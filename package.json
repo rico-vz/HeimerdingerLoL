@@ -3,7 +3,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "dev-laravel": "php artisan serve",
+        "dev-node": "npm run dev",
+        "dev-all": "npm-run-all -p dev-laravel dev-node"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.16",
@@ -14,6 +17,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "flowbite": "^2.0.0"
+        "flowbite": "^2.0.0",
+        "npm-run-all": "^4.1.5"
     }
 }
