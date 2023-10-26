@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Champion;
 use App\Http\Requests\StoreChampionRequest;
 use App\Http\Requests\UpdateChampionRequest;
+use App\Models\Champion;
 
 class ChampionController extends Controller
 {

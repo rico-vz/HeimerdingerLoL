@@ -6,7 +6,8 @@
         "build": "vite build",
         "dev-laravel": "php artisan serve",
         "dev-node": "npm run dev",
-        "dev-all": "npm-run-all -p dev-laravel dev-node"
+        "dev-all": "npm-run-all -p dev-laravel dev-node",
+        "laravel-pint": "./vendor/bin/pint"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.16",

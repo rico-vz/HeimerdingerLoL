@@ -43,16 +43,16 @@ class ChampionSkin extends Model
 
     public function getSkinImageAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art/centered/skin/' . $this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/splash-art/centered/skin/'.$this->skin_id;
     }
 
     public function getSkinImageLoadingAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait/skin/' . $this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait/skin/'.$this->skin_id;
     }
 
     public function getSkinImageTileAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile/skin/'.$this->skin_id;
     }
 }

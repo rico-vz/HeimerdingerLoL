@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ChampionSkin;
 use App\Http\Requests\StoreChampionSkinRequest;
 use App\Http\Requests\UpdateChampionSkinRequest;
+use App\Models\ChampionSkin;
 
 class ChampionSkinController extends Controller
 {
