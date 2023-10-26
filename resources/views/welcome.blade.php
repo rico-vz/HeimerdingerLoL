@@ -17,12 +17,19 @@
 
     <title>Heimerdinger.LoL</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/brands.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/solid.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/regular.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/duotone.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
 
-<body class="antialiased bg-gray-800 dark">
+<body class="antialiased bg-stone-800 dark">
     <x-navbar />
+    <x-features />
 </body>
 
 </html>
