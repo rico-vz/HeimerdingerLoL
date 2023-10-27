@@ -17,6 +17,10 @@ class SkinChroma extends Model
         'chroma_image',
     ];
 
+    protected $casts = [
+        'chroma_colors' => 'array',
+    ];
+
     public function skin()
     {
         return $this->belongsTo(Skin::class);
