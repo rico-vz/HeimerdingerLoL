@@ -41,18 +41,23 @@ class ChampionSkin extends Model
         return $this->belongsTo(Champion::class);
     }
 
+    public function chromas()
+    {
+        return $this->hasMany(SkinChroma::class, 'full_skin_id', 'full_skin_id');
+    }
+
     public function getSkinImageAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/splash-art/centered/skin/'.$this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art/centered/skin/' . $this->skin_id;
     }
 
     public function getSkinImageLoadingAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait/skin/'.$this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait/skin/' . $this->skin_id;
     }
 
     public function getSkinImageTileAttribute()
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile/skin/'.$this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
     }
 }

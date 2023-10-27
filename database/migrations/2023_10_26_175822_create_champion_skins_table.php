@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->integer('champion_id');
-            $table->integer('full_skin_id');
+            $table->unsignedBigInteger('full_skin_id')->unique();
             $table->integer('skin_id');
             $table->string('skin_name');
             $table->longText('lore');
