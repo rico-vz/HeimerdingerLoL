@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Champion;
 
 class ChampionSeeder extends Seeder
 {
@@ -11,6 +12,45 @@ class ChampionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $championDataUrl = "http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json";
+        $championData = json_decode(file_get_contents($championDataUrl), true);
+
+        foreach ($championData as $champion) {
+            $championId = $champion['id'];
+            $championExists = Champion::where('champion_id', $championId)->first();
+
+            $championAttributes = [
+                'champion_id' => $champion['id'],
+                'key' => $champion['key'],
+                'name' => $champion['name'],
+                'title' => $champion['title'],
+                'lore' => $champion['lore'],
+                'roles' => $champion['roles'],
+                'price_be' => $champion['price']['blueEssence'],
+                'price_rp' => $champion['price']['rp'],
+                'resource_type' => $champion['resource'],
+                'attack_type' => $champion['attackType'],
+                'adaptive_type' => $champion['adaptiveType'],
+                'release_date' => $champion['releaseDate'],
+                'release_patch' => $champion['releasePatch'],
+            ];
+
+            // Check if the champion already exists and if any attributes have changed
+            if ($championExists && $this->hasAttributesChanged($championExists, $championAttributes)) {
+                $championExists->update($championAttributes);
+            } elseif (!$championExists) {
+                Champion::create($championAttributes);
+            }
+        }
+    }
+
+    private function hasAttributesChanged($champion, $attributes)
+    {
+        foreach ($attributes as $key => $value) {
+            if ($champion->{$key} != $value) {
+                return true;
+            }
+        }
+        return false;
     }
 }
