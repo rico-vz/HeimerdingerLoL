@@ -12,5 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(ChampionSeeder::class);
+        $this->call(ChampionSkinSeeder::class);
     }
 }
