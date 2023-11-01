@@ -21,6 +21,12 @@ class ChampionSkinSeeder extends Seeder
             foreach ($champion['skins'] as $skin) {
                 $skinId = $skin['id'];
                 $skinExists = ChampionSkin::where('full_skin_id', $skinId)->first();
+
+                // Original is just the base skin (so, none) so we don't need to store it.
+                if ($skin['name'] === "Original") {
+                    continue;
+                }
+
                 if ($skin['cost'] == "Special") {
                     $skin['cost'] = 99999;
                 }
@@ -45,6 +51,11 @@ class ChampionSkinSeeder extends Seeder
                     'voice_actor' => $skin['voiceActor'],
                     'splash_artist' => $skin['splashArtist'],
                 ];
+
+                // Mundo is a special case, his skins often include his name in the skin name, so we need to remove it.
+                if (strpos($skinAttributes['skin_name'], 'Mundo Dr. Mundo') !== false) {
+                    $skinAttributes['skin_name'] = str_replace('Mundo Dr. Mundo', 'Mundo', $skinAttributes['skin_name']);
+                }
 
                 // Check if the skin already exists and if any attributes have changed, if so update the skin. If the skin doesn't exist, create it.
                 // This is to prevent the skin data from being updated every time the seeder is run. As I'll probably run this on a cron job.
