@@ -45,3 +45,9 @@ Technologies used in the project:
 <h2>🛡️ License:</h2>
 
 This project is licensed under the AGPL-3.0 license.
+
+  
+  
+<h2>⚠️ Disclaimer:</h2>
+
+Heimerdinger.lol was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.
