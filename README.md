@@ -11,7 +11,8 @@
 <h2>🧐 Features</h2>
 
 Here're some of the project's features:
-*These features are not all implemented yet*
+
+*Not all of these features are implemented, yet.*
 
 
 *   All available LoL Champions
