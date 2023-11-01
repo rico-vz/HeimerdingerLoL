@@ -25,11 +25,12 @@ class SkinChroma extends Model
 
     public function sluggable(): array
     {
-        $slug = $this->chroma_name . ' ' . $this->skin_name;
+        $slug = $this->chroma_name.' '.$this->skin_name;
+
         return [
             'slug' => [
-                'source' => $slug
-            ]
+                'source' => $slug,
+            ],
         ];
     }
 

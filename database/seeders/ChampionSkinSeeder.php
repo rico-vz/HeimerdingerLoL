@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Champion;
 use App\Models\ChampionSkin;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Log;
@@ -14,7 +13,7 @@ class ChampionSkinSeeder extends Seeder
      */
     public function run(): void
     {
-        $championDataUrl = "http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json";
+        $championDataUrl = 'http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
         $championData = json_decode(file_get_contents($championDataUrl), true);
 
         foreach ($championData as $champion) {
@@ -23,11 +22,11 @@ class ChampionSkinSeeder extends Seeder
                 $skinExists = ChampionSkin::where('full_skin_id', $skinId)->first();
 
                 // Original is just the base skin (so, none) so we don't need to store it.
-                if ($skin['name'] === "Original") {
+                if ($skin['name'] === 'Original') {
                     continue;
                 }
 
-                if ($skin['cost'] == "Special") {
+                if ($skin['cost'] == 'Special') {
                     $skin['cost'] = 99999;
                 }
 
@@ -35,7 +34,7 @@ class ChampionSkinSeeder extends Seeder
                     'champion_id' => $champion['id'],
                     'full_skin_id' => $skin['id'],
                     'skin_id' => substr($skin['id'], 3),
-                    'skin_name' => $skin['name'] . ' ' . $champion['name'],
+                    'skin_name' => $skin['name'].' '.$champion['name'],
                     'lore' => $skin['lore'],
                     'availability' => $skin['availability'],
                     'loot_eligible' => $skin['lootEligible'],
@@ -60,10 +59,10 @@ class ChampionSkinSeeder extends Seeder
                 // Check if the skin already exists and if any attributes have changed, if so update the skin. If the skin doesn't exist, create it.
                 // This is to prevent the skin data from being updated every time the seeder is run. As I'll probably run this on a cron job.
                 if ($skinExists && $this->hasAttributesChanged($skinExists, $skinAttributes)) {
-                    Log::info('Skin ' . $skin['name'] . ' ' . $champion['name'] . ' has changed, updating...');
+                    Log::info('Skin '.$skin['name'].' '.$champion['name'].' has changed, updating...');
                     $skinExists->update($skinAttributes);
-                } elseif (!$skinExists) {
-                    Log::info('New skin detected! Creating ' . $skin['name'] . ' ' . $champion['name'] . '...');
+                } elseif (! $skinExists) {
+                    Log::info('New skin detected! Creating '.$skin['name'].' '.$champion['name'].'...');
                     ChampionSkin::create($skinAttributes);
                 }
             }
@@ -77,6 +76,7 @@ class ChampionSkinSeeder extends Seeder
                 return true;
             }
         }
+
         return false;
     }
 }

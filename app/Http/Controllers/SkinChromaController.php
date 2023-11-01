@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SkinChroma;
 use App\Http\Requests\StoreSkinChromaRequest;
 use App\Http\Requests\UpdateSkinChromaRequest;
+use App\Models\SkinChroma;
 
 class SkinChromaController extends Controller
 {

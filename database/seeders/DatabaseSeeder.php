@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ChampionSkinSeeder::class);
         $this->call(SkinChromaSeeder::class);
 
-        Log::info('Seeding complete at ' . date('Y-m-d H:i:s'));
+        Log::info('Seeding complete at '.date('Y-m-d H:i:s'));
     }
 }
