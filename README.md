@@ -6,6 +6,22 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&amp;logo=laravel&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&amp;logo=mysql&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="shields"></p>
 
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's features:
+*These features are not all implemented yet*
+
+
+*   All available LoL Champions
+*   Sort champions by most popular lane
+*   Champion & skin sale rotation
+*   All available LoL Skins
+*   All available LoL Skin Chromas
+*   Champion & skin search
+*   A list of all Icons Emotes Summoner Spells Items
+*   Player Profile to show your rank level and mastery points. (By Riot ID *Name#0000*)
 
 <h2>🍰 Contribution Guidelines:</h2>
 
@@ -19,13 +35,12 @@ Technologies used in the project:
 
 *   Laravel
 *   MySQL
-*   Blade
-*   HTML
-*   CSS
 *   TailwindCSS
 *   Font Awesome
 *   Javascript
+*   Riot Games API
+*   DataDragon API
 
 <h2>🛡️ License:</h2>
 
-This project is licensed under the AGPL-3.0
+This project is licensed under the AGPL-3.0 license.
