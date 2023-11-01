@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ChampionSkin extends Model
 {
     use HasFactory;
+    use Sluggable;
 
     protected $fillable = [
         'champion_id',
@@ -35,6 +37,15 @@ class ChampionSkin extends Model
         'voice_actor' => 'array',
         'splash_artist' => 'array',
     ];
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'skin_name'
+            ]
+        ];
+    }
 
     public function champion()
     {
