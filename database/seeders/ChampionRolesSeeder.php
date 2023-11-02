@@ -13,5 +13,7 @@ class ChampionRolesSeeder extends Seeder
     public function run(): void
     {
         // TODO: http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json
+        $roleDataUrl = 'http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
+        $roleData = json_decode(file_get_contents($roleDataUrl), true);
     }
 }
