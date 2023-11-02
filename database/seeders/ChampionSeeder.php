@@ -39,10 +39,10 @@ class ChampionSeeder extends Seeder
             // Check if the champion already exists and if any attributes have changed, if so update the champion. If the champion doesn't exist, create it.
             // This is to prevent the champion data from being updated every time the seeder is run. As I'll probably run this on a cron job.
             if ($championExists && $this->hasAttributesChanged($championExists, $championAttributes)) {
-                Log::info('Champion '.$champion['name'].' has changed, updating...');
+                Log::info('Champion ' . $champion['name'] . ' has changed, updating...');
                 $championExists->update($championAttributes);
             } elseif (! $championExists) {
-                Log::info('New champion detected! Creating '.$champion['name'].'...');
+                Log::info('New champion detected! Creating ' . $champion['name'] . '...');
                 Champion::create($championAttributes);
             }
         }
