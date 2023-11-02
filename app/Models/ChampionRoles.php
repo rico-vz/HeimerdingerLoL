@@ -21,6 +21,8 @@ class ChampionRoles extends Model
 
     public function getRolesAttribute($value)
     {
+        $value = is_array($value) ? $value : [$value];
+
         $mappedRoles = [];
         foreach ($value as $role) {
             switch ($role) {
