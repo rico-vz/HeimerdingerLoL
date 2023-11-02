@@ -19,39 +19,31 @@ class ChampionRoles extends Model
         'roles' => 'array',
     ];
 
-    public function getRolesAttribute($value)
-    {
-        $value = is_array($value) ? $value : [$value];
-
-        $mappedRoles = [];
-        foreach ($value as $role) {
-            switch ($role) {
-                case 'TOP':
-                    $mappedRoles[] = 'Toplane';
-                    break;
-                case 'JUNGLE':
-                    $mappedRoles[] = 'Jungle';
-                    break;
-                case 'MIDDLE':
-                    $mappedRoles[] = 'Midlane';
-                    break;
-                case 'BOTTOM':
-                    $mappedRoles[] = 'Botlane';
-                    break;
-                case 'UTILITY':
-                    $mappedRoles[] = 'Support';
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        return $mappedRoles;
-    }
-
-
     public function champion()
     {
         return $this->belongsTo(Champion::class);
+    }
+
+    public function getRolesAttribute($value)
+    {
+        $value = json_decode($value);
+
+        $roleNames = [
+            'TOP' => 'Toplane',
+            'JUNGLE' => 'Jungle',
+            'MIDDLE' => 'Midlane',
+            'BOTTOM' => 'Botlane',
+            'UTILITY' => 'Support',
+        ];
+
+        $transformedRoles = [];
+
+        foreach ($value as $role) {
+            if (isset($roleNames[$role])) {
+                $transformedRoles[] = $roleNames[$role];
+            }
+        }
+
+        return $transformedRoles;
     }
 }
