@@ -7,7 +7,6 @@ use App\Models\ChampionRoles;
 use App\Models\Champion;
 use Illuminate\Support\Facades\Log;
 
-
 class ChampionRolesSeeder extends Seeder
 {
     /**
@@ -22,7 +21,9 @@ class ChampionRolesSeeder extends Seeder
             $rolesExists = ChampionRoles::where('champion_id', $championId)->first();
             $championExists = Champion::where('champion_id', $championId)->first();
 
-            if ($championExists) $championName = $championExists->name;
+            if ($championExists) {
+                $championName = $championExists->name;
+            }
 
             $playedRoles = [];
 
