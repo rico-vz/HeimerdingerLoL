@@ -13,7 +13,7 @@ class recent_skins extends Component
      */
     public function __construct()
     {
-        public array $skins;
+       public array $skins;
     }
 
     /**
