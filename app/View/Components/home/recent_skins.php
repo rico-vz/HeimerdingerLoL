@@ -11,9 +11,8 @@ class recent_skins extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(public array $skins)
     {
-       public array $skins;
     }
 
     /**
