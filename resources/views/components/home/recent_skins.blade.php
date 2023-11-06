@@ -1,3 +1,5 @@
+<?php /** @var App\Models\ChampionSkin $skin */ ?>
+
 <section class="text-white bg-stone-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:py-16 lg:px-8">
         <div class="max-w-lg mx-auto text-center">
