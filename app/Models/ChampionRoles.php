@@ -24,7 +24,7 @@ class ChampionRoles extends Model
         return $this->belongsTo(Champion::class);
     }
 
-    public function getRolesAttribute($value)
+    public function getRolesAttribute($value): array
     {
         $value = json_decode($value);
 

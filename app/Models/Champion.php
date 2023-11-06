@@ -5,6 +5,7 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Champion extends Model
 {
@@ -40,52 +41,52 @@ class Champion extends Model
         ];
     }
 
-    public function skins()
+    public function skins(): HasMany
     {
         return $this->hasMany(ChampionSkin::class);
     }
 
-    public function getChampionImageAttribute()
+    public function getChampionImageAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art';
     }
 
-    public function getChampionImageLoadingAttribute()
+    public function getChampionImageLoadingAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait';
     }
 
-    public function getChampionImageTileAttribute()
+    public function getChampionImageTileAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile';
     }
 
-    public function getChampionSquareImageAttribute()
+    public function getChampionSquareImageAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/square';
     }
 
-    public function getChampionAbilityIconQAttribute()
+    public function getChampionAbilityIconQAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/q';
     }
 
-    public function getChampionAbilityIconWAttribute()
+    public function getChampionAbilityIconWAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/w';
     }
 
-    public function getChampionAbilityIconEAttribute()
+    public function getChampionAbilityIconEAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/e';
     }
 
-    public function getChampionAbilityIconRAttribute()
+    public function getChampionAbilityIconRAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/r';
     }
 
-    public function getChampionAbilityIconPAttribute()
+    public function getChampionAbilityIconPAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/p';
     }

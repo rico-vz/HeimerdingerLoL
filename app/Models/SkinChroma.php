@@ -5,6 +5,7 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class SkinChroma extends Model
 {
@@ -25,7 +26,6 @@ class SkinChroma extends Model
 
     public function sluggable(): array
     {
-        // chroma name + skin name
         return [
             'slug' => [
                 'source' => ['chroma_name', 'skin_name'],
@@ -33,7 +33,7 @@ class SkinChroma extends Model
         ];
     }
 
-    public function skin()
+    public function skin(): BelongsTo
     {
         return $this->belongsTo(Skin::class);
     }

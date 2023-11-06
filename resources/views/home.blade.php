@@ -28,9 +28,10 @@
 </head>
 
 <body class="antialiased bg-stone-800 dark">
-    <x-navbar />
-    <x-home.features />
-    <x-home.recent_skins :skins="$skins" />
+<x-navbar/>
+<x-home.features/>
+<x-home.upcoming_skins :skins="$skins"/>
+<x-home.recent_skins :skins="$skins"/>
 
 </body>
 

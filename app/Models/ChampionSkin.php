@@ -5,6 +5,8 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ChampionSkin extends Model
 {
@@ -47,28 +49,33 @@ class ChampionSkin extends Model
         ];
     }
 
-    public function champion()
+    public function champion(): BelongsTo
     {
         return $this->belongsTo(Champion::class);
     }
 
-    public function chromas()
+    public function chromas(): HasMany
     {
         return $this->hasMany(SkinChroma::class, 'full_skin_id', 'full_skin_id');
     }
 
-    public function getSkinImageAttribute()
+    public function getSkinImageAttribute(bool $pbe = false): string
     {
+        if ($pbe) {
+            return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' . $this->champion_id . '/' . $this->full_skin_id . '.jpg';
+        }
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art/centered/skin/' . $this->skin_id;
     }
 
-    public function getSkinImageLoadingAttribute()
+    public function getSkinImageLoadingAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait/skin/' . $this->skin_id;
     }
 
-    public function getSkinImageTileAttribute()
+    public function getSkinImageTileAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
     }
+
+
 }
