@@ -30,7 +30,9 @@
 <body class="antialiased bg-stone-800 dark">
 <x-navbar/>
 <x-home.features/>
-<x-home.upcoming_skins :skins="$skins"/>
+@if($upcomingSkins != [])
+    <x-home.upcoming_skins :upcomingSkins="$upcomingSkins"/>
+@endif
 <x-home.recent_skins :skins="$skins"/>
 
 </body>
