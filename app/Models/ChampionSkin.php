@@ -76,6 +76,4 @@ class ChampionSkin extends Model
     {
         return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
     }
-
-
 }
