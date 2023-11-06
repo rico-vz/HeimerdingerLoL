@@ -1,3 +1,4 @@
+@php use Carbon\Carbon; @endphp
 <?php /** @var App\Models\ChampionSkin $skin */ ?>
 
 <section class="text-white bg-stone-900">
@@ -20,11 +21,11 @@
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center justify-center">
                                 <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
-                                    src="{{ $skin->getSkinImageAttribute() }}" alt="{{ $skin->skin_name }} Splash Art">
+                                     src="{{ $skin->getSkinImageAttribute() }}" alt="{{ $skin->skin_name }} Splash Art">
                                 <div class="flex flex-col items-center justify-center">
                                     <h2 class="mt-4 text-xl font-bold text-white">{{ $skin->skin_name }}</h2>
                                     <h3 class=" text-stone-200">Released
-                                        {{ \Carbon\Carbon::parse($skin->release_date)->diffForHumans([
+                                        {{ Carbon::parse($skin->release_date)->diffForHumans([
                                             'parts' => 2,
                                             'join' => true,
                                         ]) }}
