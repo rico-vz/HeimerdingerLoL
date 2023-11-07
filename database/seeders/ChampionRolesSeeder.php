@@ -21,7 +21,7 @@ class ChampionRolesSeeder extends Seeder
             $rolesExists = ChampionRoles::where('champion_id', $championId)->first();
             $championExists = Champion::where('champion_id', $championId)->first();
 
-            if ( ! $championExists ) {
+            if (! $championExists) {
                 Log::info('Champion with ID ' . $championId . ' does not exist, skipping...');
                 continue;
             }
