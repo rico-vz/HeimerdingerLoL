@@ -39,9 +39,9 @@
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/fontawesome.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/brands.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/duotone.min.js"></script>
+    <script defer src="{{asset('js/icons.js')}}"></script>
+    <script defer src="{{asset('js/icons-brands.min.js')}}"></script>
+    <script defer src="{{asset('js/icons-duotone.min.js')}}"></script>
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
