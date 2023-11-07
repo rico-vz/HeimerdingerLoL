@@ -13,7 +13,11 @@ class ChampionController extends Controller
      */
     public function index()
     {
-        //
+        $champions = Champion::orderBy('name')->get();
+
+        return view('champions.index', [
+            'champions' => $champions,
+        ]);
     }
 
     /**

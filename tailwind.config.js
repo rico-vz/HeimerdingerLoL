@@ -10,6 +10,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontSize: {
+                xsm: ".685rem",
+            },
             fontFamily: {
                 sans: [
                     "Inter var",

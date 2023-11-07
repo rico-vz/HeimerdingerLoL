@@ -39,14 +39,18 @@ class SkinChromaSeeder extends Seeder
                     ];
 
                     // Mundo is a special case, his skins often include his name in the skin name, so we need to remove it.
-                    if (strpos($chromaAttributes['skin_name'], 'Mundo Dr. Mundo') !== false) {
-                        $skinAttributes['skin_name'] = str_replace('Mundo Dr. Mundo', 'Mundo', $chromaAttributes['skin_name']);
+                    if (str_contains($chromaAttributes['skin_name'], 'Mundo Dr. Mundo')) {
+                        $chromaAttributes['skin_name'] = str_replace(
+                            'Mundo Dr. Mundo',
+                            'Mundo',
+                            $chromaAttributes['skin_name']
+                        );
                     }
 
                     if ($chromaExists && $this->hasAttributesChanged($chromaExists, $chromaAttributes)) {
                         Log::info('Updating chroma: ' . $chromaId);
                         $chromaExists->update($chromaAttributes);
-                    } elseif (! $chromaExists) {
+                    } elseif (!$chromaExists) {
                         Log::info('Creating chroma: ' . $chromaId);
                         SkinChroma::create($chromaAttributes);
                     }
@@ -55,7 +59,7 @@ class SkinChromaSeeder extends Seeder
         }
     }
 
-    private function hasAttributesChanged($chroma, $attributes)
+    private function hasAttributesChanged($chroma, $attributes): bool
     {
         foreach ($attributes as $key => $value) {
             if ($chroma->{$key} != $value) {

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ChampionRoles extends Model
 {
@@ -19,9 +20,9 @@ class ChampionRoles extends Model
         'roles' => 'array',
     ];
 
-    public function champion()
+    public function champion(): BelongsTo
     {
-        return $this->belongsTo(Champion::class);
+        return $this->belongsTo(Champion::class, 'champion_id', 'champion_id');
     }
 
     public function getRolesAttribute($value): array
@@ -45,5 +46,18 @@ class ChampionRoles extends Model
         }
 
         return $transformedRoles;
+    }
+
+    public function getRoleIcon($roleName)
+    {
+        $roleIcons = [
+            'Toplane' => 'gm-top.png',
+            'Jungle' => 'gm-jungle.png',
+            'Midlane' => 'gm-mid.png',
+            'Botlane' => 'gm-bot.png',
+            'Support' => 'gm-support.png',
+        ];
+
+        return asset('img/' . $roleIcons[$roleName]);
     }
 }

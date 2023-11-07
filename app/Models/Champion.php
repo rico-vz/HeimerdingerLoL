@@ -6,6 +6,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Champion extends Model
 {
@@ -46,10 +47,18 @@ class Champion extends Model
         return $this->hasMany(ChampionSkin::class);
     }
 
-    public function getChampionImageAttribute(): string
+    public function lanes(): HasOne
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art';
+        return $this->hasOne(ChampionRoles::class, 'champion_id', 'champion_id');
     }
+
+    public function getChampionImageAttribute($centered = true): string
+    {
+        $url = 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art';
+
+        return $centered ? $url . '/centered' : $url;
+    }
+
 
     public function getChampionImageLoadingAttribute(): string
     {
