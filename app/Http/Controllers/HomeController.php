@@ -9,16 +9,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $skins = Cache::remember('skins', 60 * 4, function () {
-            return ChampionSkin::orderBy('release_date', 'desc')->get();
+        $upcomingSkins = Cache::remember('upcomingSkins_home', 60 * 4, function () {
+            return ChampionSkin::where('availability', 'Upcoming')->orderBy('release_date', 'desc')->get();
         });
 
-        $upcomingSkins = Cache::remember('upcomingSkins', 60 * 4, function () use ($skins) {
-            return $skins->where('availability', 'Upcoming');
+        $latestSkins = Cache::remember('latestSkins_home', 60 * 4, function () {
+            return ChampionSkin::where('availability', 'Available')->orderBy('release_date', 'desc')->take(9)->get();
         });
+
 
         return view('home', [
-            'skins' => $skins,
+            'latestSkins' => $latestSkins,
             'upcomingSkins' => $upcomingSkins,
         ]);
     }

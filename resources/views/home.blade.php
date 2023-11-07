@@ -28,12 +28,12 @@
 </head>
 
 <body class="antialiased bg-stone-800 dark">
-<x-navbar/>
-<x-home.features/>
-@if($upcomingSkins != [])
-    <x-home.upcoming_skins :upcomingSkins="$upcomingSkins"/>
-@endif
-<x-home.recent_skins :skins="$skins"/>
+    <x-navbar />
+    <x-home.features />
+    @if ($upcomingSkins != [])
+        <x-home.upcoming_skins :upcomingSkins="$upcomingSkins" />
+    @endif
+    <x-home.recent_skins :latestSkins="$latestSkins" />
 
 </body>
 
