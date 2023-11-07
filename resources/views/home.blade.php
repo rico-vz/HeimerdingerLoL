@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
@@ -16,9 +17,18 @@
     <meta name="theme-color" content="#ff7c47">
 
     <title>Heimerdinger.LoL • Home</title>
+
+    <!-- SEO / Metadata -->
+    <meta property="og:site_name" content="Heimerdinger.LoL">
+    <meta property="og:title" content="Heimerdinger.LoL • Home">
+    <meta property="og:description" content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
+          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
     <meta name="description"
-          content="Heimerdinger.LoL is a League of Legends fan site that provides information about champions, skins,
-          game assets, and more.">
+          content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
+          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
+    <meta property="og:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/fontawesome.min.css" rel="stylesheet">
