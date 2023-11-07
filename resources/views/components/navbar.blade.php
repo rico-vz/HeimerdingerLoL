@@ -6,7 +6,9 @@
             <span class="sr-only">Home</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm rounded-lg text-stone-500 md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 dark:text-stone-400 dark:hover:bg-stone-700 dark:focus:ring-stone-600"
+                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm rounded-lg text-stone-500
+                md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 dark:text-stone-400
+                dark:hover:bg-stone-700 dark:focus:ring-stone-600"
                 aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -17,38 +19,59 @@
         </button>
         <div id="navbar-default" class="hidden w-full md:block md:w-auto">
             <ul
-                class="flex flex-col p-4 mt-4 font-medium border rounded-lg border-stone-100 md:p-0 bg-stone-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-800 dark:border-stone-700">
+                class="flex flex-col p-2 mt-4 font-medium border rounded-lg border-stone-100 md:p-0 bg-stone-50
+                md:flex-row md:space-x-6 md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-800
+                dark:border-stone-700">
                 <li>
                     <a href="/champions"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-users"></i></i> Champions</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-palette"></i></i> Skins</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-cubes"></i> Assets</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-credit-card"></i> Sale Rotation</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-newspaper"></i> Posts</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block py-2 pl-3 pr-4 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                        <i class="fa-duotone fa-circle-info"></i></i> About</a>
-                </li>
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                       dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
 
+                        <x-iconsax-bul-people class="w-6 h-6 mr-1"/>
+                        Champions</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                         dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+
+                        <x-iconsax-bul-brush-2 class="w-6 h-6 mr-1"/>
+                        Skins</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        <x-iconsax-bul-3dcube class="w-6 h-6 mr-1"/>
+                        Assets</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        <x-iconsax-bul-card class="w-6 h-6 mr-1"/>
+                        Sale Rotation</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        <x-iconsax-bul-receipt-search class="w-6 h-6 mr-1"/>
+                        Posts</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        <x-iconsax-bul-info-circle class="w-6 h-6 mr-1"/>
+                        About</a>
+                </li>
             </ul>
         </div>
     </div>
