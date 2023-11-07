@@ -18,8 +18,7 @@
 
     <title>Heimerdinger.LoL • Home</title>
     <meta name="description"
-          content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
-          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
+          content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL. Your ultimate source for in-depth information on LoL gaming. Dive in now!">
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
@@ -38,6 +37,7 @@
           Your ultimate source for in-depth information on LoL gaming. Dive in now!">
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
+    <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     @vite('resources/css/app.css')
