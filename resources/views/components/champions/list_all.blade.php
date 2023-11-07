@@ -12,14 +12,14 @@
 
     <div class="container mx-auto p-4 flex items-center justify-center mt-3">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            @foreach($champions as $champion)
+            @foreach($champions as $key => $champion)
                 <div
                     class="flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
                     border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10">
                     <div
                         class="mx-4 mt-4 overflow-hidden h-52 rounded-2xl bg-clip-border border-2 border-orange-400/40">
-                        <img loading="lazy"
-                             src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=400&output=webp&q=70"
+                        <img @if($key < 8) loading="auto" @else loading="lazy" @endif
+                        src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=400&output=webp&q=70"
                              class="object-cover w-full h-full"
                              alt="{{ $champion->name }} Splash Art"
                         />
@@ -38,7 +38,8 @@
                                     <span class="sr-only">{{$lane}}</span>
 
                                     <img data-tooltip-target="tooltip-bottom-{{$lane}}" data-tooltip-placement="bottom"
-                                         loading="lazy" src="{{$champion->lanes->getRoleIcon($lane)}}"
+                                         @if($key < 8) loading="auto" @else loading="lazy"
+                                         @endif src="{{$champion->lanes->getRoleIcon($lane)}}"
                                          alt="{{$lane}} Icon"
                                          class="w-7 h-7 mr-1">
                             </p>
