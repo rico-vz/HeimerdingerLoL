@@ -32,7 +32,7 @@
                             <p class="block text-base antialiased font-medium text-gray-100">
                                 {{ $champion->name }}
                             </p>
-                            <span class="text-xsm text-stone-300">{{ $champion->title }}</span>
+                            <span class="text-xs text-stone-300">{{ $champion->title }}</span>
                         </div>
 
                         <div class="flex items-center justify-between mt-2">
