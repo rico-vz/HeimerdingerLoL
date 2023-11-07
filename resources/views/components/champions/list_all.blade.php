@@ -20,8 +20,8 @@
                     <div
                         class="mx-4 mt-4 overflow-hidden h-52 rounded-2xl bg-clip-border border-2 border-orange-400/40">
                         <img @if($key < 8) loading="eager" @else loading="lazy" @endif
-                        src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=400&output=webp&q=70"
-                             class="object-cover w-full h-full transition-opacity filter blur-3 opacity-0"
+                        src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=380&output=webp&q=65"
+                             class="object-cover w-full h-full"
                              alt="{{ $champion->name }} Splash Art"
                         />
                     </div>
