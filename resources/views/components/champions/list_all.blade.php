@@ -19,7 +19,7 @@
                     <div
                         class="mx-4 mt-4 overflow-hidden h-52 rounded-2xl bg-clip-border border-2 border-orange-400/40">
                         <img loading="lazy"
-                             src="{{ $champion->getChampionImageAttribute() }}"
+                             src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=400&output=webp&q=70"
                              class="object-cover w-full h-full"
                              alt="{{ $champion->name }} Splash Art"
                         />
