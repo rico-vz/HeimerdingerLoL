@@ -13,7 +13,7 @@ class ChampionSeeder extends Seeder
      */
     public function run(): void
     {
-        $championDataUrl = 'http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
+        $championDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
         $championData = json_decode(file_get_contents($championDataUrl), true);
 
         foreach ($championData as $champion) {

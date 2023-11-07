@@ -14,16 +14,19 @@ class ChampionRolesSeeder extends Seeder
      */
     public function run(): void
     {
-        $roleDataUrl = 'http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
+        $roleDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
         $roleData = json_decode(file_get_contents($roleDataUrl), true);
 
         foreach ($roleData['data'] as $championId => $roles) {
             $rolesExists = ChampionRoles::where('champion_id', $championId)->first();
             $championExists = Champion::where('champion_id', $championId)->first();
 
-            if ($championExists) {
-                $championName = $championExists->name;
+            if ( ! $championExists ) {
+                Log::info('Champion with ID ' . $championId . ' does not exist, skipping...');
+                continue;
             }
+
+            $championName = $championExists->name;
 
             $playedRoles = [];
 
