@@ -15,7 +15,11 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <meta name="theme-color" content="#ff7c47">
 
-    <title>Heimerdinger.LoL</title>
+    <title>Heimerdinger.LoL • Home</title>
+    <meta name="description"
+          content="Heimerdinger.LoL is a League of Legends fan site that provides information about champions, skins,
+          game assets, and more.">
+
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/fontawesome.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/light.min.css" rel="stylesheet">
@@ -28,12 +32,12 @@
 </head>
 
 <body class="antialiased bg-stone-800 dark">
-    <x-navbar />
-    <x-home.features />
-    @if ($upcomingSkins != [])
-        <x-home.upcoming_skins :upcomingSkins="$upcomingSkins" />
-    @endif
-    <x-home.recent_skins :latestSkins="$latestSkins" />
+<x-navbar/>
+<x-home.features/>
+@if ($upcomingSkins != [])
+    <x-home.upcoming_skins :upcomingSkins="$upcomingSkins"/>
+@endif
+<x-home.recent_skins :latestSkins="$latestSkins"/>
 
 </body>
 

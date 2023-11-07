@@ -6,82 +6,81 @@
                 Welcome to Heimerdinger.LoL</h2>
 
             <p class="mt-4 text-stone-300">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-                aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur
-                saepe laborum.
+                Heimerdinger.LoL is a website dedicated to providing information about League of
+                Legends. We provide information about the champions, skins, game assets, and more.
             </p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
 
                 <i class="text-3xl text-orange-400 fa-duotone fa-gamepad-modern"></i>
                 <h2 class="mt-4 text-xl font-bold text-white">All Champions</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    Can't decide which champion to play? Check out all the champions
+                    available in League of Legends along with their skins and played roles.
                 </p>
             </a>
 
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
                 <i class="text-3xl text-orange-400 fa-duotone fa-palette"></i>
 
                 <h2 class="mt-4 text-xl font-bold text-white ">Skin Information</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    All the information you need about skins in League of Legends. Check out the
+                    latest skins, upcoming skins, and more.
                 </p>
             </a>
 
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
                 <i class="text-3xl text-orange-400 fa-duotone fa-cube"></i>
 
                 <h2 class="mt-4 text-xl font-bold text-white">Game Assets</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    Looking for that one specific icon or emote? Don't worry, we've got you covered.
+                    Check out all the game assets you could ever need.
                 </p>
             </a>
 
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
                 <i class="text-3xl text-orange-400 fa-duotone fa-messages-dollar"></i>
 
                 <h2 class="mt-4 text-xl font-bold text-white">Sale Rotation</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    Don't miss out on the latest sales in League of Legends. Check out the latest
+                    sale rotation and when they will be available.
                 </p>
             </a>
 
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
                 <i class="text-3xl text-orange-400 fa-duotone fa-newspaper"></i>
 
                 <h2 class="mt-4 text-xl font-bold text-white">Blog Posts</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    Want to know more about League of Legends? Check out our blog posts for more
+                    information about the game and its events.
                 </p>
             </a>
 
             <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-                href="#">
+               href="#">
                 <i class="text-3xl text-orange-400 fa-duotone fa-block-question"></i>
 
                 <h2 class="mt-4 text-xl font-bold text-white">About The Game</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-                    possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+                    Wondering what League of Legends is all about? Check out our About page for more
+                    information about the game.
                 </p>
             </a>
         </div>
