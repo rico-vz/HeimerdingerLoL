@@ -25,18 +25,33 @@
                                  alt="{{ $skin->skin_name }} Splash Art">
                             <div class="flex flex-col items-center justify-center">
                                 <h2 class="mt-4 text-xl font-bold text-white">{{ $skin->skin_name }}</h2>
-                                <p class="mt-1 text-sm text-stone-300">
+
+                                <div class="my-1 ">
+                                    <span class="sr-only">Associated Skinline:</span>
+                                    @foreach($skin->associated_skinline as $skinline)
+                                        <span
+                                            class="bg-orange-100 text-orange-800 text-xs font-medium
+                                            @if(!$loop->last) mr-2 @endif px-2.5  rounded
+                                            border border-orange-300
+                                            ">
+                                            {{$skinline}}</span>
+                                    @endforeach
+                                </div>
+
+                                <p class="text-sm text-stone-300">
                                     @if ($skin->rp_price == '99999')
                                         Not Available for RP
                                     @else
                                         {{ $skin->rp_price }} RP
                                     @endif
                                 </p>
-                                <p class="mt-1 text-sm italic text-stone-300">
-                                    @if ($skin->loot_eligible)
+
+                                @if ($skin->loot_eligible)
+                                    <p class="mt-1 text-sm italic text-stone-300">
                                         Can be obtained from loot
-                                    @endif
-                                </p>
+                                    </p>
+                                @endif
+
                             </div>
                         </div>
                     </div>

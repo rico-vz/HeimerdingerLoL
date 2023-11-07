@@ -1,5 +1,6 @@
 @php use Carbon\Carbon; @endphp
-<?php /** @var App\Models\ChampionSkin $skin */ ?>
+<?php
+/** @var App\Models\ChampionSkin $skin */ ?>
 
 <section class="text-white bg-stone-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:py-16 lg:px-8">
@@ -21,7 +22,7 @@
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center justify-center">
                                 <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
-                                    src="{{ $skin->getSkinImageAttribute() }}" alt="{{ $skin->skin_name }} Splash Art">
+                                     src="{{ $skin->getSkinImageAttribute() }}" alt="{{ $skin->skin_name }} Splash Art">
                                 <div class="flex flex-col items-center justify-center">
                                     <h2 class="mt-4 text-xl font-bold text-white">{{ $skin->skin_name }}</h2>
                                     <h3 class=" text-stone-200">Released
@@ -30,19 +31,31 @@
                                             'join' => true,
                                         ]) }}
                                     </h3>
-                                    <p class="mt-1 text-sm text-stone-300">
+
+                                    @foreach($skin->associated_skinline as $skinline)
+                                        <span class="sr-only">Associated Skinline:</span>
+                                        <span
+                                            class="my-2 bg-orange-100 text-orange-800 text-xs font-medium
+                                            mr-2 px-2.5 py-0.5 rounded
+                                            border border-orange-300
+                                            ">
+                                            {{$skinline}}</span>
+                                    @endforeach
+
+                                    <p class=" text-sm text-stone-300">
                                         @if ($skin->rp_price == '99999')
                                             Not Available for RP
                                         @else
                                             {{ $skin->rp_price }} RP
                                         @endif
-
                                     </p>
-                                    <p class="mt-1 text-sm italic text-stone-300">
-                                        @if ($skin->loot_eligible)
+                                    
+                                    @if ($skin->loot_eligible)
+                                        <p class="mt-1 text-sm italic text-stone-300">
                                             Can be obtained from loot
-                                        @endif
-                                    </p>
+                                        </p>
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
