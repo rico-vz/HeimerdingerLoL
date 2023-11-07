@@ -57,8 +57,8 @@
 
                             <p class="text-right text-2xl md:text-lg text-orange-300 hover:text-orange-400">
                                 <a href="/champion/{{$champion->slug}}"
-                                   aria-label="[More {{$champion->name}} info...]">
-                                    <i class="fa-duotone fa-arrow-up-right-from-square"></i>
+                                   aria-label="[Detailed {{$champion->name}} info...]">
+                                    <x-iconsax-bul-arrow-right class="w-8 transition-colors"/>
                                 </a>
                             </p>
                         </div>
