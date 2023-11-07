@@ -11,7 +11,8 @@
         Champions</h2>
 
     <div class="container mx-auto p-4 flex items-center justify-center mt-3">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 ">
+
             @foreach($champions as $key => $champion)
                 <div
                     class="flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
@@ -37,7 +38,8 @@
                                 @foreach($champion->lanes->roles as $lane)
                                     <span class="sr-only">{{$lane}}</span>
 
-                                    <img data-tooltip-target="tooltip-bottom-{{$lane}}" data-tooltip-placement="bottom"
+                                    <img data-tooltip-target="tooltip-bottom-{{$lane}}"
+                                         data-tooltip-placement="bottom"
                                          @if($key < 8) loading="auto" @else loading="lazy"
                                          @endif src="{{$champion->lanes->getRoleIcon($lane)}}"
                                          alt="{{$lane}} Icon"
@@ -53,7 +55,8 @@
                             </div>
 
                             <p class="text-right text-2xl md:text-lg text-orange-300 hover:text-orange-400">
-                                <a href="/champion/{{$champion->slug}}" aria-label="[More {{$champion->name}} info...]">
+                                <a href="/champion/{{$champion->slug}}"
+                                   aria-label="[More {{$champion->name}} info...]">
                                     <i class="fa-duotone fa-arrow-up-right-from-square"></i>
                                 </a>
                             </p>

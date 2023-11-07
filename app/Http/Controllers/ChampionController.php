@@ -15,9 +15,7 @@ class ChampionController extends Controller
     {
         $champions = Champion::orderBy('name')->get();
 
-        return view('champions.index', [
-            'champions' => $champions,
-        ]);
+        return view('champions.index', compact('champions'));
     }
 
     /**
