@@ -38,16 +38,18 @@
                                     @endforeach
                                 </div>
 
-                                <p class="text-sm text-stone-300">
+                                <p class="flex text-sm text-stone-300">
                                     @if ($skin->rp_price == '99999')
                                         Not Available for RP
                                     @else
+                                        <x-icon-RiotPoints class="text-yellow-400 w-4 mr-1"/>
                                         {{ $skin->rp_price }} RP
                                     @endif
                                 </p>
 
                                 @if ($skin->loot_eligible)
-                                    <p class="mt-1 text-sm italic text-stone-300">
+                                    <p class="flex mt-1 text-sm italic text-stone-300 items-center">
+                                        <x-icon-loot class="text-yellow-200 w-4 mr-1"/>
                                         Can be obtained from loot
                                     </p>
                                 @endif

@@ -19,7 +19,7 @@
         </button>
         <div id="navbar-default" class="hidden w-full md:block md:w-auto">
             <ul
-                class="flex flex-col p-2 mt-4 font-medium border rounded-lg border-stone-100 md:p-0 bg-stone-50
+                class="flex flex-col p-2 items-center
                 md:flex-row md:space-x-6 md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-800
                 dark:border-stone-700">
                 <li>

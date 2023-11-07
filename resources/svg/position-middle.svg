@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 34 34">
+    <path opacity="0.5" fill-rule="evenodd"
+          d="M30,12.968l-4.008,4L26,26H17l-4,4H30ZM16.979,8L21,4H4V20.977L8,17,8,8h8.981Z"/>
+    <polygon class="active" points="25 4 4 25 4 30 9 30 30 9 30 4 25 4"/>
+</svg>
