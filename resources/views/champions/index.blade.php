@@ -39,12 +39,13 @@
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/fontawesome.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/light.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/brands.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/solid.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/regular.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/duotone.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/fontawesome.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/light.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/brands.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/solid.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/regular.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/js/duotone.min.js"></script>
+
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
