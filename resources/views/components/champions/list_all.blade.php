@@ -19,15 +19,16 @@
                     border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10">
                     <div
                         class="mx-4 mt-4 overflow-hidden h-52 rounded-2xl bg-clip-border border-2 border-orange-400/40">
-                        <img @if($key < 8) loading="auto" @else loading="lazy" @endif
+                        <img @if($key < 8) loading="eager" @else loading="lazy" @endif
                         src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=400&output=webp&q=70"
-                             class="object-cover w-full h-full"
+                             class="object-cover w-full h-full transition-opacity filter blur-3 opacity-0"
                              alt="{{ $champion->name }} Splash Art"
                         />
                     </div>
+
                     <div class="px-4 py-2">
                         <div class="flex items-center justify-between">
-                            <p class="block text-base antialiased font-medium  text-gray-100">
+                            <p class="block text-base antialiased font-medium text-gray-100">
                                 {{ $champion->name }}
                             </p>
                             <span class="text-xsm text-stone-300">{{ $champion->title }}</span>
