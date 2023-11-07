@@ -17,18 +17,26 @@
     <meta name="theme-color" content="#ff7c47">
 
     <title>Heimerdinger.LoL • Home</title>
+    <meta name="description"
+          content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
+          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
 
-    <!-- SEO / Metadata -->
+    <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
     <meta property="og:title" content="Heimerdinger.LoL • Home">
     <meta property="og:description" content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
           Your ultimate source for in-depth information on LoL gaming. Dive in now!">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta name="description"
-          content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
-          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
     <meta property="og:image" content="{{asset('img/og_image.png')}}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="heimerdinger.lol">
+    <meta property="twitter:title" content="Heimerdinger.LoL • Home">
+    <meta property="twitter:description" content="Explore League of Legends champions, skins, and game assets on Heimerdinger.LoL.
+          Your ultimate source for in-depth information on LoL gaming. Dive in now!">
+    <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="https://cdn.jsdelivr.net/gh/RaiseYour/fa@main/css/fontawesome.min.css" rel="stylesheet">
