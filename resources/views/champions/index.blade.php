@@ -46,7 +46,7 @@
 
 <body class="antialiased bg-stone-900 dark">
 <x-navbar/>
-<x-champions.list_all :champions="$champions"/>
+<x-champions.list_all :champions="$champions" :roles="$roles"/>
 
 </body>
 

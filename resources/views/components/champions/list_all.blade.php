@@ -1,7 +1,8 @@
 <?php
 /** @var App\Models\Champion $champion */
 
-/** @var App\Models\ChampionRoles $lanes */ ?>
+/** @var App\Models\ChampionRole $roles */
+?>
 
 
 <section class="max-w-screen-xl mx-auto mt-12">
@@ -36,13 +37,13 @@
 
                         <div class="flex items-center justify-between mt-2">
                             <p class="text-gray-300 text-sm flex">
-                                @foreach($champion->lanes->roles as $lane)
+                                @foreach($roles[$key]->roles as $lane)
                                     <span class="sr-only">{{$lane}}</span>
 
                                     <img data-tooltip-target="tooltip-bottom-{{$lane}}"
                                          data-tooltip-placement="bottom"
                                          @if($key < 8) loading="auto" @else loading="lazy"
-                                         @endif src="{{$champion->lanes->getRoleIcon($lane)}}"
+                                         @endif src="{{getRoleIcon($lane)}}"
                                          alt="{{$lane}} Icon"
                                          class="w-7 h-7 mr-1">
                             </p>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreChampionRequest;
 use App\Http\Requests\UpdateChampionRequest;
 use App\Models\Champion;
+use App\Models\ChampionRoles;
+use Illuminate\Support\Facades\Cache;
 
 class ChampionController extends Controller
 {
@@ -13,9 +15,15 @@ class ChampionController extends Controller
      */
     public function index()
     {
-        $champions = Champion::orderBy('name')->get();
+        $champions = Cache::remember('championsListAllCache', 60 * 60 * 8, function () {
+            return Champion::orderBy('name')->get();
+        });
 
-        return view('champions.index', compact('champions'));
+        $roles = Cache::remember('championsRolesCache', 60 * 60 * 8, function () {
+            return ChampionRoles::orderBy('champion_name')->get();
+        });
+
+        return view('champions.index', compact('champions', 'roles'));
     }
 
     /**
