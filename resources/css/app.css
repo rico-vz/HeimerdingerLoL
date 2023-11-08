@@ -7,23 +7,32 @@
     position: absolute;
     inset: 0;
     border-radius: 1rem;
-    background: linear-gradient(90deg, rgba(239, 148, 61, 0.7), rgba(245, 101, 35, 0.7));
+    background: var(--splash-color);
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(8px);
     animation: glow 4s infinite;
+    --tw-scale-x: 1.02;
+    --tw-scale-y: 1.02;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.shadow-md-splash {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--splash-color), 0 2px 4px -2px var(--splash-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @keyframes glow {
     0% {
-        opacity: 0.5;
+        opacity: 0.8;
         filter: blur(8px);
     }
     50% {
-        opacity: 0.2;
-        filter: blur(13px);
+        opacity: 0.45;
+        filter: blur(11px);
     }
     100% {
-        opacity: 0.5;
+        opacity: 0.8;
         filter: blur(8px);
     }
 }

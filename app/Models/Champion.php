@@ -33,6 +33,40 @@ class Champion extends Model
         'roles' => 'array',
     ];
 
+    public function getResourceTypeAttribute($value): string
+    {
+        $resourceTypes = [
+            'BLOOD_WELL' => "Blood",
+            "MANA" => "Mana",
+            "ENERGY" => "Energy",
+            "NONE" => "None",
+            "HEALTH" => "Health",
+            "RAGE" => "Rage",
+            "COURAGE" => "Courage",
+            "SHIELD" => "Shield",
+            "FURY" => "Fury",
+            "FEROCITY" => "Ferocity",
+            "HEAT" => "Heat",
+            "GRIT" => "Grit",
+            "BLOODTHIRST" => "Bloodthirst",
+            "FLOW" => "Flow",
+            "SOUL_UNBOUND" => "Soul Unbound",
+        ];
+
+        return $resourceTypes[$value];
+    }
+
+    public function getAdaptiveTypeAttribute($value): string
+    {
+        $adaptiveTypes = [
+            'ADAPTIVE_DAMAGE' => 'Adaptive',
+            'MAGIC_DAMAGE' => 'Magical',
+            'PHYSICAL_DAMAGE' => 'Physical',
+        ];
+
+        return $adaptiveTypes[$value];
+    }
+
     public function sluggable(): array
     {
         return [
