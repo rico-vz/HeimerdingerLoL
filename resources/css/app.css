@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glow-shadow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, rgba(239, 148, 61, 0.7), rgba(245, 101, 35, 0.7));
+    opacity: 0;
+    filter: blur(5px);
+    animation: glow 4s infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        filter: blur(8px);
+    }
+    50% {
+        opacity: 0.2;
+        filter: blur(13px);
+    }
+    100% {
+        opacity: 0.5;
+        filter: blur(8px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .glow-shadow::before {
+        display: none;
+    }
+}

@@ -47,7 +47,11 @@ class ChampionController extends Controller
      */
     public function show(Champion $champion)
     {
-        //
+        $champion = Cache::remember('championShowCache' . $champion->slug, 60 * 60 * 8, function () use ($champion) {
+            return $champion->load('skins', 'lanes');
+        });
+
+        return view('champions.show', compact('champion'));
     }
 
     /**

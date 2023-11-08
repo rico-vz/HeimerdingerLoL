@@ -18,3 +18,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/champions', [ChampionController::class, 'index']);
+Route::get('/champion/{champion}', [ChampionController::class, 'show']);
