@@ -111,12 +111,21 @@
                 style="--tw-shadow-color:{{$champion->splash_color}}; --tw-shadow: var(--tw-shadow-colored); background-color: {{$champion->splash_color}};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
-                        {{$champion->name}} Skins</h4>
-                    <div class="overflow-x-scroll">
-                        {{dd($champion->skins)}}}
-                        @foreach($champion->skins as $skin)
-                            e
-                        @endforeach
+                        {{$champion->name}} Skins ({{count($champion->skins)}}) </h4>
+                    <div class="overflow-x-scroll mt-2.5">
+                        <div class="grid grid-flow-col grid-rows-2 w-max gap-4 mb-2.5">
+                            @foreach($champion->skins as $key => $skin)
+                                <div class="flex flex-col">
+                                    <img
+                                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=450&output=webp&q=70"
+                                        alt="{{$champion->name}} {{$skin->name}} Splash Art"
+                                        @if($key < 6) loading="eager" @else loading="lazy" @endif
+                                        class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10
+                                hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">
+                                    <p class="text-center text-neutral-100 text-sm mt-1.5">{{$skin->skin_name}}</p>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
