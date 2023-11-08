@@ -47,6 +47,4 @@ class ChampionRoles extends Model
 
         return $transformedRoles;
     }
-
-    
 }
