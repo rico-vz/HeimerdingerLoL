@@ -44,7 +44,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="antialiased bg-stone-900 dark">
+<body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
 <x-champions.list_all :champions="$champions" :roles="$roles"/>
 

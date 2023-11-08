@@ -23,7 +23,8 @@
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
     <meta property="og:title" content="{{$champion->name}} • Heimerdinger.LoL">
-    <meta property="og:description" content="Heimerdinger.LoL: {{$champion->name}} details showing all the information you need to know about {{$champion->name}}, {{$champion->title}}. {{substr($champion->lore, 0, 50)}}...">
+    <meta property="og:description"
+          content="Heimerdinger.LoL: {{$champion->name}} details showing all the information you need to know about {{$champion->name}}, {{$champion->title}}. {{substr($champion->lore, 0, 50)}}...">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{asset('img/og_image.png')}}">
@@ -32,7 +33,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
     <meta property="twitter:title" content="{{$champion->name}} • Heimerdinger.LoL">
-    <meta property="twitter:description" content="Heimerdinger.LoL: {{$champion->name}} details showing all the information you need to know about {{$champion->name}}, {{$champion->title}}. {{substr($champion->lore, 0, 50)}}...">
+    <meta property="twitter:description"
+          content="Heimerdinger.LoL: {{$champion->name}} details showing all the information you need to know about {{$champion->name}}, {{$champion->title}}. {{substr($champion->lore, 0, 50)}}...">
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="preconnect" href="https://rsms.me/">
@@ -42,10 +44,9 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="antialiased bg-stone-900 dark">
+<body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
 <x-champions.grid_info :champion="$champion"/>
-
 
 
 </body>

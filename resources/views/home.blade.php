@@ -44,7 +44,7 @@
     @vite('resources/js/app.js')
 </head>
 
-<body class="antialiased bg-stone-800 dark">
+<body class="antialiased bg-stone-800 dark scroll-smooth">
 <x-navbar/>
 <x-home.features/>
 @if ($upcomingSkins != [])
