@@ -112,7 +112,7 @@
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
                         {{$champion->name}} Skins ({{count($champion->skins)}}) </h4>
-                    <div class="overflow-x-scroll mt-2.5">
+                    <div id="skinsElement" class="overflow-x-scroll mt-2.5">
                         <div class="grid grid-flow-col grid-rows-2 w-max gap-4 mb-2.5">
                             @foreach($champion->skins as $key => $skin)
                                 <div class="flex flex-col">
@@ -130,4 +130,13 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
+<script>
+    // !TODO: Move this to its own file.
+    skinsElement.addEventListener('wheel', (ev) => {
+        ev.preventDefault();  // stop scrolling in another direction
+        skinsElement.scrollLeft += (ev.deltaY + ev.deltaX);
+    });
+</script>
+
