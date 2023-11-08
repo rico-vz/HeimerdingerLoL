@@ -42,6 +42,7 @@
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
+    @vite('resources/js/lane-filter.js')
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">

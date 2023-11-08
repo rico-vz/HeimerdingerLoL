@@ -51,9 +51,13 @@ class ChampionController extends Controller
             return $champion->load('skins', 'lanes');
         });
 
-        $splashColor = Cache::remember('championSplashColorCache' . $champion->slug, 60 * 60 * 24, function () use ($champion) {
-            return getAverageColorFromImageUrl($champion->getChampionImageAttribute());
-        });
+        $splashColor = Cache::remember(
+            'championSplashColorCache' . $champion->slug,
+            60 * 60 * 24,
+            function () use ($champion) {
+                return getAverageColorFromImageUrl($champion->getChampionImageAttribute());
+            }
+        );
 
         $champion->splash_color = $splashColor;
 
