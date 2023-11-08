@@ -83,7 +83,7 @@ class Champion extends Model
 
     public function skins(): HasMany
     {
-        return $this->hasMany(ChampionSkin::class);
+        return $this->hasMany(ChampionSkin::class, 'champion_id', 'champion_id');
     }
 
     public function lanes(): HasOne

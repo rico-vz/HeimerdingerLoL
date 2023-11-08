@@ -51,7 +51,7 @@ class ChampionSkin extends Model
 
     public function champion(): BelongsTo
     {
-        return $this->belongsTo(Champion::class);
+        return $this->belongsTo(Champion::class, 'champion_id', 'champion_id');
     }
 
     public function chromas(): HasMany

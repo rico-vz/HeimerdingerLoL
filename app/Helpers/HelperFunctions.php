@@ -2,7 +2,7 @@
 
 use Intervention\Image\ImageManagerStatic as Image;
 
-function getRoleIcon($roleName)
+function getRoleIcon($roleName): string
 {
     $roleIcons = [
         'Toplane' => 'gm-top.png',

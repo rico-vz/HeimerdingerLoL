@@ -109,8 +109,16 @@
                 class="rounded-2xl border border-3 border-white/10 shadow-md
                 shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20 transition-all duration-700"
                 style="--tw-shadow-color:{{$champion->splash_color}}; --tw-shadow: var(--tw-shadow-colored); background-color: {{$champion->splash_color}};">
-                3
+                <div class="p-4">
+                    <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
+                        {{$champion->name}} Skins</h4>
+                    <div class="overflow-x-scroll">
+                        {{dd($champion->skins)}}}
+                        @foreach($champion->skins as $skin)
+                            e
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </section>
