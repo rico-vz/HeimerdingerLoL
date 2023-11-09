@@ -41,9 +41,7 @@
     <link rel="preload" href="https://rsms.me/inter/inter.css" as="style">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
 
-    @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
-    @vite('resources/js/lane-filter.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/lane-filter.js'])
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
