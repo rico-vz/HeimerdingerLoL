@@ -16,13 +16,11 @@
                 class="relative rounded-2xl bg-stone-800/40 border border-neutral-300/5 shadow-sm shadow-stone-800/80 lg:col-span-2 ">
                 <div class="aspect-w-16 aspect-h-9 glow-shadow absolute inset-0 rounded-2xl"
                      style="--splash-color: {{$skin->splash_color}}"></div>
-                <div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-2xl relative">
-                    <img
-                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=880&output=webp&q=85&il"
-                        alt="{{$skin->skin_name}} Splash Art"
-                        class="w-full h-full object-cover transform scale-100 transition-transform duration-700 hover:scale-105 z-10"
-                    >
-                </div>
+                <img
+                    src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=880&output=webp&q=85&il"
+                    alt="{{$skin->skin_name}} Splash Art"
+                    class="w-full h-full object-cover transform scale-100 transition-transform duration-700 z-10 rounded-2xl"
+                >
             </div>
 
             <div
@@ -34,9 +32,9 @@
                     {{$skin->skin_name}} Details</h4>
 
                 <ul class="ml-7 ">
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mt-8"
+                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mt-4"
                         lang="en">
-                        <span class="font-bold">Riot Points Cost:</span>
+                        <span class="font-bold">RP Cost:</span>
                         @if ($skin->rp_price == '99999')
                             Not Available for RP
                         @else
@@ -99,7 +97,7 @@
                             @endforeach
                         @endif
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mb-4"
                         lang="en">
                         <span class="font-bold">Splash Artist:</span>
                         @if(count($skin->splash_artist) < 1)
