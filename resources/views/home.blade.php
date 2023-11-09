@@ -51,7 +51,6 @@
     <x-home.upcoming_skins :upcomingSkins="$upcomingSkins"/>
 @endif
 <x-home.recent_skins :latestSkins="$latestSkins"/>
-
+<x-footer/>
 </body>
-
 </html>

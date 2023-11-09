@@ -1,4 +1,4 @@
-<nav class="bg-white drop-shadow-md border-stone-200 dark:bg-stone-800">
+<nav class="drop-shadow-md border-stone-200 bg-stone-800">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
         <a href="/" class="flex items-center transition-transform hover:scale-105">
             <x-logo class="w-auto mr-2 transition-transform h-9 hover:scale-125" alt="Heimerdinger Logo"/>

@@ -115,19 +115,20 @@
                     <div id="skinsElement" class="overflow-x-scroll mt-2.5">
                         <div class="grid grid-flow-col grid-rows-2 w-max gap-4 mb-2.5">
                             @foreach($champion->skins as $key => $skin)
-                                <div class="flex flex-col ">
+                                <div class="group flex flex-col ">
                                     <a href="/skin/{{$skin->slug}}">
                                         <img
                                             src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=450&output=webp&q=70"
                                             alt="{{$champion->name}} {{$skin->name}} Splash Art"
                                             @if($key < 6) loading="eager" @else loading="lazy" @endif
-                                            class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10
+                                            class=" inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10
                                 hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">
                                     </a>
                                     <div>
 
                                         <p class="align-bottom text-center text-neutral-100 text-sm mt-1.5 items-center">
-                                            <a href="/skin/{{$skin->slug}}" class="hover:text-orange-400">
+                                            <a href="/skin/{{$skin->slug}}"
+                                               class="hover:text-orange-400 group-hover:text-orange-400">
                                                 {{$skin->skin_name}}
                                                 <x-iconsax-bul-arrow-right class="inline-block w-5"/>
                                             </a>
