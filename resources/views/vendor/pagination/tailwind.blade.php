@@ -48,7 +48,7 @@
                 <span class="relative z-0 inline-flex shadow-sm rounded-md">
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
-                        <span aria-disabled="true" aria-label="{{ __('pagination.previous') }}">
+                        <span aria-disabled="true" aria-label="{{ __('pagination.previous') }}" role="button">
                             <span
                                 class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-100 bg-stone-900 border border-stone-700 shadow-sm shadow-orange-600/20 cursor-default rounded-l-md leading-5"
                                 aria-hidden="true">
@@ -75,7 +75,7 @@
                     @foreach ($elements as $element)
                         {{-- "Three Dots" Separator --}}
                         @if (is_string($element))
-                            <span aria-disabled="true">
+                            <span aria-disabled="true" role="button">
                                 <span
                                     class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-neutral-400 bg-stone-900 border border-stone-700 shadow-sm shadow-orange-600/20 cursor-default leading-5">{{ $element }}</span>
                             </span>
@@ -112,7 +112,7 @@
                             </svg>
                         </a>
                     @else
-                        <span aria-disabled="true" aria-label="{{ __('pagination.next') }}">
+                        <span aria-disabled="true" aria-label="{{ __('pagination.next') }}" role="button">
                             <span
                                 class="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-gray-100 bg-stone-900 border border-stone-700 shadow-sm shadow-orange-600/20 cursor-default rounded-r-md leading-5"
                                 aria-hidden="true">

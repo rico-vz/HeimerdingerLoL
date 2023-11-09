@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     @if($skin->associated_skinline != null)
-                        <div class="mb-5 px-4 flex justify-center">
+                        <div class="px-4 flex justify-center">
                             @foreach($skin->associated_skinline as $skinline)
                                 <span class="sr-only">Associated Skinline:</span>
                                 <span
@@ -47,6 +47,9 @@
                             @endforeach
                         </div>
                     @endif
+                    <div class="mb-2 px-4 flex justify-center text-white">
+                        <p>More</p>
+                    </div>
 
                 </div>
             @endforeach
