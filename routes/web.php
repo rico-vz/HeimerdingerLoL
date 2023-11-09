@@ -3,6 +3,7 @@
 use App\Http\Controllers\ChampionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ChampionSkinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
+// Champions
 Route::get('/champions', [ChampionController::class, 'index']);
 Route::get('/champion/{champion}', [ChampionController::class, 'show']);
+// Skins
+Route::get('/skins', [ChampionSkinController::class, 'index']);

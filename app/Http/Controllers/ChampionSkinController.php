@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreChampionSkinRequest;
 use App\Http\Requests\UpdateChampionSkinRequest;
 use App\Models\ChampionSkin;
+use Illuminate\Support\Facades\Cache;
 
 class ChampionSkinController extends Controller
 {
@@ -13,7 +14,11 @@ class ChampionSkinController extends Controller
      */
     public function index()
     {
-        //
+        $skins = Cache::remember('championSkinsListAllCache' . request('page', 1), 60 * 60 * 8, function () {
+            return ChampionSkin::orderBy('id')->paginate(16);
+        });
+
+        return view('skins.index', compact('skins'));
     }
 
     /**

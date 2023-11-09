@@ -49,6 +49,11 @@ class ChampionSkin extends Model
         ];
     }
 
+    public function getRarityAttribute($value)
+    {
+        return $value === null || $value === 'NoRarity' ? 'Common' : $value;
+    }
+
     public function champion(): BelongsTo
     {
         return $this->belongsTo(Champion::class, 'champion_id', 'champion_id');
