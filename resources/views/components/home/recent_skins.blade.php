@@ -10,7 +10,7 @@
                 Recent Skins</h2>
 
             <p class="mt-4 text-stone-300">
-                Check out the 9 most recent skins released in League of Legends. <br>
+                Check out the 6 most recent skins released in League of Legends. <br>
                 <span class="text-sm text-stone-400">Data is updated roughly every 12 hours.</span>
             </p>
         </div>
