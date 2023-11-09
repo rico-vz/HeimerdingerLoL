@@ -15,6 +15,7 @@ class SkinChromaSeeder extends Seeder
     {
         $championDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
         $championData = json_decode(file_get_contents($championDataUrl), true);
+        $changeCount = 0;
 
         foreach ($championData as $champion) {
             foreach ($champion['skins'] as $skin) {
@@ -50,11 +51,16 @@ class SkinChromaSeeder extends Seeder
                     if ($chromaExists && $this->hasAttributesChanged($chromaExists, $chromaAttributes)) {
                         Log::info('Updating chroma: ' . $chromaId);
                         $chromaExists->update($chromaAttributes);
+                        $changeCount++;
                     } elseif (!$chromaExists) {
                         Log::info('Creating chroma: ' . $chromaId);
                         SkinChroma::create($chromaAttributes);
+                        $changeCount++;
                     }
                 }
+            }
+            if ($changeCount > 0) {
+                $this->call('cloudflare:purge');
             }
         }
     }

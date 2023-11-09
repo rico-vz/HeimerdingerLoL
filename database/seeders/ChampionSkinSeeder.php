@@ -15,6 +15,7 @@ class ChampionSkinSeeder extends Seeder
     {
         $championDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
         $championData = json_decode(file_get_contents($championDataUrl), true);
+        $changeCount = 0;
 
         foreach ($championData as $champion) {
             foreach ($champion['skins'] as $skin) {
@@ -52,8 +53,12 @@ class ChampionSkinSeeder extends Seeder
                 ];
 
                 // Mundo is a special case, his skins often include his name in the skin name, so we need to remove it.
-                if (strpos($skinAttributes['skin_name'], 'Mundo Dr. Mundo') !== false) {
-                    $skinAttributes['skin_name'] = str_replace('Mundo Dr. Mundo', 'Mundo', $skinAttributes['skin_name']);
+                if (str_contains($skinAttributes['skin_name'], 'Mundo Dr. Mundo')) {
+                    $skinAttributes['skin_name'] = str_replace(
+                        'Mundo Dr. Mundo',
+                        'Mundo',
+                        $skinAttributes['skin_name']
+                    );
                 }
 
                 // Check if the skin already exists and if any attributes have changed, if so update the skin. If the skin doesn't exist, create it.
@@ -61,10 +66,15 @@ class ChampionSkinSeeder extends Seeder
                 if ($skinExists && $this->hasAttributesChanged($skinExists, $skinAttributes)) {
                     Log::info('Skin ' . $skin['name'] . ' ' . $champion['name'] . ' has changed, updating...');
                     $skinExists->update($skinAttributes);
-                } elseif (! $skinExists) {
+                    $changeCount++;
+                } elseif (!$skinExists) {
                     Log::info('New skin detected! Creating ' . $skin['name'] . ' ' . $champion['name'] . '...');
                     ChampionSkin::create($skinAttributes);
+                    $changeCount++;
                 }
+            }
+            if ($changeCount > 0) {
+                $this->call('cloudflare:purge');
             }
         }
     }

@@ -16,12 +16,13 @@ class ChampionRolesSeeder extends Seeder
     {
         $roleDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
         $roleData = json_decode(file_get_contents($roleDataUrl), true);
+        $changeCount = 0;
 
         foreach ($roleData['data'] as $championId => $roles) {
             $rolesExists = ChampionRoles::where('champion_id', $championId)->first();
             $championExists = Champion::where('champion_id', $championId)->first();
 
-            if (! $championExists) {
+            if (!$championExists) {
                 Log::info('Champion with ID ' . $championId . ' does not exist, skipping...');
                 continue;
             }
@@ -45,10 +46,15 @@ class ChampionRolesSeeder extends Seeder
             if ($rolesExists && $this->hasAttributesChanged($rolesExists, $rolesAttributes)) {
                 Log::info('Roles for ' . $championName . ' have changed, updating...');
                 $rolesExists->update($rolesAttributes);
+                $changeCount++;
             } elseif (!$rolesExists) {
                 Log::info('New roles detected for ' . $championName . '! Creating...');
                 ChampionRoles::create($rolesAttributes);
+                $changeCount++;
             }
+        }
+        if ($changeCount > 0) {
+            $this->call('cloudflare:purge');
         }
     }
 

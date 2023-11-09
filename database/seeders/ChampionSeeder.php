@@ -15,6 +15,7 @@ class ChampionSeeder extends Seeder
     {
         $championDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
         $championData = json_decode(file_get_contents($championDataUrl), true);
+        $changeCount = 0;
 
         foreach ($championData as $champion) {
             $championId = $champion['id'];
@@ -41,10 +42,15 @@ class ChampionSeeder extends Seeder
             if ($championExists && $this->hasAttributesChanged($championExists, $championAttributes)) {
                 Log::info('Champion ' . $champion['name'] . ' has changed, updating...');
                 $championExists->update($championAttributes);
-            } elseif (! $championExists) {
+                $changeCount++;
+            } elseif (!$championExists) {
                 Log::info('New champion detected! Creating ' . $champion['name'] . '...');
                 Champion::create($championAttributes);
+                $changeCount++;
             }
+        }
+        if ($changeCount > 0) {
+            $this->call('cloudflare:purge');
         }
     }
 
