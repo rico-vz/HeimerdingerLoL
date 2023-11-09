@@ -8,6 +8,14 @@ module.exports = {
         "./resources/**/*.vue",
         "./node_modules/flowbite/**/*.js",
     ],
+    safelist: [
+        'text-stone-300',
+        'text-blue-400',
+        'text-red-500',
+        'text-pink-300',
+        'text-purple-500',
+        'text-yellow-400'
+    ],
     theme: {
         extend: {
             fontSize: {

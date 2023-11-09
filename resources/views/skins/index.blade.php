@@ -46,7 +46,7 @@
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
-<x-skins.paginatedlist :skins="$skins"/>
+<x-skins.paginatedlist :skins="$skins" :rarity-color="$rarityColor"/>
 <x-footer/>
 
 </body>

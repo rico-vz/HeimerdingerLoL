@@ -18,7 +18,16 @@ class ChampionSkinController extends Controller
             return ChampionSkin::orderBy('id')->paginate(16);
         });
 
-        return view('skins.index', compact('skins'));
+        $rarityColor = [
+            'Common' => 'text-stone-300',
+            'Epic' => 'text-blue-400',
+            'Legendary' => 'text-red-500',
+            'Rare' => 'text-pink-300',
+            'Mythic' => 'text-purple-500',
+            'Ultimate' => 'text-yellow-400',
+        ];
+
+        return view('skins.index', compact('skins', 'rarityColor'));
     }
 
     /**
