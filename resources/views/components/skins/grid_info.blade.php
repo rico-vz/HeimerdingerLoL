@@ -132,7 +132,7 @@
                         {{$skin->name}} Lore</h4>
                     <p class="text-neutral-100 hyphens-auto text-base mt-2.5 leading-loose" lang="en">
                         @if($skin->lore)
-                            {{$skin->lore}}
+                            {!! $skin->lore !!}
                         @else
                             Heimerdinger has looked far and wide but could not find any lore for {{$skin->skin_name}}.
                             But we're sure it's a great skin! The things we do know is that it was released on
