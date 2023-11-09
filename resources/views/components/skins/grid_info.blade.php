@@ -13,15 +13,20 @@
     <div class="container mx-auto p-4 flex items-center justify-center mt-3">
         <div class="w-screen grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 gap-5">
             <div
-                class="relative rounded-2xl bg-stone-800/40 border border-neutral-300/5 shadow-sm shadow-stone-800/80 lg:col-span-2 ">
+                class="relative rounded-2xl bg-stone-800/40 border border-neutral-300/5 shadow-sm shadow-stone-800/80 lg:col-span-2">
                 <div class="aspect-w-16 aspect-h-9 glow-shadow absolute inset-0 rounded-2xl"
                      style="--splash-color: {{$skin->splash_color}}"></div>
-                <img
-                    src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=880&output=webp&q=85&il"
-                    alt="{{$skin->skin_name}} Splash Art"
-                    class="w-full h-full object-cover transform scale-100 transition-transform duration-700 z-10 rounded-2xl"
-                >
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=840&output=webp&q=70"
+                     alt="{{$skin->skin_name}} Splash Art"
+                     class="w-full h-full object-cover transform scale-100 transition-transform duration-700 z-10 rounded-2xl">
+
+                <div class="absolute bottom-0 left-0 p-4">
+                    <a href="{{ $skin->getSkinImageAttribute() }}" target="_blank"
+                       class="text-white text-base font-bold bg-black bg-opacity-50 p-2 rounded-xl">View in
+                        HD</a>
+                </div>
             </div>
+
 
             <div
                 class="rounded-2xl border border-3 border-white/10
@@ -31,7 +36,7 @@
                 <h4 class="text-center text-lg font-semibold text-neutral-100 uppercase mt-3.5 shadow-sm mx-2">
                     {{$skin->skin_name}} Details</h4>
 
-                <ul class="ml-7 ">
+                <ul class="mx-5">
                     <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mt-4"
                         lang="en">
                         <span class="font-bold">RP Cost:</span>
@@ -126,7 +131,13 @@
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
                         {{$skin->name}} Lore</h4>
                     <p class="text-neutral-100 hyphens-auto text-base mt-2.5 leading-loose" lang="en">
-                        {{$skin->lore}}
+                        @if($skin->lore)
+                            {{$skin->lore}}
+                        @else
+                            Heimerdinger has looked far and wide but could not find any lore for {{$skin->skin_name}}.
+                            But we're sure it's a great skin! The things we do know is that it was released on
+                            {{$skin->release_date}} and costs {{$skin->rp_price}} RP.
+                        @endif
                     </p>
                 </div>
 
@@ -140,6 +151,11 @@
                         {{$skin->name}} Chromas ({{count($skin->chromas)}}) </h4>
                     <div id="skinsElement" class="overflow-x-scroll mt-2.5">
                         <div class="grid grid-flow-col grid-rows-2 w-max gap-4 mb-2.5">
+                            @if(count($skin->chromas) < 1)
+                                <p class="text-neutral-100 hyphens-auto text-base mt-2.5 leading-loose" lang="en">
+                                    Sadly there are no chromas for {{$skin->skin_name}} yet.
+                                </p>
+                            @endif
                             @foreach($skin->chromas as $key => $chroma)
                                 <div class="group flex flex-col ">
                                     <a href="/skin/{{$skin->slug}}">

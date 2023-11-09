@@ -12,7 +12,7 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="/champions">
 
                 <x-iconsax-bul-personalcard class="h-10 text-orange-400"/>
@@ -25,7 +25,7 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="/skins">
                 <x-iconsax-bul-paintbucket class="h-10 text-orange-400"/>
 
@@ -37,7 +37,7 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="#">
                 <x-iconsax-bul-3d-cube-scan class="h-10 text-orange-400"/>
 
@@ -49,7 +49,7 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="#">
                 <x-iconsax-bul-money-change class="h-10 text-orange-400"/>
 
@@ -61,7 +61,7 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="#">
                 <x-iconsax-bul-receipt-edit class="h-10 text-orange-400"/>
 
@@ -73,7 +73,7 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
                href="#">
                 <x-iconsax-bul-message-question class="h-10 text-orange-400"/>
 

@@ -16,9 +16,9 @@
         </div>
         <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
             @foreach ($latestSkins as $skin)
-                @if ($loop->index < 9)
+                @if ($loop->index < 6)
                     <div
-                        class="p-8 transition border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
+                        class="p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center justify-center">
                                 <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
