@@ -42,12 +42,12 @@
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
-    @vite('resources/js/vert-scroll.js')
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
 <x-champions.grid_info :champion="$champion"/>
+@vite('resources/js/vert-scroll.js')
 </body>
 
 </html>
