@@ -47,6 +47,8 @@
 <body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
 <x-champions.grid_info :champion="$champion"/>
+<x-footer/>
+
 @vite('resources/js/vert-scroll.js')
 </body>
 
