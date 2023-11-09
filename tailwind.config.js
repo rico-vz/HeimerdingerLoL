@@ -19,7 +19,7 @@ module.exports = {
     theme: {
         extend: {
             fontSize: {
-                xsm: ".685rem",
+                '2xs': ".685rem",
             },
             fontFamily: {
                 sans: [
