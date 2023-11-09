@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\ChampionRoles;
 use App\Models\Champion;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 
 class ChampionRolesSeeder extends Seeder
@@ -54,7 +55,7 @@ class ChampionRolesSeeder extends Seeder
             }
         }
         if ($changeCount > 0) {
-            $this->call('cloudflare:purge');
+            Artisan::call('cloudflare:purge');
         }
     }
 
