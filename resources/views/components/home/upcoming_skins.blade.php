@@ -21,7 +21,7 @@
                     <div class="flex flex-col">
                         <div class="flex flex-col items-center justify-center">
                             <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
-                                 src="{{ $skin->getSkinImageAttribute() }}"
+                                 src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=720&output=jpg&q=90&il"
                                  alt="{{ $skin->skin_name }} Splash Art">
                             <div class="flex flex-col items-center justify-center">
                                 <h2 class="mt-4 text-xl font-bold text-white">{{ $skin->skin_name }}</h2>

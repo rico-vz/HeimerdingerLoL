@@ -49,6 +49,11 @@ class ChampionSkin extends Model
         ];
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     public function getRarityAttribute($value)
     {
         return $value === null || $value === 'NoRarity' ? 'Common' : $value;

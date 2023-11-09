@@ -34,6 +34,20 @@
                             <span class="text-xs text-stone-300">{{$skin->rarity}}</span>
                         </div>
                     </div>
+                    @if($skin->associated_skinline != null)
+                        <div class="mb-5 px-4 flex justify-center">
+                            @foreach($skin->associated_skinline as $skinline)
+                                <span class="sr-only">Associated Skinline:</span>
+                                <span
+                                    class="my-2 bg-orange-100 text-orange-800 text-xs font-medium
+                                            mr-2 px-2.5 py-0.5 rounded
+                                            border border-orange-300
+                                            ">
+                                            {{$skinline}}</span>
+                            @endforeach
+                        </div>
+                    @endif
+
                 </div>
             @endforeach
         </div>
