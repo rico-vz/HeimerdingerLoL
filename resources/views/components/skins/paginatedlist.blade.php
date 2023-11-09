@@ -5,7 +5,7 @@
     <h2
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
         bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-        Skins</h2>
+        Champion Skins</h2>
     <div class="flex justify-center items-center mx-auto max-w-screen-xl mt-2.5">
     </div>
 
@@ -52,7 +52,7 @@
                     <div
                         class="mb-2 px-4 flex justify-center items-end text-white text-2xl md:text-lg mt-auto">
                         <p class="font-medium text-sm hover:text-orange-400 "><a
-                                href="#">More details
+                                href="/skin/{{$skin->slug}}">More details
                                 <x-iconsax-bul-arrow-circle-right class="inline-block w-6"/>
                             </a>
                         </p>

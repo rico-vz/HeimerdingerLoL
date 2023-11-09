@@ -35,6 +35,11 @@ class SkinChroma extends Model
 
     public function skin(): BelongsTo
     {
-        return $this->belongsTo(Skin::class);
+        return $this->belongsTo(ChampionSkin::class, 'full_skin_id', 'full_skin_id');
+    }
+
+    public function getChromaImageAttribute()
+    {
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/' . $this->skin->champion_id . '/' . $this->chroma_id . '.png';
     }
 }
