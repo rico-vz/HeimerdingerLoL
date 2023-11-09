@@ -132,11 +132,3 @@
         </div>
     </div>
 </section>
-<script>
-    // !TODO: Move this to its own file.
-    skinsElement.addEventListener('wheel', (ev) => {
-        ev.preventDefault();  // stop scrolling in another direction
-        skinsElement.scrollLeft += (ev.deltaY + ev.deltaX);
-    });
-</script>
-

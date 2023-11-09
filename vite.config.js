@@ -4,7 +4,7 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/lane-filter.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/lane-filter.js', 'resources/js/vert-scroll.js'],
             refresh: true,
         }),
     ],
