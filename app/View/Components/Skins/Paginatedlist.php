@@ -8,7 +8,6 @@ use Illuminate\Pagination\LengthAwarePaginator as Paginator;
 
 class Paginatedlist extends Component
 {
-
     public function __construct(public Paginator $skins)
     {
     }
