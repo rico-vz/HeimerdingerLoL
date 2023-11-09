@@ -38,8 +38,8 @@
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print"
+          onload="this.onload=null;this.removeAttribute('media');">
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
