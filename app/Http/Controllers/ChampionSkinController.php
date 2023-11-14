@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreChampionSkinRequest;
 use App\Http\Requests\UpdateChampionSkinRequest;
+use App\Models\Champion;
 use App\Models\ChampionSkin;
 use Illuminate\Support\Facades\Cache;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class ChampionSkinController extends Controller
 {
@@ -14,9 +17,10 @@ class ChampionSkinController extends Controller
      */
     public function index()
     {
-        $skins = Cache::remember('championSkinsListAllCache' . request('page', 1), 60 * 60 * 8, function () {
-            return ChampionSkin::orderBy('id')->paginate(16);
-        });
+        $skins = QueryBuilder::for(ChampionSkin::class)
+            ->allowedFilters(AllowedFilter::partial('name', 'skin_name'), 'rarity')
+            ->paginate(16)
+            ->appends(request()->query());
 
         $rarityColor = [
             'Common' => 'text-stone-300',

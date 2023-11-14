@@ -22,5 +22,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/champions', [ChampionController::class, 'index']);
 Route::get('/champion/{champion}', [ChampionController::class, 'show']);
 // Skins
-Route::get('/skins', [ChampionSkinController::class, 'index']);
+Route::get('/skins', [ChampionSkinController::class, 'index'])->name('skins.index');
 Route::get('/skin/{championSkin}', [ChampionSkinController::class, 'show']);
