@@ -8,6 +8,16 @@
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
         bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         {{$skin->skin_name}}</h1>
+    <p class="text-sm text-center text-orange-400 uppercase font-medium hover:underline decoration-1 decoration-transparent hover:decoration-orange-400 transition-all duration-700">
+        <a
+            href="/champion/{{$skin->champion->name}}">
+            <span class="flex items-center justify-center">
+            View
+            champion
+            info             <x-iconsax-bul-arrow-square-right class="w-5"/>
+
+                </span>
+        </a>
 
 
     <div class="container mx-auto p-4 flex items-center justify-center mt-3">
