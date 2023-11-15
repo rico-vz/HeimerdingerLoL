@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ChampionSkinSeeder::class);
         $this->call(SkinChromaSeeder::class);
         $this->call(ChampionRolesSeeder::class);
+        $this->call(SummonerIconSeeder::class);
 
         Cache::flush();
 
