@@ -33,5 +33,4 @@ class SummonerIcon extends Model
             ],
         ];
     }
-
 }
