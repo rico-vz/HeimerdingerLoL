@@ -14,7 +14,8 @@
             <span class="flex items-center justify-center">
             View
             champion
-            info             <x-iconsax-bul-arrow-square-right class="w-5"/>
+            info
+                <x-iconsax-bul-arrow-square-right class="w-5"/>
 
                 </span>
         </a>

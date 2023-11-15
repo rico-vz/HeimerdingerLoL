@@ -4,6 +4,7 @@ use App\Http\Controllers\ChampionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChampionSkinController;
+use App\Http\Controllers\SummonerIconController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,13 @@ Route::get('/champions', [ChampionController::class, 'index']);
 Route::get('/champion/{champion}', [ChampionController::class, 'show']);
 // Skins
 Route::get('/skins', [ChampionSkinController::class, 'index'])->name('skins.index');
-Route::get('/skin/{championSkin}', [ChampionSkinController::class, 'show']);
+Route::get(
+    '/skin/{championSkin}',
+    [ChampionSkinController::class, 'show']
+);
+
+// Icons
+Route::get('/icons', [
+    SummonerIconController::class,
+    'index'
+])->name('icons.index');
