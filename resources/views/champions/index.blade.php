@@ -48,8 +48,7 @@
 <x-navbar/>
 <x-champions.list_all :champions="$champions" :roles="$roles"/>
 <x-footer/>
-
-
+@include('popper::assets')
 </body>
 
 </html>
