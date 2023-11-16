@@ -35,12 +35,13 @@ Please see [CONTRIBUTING.md](https://github.com/rico-vz/HeimerdingerLoL/blob/mai
 Technologies used in the project:
 
 *   Laravel
+*   Vite
 *   MySQL
 *   TailwindCSS
-*   Font Awesome
 *   Javascript
 *   Riot Games API
 *   DataDragon API
+*   Meraki Analytics
 
 <h2>🛡️ License:</h2>
 
