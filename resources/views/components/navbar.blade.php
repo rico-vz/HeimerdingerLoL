@@ -23,7 +23,7 @@
                 md:flex-row md:space-x-6 md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-800
                 dark:border-stone-700">
                 <li>
-                    <a href="/champions"
+                    <a href="{{route('champions.index')}}"
                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
                        md:border-0 md:p-0 md:dark:hover:text-orange-400
                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
@@ -33,7 +33,7 @@
                         Champions</a>
                 </li>
                 <li>
-                    <a href="/skins"
+                    <a href="{{route('skins.index')}}"
                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
                         md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
                          dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
@@ -43,7 +43,7 @@
                         Skins</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="{{route('assets.index')}}"
                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
                         md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
                         dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent

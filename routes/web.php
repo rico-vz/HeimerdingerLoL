@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -34,3 +35,9 @@ Route::get('/icons', [
     SummonerIconController::class,
     'index'
 ])->name('assets.icons.index');
+
+// Assets
+Route::get('/assets', [
+    AssetsController::class,
+    'index'
+])->name('assets.index');

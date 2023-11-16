@@ -17,5 +17,6 @@ export default defineConfig({
                 assetFileNames: `heimerdinger` + hash + `.[ext]`
             }
         }
-    }
+    },
+    publicDir: 'public',
 });
