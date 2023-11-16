@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 
+export const hash = Math.floor(Math.random() * 90000) + 10000;
 export default defineConfig({
     plugins: [
         laravel({
@@ -8,4 +9,13 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                entryFileNames: `[name]` + hash + `.js`,
+                chunkFileNames: `[name]` + hash + `.js`,
+                assetFileNames: `[name]` + hash + `.[ext]`
+            }
+        }
+    }
 });
