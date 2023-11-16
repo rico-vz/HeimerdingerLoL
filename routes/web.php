@@ -20,17 +20,17 @@ use App\Http\Controllers\SummonerIconController;
 Route::get('/', [HomeController::class, 'index']);
 
 // Champions
-Route::get('/champions', [ChampionController::class, 'index']);
-Route::get('/champion/{champion}', [ChampionController::class, 'show']);
+Route::get('/champions', [ChampionController::class, 'index'])->name('champions.index');
+Route::get('/champion/{champion}', [ChampionController::class, 'show'])->name('champions.show');
 // Skins
 Route::get('/skins', [ChampionSkinController::class, 'index'])->name('skins.index');
 Route::get(
     '/skin/{championSkin}',
     [ChampionSkinController::class, 'show']
-);
+)->name('skins.show');
 
 // Icons
 Route::get('/icons', [
     SummonerIconController::class,
     'index'
-])->name('icons.index');
+])->name('assets.icons.index');

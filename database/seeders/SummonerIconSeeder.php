@@ -19,6 +19,10 @@ class SummonerIconSeeder extends Seeder
         $changeCount = 0;
 
         foreach ($iconData as $icon) {
+            if ($icon['yearReleased'] === 0) {
+                continue;
+            }
+
             $iconId = $icon['id'];
             $iconExists = SummonerIcon::where('icon_id', $iconId)->first();
 

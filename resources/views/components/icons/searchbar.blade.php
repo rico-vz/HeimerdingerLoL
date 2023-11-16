@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center mt-8 ">
-    <form action="{{ route('icons.index') }}" method="GET" class="flex" id="searchForm">
+    <form action="{{ route('assets.icons.index') }}" method="GET" class="flex" id="searchForm">
         <div class="relative">
             <input type="text" name="filter[title]" placeholder="Search by icon title"
                    value="{{ request('filter.title') }}"

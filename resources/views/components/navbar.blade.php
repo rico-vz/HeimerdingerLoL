@@ -24,51 +24,57 @@
                 dark:border-stone-700">
                 <li>
                     <a href="/champions"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                       dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:p-0 md:dark:hover:text-orange-400
+                       dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                       {{ request()->routeIs('champions.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
 
                         <x-iconsax-bul-people class="w-6 h-6 mr-1"/>
                         Champions</a>
                 </li>
                 <li>
                     <a href="/skins"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                         dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
+                         dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                         {{ request()->routeIs('skins.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
 
                         <x-iconsax-bul-brush-2 class="w-6 h-6 mr-1"/>
                         Skins</a>
                 </li>
                 <li>
                     <a href="#"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('assets.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         <x-iconsax-bul-3dcube class="w-6 h-6 mr-1"/>
                         Assets</a>
                 </li>
                 <li>
                     <a href="#"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('sale.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         <x-iconsax-bul-card class="w-6 h-6 mr-1"/>
                         Sale Rotation</a>
                 </li>
                 <li>
                     <a href="#"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                        md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                        md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('posts.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         <x-iconsax-bul-receipt-search class="w-6 h-6 mr-1"/>
                         Posts</a>
                 </li>
                 <li>
                     <a href="#"
-                       class="flex py-2 pl-3 pr-2 rounded text-stone-800 hover:bg-stone-100 md:hover:bg-transparent
-                       md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-400
-                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                       class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
+                       md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
+                        dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('info.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         <x-iconsax-bul-info-circle class="w-6 h-6 mr-1"/>
                         About</a>
                 </li>
