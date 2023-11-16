@@ -5,6 +5,7 @@ Heimerdinger.LoL isn't endorsed by Riot Games and doesn't reflect the views or o
 
 ## Technologies Used
 - Our project is written in PHP (Laravel), Javascript, HTML & CSS.
+- You will need PHP (with all the [Laravel Server Requirements](https://laravel.com/docs/10.x/deployment#server-requirements)) and NodeJS to run this project.
 
 ## Types of Contributions
 We welcome any kind of improvement to the codebase of Heimerdinger.LoL. Whether it's bug fixes, new features, code improvements, or documentation updates, your contributions are valuable.
