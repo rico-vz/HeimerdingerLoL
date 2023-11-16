@@ -12,9 +12,9 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                entryFileNames: `[name]` + `-heimer-` + hash + `.js`,
-                chunkFileNames: `[name]` + `-heimer-` + hash + `.js`,
-                assetFileNames: `[name]` + `-heimer-` + hash + `.[ext]`
+                entryFileNames: `heimerdinger` + hash + `.js`,
+                chunkFileNames: `heimerdinger` + hash + `.js`,
+                assetFileNames: `heimerdinger` + hash + `.[ext]`
             }
         }
     }
