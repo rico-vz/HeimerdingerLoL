@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
+use App\Http\Controllers\SummonerEmoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChampionSkinController;
@@ -35,6 +36,12 @@ Route::get('/icons', [
     SummonerIconController::class,
     'index'
 ])->name('assets.icons.index');
+
+// Emotes
+Route::get('/emotes', [
+    SummonerEmoteController::class,
+    'index'
+])->name('assets.emotes.index');
 
 // Assets
 Route::get('/assets', [
