@@ -12,7 +12,6 @@ class SummonerEmotePolicy
 
     public function viewAny(User $user): bool
     {
-
     }
 
     public function view(User $user, SummonerEmote $summonerEmote): bool
