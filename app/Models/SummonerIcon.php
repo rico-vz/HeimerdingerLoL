@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Sqids\Sqids;
 
 class SummonerIcon extends Model
 {
@@ -29,8 +30,14 @@ class SummonerIcon extends Model
     {
         return [
             'slug' => [
-                'source' => ['title', 'icon_id'],
+                'source' => ['title', 'sqid'],
             ],
         ];
+    }
+
+    public function getSqidAttribute(): string
+    {
+        $sqids = new Sqids(minLength: 5);
+         return $sqids->encode([$this->icon_id]);
     }
 }

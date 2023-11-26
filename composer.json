@@ -21,7 +21,8 @@
         "laravel/tinker": "^2.8",
         "saade/blade-iconsax": "^1.1",
         "spatie/laravel-backup": "^8.3",
-        "spatie/laravel-query-builder": "^5.6"
+        "spatie/laravel-query-builder": "^5.6",
+        "sqids/sqids": "^0.4.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
