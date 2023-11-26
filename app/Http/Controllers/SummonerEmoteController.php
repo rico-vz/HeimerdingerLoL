@@ -21,7 +21,6 @@ class SummonerEmoteController extends Controller
         $request->validate([
             'emote_id' => ['required', 'integer'],
             'title' => ['required'],
-            'description' => ['nullable'],
             'image' => ['required'],
         ]);
 
@@ -42,7 +41,6 @@ class SummonerEmoteController extends Controller
         $request->validate([
             'emote_id' => ['required', 'integer'],
             'title' => ['required'],
-            'description' => ['nullable'],
             'image' => ['required'],
         ]);
 

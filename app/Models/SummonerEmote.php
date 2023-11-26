@@ -9,7 +9,6 @@ class SummonerEmote extends Model
     protected $fillable = [
         'emote_id',
         'title',
-        'description',
         'image',
     ];
 }

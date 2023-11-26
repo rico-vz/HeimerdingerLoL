@@ -11,7 +11,6 @@ return new class extends Migration {
             $table->id();
             $table->integer('emote_id');
             $table->string('title');
-            $table->text('description')->nullable();
             $table->string('image');
             $table->timestamps();
         });
