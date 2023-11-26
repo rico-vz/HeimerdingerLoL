@@ -38,6 +38,6 @@ class SummonerIcon extends Model
     public function getSqidAttribute(): string
     {
         $sqids = new Sqids(minLength: 5);
-         return $sqids->encode([$this->icon_id]);
+        return $sqids->encode([$this->icon_id]);
     }
 }

@@ -8,10 +8,8 @@ use App\Models\Champion;
 use App\Models\ChampionRoles;
 use Illuminate\Support\Facades\Cache;
 
-
 class ChampionController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      */
