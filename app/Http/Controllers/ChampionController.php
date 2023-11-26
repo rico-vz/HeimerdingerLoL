@@ -8,18 +8,22 @@ use App\Models\Champion;
 use App\Models\ChampionRoles;
 use Illuminate\Support\Facades\Cache;
 
+
 class ChampionController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $champions = Cache::remember('championsListAllCache', 60 * 60 * 8, function () {
+        $eightHoursInSeconds = 60 * 60 * 8;
+
+        $champions = Cache::remember('championsListAllCache', $eightHoursInSeconds, function () {
             return Champion::orderBy('name')->get();
         });
 
-        $roles = Cache::remember('championsRolesCache', 60 * 60 * 8, function () {
+        $roles = Cache::remember('championsRolesCache', $eightHoursInSeconds, function () {
             return ChampionRoles::orderBy('champion_name')->get();
         });
 
@@ -47,13 +51,16 @@ class ChampionController extends Controller
      */
     public function show(Champion $champion)
     {
-        $champion = Cache::remember('championShowCache' . $champion->slug, 60 * 60 * 8, function () use ($champion) {
+        $eightHoursInSeconds = 60 * 60 * 8;
+        $dayInSeconds = 60 * 60 * 24;
+
+        $champion = Cache::remember('championShowCache' . $champion->slug, $eightHoursInSeconds, function () use ($champion) {
             return $champion->load('skins', 'lanes');
         });
 
         $splashColor = Cache::remember(
             'championSplashColorCache' . $champion->slug,
-            60 * 60 * 24,
+            $dayInSeconds,
             function () use ($champion) {
                 return getAverageColorFromImageUrl($champion->getChampionImageAttribute());
             }
