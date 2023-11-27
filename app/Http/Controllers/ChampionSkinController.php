@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreChampionSkinRequest;
 use App\Http\Requests\UpdateChampionSkinRequest;
-use App\Models\Champion;
 use App\Models\ChampionSkin;
 use Illuminate\Support\Facades\Cache;
 use Spatie\QueryBuilder\AllowedFilter;

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\SummonerIcon;
 use Illuminate\Http\Request;
-use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class SummonerIconController extends Controller
