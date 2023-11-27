@@ -40,4 +40,9 @@ class SummonerIcon extends Model
         $sqids = new Sqids(minLength: 5);
         return $sqids->encode([$this->icon_id]);
     }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 }

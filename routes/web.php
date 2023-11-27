@@ -36,6 +36,10 @@ Route::get('/icons', [
     SummonerIconController::class,
     'index'
 ])->name('assets.icons.index');
+Route::get('/icon/{summonerIcon}', [
+    SummonerIconController::class,
+    'show'
+])->name('assets.icons.show');
 
 // Emotes
 Route::get('/emotes', [

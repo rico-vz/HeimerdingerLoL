@@ -39,7 +39,9 @@ class SummonerIconController extends Controller
 
     public function show(SummonerIcon $summonerIcon)
     {
-        return $summonerIcon;
+        $icon = $summonerIcon;
+
+        return view('icons.show', compact('icon'));
     }
 
     public function update(Request $request, SummonerIcon $summonerIcon)
