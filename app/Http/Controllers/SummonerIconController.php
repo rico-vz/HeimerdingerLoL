@@ -13,7 +13,7 @@ class SummonerIconController extends Controller
     {
         $icons = QueryBuilder::for(SummonerIcon::class)
             ->allowedFilters('title')
-            ->defaultSort('icon_id')
+            ->defaultSort('-icon_id')
             ->paginate(72)
             ->appends(request()->query());
 
