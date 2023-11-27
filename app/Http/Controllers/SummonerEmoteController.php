@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\SummonerEmote;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class SummonerEmoteController extends Controller
 {
     public function index()
     {
-        $this->authorize('viewAny', SummonerEmote::class);
+        $emotes = QueryBuilder::for(SummonerEmote::class)
+            ->allowedFilters('title')
+            ->defaultSort('-emote_id')
+            ->paginate(72)
+            ->appends(request()->query());
 
-        return SummonerEmote::all();
+        return view('emotes.index', compact('emotes'));
     }
 
     public function store(Request $request)
@@ -29,8 +34,6 @@ class SummonerEmoteController extends Controller
 
     public function show(SummonerEmote $summonerEmote)
     {
-        $this->authorize('view', $summonerEmote);
-
         return $summonerEmote;
     }
 
