@@ -38,7 +38,7 @@
             </a>
 
             <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="#">
+               href="/assets">
                 <x-iconsax-bul-3d-cube-scan class="h-10 text-orange-400"/>
 
                 <h2 class="mt-4 text-xl font-bold text-white">Game Assets</h2>
