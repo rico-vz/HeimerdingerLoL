@@ -58,7 +58,7 @@
 
 <div class="container mx-auto p-4 flex items-center justify-center mt-3 flex-grow">
     <div class="text-center items-center justify-center align-middle">
-        <img class="items-center mx-auto" src="{{asset('img/heimerdinger-emote.webp')}}">
+        <img class="items-center mx-auto" src="{{asset('img/heimerdinger-emote.webp')}}" alt="Heimerdinger Emote">
         <p class="text-gray-100">Tired of endless browsing to find that one icon or emote you love?</p>
         <p class="text-gray-100 ">We got you covered! Search through <span
                 class="underline decoration-orange-500/50 font-medium">all</span>

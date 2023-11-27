@@ -44,7 +44,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased bg-stone-900 dark scroll-smooth">
+<body class="antialiased bg-stone-900 dark scroll-smooth min-h-screen">
 <x-navbar/>
 <x-icons.view_grid :icon="$icon"/>
 <x-footer/>
