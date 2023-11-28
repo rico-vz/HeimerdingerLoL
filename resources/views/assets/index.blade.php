@@ -18,13 +18,13 @@
 
     <title>Heimerdinger.LoL • Assets</title>
     <meta name="description"
-          content="Explore all champion skins on Heimerdinger.LoL. Find detailed information on popular skins such as Dark Cosmic Jhin, HEARTSTEEL Ezreal, PROJECT: Vayne and more!">
+          content="Explore game assets on Heimerdinger.LoL. Find detailed information on all icons and emotes available in League of Legends!">
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
-    <meta property="og:title" content="Heimerdinger.LoL • Skins">
+    <meta property="og:title" content="Heimerdinger.LoL • Assets">
     <meta property="og:description"
-          content="Explore all champion skins on Heimerdinger.LoL. Find detailed information on popular skins such as Dark Cosmic Jhin, HEARTSTEEL Ezreal, PROJECT: Vayne and more!">
+          content="Explore game assets on Heimerdinger.LoL. Find detailed information on all icons and emotes available in League of Legends!">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{asset('img/og_image.png')}}">
@@ -32,9 +32,9 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
-    <meta property="twitter:title" content="Heimerdinger.LoL • Skins">
+    <meta property="twitter:title" content="Heimerdinger.LoL • Assets">
     <meta property="twitter:description"
-          content="Explore all champion skins on Heimerdinger.LoL. Find detailed information on popular skins such as Dark Cosmic Jhin, HEARTSTEEL Ezreal, PROJECT: Vayne and more!">
+          content="Explore game assets on Heimerdinger.LoL. Find detailed information on all icons and emotes available in League of Legends!">
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
 
     <link rel="preconnect" href="https://rsms.me/">
@@ -69,7 +69,8 @@
         <div class="flex justify-center space-x-4">
             <a href="{{route('assets.icons.index')}}"
                class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600">Icons</a>
-            <a href="{{route('assets.emotes.index')}}" class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600">Emotes</a>
+            <a href="{{route('assets.emotes.index')}}"
+               class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600">Emotes</a>
         </div>
     </div>
 </div>

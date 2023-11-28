@@ -22,7 +22,7 @@
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
-    <meta property="og:title" content="Heimerdinger.LoL • Icons">
+    <meta property="og:title" content="Heimerdinger.LoL • Emotes">
     <meta property="og:description"
           content="Explore all LoL Emotes on Heimerdinger.LoL. Find detailed information on popular emotes such as Dab Pengu, Bee Mad, Little Camper and more!">
     <meta property="og:locale" content="en">
@@ -32,7 +32,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
-    <meta property="twitter:title" content="Heimerdinger.LoL • Icons">
+    <meta property="twitter:title" content="Heimerdinger.LoL • Emotes">
     <meta property="twitter:description"
           content="Explore all LoL Emotes on Heimerdinger.LoL. Find detailed information on popular emotes such as Dab Pengu, Bee Mad, Little Camper and more!">
     <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
