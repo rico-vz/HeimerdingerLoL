@@ -18,6 +18,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'login_route' => env('LOGIN_ROUTE_NAME', 'login'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

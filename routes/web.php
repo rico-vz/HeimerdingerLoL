@@ -52,3 +52,8 @@ Route::get('/assets', [
     AssetsController::class,
     'index'
 ])->name('assets.index');
+
+
+Route::get(config('app.login_route'), function () {
+    return redirect('/pulse');
+})->name('login')->middleware('auth.basic');
