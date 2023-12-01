@@ -9,14 +9,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    build: {
-        rollupOptions: {
-            output: {
-                entryFileNames: `heimerdinger` + hash + `.js`,
-                chunkFileNames: `heimerdinger` + hash + `.js`,
-                assetFileNames: `heimerdinger` + hash + `.[ext]`
-            }
-        }
-    },
     publicDir: 'public',
 });
