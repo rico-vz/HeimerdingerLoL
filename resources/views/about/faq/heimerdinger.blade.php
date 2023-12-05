@@ -49,12 +49,12 @@
 
 <div class="max-w-screen-xl mx-auto px-5 min-h-sceen">
     <div class="flex flex-col items-center">
-        <h2 class="text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text mt-12">
+        <h1 class="text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text mt-12">
             FAQ • Heimerdinger
-        </h2>
-        <p class="text-lg text-gray-300">
+        </h1>
+        <h2 class="text-lg text-gray-300">
             Frequently Asked Questions about the popular League of Legends champion Heimerdinger.
-        </p>
+        </h2>
     </div>
     <div class="grid divide-y divide-neutral-700 max-w-xl mx-auto mt-8">
        <x-about.faq.dropdown
