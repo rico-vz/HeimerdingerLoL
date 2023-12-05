@@ -10,8 +10,7 @@ class Dropdown extends Component
     public function __construct(
         public string $question,
         public string $answer
-    )
-    {
+    ) {
     }
 
     public function render(): View
