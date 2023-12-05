@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
 use Illuminate\Support\Facades\Route;
@@ -54,9 +55,23 @@ Route::get('/assets', [
     'index'
 ])->name('assets.index');
 
+// Sales
+Route::get('/sale-rotation', [SaleController::class, 'index'])->name('sales.index');
 
+// About
+
+// About.FAQController
+Route::get('/about/faq/league-of-legends', [
+    FAQController::class,
+    'leagueoflegends'
+])->name('about.faq.leagueoflegends');
+
+Route::get('/about/faq/heimerdinger', [
+    FAQController::class,
+    'heimerdinger'
+])->name('about.faq.heimerdinger');
+
+// Pulse
 Route::get(config('app.login_route'), function () {
     return redirect('/pulse');
 })->name('login')->middleware('auth.basic');
-
-Route::get('/sale-rotation', [SaleController::class, 'index'])->name('sales.index');
