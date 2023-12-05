@@ -70,6 +70,10 @@
             answer="Heimerdinger in Arcane is voiced by the legendary Mick Wingert."/>
 
         <x-about.faq.dropdown
+            question="What is Heimerdinger his backstory?"
+            answer="Heimerdinger is a Yordle, a being from the Spirit Realm. He left Piltover and settled in Zaun, where he saw firsthand the hard, difficult, and often miserable ways of living for the people there. He encountered Ekko, who helped him find a new place and a new way to help people. Heimerdinger is a scientist, inventor, and mechanic, and he is the founder of Piltover and the head of the Council of Clans."/>
+
+        <x-about.faq.dropdown
             question="Who is Heimerdinger named after?"
             answer="Heimersdingers name is a combination of the names of J. Robert Oppenheimer, a physicist known for the atomic bomb, and Erwin Schrödinger, one of the original people behind quantum physics."/>
 
