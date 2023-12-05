@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
+use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -57,3 +58,5 @@ Route::get('/assets', [
 Route::get(config('app.login_route'), function () {
     return redirect('/pulse');
 })->name('login')->middleware('auth.basic');
+
+Route::get('/sale-rotation', [SaleController::class, 'index'])->name('sales.index');
