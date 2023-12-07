@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
 use App\Http\Controllers\FAQController;
@@ -59,6 +60,10 @@ Route::get('/assets', [
 Route::get('/sale-rotation', [SaleController::class, 'index'])->name('sales.index');
 
 // About
+Route::get('/about', [
+    AboutController::class,
+    'index'
+])->name('about.index');
 
 // About.FAQController
 Route::get('/about/faq/league-of-legends', [
