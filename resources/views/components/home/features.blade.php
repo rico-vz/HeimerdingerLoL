@@ -1,14 +1,14 @@
 <section class="text-white bg-stone-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:py-16 lg:px-8">
         <div class="max-w-lg mx-auto text-center">
-            <h2
+            <h1
                 class="text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-                Welcome to Heimerdinger.LoL</h2>
+                Welcome to Heimerdinger.LoL</h1>
 
-            <p class="mt-4 text-stone-300">
+            <h2 class="mt-4 text-stone-300">
                 Heimerdinger.LoL is a website dedicated to providing information about League of
                 Legends. We provide information about the champions, skins, game assets, and more.
-            </p>
+            </h2>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">

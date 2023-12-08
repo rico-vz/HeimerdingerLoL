@@ -2,10 +2,10 @@
 /** @var App\Models\ChampionSkin $skin */ ?>
 
 <section class="max-w-screen-xl mx-auto mt-12">
-    <h2
+    <h1
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
         bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-        Champion Skins</h2>
+        Champion Skins</h1>
     <x-skins.searchbar/>
 
     <div class="flex justify-center items-center mx-auto max-w-screen-xl mt-2.5">

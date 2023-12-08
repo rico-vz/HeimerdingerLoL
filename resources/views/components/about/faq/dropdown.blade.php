@@ -8,7 +8,7 @@
               </span>
         </summary>
         <p class="text-gray-100 mt-3">
-            {{$answer}}
+            {!! $answer !!}
         </p>
     </details>
 </div>
