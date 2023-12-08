@@ -16,8 +16,7 @@
     <meta name="theme-color" content="#ff7c47">
 
     <title>@yield('title')</title>
-    <meta name="description"
-          content="@yield('description')">
+    <meta name="description" content="@yield('description')">
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
@@ -39,11 +38,14 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('top_scripts')
 </head>
 
-<body class="antialiased bg-stone-800 dark scroll-smooth">
+<body class="antialiased bg-stone-900 dark scroll-smooth">
 <x-navbar/>
 @yield('content')
 <x-footer/>
+@stack('bottom_scripts')
 </body>
 </html>
