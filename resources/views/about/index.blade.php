@@ -87,7 +87,7 @@
             multiple regional leagues; they all come together in an annual League of Legends World Championship. The
             2023 World Championship had over 6 million concurrent unique viewers. Which happened during the finals of
             WBG vs T1. Domestic and international events have been broadcast on livestreaming websites such as
-            Twitch, YouTube, Trello and Bilibili.
+            Twitch, YouTube, Trovo and Bilibili.
             <br><br>
             Aside from its main game mode, League of Legends also offers other game modes like ARAM ("All Random, All
             Mid") and Teamfight Tactics. ARAM is a 5v5 mode on a single-lane map, with champions randomly
