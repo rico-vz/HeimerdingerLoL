@@ -2,10 +2,10 @@
 /** @var App\Models\SummonerEmote $emote */ ?>
 
 <section class="max-w-screen-xl mx-auto mt-12">
-    <h2
+    <h1
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
         bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-        Summoner Emotes</h2>
+        Summoner Emotes</h1>
 
     <x-emotes.searchbar/>
 

@@ -4,10 +4,10 @@
 /** @var App\Models\ChampionRoles $roles */
 ?>
 <section class="max-w-screen-xl mx-auto mt-12">
-    <h2
+    <h1
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
         bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-        Champions</h2>
+        Champions</h1>
     <div class="flex justify-center items-center mx-auto max-w-screen-xl mt-2.5">
         <x-champions.lane-selector class="text-center"/>
     </div>
