@@ -1,4 +1,4 @@
-<footer class="p-4 mt-7 md:p-8 lg:p-10 bg-stone-800">
+<footer class="p-4 mt-7 md:p-8 lg:p-10 bg-stone-800 shadow-footer">
     <div class="mx-auto max-w-screen-xl text-center">
         <a href="/" class="flex justify-center items-center text-2xl font-semibold text-gray-100">
             <x-logo class="w-auto mr-2 h-9" alt="Heimerdinger.lol Logo"/>
