@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('db:seed')->twiceDaily(1, 13)->timezone('Europe/Amsterdam');
+        $schedule->command('db:seed --force')->twiceDaily(1, 13)->timezone('Europe/Amsterdam');
     }
 
     /**
