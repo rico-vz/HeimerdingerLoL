@@ -15,7 +15,7 @@
         "cviebrock/eloquent-sluggable": "^10.0",
         "dolejska-daniel/riot-api": "^5",
         "guzzlehttp/guzzle": "^7.2",
-        "intervention/image": "^2.7",
+        "intervention/image": "^3.0",
         "laravel/framework": "^10.10",
         "laravel/pulse": "^1.0@beta",
         "laravel/sanctum": "^3.2",
