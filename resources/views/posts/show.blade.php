@@ -11,7 +11,7 @@
         posts</a>
     <article class="max-w-screen-md mx-auto mt-2 prose prose-stone prose-invert" itemscope
              itemtype="https://schema.org/BlogPosting"
-             itemid="https://www.dataliberate.com/2019/05/14/library-metadata-evolution-final-mile/">
+             itemid="{{url()->current()}}">
         <meta itemprop="wordCount" content="{{str_word_count($post->contents)}}">
         <h3 class="not-prose text-sm text-center text-orange-100 font-semibold" itemprop="datePublished">
             {{ Carbon::parse($post->date)->format('F d, Y') }}
