@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/typography": "^0.5.10",
         "autoprefixer": "^10.4.16",
         "axios": "^1.1.2",
         "laravel-vite-plugin": "^0.8.0",

@@ -39,5 +39,6 @@ module.exports = {
             textColor: ['group-hover'],
         }
     },
-    plugins: [require("flowbite/plugin"), require("@tailwindcss/aspect-ratio"), require('tailwind-capitalize-first-letter'),],
+    plugins: [require("flowbite/plugin"), require("@tailwindcss/aspect-ratio"), require('tailwind-capitalize-first-letter'),
+        require('@tailwindcss/typography')],
 };

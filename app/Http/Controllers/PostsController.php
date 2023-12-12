@@ -20,7 +20,6 @@ class PostsController extends Controller
 
     public function show(Sheet $post)
     {
-        dd($post);
         return view('posts.show', compact('post'));
     }
 }
