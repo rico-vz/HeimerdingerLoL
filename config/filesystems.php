@@ -56,6 +56,11 @@ return [
             'throw' => false,
         ],
 
+        'posts' => [
+            'driver' => 'local',
+            'root' => base_path('content/posts'),
+        ]
+
     ],
 
     /*

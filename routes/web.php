@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
 use Illuminate\Support\Facades\Route;
@@ -75,6 +76,17 @@ Route::get('/about/faq/heimerdinger', [
     FAQController::class,
     'heimerdinger'
 ])->name('about.faq.heimerdinger');
+
+// Posts
+Route::get('/posts', [
+    PostsController::class,
+    'index'
+])->name('posts.index');
+
+Route::get('/post/{post}', [
+    PostsController::class,
+    'show'
+])->name('posts.show');
 
 // Pulse
 Route::get(config('app.login_route'), function () {
