@@ -12,6 +12,7 @@
         "andcarpi/laravel-popper": "^0.9.4",
         "anhskohbo/no-captcha": "^3.5",
         "blade-ui-kit/blade-icons": "^1.5",
+        "creativecrafts/laravel-paginate-collection": "^0.2.4",
         "cviebrock/eloquent-sluggable": "^10.0",
         "dolejska-daniel/riot-api": "^5",
         "guzzlehttp/guzzle": "^7.2",
