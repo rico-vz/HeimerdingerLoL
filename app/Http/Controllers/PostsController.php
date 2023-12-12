@@ -10,7 +10,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Sheets::all();
-        
+
         return view('posts.index', compact('posts'));
     }
 
