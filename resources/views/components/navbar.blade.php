@@ -61,7 +61,7 @@
                         Sale Rotation</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="{{route('posts.index')}}"
                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent
                         md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400
                         dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent

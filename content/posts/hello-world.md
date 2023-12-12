@@ -1,9 +1,10 @@
 ---
-title: Hello, world!
-description: Welcome to Sheets!
-date: 2020-07-01
+title: Hello, I am a cat!
+description: Thumbnail is a cat.
+thumbnail: 'https://placekitten.com/1920/1080'
+date: 2022-10-01 # YYYY-MM-DD HH:MM:SS
 ---
 
 # Hello, world!
 
-Welcome to Sheets!
+meow?
