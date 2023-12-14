@@ -4,6 +4,14 @@
 @section('title', $post->title . ' • Heimerdinger.LoL')
 @section('description', 'Heimerdinger.LoL: ' . $post->description)
 
+@push('meta_tags')
+    <link rel="canonical" href="{{config('app.HEIMER_URL') . '/post/' . $post->slug}}">
+
+    <meta name="author" content="Heimerdinger.LoL">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+@endpush
+
 @section('content')
     <a href="{{route('posts.index')}}"
        class="block mt-8 text-center text-orange-400 text-sm uppercase font-medium hover:underline">Back

@@ -18,9 +18,12 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
+    @stack('meta_tags')
+
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
     <meta property="og:title" content="@yield('title')">
+    <meta property="og:url" content="{{url()->current()}}">
     <meta property="og:description" content="@yield('description')">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
