@@ -1,7 +1,6 @@
-<div class="py-5" itemscope itemtype="https://schema.org/QAPage">
+<div class="py-5" itemscope itemtype="https://schema.org/Question">
     <details class="group">
-        <summary class="flex justify-between items-center font-medium cursor-pointer list-none" itemprop="mainEntity"
-                 itemscope itemtype="https://schema.org/Question">
+        <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
             <span class="text-orange-400" itemprop="name">{{$question}}</span>
             <span class="transition text-orange-400 group-open:rotate-180">
                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
@@ -10,7 +9,7 @@
                 </svg>
               </span>
         </summary>
-        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="acceptedAnswer suggestedAnswer" itemscope itemtype="https://schema.org/Answer">
             <p class="text-gray-100 mt-3" itemprop="text">
                 {!! $answer !!}
             </p>
