@@ -187,4 +187,17 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /*
+    | Configurations mostly used for SEO and attribution.
+    | These are used in the <head> of the page.
+    | Do not change these to your own URL, as they are used for attribution.
+    | If you want to change the URL, change the APP_URL in your .env file.
+    */
+
+    'IS_STAGING' => env('APP_STAGING') == 'true',
+
+    'HEIMER_URL' => env('APP_ENV') == 'local' ? 'http://127.0.0.1:8000'
+        : (env('IS_STAGING')
+            ? 'https://staging.heimerdinger.lol'
+            : 'https://heimerdinger.lol'),
 ];
