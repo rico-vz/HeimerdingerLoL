@@ -42,11 +42,6 @@ Technologies used in the project:
 *   Riot Games API
 *   DataDragon API
 *   Meraki Analytics
-
-<h2>🛡️ License:</h2>
-
-This project is licensed under the AGPL-3.0 license.
-
   
   
 <h2>⚠️ Disclaimer:</h2>
