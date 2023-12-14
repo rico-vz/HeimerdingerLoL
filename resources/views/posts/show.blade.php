@@ -26,6 +26,7 @@
         </h3>
         <img src="{{$post->thumbnail}}" alt="{{$post->title}} Thumbnail"
              class="not-prose aspect-video h-80 mt-2 mb-2 mx-auto rounded-3xl border-orange-500/40 border-2"/>
+        <meta itemprop="thumbnailUrl" content="{{$post->thumbnail}}"/>
         <div>
             <h1
                 class="not-prose text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
