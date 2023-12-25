@@ -1820,16 +1820,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "3de73efee5b1f96355f4d3ff4103411527a7cfb6"
+                "reference": "dcedead709149720ceb1977f2e061167d79ae171"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/3de73efee5b1f96355f4d3ff4103411527a7cfb6",
-                "reference": "3de73efee5b1f96355f4d3ff4103411527a7cfb6",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/dcedead709149720ceb1977f2e061167d79ae171",
+                "reference": "dcedead709149720ceb1977f2e061167d79ae171",
                 "shasum": ""
             },
             "require": {
@@ -1871,7 +1871,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.1.0"
+                "source": "https://github.com/Intervention/image/tree/3.2.0"
             },
             "funding": [
                 {
@@ -1883,7 +1883,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-16T14:21:10+00:00"
+            "time": "2023-12-23T16:36:10+00:00"
         },
         {
             "name": "laravel/framework",
