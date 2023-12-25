@@ -1,6 +1,7 @@
 <?php
 
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 function getRoleIcon($roleName): string
 {
@@ -17,7 +18,9 @@ function getRoleIcon($roleName): string
 
 function getAverageColorFromImageUrl($imageUrl): string
 {
-    $img = Image::make($imageUrl);
+    $imgManager = new ImageManager(new Driver());
+
+    $img = $imgManager->read(file_get_contents($imageUrl));
 
     $img->resize(24, 24);
 
@@ -31,9 +34,9 @@ function getAverageColorFromImageUrl($imageUrl): string
     for ($x = 0; $x < $width; $x++) {
         for ($y = 0; $y < $height; $y++) {
             $color = $img->pickColor($x, $y);
-            $totalR += $color[0];
-            $totalG += $color[1];
-            $totalB += $color[2];
+            $totalR += $color->red()->toInt();
+            $totalG += $color->green()->toInt();
+            $totalB += $color->blue()->toInt();
         }
     }
 
