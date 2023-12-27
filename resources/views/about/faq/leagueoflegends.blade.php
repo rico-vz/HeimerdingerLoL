@@ -52,7 +52,7 @@
 
             <x-about.faq.dropdown
                 question="When League of Legends season 13 end?"
-                answer="Season 13 Split 2 ends on January 3rd 2024 at 12PM of the server's time zone. Season 14 will start January 9th 2024."/>
+                answer="Season 13 ends on January 9, 2024 at 12AM of the server's time zone. Season 14 will start January 9th 2024 when patch 14.1 is live."/>
 
             <x-about.faq.dropdown
                 question="Is League of Legends Arena mode permanent?"
