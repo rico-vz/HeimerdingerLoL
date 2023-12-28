@@ -18,7 +18,7 @@
             @foreach($champions as $key => $champion)
                 <div
                     class="champ-card flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
-                    border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 @foreach($roles[$key]->roles as $lane)POS-{{$lane}}@endforeach">
+                    border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 @foreach($roles[$key]->roles as $lane) POS-{{$lane}}@endforeach">
                     <div
                         class="mx-4 mt-4 overflow-hidden h-52 rounded-2xl bg-clip-border border-2 border-orange-400/40">
                         <img @if($key < 8) loading="eager" @else loading="lazy" @endif
