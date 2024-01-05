@@ -17,15 +17,11 @@ class ChampionController extends Controller
     {
         $eightHoursInSeconds = 60 * 60 * 8;
 
-        $champions = Cache::remember('championsListAllCache', $eightHoursInSeconds, function () {
-            return Champion::orderBy('name')->get();
-        });
+        $champions = Cache::remember('championsListAllCache', $eightHoursInSeconds, static fn() => Champion::orderBy('name')->get());
 
-        $roles = Cache::remember('championsRolesCache', $eightHoursInSeconds, function () {
-            return ChampionRoles::orderBy('champion_name')->get();
-        });
+        $roles = Cache::remember('championsRolesCache', $eightHoursInSeconds, static fn() => ChampionRoles::orderBy('champion_name')->get());
 
-        return view('champions.index', compact('champions', 'roles'));
+        return view('champions.index', ['champions' => $champions, 'roles' => $roles]);
     }
 
     /**
@@ -52,21 +48,17 @@ class ChampionController extends Controller
         $eightHoursInSeconds = 60 * 60 * 8;
         $dayInSeconds = 60 * 60 * 24;
 
-        $champion = Cache::remember('championShowCache' . $champion->slug, $eightHoursInSeconds, function () use ($champion) {
-            return $champion->load('skins', 'lanes');
-        });
+        $champion = Cache::remember('championShowCache' . $champion->slug, $eightHoursInSeconds, static fn() => $champion->load('skins', 'lanes'));
 
         $splashColor = Cache::remember(
             'championSplashColorCache' . $champion->slug,
             $dayInSeconds,
-            function () use ($champion) {
-                return getAverageColorFromImageUrl($champion->getChampionImageAttribute());
-            }
+            static fn() => getAverageColorFromImageUrl($champion->getChampionImageAttribute())
         );
 
         $champion->splash_color = $splashColor;
 
-        return view('champions.show', compact('champion'));
+        return view('champions.show', ['champion' => $champion]);
     }
 
     /**

@@ -20,6 +20,6 @@ class PostsController extends Controller
 
     public function show(Sheet $post)
     {
-        return view('posts.show', compact('post'));
+        return view('posts.show', ['post' => $post]);
     }
 }

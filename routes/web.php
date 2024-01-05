@@ -3,14 +3,17 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
+use App\Http\Controllers\ChampionSkinController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ChampionSkinController;
 use App\Http\Controllers\SummonerIconController;
+use App\Models\Champion;
+use App\Models\SummonerIcon;
+use Illuminate\Support\Facades\Route;
+use Spatie\Sheets\Sheet;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,72 +26,43 @@ use App\Http\Controllers\SummonerIconController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', static fn () => (new HomeController())->index());
 
 // Champions
-Route::get('/champions', [ChampionController::class, 'index'])->name('champions.index');
-Route::get('/champion/{champion}', [ChampionController::class, 'show'])->name('champions.show');
+Route::get('/champions', static fn () => (new ChampionController())->index())->name('champions.index');
+Route::get('/champion/{champion}', static fn (Champion $champion) => (new ChampionController())->show($champion))->name('champions.show');
 // Skins
-Route::get('/skins', [ChampionSkinController::class, 'index'])->name('skins.index');
+Route::get('/skins', static fn () => (new ChampionSkinController())->index())->name('skins.index');
 Route::get(
     '/skin/{championSkin}',
-    [ChampionSkinController::class, 'show']
+    static fn (\App\Models\ChampionSkin $championSkin) => (new ChampionSkinController())->show($championSkin)
 )->name('skins.show');
 
 // Icons
-Route::get('/icons', [
-    SummonerIconController::class,
-    'index'
-])->name('assets.icons.index');
-Route::get('/icon/{summonerIcon}', [
-    SummonerIconController::class,
-    'show'
-])->name('assets.icons.show');
+Route::get('/icons', static fn () => (new SummonerIconController())->index())->name('assets.icons.index');
+Route::get('/icon/{summonerIcon}', static fn (SummonerIcon $summonerIcon) => (new SummonerIconController())->show($summonerIcon))->name('assets.icons.show');
 
 // Emotes
-Route::get('/emotes', [
-    SummonerEmoteController::class,
-    'index'
-])->name('assets.emotes.index');
+Route::get('/emotes', static fn () => (new SummonerEmoteController())->index())->name('assets.emotes.index');
 
 // Assets
-Route::get('/assets', [
-    AssetsController::class,
-    'index'
-])->name('assets.index');
+Route::get('/assets', static fn () => (new AssetsController())->index())->name('assets.index');
 
 // Sales
-Route::get('/sale-rotation', [SaleController::class, 'index'])->name('sales.index');
+Route::get('/sale-rotation', static fn () => (new SaleController())->index())->name('sales.index');
 
 // About
-Route::get('/about', [
-    AboutController::class,
-    'index'
-])->name('about.index');
+Route::get('/about', static fn () => (new AboutController())->index())->name('about.index');
 
 // About.FAQController
-Route::get('/about/faq/league-of-legends', [
-    FAQController::class,
-    'leagueoflegends'
-])->name('about.faq.leagueoflegends');
+Route::get('/about/faq/league-of-legends', static fn () => (new FAQController())->leagueoflegends())->name('about.faq.leagueoflegends');
 
-Route::get('/about/faq/heimerdinger', [
-    FAQController::class,
-    'heimerdinger'
-])->name('about.faq.heimerdinger');
+Route::get('/about/faq/heimerdinger', static fn () => (new FAQController())->heimerdinger())->name('about.faq.heimerdinger');
 
 // Posts
-Route::get('/posts', [
-    PostsController::class,
-    'index'
-])->name('posts.index');
+Route::get('/posts', static fn () => (new PostsController())->index())->name('posts.index');
 
-Route::get('/post/{post}', [
-    PostsController::class,
-    'show'
-])->name('posts.show');
+Route::get('/post/{post}', static fn (Sheet $post) => (new PostsController())->show($post))->name('posts.show');
 
 // Pulse
-Route::get(config('app.login_route'), function () {
-    return redirect('/pulse');
-})->name('login')->middleware('auth.basic');
+Route::get(config('app.login_route'), static fn () => redirect('/pulse'))->name('login')->middleware('auth.basic');

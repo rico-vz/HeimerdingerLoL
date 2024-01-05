@@ -16,7 +16,7 @@ class SummonerEmoteController extends Controller
             ->paginate(72)
             ->appends(request()->query());
 
-        return view('emotes.index', compact('emotes'));
+        return view('emotes.index', ['emotes' => $emotes]);
     }
 
     public function store(Request $request)

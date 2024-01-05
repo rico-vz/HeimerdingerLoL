@@ -16,7 +16,7 @@ class SummonerIconController extends Controller
             ->paginate(72)
             ->appends(request()->query());
 
-        return view('icons.index', compact('icons'));
+        return view('icons.index', ['icons' => $icons]);
     }
 
     public function store(Request $request)
@@ -40,7 +40,7 @@ class SummonerIconController extends Controller
     {
         $icon = $summonerIcon;
 
-        return view('icons.show', compact('icon'));
+        return view('icons.show', ['icon' => $icon]);
     }
 
     public function update(Request $request, SummonerIcon $summonerIcon)

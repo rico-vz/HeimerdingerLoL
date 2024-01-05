@@ -30,7 +30,7 @@ class ChampionSkinController extends Controller
             'Ultimate' => 'text-yellow-400',
         ];
 
-        return view('skins.index', compact('skins', 'rarityColor'));
+        return view('skins.index', ['skins' => $skins, 'rarityColor' => $rarityColor]);
     }
 
     /**
@@ -57,22 +57,18 @@ class ChampionSkinController extends Controller
         $skin = Cache::remember(
             'championSkinShowCache' . $championSkin->slug,
             60 * 60 * 8,
-            function () use ($championSkin) {
-                return $championSkin->load('champion', 'chromas');
-            }
+            static fn() => $championSkin->load('champion', 'chromas')
         );
 
         $splashColor = Cache::remember(
             'championSkinSplashColorCache' . $championSkin->slug,
             60 * 60 * 24,
-            function () use ($championSkin) {
-                return getAverageColorFromImageUrl($championSkin->getSkinImageAttribute());
-            }
+            static fn() => getAverageColorFromImageUrl($championSkin->getSkinImageAttribute())
         );
 
         $skin->splash_color = $splashColor;
 
-        return view('skins.show', compact('skin'));
+        return view('skins.show', ['skin' => $skin]);
     }
 
     /**
