@@ -13,7 +13,7 @@ class SaleController extends Controller
                 file_get_contents('https://api.shop.riotgames.com/v3/collections/'),
                 true
             );
-            $salesData = array_filter($shopData, static fn($collection) => $collection['path'] === '/event/sales');
+            $salesData = array_filter($shopData, static fn ($collection) => $collection['path'] === '/event/sales');
             return reset($salesData)['dynamicCollection']['discountedProductsByProductType'] ?? [];
         });
 
