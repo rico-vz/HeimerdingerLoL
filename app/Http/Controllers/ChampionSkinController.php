@@ -56,14 +56,14 @@ class ChampionSkinController extends Controller
     {
         $skin = Cache::remember(
             'championSkinShowCache' . $championSkin->slug,
-            60 * 60 * 8,
-            static fn () => $championSkin->load('champion', 'chromas')
+            60 * 60 * 48,
+            static fn() => $championSkin->load('champion', 'chromas')
         );
 
         $splashColor = Cache::remember(
             'championSkinSplashColorCache' . $championSkin->slug,
-            60 * 60 * 24,
-            static fn () => getAverageColorFromImageUrl($championSkin->getSkinImageAttribute())
+            60 * 60 * 120,
+            static fn() => getAverageColorFromImageUrl($championSkin->getSkinImageAttribute())
         );
 
         $skin->splash_color = $splashColor;
