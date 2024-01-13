@@ -162,11 +162,11 @@ return [
     | by a Swoole table. You may set the maximum number of rows as well as
     | the number of bytes per row using the configuration options below.
     |
-    */
+     */
 
     'cache' => [
-        'rows' => 1000,
-        'bytes' => 10000,
+        'rows' => 100000,
+        'bytes' => 70000,
     ],
 
     /*
