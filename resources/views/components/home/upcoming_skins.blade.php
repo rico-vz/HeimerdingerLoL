@@ -11,7 +11,8 @@
 
             <p class="mt-4 text-stone-300">
                 Check out upcoming skins in League of Legends. <br>
-                <span class="text-sm text-stone-400">Data is updated roughly every 12 hours.</span>
+                <span class="text-sm text-stone-400">Data is sourced from the <a class="underline decoration-1 decoration-orange-400/50 hover:decoration-orange-400 transition-all duration-700" href="https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki" target="_blank">LoL Wiki</a>, ran by volunteers.</span><br>
+                <span class="text-sm text-stone-400">We cannot guarantee its real-time accuracy.</span>
             </p>
         </div>
         <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
