@@ -1969,16 +1969,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "3.2.2",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6"
+                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6",
-                "reference": "71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/e04c51b367fad2b010758e74528041484cd8d2f7",
+                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7",
                 "shasum": ""
             },
             "require": {
@@ -1990,6 +1990,9 @@
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1",
                 "phpunit/phpunit": "^9"
+            },
+            "suggest": {
+                "ext-exif": "Recommended to be able to read EXIF data properly."
             },
             "type": "library",
             "autoload": {
@@ -2020,7 +2023,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.2.2"
+                "source": "https://github.com/Intervention/image/tree/3.2.4"
             },
             "funding": [
                 {
@@ -2032,7 +2035,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-07T09:11:20+00:00"
+            "time": "2024-01-14T07:47:00+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
