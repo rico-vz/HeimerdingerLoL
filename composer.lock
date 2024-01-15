@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b911118ecb3088a07b792a244ee4bf7b",
+    "content-hash": "4aad231dd714f9e0f4e8544098ca6221",
     "packages": [
         {
             "name": "andcarpi/laravel-popper",
@@ -4753,22 +4753,27 @@
         },
         {
             "name": "simonhamp/the-og",
-            "version": "v0.2.2",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simonhamp/the-og.git",
-                "reference": "2221ff4594baae5d381603be11b57205afa45934"
+                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/2221ff4594baae5d381603be11b57205afa45934",
-                "reference": "2221ff4594baae5d381603be11b57205afa45934",
+                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/bc4605d34594e86fbbcca4e90fef4d13faec2d70",
+                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70",
                 "shasum": ""
             },
             "require": {
                 "ext-imagick": "*",
                 "intervention/image": "^3.1",
                 "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5",
+                "spatie/phpunit-snapshot-assertions": "^5.1.1",
+                "spatie/pixelmatch-php": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -4789,7 +4794,7 @@
             "description": "OpenGraph Image Generator for PHP",
             "support": {
                 "issues": "https://github.com/simonhamp/the-og/issues",
-                "source": "https://github.com/simonhamp/the-og/tree/v0.2.2"
+                "source": "https://github.com/simonhamp/the-og/tree/v0.4.0"
             },
             "funding": [
                 {
@@ -4797,7 +4802,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-06T01:22:40+00:00"
+            "time": "2024-01-13T04:43:50+00:00"
         },
         {
             "name": "spatie/db-dumper",
