@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b911118ecb3088a07b792a244ee4bf7b",
+    "content-hash": "4aad231dd714f9e0f4e8544098ca6221",
     "packages": [
         {
             "name": "andcarpi/laravel-popper",
@@ -1969,16 +1969,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "3.2.2",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6"
+                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6",
-                "reference": "71bb0e3449bbbfdf47a0d0f2860af7e5e90428e6",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/e04c51b367fad2b010758e74528041484cd8d2f7",
+                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7",
                 "shasum": ""
             },
             "require": {
@@ -1990,6 +1990,9 @@
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1",
                 "phpunit/phpunit": "^9"
+            },
+            "suggest": {
+                "ext-exif": "Recommended to be able to read EXIF data properly."
             },
             "type": "library",
             "autoload": {
@@ -2020,7 +2023,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.2.2"
+                "source": "https://github.com/Intervention/image/tree/3.2.4"
             },
             "funding": [
                 {
@@ -2032,7 +2035,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-07T09:11:20+00:00"
+            "time": "2024-01-14T07:47:00+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -4750,22 +4753,27 @@
         },
         {
             "name": "simonhamp/the-og",
-            "version": "v0.2.2",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simonhamp/the-og.git",
-                "reference": "2221ff4594baae5d381603be11b57205afa45934"
+                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/2221ff4594baae5d381603be11b57205afa45934",
-                "reference": "2221ff4594baae5d381603be11b57205afa45934",
+                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/bc4605d34594e86fbbcca4e90fef4d13faec2d70",
+                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70",
                 "shasum": ""
             },
             "require": {
                 "ext-imagick": "*",
                 "intervention/image": "^3.1",
                 "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5",
+                "spatie/phpunit-snapshot-assertions": "^5.1.1",
+                "spatie/pixelmatch-php": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -4786,7 +4794,7 @@
             "description": "OpenGraph Image Generator for PHP",
             "support": {
                 "issues": "https://github.com/simonhamp/the-og/issues",
-                "source": "https://github.com/simonhamp/the-og/tree/v0.2.2"
+                "source": "https://github.com/simonhamp/the-og/tree/v0.4.0"
             },
             "funding": [
                 {
@@ -4794,7 +4802,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-06T01:22:40+00:00"
+            "time": "2024-01-13T04:43:50+00:00"
         },
         {
             "name": "spatie/db-dumper",
