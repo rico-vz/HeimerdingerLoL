@@ -11,12 +11,9 @@ use Laravel\Octane\Events\TickTerminated;
 use Laravel\Octane\Events\WorkerErrorOccurred;
 use Laravel\Octane\Events\WorkerStarting;
 use Laravel\Octane\Events\WorkerStopping;
-use Laravel\Octane\Listeners\CollectGarbage;
-use Laravel\Octane\Listeners\DisconnectFromDatabases;
 use Laravel\Octane\Listeners\EnsureUploadedFilesAreValid;
 use Laravel\Octane\Listeners\EnsureUploadedFilesCanBeMoved;
 use Laravel\Octane\Listeners\FlushTemporaryContainerInstances;
-use Laravel\Octane\Listeners\FlushUploadedFiles;
 use Laravel\Octane\Listeners\ReportException;
 use Laravel\Octane\Listeners\StopWorkerIfNecessary;
 use Laravel\Octane\Octane;
@@ -34,7 +31,7 @@ return [
     |
     | Supported: "roadrunner", "swoole", "frankenphp"
     |
-    */
+     */
 
     'server' => env('OCTANE_SERVER', 'roadrunner'),
 
@@ -47,7 +44,7 @@ return [
     | framework that all absolute links must be generated using the HTTPS
     | protocol. Otherwise your links may be generated using plain HTTP.
     |
-    */
+     */
 
     'https' => env('OCTANE_HTTPS', false),
 
@@ -60,7 +57,7 @@ return [
     | listeners are responsible for resetting your application's state for
     | the next request. You may even add your own listeners to the list.
     |
-    */
+     */
 
     'listeners' => [
         WorkerStarting::class => [
@@ -125,7 +122,7 @@ return [
     | or they will be flushed before every new request. Flushing a binding
     | will force the container to resolve that binding again when asked.
     |
-    */
+     */
 
     'warm' => [
         ...Octane::defaultServicesToWarm(),
@@ -144,7 +141,7 @@ return [
     | application. These tables can be used to store data that needs to be
     | quickly accessed by other workers on the particular Swoole server.
     |
-    */
+     */
 
     'tables' => [
         'example:1000' => [
@@ -165,8 +162,8 @@ return [
      */
 
     'cache' => [
-        'rows' => 100000,
-        'bytes' => 70000,
+        'rows' => 500,
+        'bytes' => 4000,
     ],
 
     /*
@@ -178,7 +175,7 @@ return [
     | the --watch option offered by Octane. If any of the directories and
     | files are changed, Octane will automatically reload your workers.
     |
-    */
+     */
 
     'watch' => [
         'app',
@@ -201,7 +198,7 @@ return [
     | up before being cleared by PHP. You can force Octane to run garbage
     | collection if your application consumes this amount of megabytes.
     |
-    */
+     */
 
     'garbage' => 50,
 
@@ -214,7 +211,7 @@ return [
     | being handled by Octane. You may set this value to 0 to indicate that
     | there isn't a specific time limit on Octane request execution time.
     |
-    */
+     */
 
     'max_execution_time' => 30,
 
