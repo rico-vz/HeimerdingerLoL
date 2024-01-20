@@ -3,6 +3,9 @@
 <div class="container mx-auto p-4 flex flex-col items-center justify-center mt-3">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 auto-cols-max w-full">
         @foreach($posts as $post)
+            @if($post->hidden)
+                @continue
+            @endif
             <article class="inline-block text-gray-200 bg-stone-800/40 shadow-md rounded-2xl border border-stone-800
                 hover:border-orange-500/10 hover:shadow-orange-500/10 items-center h-80 relative">
                 <span

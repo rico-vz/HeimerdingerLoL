@@ -21,18 +21,18 @@
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Contact</a>
             </li>
             <li>
-                <a href="#"
+                <a href="/post/privacy-policy"
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Privacy</a>
             </li>
             <li>
-                <a href="#"
+                <a href="/post/terms-of-use"
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Terms</a>
             </li>
 
         </ul>
         <span
             class="text-sm text-gray-500 sm:text-center dark:text-gray-400 items-center flex flex-row justify-center whitespace-pre">© {{date('Y')}} <a
-                href="/" class=" hover:underline">Heimerdinger.LoL</a> • Made with <x-iconsax-bul-heart-circle
-                class="inline-block w-5 self-center relative text-red-400"/></span>
+                href="/" class=" hover:underline">Heimerdinger.LoL</a> • Made with <a href="https://rico.sh"><x-iconsax-bul-heart-circle
+                class="inline-block w-5 self-center relative text-red-400"/></a></span>
     </div>
 </footer>
