@@ -25,7 +25,7 @@
                                  src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=720&output=jpg&q=90&il"
                                  alt="{{ $skin->skin_name }} Splash Art">
                             <div class="flex flex-col items-center justify-center">
-                                <h2 class="mt-4 text-xl font-bold text-white">{{ $skin->skin_name }}</h2>
+                                <h2 class="mt-4 text-xl font-bold text-white"><a href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a></h2>
 
                                 <div class="my-1 ">
                                     <span class="sr-only">Associated Skinline:</span>
