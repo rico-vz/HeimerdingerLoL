@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e10212963e09c396db09b0be47a4b852",
+    "content-hash": "67f4cfda5ceab0b22155823193d2edd7",
     "packages": [
         {
             "name": "andcarpi/laravel-popper",
@@ -1917,16 +1917,16 @@
         },
         {
             "name": "intervention/gif",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/gif.git",
-                "reference": "521010e0cf1f5cde9df54b8adcd7496ab5f1504f"
+                "reference": "3d4fa6e5eed87f344ada9c0beb410d68e9f274ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/gif/zipball/521010e0cf1f5cde9df54b8adcd7496ab5f1504f",
-                "reference": "521010e0cf1f5cde9df54b8adcd7496ab5f1504f",
+                "url": "https://api.github.com/repos/Intervention/gif/zipball/3d4fa6e5eed87f344ada9c0beb410d68e9f274ae",
+                "reference": "3d4fa6e5eed87f344ada9c0beb410d68e9f274ae",
                 "shasum": ""
             },
             "require": {
@@ -1934,7 +1934,8 @@
             },
             "require-dev": {
                 "phpstan/phpstan": "^1",
-                "phpunit/phpunit": "^9"
+                "phpunit/phpunit": "^9",
+                "squizlabs/php_codesniffer": "^3.8"
             },
             "type": "library",
             "autoload": {
@@ -1963,33 +1964,44 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/gif/issues",
-                "source": "https://github.com/Intervention/gif/tree/4.0.0"
+                "source": "https://github.com/Intervention/gif/tree/4.0.1"
             },
-            "time": "2024-01-06T16:35:57+00:00"
+            "funding": [
+                {
+                    "url": "https://paypal.me/interventionio",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Intervention",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-27T08:01:45+00:00"
         },
         {
             "name": "intervention/image",
-            "version": "3.2.4",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7"
+                "reference": "8494cc91e3906e36ca58acc3dfe70fa331520b88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/e04c51b367fad2b010758e74528041484cd8d2f7",
-                "reference": "e04c51b367fad2b010758e74528041484cd8d2f7",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/8494cc91e3906e36ca58acc3dfe70fa331520b88",
+                "reference": "8494cc91e3906e36ca58acc3dfe70fa331520b88",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "intervention/gif": "^4",
+                "intervention/gif": "^4.0.1",
                 "php": "^8.1"
             },
             "require-dev": {
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1",
-                "phpunit/phpunit": "^9"
+                "phpunit/phpunit": "^9",
+                "squizlabs/php_codesniffer": "^3.8"
             },
             "suggest": {
                 "ext-exif": "Recommended to be able to read EXIF data properly."
@@ -2023,7 +2035,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.2.4"
+                "source": "https://github.com/Intervention/image/tree/3.3.2"
             },
             "funding": [
                 {
@@ -2035,7 +2047,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-14T07:47:00+00:00"
+            "time": "2024-01-27T19:34:18+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -4753,16 +4765,16 @@
         },
         {
             "name": "simonhamp/the-og",
-            "version": "v0.4.0",
+            "version": "v0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simonhamp/the-og.git",
-                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70"
+                "reference": "c5cd444fa02418ef0bf3da056aaaf8eba235ede9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/bc4605d34594e86fbbcca4e90fef4d13faec2d70",
-                "reference": "bc4605d34594e86fbbcca4e90fef4d13faec2d70",
+                "url": "https://api.github.com/repos/simonhamp/the-og/zipball/c5cd444fa02418ef0bf3da056aaaf8eba235ede9",
+                "reference": "c5cd444fa02418ef0bf3da056aaaf8eba235ede9",
                 "shasum": ""
             },
             "require": {
@@ -4794,7 +4806,7 @@
             "description": "OpenGraph Image Generator for PHP",
             "support": {
                 "issues": "https://github.com/simonhamp/the-og/issues",
-                "source": "https://github.com/simonhamp/the-og/tree/v0.4.0"
+                "source": "https://github.com/simonhamp/the-og/tree/v0.5.4"
             },
             "funding": [
                 {
@@ -4802,7 +4814,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-13T04:43:50+00:00"
+            "time": "2024-01-17T10:50:36+00:00"
         },
         {
             "name": "spatie/db-dumper",

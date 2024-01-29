@@ -24,7 +24,7 @@
         "laravel/tinker": "^2.8",
         "league/flysystem-aws-s3-v3": "^3.0",
         "saade/blade-iconsax": "^1.1",
-        "simonhamp/the-og": "^0.4.0",
+        "simonhamp/the-og": "^0.5.4",
         "spatie/laravel-backup": "^8.3",
         "spatie/laravel-query-builder": "^5.6",
         "spatie/sheets": "^1.10",
