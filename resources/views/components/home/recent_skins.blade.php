@@ -1,6 +1,7 @@
 @php use Carbon\Carbon; @endphp
 <?php
-/** @var App\Models\ChampionSkin $skin */ ?>
+/** @var App\Models\ChampionSkin $skin */
+?>
 
 <section class="text-white bg-stone-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:py-16 lg:px-8">
@@ -18,14 +19,18 @@
             @foreach ($latestSkins as $skin)
                 @if ($loop->index < 6)
                     <div
-                        class="p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
+                        class="p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center justify-center">
-                                <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
-                                     src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=720&output=jpg&q=90&il"
-                                     alt="{{ $skin->skin_name }} Splash Art">
+                                <a href="{{ route('skins.show', $skin->slug) }}">
+                                    <img loading="lazy" class="border-2 border-orange-400/40 rounded-xl"
+                                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=720&output=jpg&q=90&il"
+                                        alt="{{ $skin->skin_name }} Splash Art">
+                                </a>
                                 <div class="flex flex-col items-center justify-center">
-                                    <h2 class="mt-4 text-xl font-bold text-white"><a href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a></h2>
+                                    <h2 class="mt-4 text-xl font-bold text-white"><a
+                                            href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a>
+                                    </h2>
                                     <h3 class=" text-stone-200">Released
                                         {{ Carbon::parse($skin->release_date)->diffForHumans([
                                             'parts' => 2,
@@ -33,28 +38,28 @@
                                         ]) }}
                                     </h3>
 
-                                    @foreach($skin->associated_skinline as $skinline)
+                                    @foreach ($skin->associated_skinline as $skinline)
                                         <span class="sr-only">Associated Skinline:</span>
                                         <span
                                             class="my-2 bg-orange-100 text-orange-800 text-xs font-medium
                                             mr-2 px-2.5 py-0.5 rounded
                                             border border-orange-300
                                             ">
-                                            {{$skinline}}</span>
+                                            {{ $skinline }}</span>
                                     @endforeach
 
                                     <p class="flex text-sm text-stone-300">
                                         @if ($skin->rp_price == '99999')
                                             Not Available for RP
                                         @else
-                                            <x-icon-RiotPoints class="text-yellow-400 w-4 mr-1"/>
+                                            <x-icon-RiotPoints class="w-4 mr-1 text-yellow-400" />
                                             {{ $skin->rp_price }} RP
                                         @endif
                                     </p>
 
                                     @if ($skin->loot_eligible)
-                                        <p class="flex mt-1 text-sm italic text-stone-300 items-center">
-                                            <x-icon-loot class="text-yellow-200 w-4 mr-1"/>
+                                        <p class="flex items-center mt-1 text-sm italic text-stone-300">
+                                            <x-icon-loot class="w-4 mr-1 text-yellow-200" />
                                             Can be obtained from loot
                                         </p>
                                     @endif
