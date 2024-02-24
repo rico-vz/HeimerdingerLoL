@@ -200,4 +200,6 @@ return [
         : (env('IS_STAGING')
             ? 'https://staging.heimerdinger.lol'
             : 'https://heimerdinger.lol'),
+
+    'GTAG_MEASUREMENT_ID' => env('GTAG_MEASUREMENT_ID', 'G-XXXXXXXXXX'),
 ];
