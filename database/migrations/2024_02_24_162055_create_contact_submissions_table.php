@@ -14,7 +14,7 @@ return new class () extends Migration {
             $table->string('discord')->nullable();
             $table->enum('category', ['question', 'advertising', 'bug_report', 'feedback', 'other']);
             $table->string('subject');
-            $table->text('message')->unique();
+            $table->text('message');
             $table->timestamps();
         });
     }
