@@ -4,16 +4,20 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\ChampionController;
 use App\Http\Controllers\ChampionSkinController;
+use App\Http\Controllers\ContactSubmissionController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
 use App\Http\Controllers\SummonerIconController;
+use App\Http\Requests\ContactSubmissionRequest;
 use App\Models\Champion;
 use App\Models\SummonerIcon;
 use Illuminate\Support\Facades\Route;
 use Spatie\Sheets\Sheet;
+use Spatie\Honeypot\ProtectAgainstSpam;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +67,12 @@ Route::get('/about/faq/heimerdinger', static fn () => (new FAQController())->hei
 Route::get('/posts', static fn () => (new PostsController())->index())->name('posts.index');
 
 Route::get('/post/{post}', static fn (Sheet $post) => (new PostsController())->show($post))->name('posts.show');
+
+// Contact
+Route::get('/contact', static fn () => (new ContactSubmissionController())->index())->name('contact.index');
+Route::post('/contact', function (ContactSubmissionRequest $request) {
+    return (new ContactSubmissionController())->store($request);
+})->name('contact.store')->middleware(ProtectAgainstSpam::class);
 
 // Pulse
 Route::get(config('app.login_route'), static fn () => redirect('/pulse'))->name('login')->middleware('auth.basic');
