@@ -170,6 +170,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Scyllaly\HCaptcha\HCaptchaServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,6 +185,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'HCaptcha' => Scyllaly\HCaptcha\Facades\HCaptcha::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
