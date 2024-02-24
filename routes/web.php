@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sheets\Sheet;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
