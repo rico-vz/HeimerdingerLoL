@@ -10,7 +10,7 @@ return new class () extends PulseMigration {
      */
     public function up(): void
     {
-        if (! $this->shouldRun()) {
+        if (!$this->shouldRun()) {
             return;
         }
 
