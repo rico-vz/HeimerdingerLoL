@@ -5,32 +5,30 @@
 frequently asked questions about League of Legends, Heimerdinger and us. Dive in now!')
 
 @section('content')
-    <div class="max-w-screen-xl mx-auto px-5 min-h-sceen">
+    <div class="max-w-screen-xl px-5 mx-auto min-h-sceen">
         <div class="flex flex-col items-center">
             <h1
-                class="mt-7 text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+                class="text-3xl font-bold text-center text-transparent uppercase mt-7 sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
                 About</h1>
             <h2
-                class="text-lg font-bold text-center text-transparent uppercase
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text ">
+                class="text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text ">
                 Learn all about League of Legends, Heimerdinger and us.</h2>
         </div>
 
-        <div class="flex justify-center items-center mt-2">
+        <div class="flex items-center justify-center mt-2">
             <a href="{{route('about.faq.heimerdinger')}}"
-               class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600 mr-3">FAQ •
+               class="px-4 py-2 mr-3 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">FAQ •
                 Heimerdinger</a>
             <a href="{{route('about.faq.leagueoflegends')}}"
-               class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600">FAQ • League of
+               class="px-4 py-2 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">FAQ • League of
                 Legends</a>
         </div>
 
-        <div class="flex flex-col items-center mt-5 justify-center ">
+        <div class="flex flex-col items-center justify-center mt-5 ">
             <h2
-                class="text-lg font-bold text-center uppercase text-gray-100">
+                class="text-lg font-bold text-center text-gray-100 uppercase">
                 What is League of Legends?</h2>
-            <p class="text-center text-stone-300 mt-2 max-w-3xl">
+            <p class="max-w-3xl mt-2 text-center text-stone-300">
                 League of Legends (LoL), commonly referred to as League, is a MOBA game developed and published by Riot
                 Games. The game was inspired by DoTA, a custom map for
                 Warcraft III, and was released in October 2009. Since its release, League has been free-to-play and is
@@ -70,9 +68,9 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
             <h2
-                class="text-lg font-bold text-center uppercase text-gray-100">
+                class="text-lg font-bold text-center text-gray-100 uppercase">
                 What is Heimerdinger.lol?</h2>
-            <p class="text-center text-stone-300 mt-2 max-w-3xl">
+            <p class="max-w-3xl mt-2 text-center text-stone-300">
                 Heimerdinger.lol is a website dedicated to providing information about League of Legends and its events.
                 We provide in-depth information about the champions, skins, game assets, and more.
                 <br><br>
@@ -91,17 +89,17 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 <br><br>
                 I am always looking for ways to improve this website. If you have any suggestions, feedback, or just
                 want to
-                say hi, you can do so by contacting me through the contact form on my <a
-                    href="https://rico.sh/contact/" class="underline decoration-orange-500/50" target="_blank">personal
+                say hi, you can do so by contacting me through the contact form on <a
+                    href="/contact" class="underline decoration-orange-500/50" target="_blank">this
                     website</a>. I will try to respond as soon as possible.
             </p>
         </div>
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
             <h2
-                class="text-lg font-bold text-center uppercase text-gray-100">
+                class="text-lg font-bold text-center text-gray-100 uppercase">
                 Who is Heimerdinger?</h2>
-            <p class="text-center text-stone-300 mt-2 max-w-3xl">
+            <p class="max-w-3xl mt-2 text-center text-stone-300">
                 Heimerdinger is a character from the game. He is a brilliant
                 scientist, Professor Cecil B. Heimerdinger, which is his full name, is one of the most innovative and
                 esteemed inventors
