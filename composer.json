@@ -24,6 +24,7 @@
         "laravel/tinker": "^2.8",
         "league/flysystem-aws-s3-v3": "^3.0",
         "saade/blade-iconsax": "^1.1",
+        "scyllaly/hcaptcha": "^4.4",
         "simonhamp/the-og": "^0.5.4",
         "spatie/laravel-backup": "^8.3",
         "spatie/laravel-discord-alerts": "^1.3",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2af8ed1dad29aeeb6bd0674017bde595",
+    "content-hash": "2954259235d0a0b20a9f886137583fec",
     "packages": [
         {
             "name": "andcarpi/laravel-popper",
@@ -4759,6 +4759,65 @@
                 "source": "https://github.com/saade/blade-iconsax/tree/v1.1.0"
             },
             "time": "2023-02-17T13:23:26+00:00"
+        },
+        {
+            "name": "scyllaly/hcaptcha",
+            "version": "4.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Scyllaly/hcaptcha.git",
+                "reference": "3c133dfe684d34570e911de11098ebaa0d2c369d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Scyllaly/hcaptcha/zipball/3c133dfe684d34570e911de11098ebaa0d2c369d",
+                "reference": "3c133dfe684d34570e911de11098ebaa0d2c369d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*|6.*|7.*|8.*|^9.0|10.*",
+                "php": ">=5.5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8|^9.5.10|^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Scyllaly\\HCaptcha\\HCaptchaServiceProvider"
+                    ],
+                    "aliases": {
+                        "HCaptcha": "Scyllaly\\HCaptcha\\Facades\\HCaptcha"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scyllaly\\HCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "scyllaly",
+                    "email": "scyllaly@github.com"
+                }
+            ],
+            "description": "hCaptcha for Laravel",
+            "keywords": [
+                "captcha",
+                "hcaptcha",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Scyllaly/hcaptcha/issues",
+                "source": "https://github.com/Scyllaly/hcaptcha/tree/4.4.5"
+            },
+            "time": "2023-03-14T16:36:21+00:00"
         },
         {
             "name": "simonhamp/the-og",
