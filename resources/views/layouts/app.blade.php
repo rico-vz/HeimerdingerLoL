@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- DarkReader somehow thinks the website isn't dark by default, this tells darkreader to disable on the site. -->
+    <meta name="darkreader-lock">
+
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
@@ -24,18 +28,18 @@
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
     <meta property="og:title" content="@yield('title')">
-    <meta property="og:url" content="{{url()->current()}}">
+    <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:description" content="@yield('description')">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{asset('img/og_image.png')}}">
+    <meta property="og:image" content="{{ asset('img/og_image.png') }}">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
-    <meta property="twitter:image" content="{{asset('img/og_image.png')}}">
+    <meta property="twitter:image" content="{{ asset('img/og_image.png') }}">
 
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="preload" href="https://rsms.me/inter/inter.css" as="style">
@@ -47,10 +51,11 @@
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
-<x-navbar/>
-@yield('content')
-<x-footer/>
-@stack('bottom_scripts')
-<x-googletag/>
+    <x-navbar />
+    @yield('content')
+    <x-footer />
+    @stack('bottom_scripts')
+    <x-googletag />
 </body>
+
 </html>
