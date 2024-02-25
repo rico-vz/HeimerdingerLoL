@@ -82,10 +82,7 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 any way. We are just a fan of League of Legends and
                 created this website to help other fans while also learning and practicing our skills. We hope you enjoy
                 using our website as much as we enjoy creating it. Heimerdinger.lol is completely open-source, so if you
-                are a developer and want to contribute to the project, you can do so on our GitHub page here: <a
-                    href="https://github.com/rico-vz/HeimerdingerLoL" class="underline decoration-orange-500/50"
-                    target="_blank">HeimerdingerLoL.
-                </a>
+                are a developer and want to contribute to the project, you can do so.
                 <br><br>
                 I am always looking for ways to improve this website. If you have any suggestions, feedback, or just
                 want to
