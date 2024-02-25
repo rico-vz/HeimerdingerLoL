@@ -1,16 +1,14 @@
 <section class="max-w-screen-xl mx-auto mt-12">
     <p class="sr-only">Heimerdinger Presents:</p>
     <h3
-        class="text-sm font-bold text-center text-transparent uppercase sm:text-md
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+        class="text-sm font-bold text-center text-transparent uppercase sm:text-md bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         SKIN DETAILS</h3>
     <h1
-        class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+        class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         {{$skin->skin_name}}</h1>
-    <p class="text-sm text-center text-orange-400 uppercase font-medium hover:underline decoration-1 decoration-transparent hover:decoration-orange-400 transition-all duration-700">
+    <p class="text-sm font-medium text-center text-orange-400 uppercase transition-all duration-700 hover:underline decoration-1 decoration-transparent hover:decoration-orange-400">
         <a
-            href="/champion/{{$skin->champion->name}}">
+            href="/champion/{{$skin->champion->slug}}">
             <span class="flex items-center justify-center">
             View
             champion
@@ -21,34 +19,33 @@
         </a>
 
 
-    <div class="container mx-auto p-4 flex items-center justify-center mt-3">
-        <div class="w-screen grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="container flex items-center justify-center p-4 mx-auto mt-3">
+        <div class="grid w-screen grid-cols-1 gap-5 md-grid-cols-2 lg:grid-cols-3">
             <div
-                class="relative rounded-2xl bg-stone-800/40 border border-neutral-300/5 shadow-sm shadow-stone-800/80 lg:col-span-2">
-                <div class="aspect-w-16 aspect-h-9 glow-shadow absolute inset-0 rounded-2xl"
+                class="relative border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
+                <div class="absolute inset-0 aspect-w-16 aspect-h-9 glow-shadow rounded-2xl"
                      style="--splash-color: {{$skin->splash_color}}"></div>
                 <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=840&output=webp&q=70"
                      alt="{{$skin->skin_name}} Splash Art"
-                     class="w-full h-full object-cover transform scale-100 transition-transform duration-700 z-10 rounded-2xl">
+                     class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
 
                 <div class="absolute bottom-0 left-0 p-4">
                     <a href="{{ $skin->getSkinImageAttribute() }}" target="_blank"
-                       class="text-white text-base font-bold bg-black bg-opacity-50 p-2 rounded-xl">View in
+                       class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in
                         HD</a>
                 </div>
             </div>
 
 
             <div
-                class="rounded-2xl border border-3 border-white/10
-                  lg:col-start-3 shadow-md transition-all duration-700"
+                class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 lg:col-start-3"
                 style="--tw-shadow-color:{{$skin->splash_color}}; --tw-shadow: var(--tw-shadow-colored); background-color: {{$skin->splash_color}};">
 
                 <h4 class="text-center text-lg font-semibold text-neutral-100 uppercase mt-3.5 shadow-sm mx-2">
                     {{$skin->skin_name}} Details</h4>
 
                 <ul class="mx-5">
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mt-4"
+                    <li class="items-center mt-4 text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">RP Cost:</span>
                         @if ($skin->rp_price == '99999')
@@ -58,19 +55,19 @@
                             {{ $skin->rp_price }} RP
                         @endif
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Release Date:</span> {{$skin->release_date}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Rarity:</span> {{$skin->rarity}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Availability:</span> {{$skin->availability}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Chromas:</span> @if ($skin->chromas->count() > 0)
                             {{$skin->chromas->count()}}
@@ -78,31 +75,31 @@
                             None
                         @endif
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Lootable:</span> {{$skin->loot_eligible ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">New Effects:</span> {{$skin->new_effects ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">New Animations:</span> {{$skin->new_animations ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">New Recall:</span> {{$skin->new_recall ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">New Voice:</span> {{$skin->new_voice ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">New Quotes:</span> {{$skin->new_quotes ? 'Yes' : 'No'}}
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center"
+                    <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Voice Actor:</span>
                         @if(count($skin->voice_actor) < 1)
@@ -113,7 +110,7 @@
                             @endforeach
                         @endif
                     </li>
-                    <li class="text-neutral-100 hyphens-auto text-base font-medium leading-loose items-center mb-4"
+                    <li class="items-center mb-4 text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
                         <span class="font-bold">Splash Artist:</span>
                         @if(count($skin->splash_artist) < 1)
@@ -135,8 +132,7 @@
             </div>
 
 
-            <div class="rounded-2xl border border-3 border-white/10 shadow-md
-            shadow-stone-800/80 hover:shadow-orange-500/20 transition-all duration-700"
+            <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                  style="--tw-shadow-color:{{$skin->splash_color}}; --tw-shadow: var(--tw-shadow-colored); background-color: {{$skin->splash_color}};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
@@ -154,8 +150,7 @@
 
             </div>
             <div
-                class="rounded-2xl border border-3 border-white/10 shadow-md
-                shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20 transition-all duration-700"
+                class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{$skin->splash_color}}; --tw-shadow: var(--tw-shadow-colored); background-color: {{$skin->splash_color}};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
@@ -168,7 +163,7 @@
                                 </p>
                             @endif
                             @foreach($skin->chromas as $key => $chroma)
-                                <div class="group flex flex-col ">
+                                <div class="flex flex-col group ">
                                     <a href="/skin/{{$skin->slug}}">
                                         <img
                                             src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=220&output=webp&q=70&il"
