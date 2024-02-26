@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- DarkReader somehow thinks the website isn't dark by default, this tells darkreader to disable on the site. -->
+    <!-- DarkReader somehow thinks the website isn't dark by default, 
+    this tells darkreader to disable on the site. -->
     <meta name="darkreader-lock">
 
 
@@ -40,10 +41,6 @@
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
     <meta property="twitter:image" content="{{ asset('img/og_image.png') }}">
-
-    {{-- <link rel="preconnect" href="https://rsms.me/">
-    <link rel="preload" href="https://rsms.me/inter/inter.css" as="style">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'"> --}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
