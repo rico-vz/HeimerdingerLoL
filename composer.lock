@@ -5407,16 +5407,16 @@
         },
         {
             "name": "spatie/sheets",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/sheets.git",
-                "reference": "a7ff7af3d0a8e578a6d1aab9c4386ff012a96072"
+                "reference": "a87740f768252953d7089a0c17fec22bc231bf51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/sheets/zipball/a7ff7af3d0a8e578a6d1aab9c4386ff012a96072",
-                "reference": "a7ff7af3d0a8e578a6d1aab9c4386ff012a96072",
+                "url": "https://api.github.com/repos/spatie/sheets/zipball/a87740f768252953d7089a0c17fec22bc231bf51",
+                "reference": "a87740f768252953d7089a0c17fec22bc231bf51",
                 "shasum": ""
             },
             "require": {
@@ -5474,7 +5474,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/sheets/issues",
-                "source": "https://github.com/spatie/sheets/tree/1.11.0"
+                "source": "https://github.com/spatie/sheets/tree/1.11.1"
             },
             "funding": [
                 {
@@ -5482,7 +5482,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-12-18T07:55:33+00:00"
+            "time": "2024-02-22T22:44:24+00:00"
         },
         {
             "name": "spatie/temporary-directory",
