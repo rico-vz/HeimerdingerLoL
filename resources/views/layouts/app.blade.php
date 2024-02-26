@@ -9,7 +9,6 @@
     this tells darkreader to disable on the site. -->
     <meta name="darkreader-lock">
 
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
@@ -45,6 +44,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('top_scripts')
+    <x-matomo-analytics />
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
