@@ -44,7 +44,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('top_scripts')
-    <x-matomo-analytics />
+    <x-analytics.plausible />
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
