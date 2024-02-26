@@ -52,7 +52,6 @@
     @yield('content')
     <x-footer />
     @stack('bottom_scripts')
-    <x-googletag />
 </body>
 
 </html>
