@@ -1,1 +1,1 @@
-<script defer data-domain="rico.sh" src="https://data.rico.sh/js/script.js"></script>
+<script defer data-domain="heimerdinger.lol" src="https://data.rico.sh/js/script.js"></script>
