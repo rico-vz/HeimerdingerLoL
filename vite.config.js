@@ -10,4 +10,7 @@ export default defineConfig({
         }),
     ],
     publicDir: 'public',
+    build: {
+        minify: 'terser',
+    }
 });
