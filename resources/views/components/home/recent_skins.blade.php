@@ -23,8 +23,8 @@
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center justify-center">
                                 <a href="{{ route('skins.show', $skin->slug) }}">
-                                    <img loading="lazy" class="border-2 w-80 min-h-44 aspect-video border-orange-400/40 rounded-xl"
-                                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=640&output=webp&q=75&maxage=2d"
+                                    <img loading="lazy" class="h-full border-2 w-80 border-orange-400/40 rounded-xl"
+                                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=480&output=webp&q=75&maxage=2d"
                                         alt="{{ $skin->skin_name }} Splash Art">
                                 </a>
                                 <div class="flex flex-col items-center justify-center">
