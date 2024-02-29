@@ -30,6 +30,9 @@
             </li>
 
         </ul>
+        <div class="flex items-center justify-center w-full mb-6">
+            <a href="https://www.producthunt.com/posts/heimerdinger-lol?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-heimerdinger&#0045;lol" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442110&theme=dark" alt="Heimerdinger&#0046;lol - Discover&#0032;LoL&#0058;&#0032;Champions&#0044;&#0032;Skins&#0044;&#0032;Sales&#0032;and&#0032;More&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+        </div>
         <span
             class="flex flex-row items-center justify-center text-sm text-gray-500 whitespace-pre sm:text-center dark:text-gray-400">© {{date('Y')}} <a
                 href="/" class=" hover:underline">Heimerdinger.LoL</a> • Made with <a aria-label="Find out more about the creator of Heimerdinger.lol" href="https://rico.sh"><x-iconsax-bul-heart-circle

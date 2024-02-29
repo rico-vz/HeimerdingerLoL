@@ -9,13 +9,20 @@
                 Heimerdinger.LoL is a website dedicated to providing information about League of
                 Legends. We provide information about the champions, skins, game assets, and more.
             </h2>
+            <div class="flex items-center justify-center w-full mt-4 mb-6">
+                <a href="https://www.producthunt.com/posts/heimerdinger-lol?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-heimerdinger&#0045;lol"
+                    target="_blank"><img
+                        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442110&theme=light"
+                        alt="Heimerdinger&#0046;lol - Discover&#0032;LoL&#0058;&#0032;Champions&#0044;&#0032;Skins&#0044;&#0032;Sales&#0032;and&#0032;More&#0033; | Product Hunt"
+                        style="width: 250px; height: 54px;" width="250" height="54" /></a>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/champions">
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/champions">
 
-                <x-iconsax-bul-personalcard class="h-10 text-orange-400"/>
+                <x-iconsax-bul-personalcard class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white">All Champions</h2>
 
@@ -25,9 +32,9 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/skins">
-                <x-iconsax-bul-paintbucket class="h-10 text-orange-400"/>
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/skins">
+                <x-iconsax-bul-paintbucket class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white ">Skin Information</h2>
 
@@ -37,9 +44,9 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/assets">
-                <x-iconsax-bul-3d-cube-scan class="h-10 text-orange-400"/>
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/assets">
+                <x-iconsax-bul-3d-cube-scan class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white">Game Assets</h2>
 
@@ -49,9 +56,9 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/sale-rotation">
-                <x-iconsax-bul-money-change class="h-10 text-orange-400"/>
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/sale-rotation">
+                <x-iconsax-bul-money-change class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white">Sale Rotation</h2>
 
@@ -61,9 +68,9 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/posts">
-                <x-iconsax-bul-receipt-edit class="h-10 text-orange-400"/>
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/posts">
+                <x-iconsax-bul-receipt-edit class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white">Blog Posts</h2>
 
@@ -73,9 +80,9 @@
                 </p>
             </a>
 
-            <a class="block p-8 transition bg-stone-800/40 border shadow-xl border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
-               href="/about">
-                <x-iconsax-bul-message-question class="h-10 text-orange-400"/>
+            <a class="block p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10"
+                href="/about">
+                <x-iconsax-bul-message-question class="h-10 text-orange-400" />
 
                 <h2 class="mt-4 text-xl font-bold text-white">About The Game</h2>
 
