@@ -1,0 +1,4 @@
+Contact: mailto:sec-report@heimerdinger.lol
+Expires: 2025-01-01T11:00:00.000Z
+Preferred-Languages: en, nl
+Policy: https://github.com/rico-vz/HeimerdingerLoL/blob/main/SECURITY.md
