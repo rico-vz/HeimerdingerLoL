@@ -7,6 +7,7 @@ use App\Http\Controllers\ChampionSkinController;
 use App\Http\Controllers\ContactSubmissionController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HTMLSitemapController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SummonerEmoteController;
@@ -29,7 +30,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 |
 */
 
-Route::get('/', static fn () => (new HomeController())->index());
+Route::get('/', static fn () => (new HomeController())->index())->name('home');
 
 // Champions
 Route::get('/champions', static fn () => (new ChampionController())->index())->name('champions.index');
@@ -72,6 +73,9 @@ Route::get('/contact', static fn () => (new ContactSubmissionController())->inde
 Route::post('/contact', function (ContactSubmissionRequest $request) {
     return (new ContactSubmissionController())->store($request);
 })->name('contact.store')->middleware(ProtectAgainstSpam::class);
+
+// Site Map
+Route::get('/resource/sitemap', static fn () => (new HTMLSitemapController())->index())->name('sitemap.index');
 
 // Pulse
 Route::get(config('app.login_route'), static fn () => redirect('/pulse'))->name('login')->middleware('auth.basic');
