@@ -23,11 +23,11 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    @if (strpos($_SERVER['REQUEST_URI'], 'page') !== false)
+    {{-- @if (strpos($_SERVER['REQUEST_URI'], 'page') !== false)
         <link rel="canonical" href="{{ url()->full() }}">
     @else
         <link rel="canonical" href="{{ url()->current() }}">
-    @endif
+    @endif --}}
 
     @stack('meta_tags')
 
