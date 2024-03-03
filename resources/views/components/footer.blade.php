@@ -5,15 +5,15 @@
             Heimerdinger.LoL
         </a>
         <p class="my-4 text-sm text-gray-500 dark:text-gray-400">Heimerdinger.LoL was created under <a
-                href="https://www.riotgames.com/" target="_blank">Riot Games</a>' "<a
+                href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a>' "<a
                 href="https://www.riotgames.com/en/legal"
                 class="underline transition-all duration-700 decoration-orange-500/50 hover:decoration-orange-500 hover:decoration-1"
-                target="_blank">Legal
+                rel="noopener" target="_blank">Legal
                 Jibber
                 Jabber</a>" policy
             using assets owned by <a
-                href="https://www.riotgames.com/" target="_blank">Riot Games</a>. <a
-                href="https://www.riotgames.com/" target="_blank">Riot Games</a> does not endorse or sponsor
+                href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a>. <a
+                href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a> does not endorse or sponsor
             this project.</p>
         <ul class="flex flex-wrap items-center justify-center mb-6 text-neutral-300 ">
             <li>
@@ -32,7 +32,7 @@
         </ul>
         <div class="flex items-center justify-center w-full mb-4">
             <a href="https://www.producthunt.com/posts/heimerdinger-lol?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-heimerdinger&#0045;lol"
-               target="_blank"><img
+               rel="noopener" target="_blank"><img
                     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442110&theme=dark"
                     alt="Heimerdinger&#0046;lol - Discover&#0032;LoL&#0058;&#0032;Champions&#0044;&#0032;Skins&#0044;&#0032;Sales&#0032;and&#0032;More&#0033; | Product Hunt"
                     style="width: 250px; height: 54px;" width="250" height="54"/></a>

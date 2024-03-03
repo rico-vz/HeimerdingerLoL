@@ -25,7 +25,7 @@
                         alt="{{$icon->title}} Icon"
                         class="transition-transform duration-700 rounded-2xl bg-clip-border border-2 border-orange-400/40
                     shadow-md shadow-orange-400/20"/>
-                    <a href="{{$icon->image}}" target="_blank"
+                    <a href="{{$icon->image}}" rel="noopener" target="_blank"
                        class="text-center text-neutral-100 text-sm font-medium px-4 py-2">
                         View in HD
                     </a>

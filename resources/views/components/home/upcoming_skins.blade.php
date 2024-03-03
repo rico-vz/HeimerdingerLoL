@@ -14,7 +14,7 @@
                 Check out upcoming skins in League of Legends. <br>
                 <span class="text-sm text-stone-400">Data is sourced from the <a
                         class="underline transition-all duration-700 decoration-1 decoration-orange-400/50 hover:decoration-orange-400"
-                        href="https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki" target="_blank">LoL
+                        href="https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki" rel="noopener" target="_blank">LoL
                         Wiki</a>, ran by volunteers.</span><br>
                 <span class="text-sm text-stone-400">We cannot guarantee its real-time accuracy.</span>
             </p>

@@ -30,7 +30,7 @@
                      class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
 
                 <div class="absolute bottom-0 left-0 p-4">
-                    <a href="{{ $skin->getSkinImageAttribute() }}" target="_blank"
+                    <a href="{{ $skin->getSkinImageAttribute() }}" rel="noopener" target="_blank"
                        class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in
                         HD</a>
                 </div>

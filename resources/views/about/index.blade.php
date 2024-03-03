@@ -87,7 +87,7 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 I am always looking for ways to improve this website. If you have any suggestions, feedback, or just
                 want to
                 say hi, you can do so by contacting me through the contact form on <a
-                    href="/contact" class="underline decoration-orange-500/50" target="_blank">this
+                    href="/contact" class="underline decoration-orange-500/50" rel="noopener" target="_blank">this
                     website</a>. I will try to respond as soon as possible.
             </p>
         </div>
