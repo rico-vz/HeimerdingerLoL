@@ -9,13 +9,6 @@
                 Heimerdinger.LoL is a website dedicated to providing information about League of
                 Legends. We provide information about the champions, skins, game assets, and more.
             </h2>
-            <div class="flex items-center justify-center w-full mt-4 mb-6">
-                <a href="https://www.producthunt.com/posts/heimerdinger-lol?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-heimerdinger&#0045;lol"
-                    target="_blank"><img
-                        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442110&theme=light"
-                        alt="Heimerdinger&#0046;lol - Discover&#0032;LoL&#0058;&#0032;Champions&#0044;&#0032;Skins&#0044;&#0032;Sales&#0032;and&#0032;More&#0033; | Product Hunt"
-                        style="width: 250px; height: 54px;" width="250" height="54" /></a>
-            </div>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
