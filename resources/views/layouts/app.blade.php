@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- DarkReader somehow thinks the website isn't dark by default, 
+    <!-- DarkReader somehow thinks the website isn't dark by default,
     this tells darkreader to disable on the site. -->
     <meta name="darkreader-lock">
 
@@ -23,7 +23,11 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
-    <link rel="canonical" href="{{ url()->current() }}">
+    @if (strpos($_SERVER['REQUEST_URI'], 'page') !== false)
+        <link rel="canonical" href="{{ url()->full() }}">
+    @else
+        <link rel="canonical" href="{{ url()->current() }}">
+    @endif
 
     @stack('meta_tags')
 
