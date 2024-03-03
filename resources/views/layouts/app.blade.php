@@ -23,6 +23,8 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
+    <link rel="canonical" href="{{ url()->current() }}">
+
     @stack('meta_tags')
 
     <!-- OpenGraph -->
