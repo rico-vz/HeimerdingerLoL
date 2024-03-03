@@ -6,10 +6,10 @@
 @section('content')
     <div class="max-w-screen-xl px-5 mx-auto min-h-sceen">
         <div class="flex flex-col items-center">
-            <h2
+            <h1
                 class="mt-12 text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
                 FAQ • League of Legends
-            </h2>
+            </h1>
             <p class="text-lg text-gray-300">
                 Frequently Asked Questions about League of Legends and Riot Games.
             </p>
