@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Cache;
 
 use Spatie\Sheets\Facades\Sheets;
 
-
 class HTMLSitemapController extends Controller
 {
     public function index()
