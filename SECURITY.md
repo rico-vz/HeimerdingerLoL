@@ -2,7 +2,7 @@
 
 ## Reporting a Security Vulnerability
 
-Thank you for your interest in improving the security of "Heimerdinger.LoL." We take security seriously and encourage responsible disclosure. If you discover a security vulnerability, please report it to us at **sec-report@heimerdinger.lol**. We appreciate your cooperation in keeping our project secure.
+Thank you for your interest in improving the security of "Heimerdinger.LoL." We take security seriously and encourage responsible disclosure. If you discover a security vulnerability, please report it to us at **security@rico.sh**. We appreciate your cooperation in keeping our project secure.
 
 ### Responsible Disclosure Policy
 
@@ -18,11 +18,11 @@ At the moment, we do not offer monetary rewards or bounties for security reports
 
 ## Public or Private Reporting
 
-We prefer that you report security vulnerabilities privately to **sec-report@heimerdinger.lol** before disclosing them publicly. This gives us an opportunity to address the issue and protect our users before potential exploitation.
+We prefer that you report security vulnerabilities privately to **security@rico.sh** before disclosing them publicly. This gives us an opportunity to address the issue and protect our users before potential exploitation.
 
 ## Security Contact
 
-You can reach us at **sec-report@heimerdinger.lol** for any security-related concerns.
+You can reach us at **security@rico.sh** for any security-related concerns.
 
 ## Acknowledgments
 
