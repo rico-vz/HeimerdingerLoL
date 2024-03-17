@@ -2489,16 +2489,16 @@
         },
         {
             "name": "laravel/pulse",
-            "version": "v1.0.0-beta13",
+            "version": "v1.0.0-beta15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pulse.git",
-                "reference": "e6d53d92e137be9cc3f001b88e31e722038594a6"
+                "reference": "6fc88b3ead77fd1c67428f0c0fa6ac2ec5302e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pulse/zipball/e6d53d92e137be9cc3f001b88e31e722038594a6",
-                "reference": "e6d53d92e137be9cc3f001b88e31e722038594a6",
+                "url": "https://api.github.com/repos/laravel/pulse/zipball/6fc88b3ead77fd1c67428f0c0fa6ac2ec5302e2b",
+                "reference": "6fc88b3ead77fd1c67428f0c0fa6ac2ec5302e2b",
                 "shasum": ""
             },
             "require": {
@@ -2571,7 +2571,7 @@
                 "issues": "https://github.com/laravel/pulse/issues",
                 "source": "https://github.com/laravel/pulse"
             },
-            "time": "2024-02-19T14:28:51+00:00"
+            "time": "2024-03-11T13:19:11+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3225,16 +3225,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.4.6",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "7e7d638183b34fb61621455891869f5abfd55a82"
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/7e7d638183b34fb61621455891869f5abfd55a82",
-                "reference": "7e7d638183b34fb61621455891869f5abfd55a82",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
                 "shasum": ""
             },
             "require": {
@@ -3288,7 +3288,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.4.6"
+                "source": "https://github.com/livewire/livewire/tree/v3.4.9"
             },
             "funding": [
                 {
@@ -3296,7 +3296,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-20T14:04:25+00:00"
+            "time": "2024-03-14T14:03:32+00:00"
         },
         {
             "name": "masterminds/html5",
