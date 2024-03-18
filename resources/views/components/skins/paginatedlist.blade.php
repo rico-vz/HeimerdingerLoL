@@ -12,7 +12,7 @@
     </div>
 
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 ">
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
 
             @foreach ($skins as $key => $skin)
                 <div
@@ -23,10 +23,7 @@
                             @foreach ($skin->associated_skinline as $skinline)
                                 <span class="sr-only">Associated Skinline:</span>
                                 <span
-                                    class="m-2 bg-orange-100 text-orange-800 text-xs font-medium
-                                            mr-2 px-2.5 py-0.5 rounded
-                                            border border-orange-300
-                                            ">
+                                    class="m-2 bg-orange-100 text-orange-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-orange-300">
                                     {{ $skinline }}</span>
                             @endforeach
                         </div>
@@ -53,7 +50,7 @@
                     </div>
 
                     <div class="flex items-end justify-center px-4 mt-auto mb-2 text-2xl text-white md:text-lg">
-                        <p class="text-sm font-medium hover:text-orange-400 "><a href="/skin/{{ $skin->slug }}">More
+                        <p class="text-sm font-medium hover:text-orange-400"><a href="/skin/{{ $skin->slug }}">More
                                 details
                                 <x-iconsax-bul-arrow-circle-right class="inline-block w-6" />
                             </a>

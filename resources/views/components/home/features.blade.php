@@ -29,7 +29,7 @@
                 href="/skins">
                 <x-iconsax-bul-paintbucket class="h-10 text-orange-400" />
 
-                <h2 class="mt-4 text-xl font-bold text-white ">Skin Information</h2>
+                <h2 class="mt-4 text-xl font-bold text-white">Skin Information</h2>
 
                 <p class="mt-1 text-sm text-stone-300">
                     All the information you need about skins in League of Legends. Check out the

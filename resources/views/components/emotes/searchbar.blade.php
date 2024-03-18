@@ -1,10 +1,9 @@
-<div class="flex items-center justify-center mt-8 ">
+<div class="flex items-center justify-center mt-8">
     <form action="{{ route('assets.emotes.index') }}" method="GET" class="flex" id="searchForm">
         <div class="relative">
             <input type="text" name="filter[title]" placeholder="Search by emote name"
                    value="{{ request('filter.title') }}"
-                   class="border border-transparent focus:border-transparent focus:ring-0 border-stone-700 rounded-l
-                   px-4 py-2 bg-stone-800 text-white ring-orange-500 pr-10">
+                   class="border border-transparent focus:border-transparent focus:ring-0 border-stone-700 rounded-l px-4 py-2 bg-stone-800 text-white ring-orange-500 pr-10">
             @if(request('filter.title'))
                 <button type="button" onclick="clearSearchAndSubmit()"
                         class="absolute inset-y-0 right-0 flex items-center px-3 bg-stone-800 text-white cursor-pointer">
@@ -13,8 +12,7 @@
             @endif
         </div>
         <button type="submit"
-                class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-r
-                focus:outline-none ring-orange-500">
+                class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-r focus:outline-none ring-orange-500">
             Search
         </button>
     </form>
