@@ -13,7 +13,7 @@ function getRoleIcon($roleName): string
         'Support' => 'gm-support.png',
     ];
 
-    return asset('img/'.$roleIcons[$roleName]);
+    return asset('img/' . $roleIcons[$roleName]);
 }
 
 function getAverageColorFromImageUrl($imageUrl): string

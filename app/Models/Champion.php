@@ -96,48 +96,48 @@ class Champion extends Model
 
     public function getChampionImageAttribute($centered = true): string
     {
-        $url = 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/splash-art';
+        $url = 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/splash-art';
 
-        return $centered ? $url.'/centered' : $url;
+        return $centered ? $url . '/centered' : $url;
     }
 
     public function getChampionImageLoadingAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait';
     }
 
     public function getChampionImageTileAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile';
     }
 
     public function getChampionSquareImageAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/square';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/square';
     }
 
     public function getChampionAbilityIconQAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/q';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/q';
     }
 
     public function getChampionAbilityIconWAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/w';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/w';
     }
 
     public function getChampionAbilityIconEAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/e';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/e';
     }
 
     public function getChampionAbilityIconRAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/r';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/r';
     }
 
     public function getChampionAbilityIconPAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/p';
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/ability-icon/p';
     }
 }

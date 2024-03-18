@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
 
         Cache::flush();
 
-        Log::info('Seeding complete at '.date('Y-m-d H:i:s'));
+        Log::info('Seeding complete at ' . date('Y-m-d H:i:s'));
     }
 }
