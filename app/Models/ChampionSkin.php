@@ -34,11 +34,14 @@ class ChampionSkin extends Model
         'splash_artist',
     ];
 
-    protected $casts = [
-        'associated_skinline' => 'array',
-        'voice_actor' => 'array',
-        'splash_artist' => 'array',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'associated_skinline' => 'array',
+            'voice_actor' => 'array',
+            'splash_artist' => 'array',
+        ];
+    }
 
     public function sluggable(): array
     {

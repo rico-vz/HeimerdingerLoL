@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Schedule;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,3 +12,8 @@
 | simple approach to interacting with each command's IO methods.
 |
 */
+
+
+Schedule::command('db:seed --force')->twiceDaily(1, 13)->timezone('Europe/Amsterdam');
+
+Schedule::command('sitemap:generate')->weekly();
