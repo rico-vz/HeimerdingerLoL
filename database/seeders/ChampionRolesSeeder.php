@@ -25,6 +25,7 @@ class ChampionRolesSeeder extends Seeder
 
             if (! $championExists) {
                 Log::info('Champion with ID '.$championId.' does not exist, skipping...');
+
                 continue;
             }
 

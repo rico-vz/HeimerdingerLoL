@@ -2,16 +2,13 @@
     <div class="my-auto mx-auto items-center justify-center align-middle">
         <p class="sr-only">Heimerdinger Presents:</p>
         <h3
-            class="text-sm font-bold text-center text-transparent uppercase sm:text-md
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+            class="text-sm font-bold text-center text-transparent uppercase sm:text-md bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
             ICON DETAILS</h3>
         <h1
-            class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+            class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
             {{$icon->title}}</h1>
         <h2
-            class="text-sm md:text-lg font-bold text-center text-transparent uppercase
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+            class="text-sm md:text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
             Released in: {{$icon->release_year}}</h2>
 
         <div class="container mx-auto p-4 flex items-center justify-center mt-3 my-auto">
@@ -23,8 +20,7 @@
                     <img
                         src="//wsrv.nl/?url={{ $icon->image }}&w=400&output=webp&q=100&il"
                         alt="{{$icon->title}} Icon"
-                        class="transition-transform duration-700 rounded-2xl bg-clip-border border-2 border-orange-400/40
-                    shadow-md shadow-orange-400/20"/>
+                        class="transition-transform duration-700 rounded-2xl bg-clip-border border-2 border-orange-400/40 shadow-md shadow-orange-400/20"/>
                     <a href="{{$icon->image}}" rel="noopener" target="_blank"
                        class="text-center text-neutral-100 text-sm font-medium px-4 py-2">
                         View in HD
@@ -36,7 +32,7 @@
                         {{$icon->title}} Details
                     </h4>
                     <div class="flex flex-col justify-between h-max">
-                        <ul class="mx-5 flex-1  h-max">
+                        <ul class="mx-5 flex-1 h-max">
                             <li class="text-neutral-100 hyphens-auto text-base leading-loose items-center" lang="en">
                                 <span class="font-bold">Icon ID:</span>
                                 <span class="font-mono font-semibold">{{$icon->icon_id}}</span>

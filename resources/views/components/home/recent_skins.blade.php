@@ -31,7 +31,7 @@
                                     <h2 class="mt-4 text-xl font-bold text-white"><a
                                             href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a>
                                     </h2>
-                                    <h3 class=" text-stone-200">Released
+                                    <h3 class="text-stone-200">Released
                                         {{ Carbon::parse($skin->release_date)->diffForHumans([
                                             'parts' => 2,
                                             'join' => true,
@@ -41,10 +41,7 @@
                                     @foreach ($skin->associated_skinline as $skinline)
                                         <span class="sr-only">Associated Skinline:</span>
                                         <span
-                                            class="my-2 bg-orange-100 text-orange-800 text-xs font-medium
-                                            mr-2 px-2.5 py-0.5 rounded
-                                            border border-orange-300
-                                            ">
+                                            class="my-2 bg-orange-100 text-orange-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-orange-300">
                                             {{ $skinline }}</span>
                                     @endforeach
 

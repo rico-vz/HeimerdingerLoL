@@ -6,12 +6,10 @@
 
 @section('content')
     <h1
-        class="mt-7 text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+        class="mt-7 text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         Assets</h1>
     <h2
-        class="text-lg font-bold text-center text-transparent uppercase
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text ">
+        class="text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         LoL Icons & Emotes</h2>
 
     <div class="container mx-auto p-4 flex items-center justify-center mt-3 flex-grow">
@@ -19,7 +17,7 @@
             <img class="items-center mx-auto" src="{{asset('img/heimerdinger-emote.webp')}}"
                  alt="Heimerdinger Emote">
             <p class="text-gray-100">Tired of endless browsing to find that one icon or emote you love?</p>
-            <p class="text-gray-100 ">We got you covered! Search through <span
+            <p class="text-gray-100">We got you covered! Search through <span
                     class="underline decoration-orange-500/50 font-medium">all</span>
                 icons &
                 emotes with ease. </p>
