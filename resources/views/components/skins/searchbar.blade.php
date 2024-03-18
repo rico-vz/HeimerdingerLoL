@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center mt-8 ">
+<div class="flex items-center justify-center mt-8">
     <form action="{{ route('skins.index') }}" method="GET" class="flex" id="searchForm">
         <div class="relative">
             <input type="text" name="filter[name]" placeholder="Search by skin name"

@@ -11,7 +11,7 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 class="text-3xl font-bold text-center text-transparent uppercase mt-7 sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
                 About</h1>
             <h2
-                class="text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text ">
+                class="text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
                 Learn all about League of Legends, Heimerdinger and us.</h2>
         </div>
 
@@ -24,7 +24,7 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 Legends</a>
         </div>
 
-        <div class="flex flex-col items-center justify-center mt-5 ">
+        <div class="flex flex-col items-center justify-center mt-5">
             <h2
                 class="text-lg font-bold text-center text-gray-100 uppercase">
                 What is League of Legends?</h2>

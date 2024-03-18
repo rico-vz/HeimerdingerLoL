@@ -34,7 +34,7 @@
                                 <h2 class="mt-4 text-xl font-bold text-white"><a
                                         href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a></h2>
 
-                                <div class="my-1 ">
+                                <div class="my-1">
                                     <span class="sr-only">Associated Skinline:</span>
                                     @foreach ($skin->associated_skinline as $skinline)
                                         <span

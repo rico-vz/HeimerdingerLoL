@@ -20,7 +20,7 @@
                         <a href="/icon/{{ $icon->slug }}">
                             <img @if ($key < 8) loading="eager" @else loading="lazy" @endif
                                 src="//wsrv.nl/?url={{ $icon->image }}&w=200&output=webp&q=50&il&default=ssl:wsrv.nl%2F%3Furl%3Dhttps://i.ibb.co/5s6YyvN/aaaa.png"
-                                class="object-cover w-full h-full " alt="{{ $icon->title }} Icon" /></a>
+                                class="object-cover w-full h-full" alt="{{ $icon->title }} Icon" /></a>
                     </div>
 
                     <div class="px-4 py-2">
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="flex items-end justify-center px-4 mt-auto mb-2 text-2xl text-white md:text-lg">
-                        <p class="text-sm font-medium hover:text-orange-400 "><a href="/icon/{{ $icon->slug }}">More
+                        <p class="text-sm font-medium hover:text-orange-400"><a href="/icon/{{ $icon->slug }}">More
                                 details
                                 <x-iconsax-bul-arrow-circle-right class="inline-block w-6" />
                             </a>

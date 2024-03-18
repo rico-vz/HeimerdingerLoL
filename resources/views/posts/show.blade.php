@@ -29,8 +29,7 @@
         <meta itemprop="thumbnailUrl" content="{{$post->thumbnail}}"/>
         <div>
             <h1
-                class="not-prose text-3xl font-bold text-center text-transparent uppercase sm:text-4xl
-        bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text" itemprop="headline">
+                class="not-prose text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text" itemprop="headline">
                 “{{$post->title}}”</h1>
             <h2 class="not-prose text-center text-orange-400 text-sm italic" itemprop="description">
                 “{{ $post->description }}”

@@ -12,7 +12,7 @@
     </div>
 
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 ">
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
 
             @foreach($champions as $key => $champion)
                 <div
@@ -53,7 +53,7 @@
                             </p>
                             @endforeach
 
-                            <div class="flex items-end justify-end w-full justify-items-end ">
+                            <div class="flex items-end justify-end w-full justify-items-end">
                                 <p class="text-2xl text-right text-orange-300 md:text-lg hover:text-orange-400">
                                     <a href="/champion/{{$champion->slug}}"
                                        aria-label="[Detailed {{$champion->name}} info...]">

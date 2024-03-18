@@ -6,8 +6,7 @@
             @if($post->hidden)
                 @continue
             @endif
-            <article class="inline-block text-gray-200 bg-stone-800/40 shadow-md rounded-2xl border border-stone-800
-                hover:border-orange-500/10 hover:shadow-orange-500/10 items-center h-80 relative">
+            <article class="inline-block text-gray-200 bg-stone-800/40 shadow-md rounded-2xl border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 items-center h-80 relative">
                 <span
                     class="absolute top-4 left-4 text-sm text-gray-100 font-medium bg-black/60 px-1 py-1 rounded-lg">
                     <abbr itemprop="datePublished">{{ Carbon::parse($post->date)->format('F d, Y') }}</abbr>
