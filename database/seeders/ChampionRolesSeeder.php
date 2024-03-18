@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Models\ChampionRoles;
 use App\Models\Champion;
+use App\Models\ChampionRoles;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 
@@ -23,8 +23,8 @@ class ChampionRolesSeeder extends Seeder
             $rolesExists = ChampionRoles::where('champion_id', $championId)->first();
             $championExists = Champion::where('champion_id', $championId)->first();
 
-            if (!$championExists) {
-                Log::info('Champion with ID ' . $championId . ' does not exist, skipping...');
+            if (! $championExists) {
+                Log::info('Champion with ID '.$championId.' does not exist, skipping...');
                 continue;
             }
 
@@ -45,11 +45,11 @@ class ChampionRolesSeeder extends Seeder
             ];
 
             if ($rolesExists && $this->hasAttributesChanged($rolesExists, $rolesAttributes)) {
-                Log::info('Roles for ' . $championName . ' have changed, updating...');
+                Log::info('Roles for '.$championName.' have changed, updating...');
                 $rolesExists->update($rolesAttributes);
                 $changeCount++;
-            } elseif (!$rolesExists) {
-                Log::info('New roles detected for ' . $championName . '! Creating...');
+            } elseif (! $rolesExists) {
+                Log::info('New roles detected for '.$championName.'! Creating...');
                 ChampionRoles::create($rolesAttributes);
                 $changeCount++;
             }

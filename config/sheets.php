@@ -9,6 +9,6 @@ return [
             'path_parser' => Spatie\Sheets\PathParsers\SlugParser::class,
             'content_parser' => Spatie\Sheets\ContentParsers\MarkdownWithFrontMatterParser::class,
             'extension' => 'md',
-        ]
+        ],
     ],
 ];

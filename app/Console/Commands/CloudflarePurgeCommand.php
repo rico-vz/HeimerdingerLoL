@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
+use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\App;
 
 class CloudflarePurgeCommand extends Command
@@ -25,10 +25,10 @@ class CloudflarePurgeCommand extends Command
 
             $response = $client->request(
                 'POST',
-                "https://api.cloudflare.com/client/v4/zones/" . $cf_zone_id . "/purge_cache",
+                'https://api.cloudflare.com/client/v4/zones/'.$cf_zone_id.'/purge_cache',
                 [
                     'headers' => [
-                        'Authorization' => 'Bearer ' . $cf_auth_bearer,
+                        'Authorization' => 'Bearer '.$cf_auth_bearer,
                         'Content-Type' => 'application/json',
                     ],
                     'json' => [

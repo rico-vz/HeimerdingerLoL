@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Enums\ContactCategory;
+use Illuminate\Database\Eloquent\Model;
 
 class ContactSubmission extends Model
 {

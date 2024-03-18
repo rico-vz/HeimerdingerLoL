@@ -43,6 +43,6 @@ class SkinChroma extends Model
 
     public function getChromaImageAttribute()
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/' . $this->skin->champion_id . '/' . $this->chroma_id . '.png';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-chroma-images/'.$this->skin->champion_id.'/'.$this->chroma_id.'.png';
     }
 }

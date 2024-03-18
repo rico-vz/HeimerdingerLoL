@@ -14,6 +14,7 @@ class SaleController extends Controller
                 true
             );
             $salesData = array_filter($shopData, static fn ($collection) => $collection['path'] === '/event/sales');
+
             return reset($salesData)['dynamicCollection']['discountedProductsByProductType'] ?? [];
         });
 

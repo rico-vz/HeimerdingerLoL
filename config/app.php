@@ -6,7 +6,6 @@ return [
 
     'login_route' => env('LOGIN_ROUTE_NAME', 'login'),
 
-
     'aliases' => Facade::defaultAliases()->merge([
         'HCaptcha' => Scyllaly\HCaptcha\Facades\HCaptcha::class,
         // 'Example' => App\Facades\Example::class,
