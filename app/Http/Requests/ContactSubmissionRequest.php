@@ -15,7 +15,10 @@ class ContactSubmissionRequest extends FormRequest
             'category' => ['required', 'in:question,advertising,bug_report,feedback,other'],
             'subject' => ['required', 'max:254'],
             'message' => ['required', 'unique:contact_submissions', 'max:3500'],
-            'h-captcha-response' => 'required|HCaptcha',
+            'h-captcha-response' => [
+                'required',
+                'HCaptcha',
+            ],
         ];
     }
 
