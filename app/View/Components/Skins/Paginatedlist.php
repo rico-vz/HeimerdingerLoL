@@ -3,8 +3,8 @@
 namespace App\View\Components\Skins;
 
 use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
+use Illuminate\View\Component;
 
 class Paginatedlist extends Component
 {

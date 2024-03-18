@@ -16,8 +16,8 @@ use App\Http\Requests\ContactSubmissionRequest;
 use App\Models\Champion;
 use App\Models\SummonerIcon;
 use Illuminate\Support\Facades\Route;
-use Spatie\Sheets\Sheet;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use Spatie\Sheets\Sheet;
 
 /*
 |--------------------------------------------------------------------------

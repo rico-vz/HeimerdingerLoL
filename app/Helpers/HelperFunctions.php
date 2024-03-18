@@ -1,7 +1,7 @@
 <?php
 
-use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\ImageManager;
 
 function getRoleIcon($roleName): string
 {
@@ -13,7 +13,7 @@ function getRoleIcon($roleName): string
         'Support' => 'gm-support.png',
     ];
 
-    return asset('img/' . $roleIcons[$roleName]);
+    return asset('img/'.$roleIcons[$roleName]);
 }
 
 function getAverageColorFromImageUrl($imageUrl): string
@@ -45,7 +45,7 @@ function getAverageColorFromImageUrl($imageUrl): string
     $avgG = $totalG / $pixelCount;
     $avgB = $totalB / $pixelCount;
 
-    return sprintf("#%02x%02x%02x", $avgR, $avgG, $avgB);
+    return sprintf('#%02x%02x%02x', $avgR, $avgG, $avgB);
 }
 
 function getRoleIconSvg($roleName): string
