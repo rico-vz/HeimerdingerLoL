@@ -48,10 +48,10 @@ class ChampionController extends Controller
         $threeDaysInSeconds = 60 * 60 * 24 * 3;
         $sixMonthsInSeconds = 60 * 60 * 24 * 30 * 6;
 
-        $champion = Cache::remember('championShowCache' . $champion->slug, $threeDaysInSeconds, static fn () => $champion->load('skins', 'lanes'));
+        $champion = Cache::remember('championShowCache'.$champion->slug, $threeDaysInSeconds, static fn () => $champion->load('skins', 'lanes'));
 
         $splashColor = Cache::remember(
-            'championSplashColorCache' . $champion->slug,
+            'championSplashColorCache'.$champion->slug,
             $sixMonthsInSeconds,
             static fn () => getAverageColorFromImageUrl($champion->getChampionImageAttribute())
         );

@@ -32,7 +32,7 @@ class SummonerIconSeeder extends Seeder
                 'description' => $icon['descriptions'][0]['description'] ?? null,
                 'release_year' => $icon['yearReleased'],
                 'legacy' => $icon['isLegacy'],
-                'image' => 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/' . $icon['id'] . '.jpg',
+                'image' => 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/'.$icon['id'].'.jpg',
                 'esports_team' => $icon['esportsTeam'] ?? null,
                 'esports_region' => $icon['esportsRegion'] ?? null,
                 'esports_event' => $icon['esportsEvent'] ?? null,
@@ -41,11 +41,11 @@ class SummonerIconSeeder extends Seeder
             // Check if the champion already exists and if any attributes have changed, if so update the champion. If the champion doesn't exist, create it.
             // This is to prevent the champion data from being updated every time the seeder is run. As I'll probably run this on a cron job.
             if ($iconExists && $this->hasAttributesChanged($iconExists, $iconAttributes)) {
-                Log::info('Icon ' . $iconId . ' has changed, updating...');
+                Log::info('Icon '.$iconId.' has changed, updating...');
                 $iconExists->update($iconAttributes);
                 $changeCount++;
-            } elseif (!$iconExists) {
-                Log::info('New icon detected! Creating ' . $iconId . '...');
+            } elseif (! $iconExists) {
+                Log::info('New icon detected! Creating '.$iconId.'...');
                 SummonerIcon::create($iconAttributes);
                 $changeCount++;
             }

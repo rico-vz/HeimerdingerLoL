@@ -14,7 +14,7 @@ class UserCreateCommand extends Command
     public function handle(): void
     {
         if (config('app.env') === 'production') {
-            if (!$this->confirm('You are in production mode. Are you sure you want to continue?')) {
+            if (! $this->confirm('You are in production mode. Are you sure you want to continue?')) {
                 return;
             }
         }
@@ -27,14 +27,15 @@ class UserCreateCommand extends Command
         $password_confirmation = $this->secret('Confirm password');
         $admin = $this->confirm('Is this user an admin?');
 
-        $this->info('Name: ' . $name);
-        $this->info('Email: ' . $email);
-        $this->info('Password: ' . $password);
-        $this->info('Password confirmation: ' . $password_confirmation);
-        $this->info('Admin: ' . $admin);
+        $this->info('Name: '.$name);
+        $this->info('Email: '.$email);
+        $this->info('Password: '.$password);
+        $this->info('Password confirmation: '.$password_confirmation);
+        $this->info('Admin: '.$admin);
 
         if ($password !== $password_confirmation) {
             $this->error('Passwords do not match!');
+
             return;
         }
 
@@ -45,6 +46,6 @@ class UserCreateCommand extends Command
             'admin' => $admin,
         ]);
 
-        $this->info('User with name ' . $user->name . 'created successfully.');
+        $this->info('User with name '.$user->name.'created successfully.');
     }
 }

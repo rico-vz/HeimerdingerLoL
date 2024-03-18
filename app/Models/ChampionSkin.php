@@ -74,16 +74,16 @@ class ChampionSkin extends Model
 
     public function getSkinImageAttribute(): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' . $this->champion_id . '/' . $this->full_skin_id . '.jpg';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'.$this->champion_id.'/'.$this->full_skin_id.'.jpg';
     }
 
     public function getSkinImageLoadingAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait/skin/' . $this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait/skin/'.$this->skin_id;
     }
 
     public function getSkinImageTileAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile/skin/'.$this->skin_id;
     }
 }
