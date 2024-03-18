@@ -17,7 +17,10 @@ class ContactSubmission extends Model
             'message',
         ];
 
-    protected $casts = [
-        'category' => ContactCategory::class,
-    ];
+    protected function casts(): array
+    {
+        return [
+            'category' => ContactCategory::class,
+        ];
+    }
 }

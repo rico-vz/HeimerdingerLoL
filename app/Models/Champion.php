@@ -29,9 +29,12 @@ class Champion extends Model
         'release_patch',
     ];
 
-    protected $casts = [
-        'roles' => 'array',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'roles' => 'array',
+        ];
+    }
 
     public function getResourceTypeAttribute($value): string
     {

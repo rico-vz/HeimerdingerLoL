@@ -20,9 +20,12 @@ class SkinChroma extends Model
         'chroma_image',
     ];
 
-    protected $casts = [
-        'chroma_colors' => 'array',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'chroma_colors' => 'array',
+        ];
+    }
 
     public function sluggable(): array
     {

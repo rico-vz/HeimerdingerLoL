@@ -16,9 +16,12 @@ class ChampionRoles extends Model
         'roles',
     ];
 
-    protected $casts = [
-        'roles' => 'array',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'roles' => 'array',
+        ];
+    }
 
     public function champion(): BelongsTo
     {

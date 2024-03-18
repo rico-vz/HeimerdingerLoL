@@ -22,9 +22,12 @@ class SummonerIcon extends Model
         'esports_event',
     ];
 
-    protected $casts = [
-        'legacy' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'legacy' => 'boolean',
+        ];
+    }
 
     public function sluggable(): array
     {
