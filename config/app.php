@@ -7,21 +7,6 @@ return [
 
     'login_route' => env('LOGIN_ROUTE_NAME', 'login'),
 
-    'providers' => ServiceProvider::defaultProviders()->merge([
-        /*
-         * Package Service Providers...
-         */
-
-        /*
-         * Application Service Providers...
-         */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        Scyllaly\HCaptcha\HCaptchaServiceProvider::class,
-    ])->toArray(),
 
     'aliases' => Facade::defaultAliases()->merge([
         'HCaptcha' => Scyllaly\HCaptcha\Facades\HCaptcha::class,
