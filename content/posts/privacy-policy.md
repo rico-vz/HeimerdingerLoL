@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: This Privacy Policy covers the information we may collect when you use Heimerdinger.lol.
 thumbnail: 'https://cdn.rico.sh/thumb-privacypolicy.png'
-date: 2024-01-20 # YYYY-MM-DD HH:MM:SS
+date: 2024-03-18 # YYYY-MM-DD HH:MM:SS
 tags:
   - privacy
   - policy
@@ -13,7 +13,7 @@ hidden: true
 
 # Privacy Policy
 
-Last Updated: January 20th, 2024
+Last Updated: March 18th, 2024
 
 ## 1. Introduction
 
@@ -27,7 +27,7 @@ We may collect and store information that you voluntarily provide to us, includi
 
 ### 2.2 Automatically Collected Information
 
-We use Google Analytics, Cloudflare Insights, and Simple Analytics to collect anonymous data about your interactions with our site. This data includes, but is not limited to, your IP address, browser type, operating system, and pages visited. We use this data to improve our site and your user experience.
+We use Cloudflare Insights and Plausible to collect anonymous data about your interactions with our site. This data includes, but is not limited to, your IP address, browser type, operating system, and pages visited. We use this data to improve our site and your user experience. No information is shared with, sent to or sold to third-parties. No information is monetized
 
 ## 3. How We Use Your Information
 
