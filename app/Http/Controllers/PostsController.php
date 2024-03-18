@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use CreativeCrafts\Paginate\Facades\Paginate;
 use Spatie\Sheets\Facades\Sheets;
 use Spatie\Sheets\Sheet;
-use CreativeCrafts\Paginate\Facades\Paginate;
 
 class PostsController extends Controller
 {

@@ -20,9 +20,9 @@ class SummonerEmoteSeeder extends Seeder
 
         foreach ($emoteData as $emote) {
             if (str_contains($emote['name'], 'game_summoner_emote_name_')
-                || $emote['inventoryIcon'] === ""
+                || $emote['inventoryIcon'] === ''
                 || empty($emote['inventoryIcon'])
-                || $emote['inventoryIcon'] === "/lol-game-data/assets/"
+                || $emote['inventoryIcon'] === '/lol-game-data/assets/'
                 || $emote['id'] === 0) {
                 continue;
             }
@@ -30,7 +30,7 @@ class SummonerEmoteSeeder extends Seeder
             $emoteId = $emote['id'];
             $emoteExists = SummonerEmote::where('emote_id', $emoteId)->first();
             $afterKeyword = str_replace('/lol-game-data/assets/ASSETS/Loadouts/SummonerEmotes', '', $emote['inventoryIcon']);
-            $imageUrl = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes' . strtolower($afterKeyword);
+            $imageUrl = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/loadouts/summoneremotes'.strtolower($afterKeyword);
 
             $emoteAttributes = [
                 'emote_id' => $emote['id'],
@@ -39,11 +39,11 @@ class SummonerEmoteSeeder extends Seeder
             ];
 
             if ($emoteExists && $this->hasAttributesChanged($emoteExists, $emoteAttributes)) {
-                Log::info('Emote ' . $emoteId . ' has changed, updating...');
+                Log::info('Emote '.$emoteId.' has changed, updating...');
                 $emoteExists->update($emoteAttributes);
                 $changeCount++;
-            } elseif (!$emoteExists) {
-                Log::info('New emote detected! Creating ' . $emoteId . '...');
+            } elseif (! $emoteExists) {
+                Log::info('New emote detected! Creating '.$emoteId.'...');
                 SummonerEmote::create($emoteAttributes);
                 $changeCount++;
             }

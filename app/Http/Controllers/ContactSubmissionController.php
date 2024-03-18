@@ -28,7 +28,7 @@ class ContactSubmissionController extends Controller
                 'title' => "{$contactSubmission->category->humanReadable()} - {$contactSubmission->subject}",
                 'description' => $descriptionContent,
                 'color' => '#ff8a4c',
-            ]
+            ],
         ]);
 
         return redirect()->route('contact.index')->with('success', 'Your message has been sent!');
