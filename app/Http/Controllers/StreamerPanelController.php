@@ -12,7 +12,9 @@ class StreamerPanelController extends Controller
      */
     public function index()
     {
-        //
+        return view('streamerpanel.index', [
+            'streamers' => Streamer::all(),
+        ]);
     }
 
     /**

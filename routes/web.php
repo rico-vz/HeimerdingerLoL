@@ -79,3 +79,6 @@ Route::get('/resource/sitemap', static fn () => (new HTMLSitemapController())->i
 
 // Pulse
 Route::get(config('app.login_route'), static fn () => redirect('/pulse'))->name('login')->middleware('auth.basic');
+
+// Streamer Panel
+Route::get('/streamerpanel', static fn () => (new \App\Http\Controllers\StreamerPanelController())->index())->name('streamers.index')->middleware('auth.basic');
