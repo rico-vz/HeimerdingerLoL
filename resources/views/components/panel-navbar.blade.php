@@ -19,13 +19,15 @@
             <ul
                 class="flex flex-col items-center p-2 md:flex-row md:space-x-6 md:mt-0 md:border-0 md:bg-white dark:bg-stone-800 md:dark:bg-stone-800 dark:border-stone-700">
                 <li>
-                    <a href="{{ route('champions.index') }}"
-                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                    <a href="{{ route('streamerpanel.index') }}"
+                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('streamerpanel.*') ? 'text-orange-400 font-medium' : 'text-white'  }}">
                         Streamers</a>
                 </li>
                 <li>
-                    <a href="{{ route('skins.index') }}"
-                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent ">
+                    <a href="#"
+                        class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        {{ request()->routeIs('streamerrequests.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         Streamer Requests</a>
                 </li>
             </ul>

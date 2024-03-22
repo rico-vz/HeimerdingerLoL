@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Streamer;
+use App\Models\Champion;
 use Illuminate\Http\Request;
 
 class StreamerPanelController extends Controller
@@ -22,7 +23,9 @@ class StreamerPanelController extends Controller
      */
     public function create()
     {
-        //
+        return view('streamerpanel.streamer-create', [
+            'champions' => Champion::all(),
+        ]);
     }
 
     /**
@@ -30,7 +33,16 @@ class StreamerPanelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'champion_id' => 'required|exists:champions,id',
+            'platform' => 'required|in:twitch,youtube,kick,douyu,huya',
+            'username' => 'required|string',
+            'displayname' => 'required|string',
+        ]);
+
+        Streamer::create($request->all());
+
+        return redirect()->route('streamerpanel.index');
     }
 
     /**
@@ -38,7 +50,10 @@ class StreamerPanelController extends Controller
      */
     public function edit(Streamer $streamer)
     {
-        //
+        return view('streamerpanel.streamer-edit', [
+            'streamer' => $streamer,
+            'champions' => Champion::all(),
+        ]);
     }
 
     /**
@@ -46,7 +61,16 @@ class StreamerPanelController extends Controller
      */
     public function update(Request $request, Streamer $streamer)
     {
-        //
+        $request->validate([
+            'champion_id' => 'required|exists:champions,id',
+            'platform' => 'required|in:twitch,youtube,kick,douyu,huya',
+            'username' => 'required|string',
+            'displayname' => 'required|string',
+        ]);
+
+        $streamer->update($request->all());
+
+        return redirect()->route('streamerpanel.index');
     }
 
     /**
@@ -54,6 +78,8 @@ class StreamerPanelController extends Controller
      */
     public function destroy(Streamer $streamer)
     {
-        //
+        $streamer->delete();
+
+        return redirect()->route('streamerpanel.index');
     }
 }

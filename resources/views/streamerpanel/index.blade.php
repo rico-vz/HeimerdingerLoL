@@ -4,5 +4,6 @@
 @section('description', 'Heimerdinger.LoL: Streamer Panel for managing your streamer requests.')
 
 @section('content')
-    hello world
+    <x-streamerpanel.home />
+    <x-streamerpanel.streamerstable :streamers="$streamers" />
 @endsection
