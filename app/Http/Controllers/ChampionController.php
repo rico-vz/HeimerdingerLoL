@@ -31,11 +31,9 @@ class ChampionController extends Controller
     {
         $threeDaysInSeconds = 60 * 60 * 24 * 3;
         $sixMonthsInSeconds = 60 * 60 * 24 * 30 * 6;
-        $tenMinutesInSeconds = 60 * 10;
 
         $champion = Cache::remember('championShowCache' . $champion->slug, $threeDaysInSeconds, static fn () => $champion->load('streamers', 'skins', 'lanes'));
 
-        //$streamers = Cache::remember('championStreamersCache' . $champion->slug, $tenMinutesInSeconds, static fn () => $champion->streamers);
         $streamers = $champion->load('streamers')->streamers;
 
         $splashColor = Cache::remember(
