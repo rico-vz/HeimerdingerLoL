@@ -21,8 +21,6 @@ return new class extends Migration
             $table->foreign('champion_id')->references('champion_id')->on('champions')->onDelete('cascade');
 
             $table->timestamps();
-
-
         });
     }
 
