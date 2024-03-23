@@ -14,7 +14,7 @@ class StreamerPanelController extends Controller
     public function index()
     {
         return view('streamerpanel.index', [
-            'streamers' => Streamer::all(),
+            'streamers' => Streamer::with('champion')->get(),
         ]);
     }
 
@@ -33,8 +33,7 @@ class StreamerPanelController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'champion_id' => 'required|exists:champions,id',
+        $request->validate(['champion_id' => 'required|exists:champions,champion_id',
             'platform' => 'required|in:twitch,youtube,kick,douyu,huya',
             'username' => 'required|string',
             'displayname' => 'required|string',

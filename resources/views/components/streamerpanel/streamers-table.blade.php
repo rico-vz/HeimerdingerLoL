@@ -2,7 +2,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 @endpush
-
 <div class="w-10/12 mx-auto">
     <div id="streamers-wrapper"></div>
 </div>

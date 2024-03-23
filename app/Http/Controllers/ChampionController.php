@@ -25,63 +25,27 @@ class ChampionController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreChampionRequest $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Champion $champion)
     {
         $threeDaysInSeconds = 60 * 60 * 24 * 3;
         $sixMonthsInSeconds = 60 * 60 * 24 * 30 * 6;
+        $tenMinutesInSeconds = 60 * 10;
 
-        $champion = Cache::remember('championShowCache'.$champion->slug, $threeDaysInSeconds, static fn () => $champion->load('skins', 'lanes'));
+        $champion = Cache::remember('championShowCache' . $champion->slug, $threeDaysInSeconds, static fn () => $champion->load('streamers', 'skins', 'lanes'));
+
+        //$streamers = Cache::remember('championStreamersCache' . $champion->slug, $tenMinutesInSeconds, static fn () => $champion->streamers);
+        $streamers = $champion->load('streamers')->streamers;
 
         $splashColor = Cache::remember(
-            'championSplashColorCache'.$champion->slug,
+            'championSplashColorCache' . $champion->slug,
             $sixMonthsInSeconds,
             static fn () => getAverageColorFromImageUrl($champion->getChampionImageAttribute())
         );
 
         $champion->splash_color = $splashColor;
 
-        return view('champions.show', ['champion' => $champion]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Champion $champion)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateChampionRequest $request, Champion $champion)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Champion $champion)
-    {
-        //
+        return view('champions.show', ['champion' => $champion, 'streamers' => $streamers]);
     }
 }

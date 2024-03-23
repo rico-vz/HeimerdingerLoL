@@ -3,9 +3,10 @@
     <div class="flex flex-col space-y-4">
         <div class="flex flex-col space-y-2">
             <label for="champion_id" class="text-lg font-semibold text-orange-400">Champion</label>
-            <select name="champion_id" id="champion_id" class="w-full p-2 text-white rounded-md bg-stone-800">
+            <select name="champion_id" required id="champion_id" class="w-full p-2 text-white rounded-md bg-stone-800">
+                <option value="">Select a champion</option>
                 @foreach ($champions as $champion)
-                    <option value="{{ $champion->id }}">{{ $champion->name }}</option>
+                    <option value="{{ $champion->champion_id }}">{{ $champion->name }}</option>
                 @endforeach
             </select>
         </div>
@@ -21,7 +22,8 @@
         </div>
         <div class="flex flex-col space-y-2">
             <label for="username" class="text-lg font-semibold text-orange-400">Username</label>
-            <input type="text" name="username" id="username" class="w-full p-2 text-white rounded-md bg-stone-800" />
+            <input type="text" name="username" id="username"
+                class="w-full p-2 text-white rounded-md bg-stone-800" />
         </div>
         <div class="flex flex-col space-y-2">
             <label for="displayname" class="text-lg font-semibold text-orange-400">Display Name</label>

@@ -13,11 +13,16 @@ return new class extends Migration
     {
         Schema::create('streamers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('champion_id')->constrained();
+            $table->integer('champion_id');
             $table->enum('platform', ['twitch', 'youtube', 'kick', 'douyu', 'huya']);
             $table->string('username');
             $table->string('displayname');
+
+            $table->foreign('champion_id')->references('champion_id')->on('champions')->onDelete('cascade');
+
             $table->timestamps();
+
+
         });
     }
 

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Champion;
 
 class Streamer extends Model
 {
@@ -11,10 +13,6 @@ class Streamer extends Model
 
     protected $fillable = ['champion_id', 'platform', 'username', 'displayname'];
 
-    public function champion()
-    {
-        return $this->belongsTo(Champion::class);
-    }
 
     public function getPlatformAttribute($value): string
     {
@@ -38,5 +36,10 @@ class Streamer extends Model
             'Douyu' => "https://www.douyu.com/{$this->username}",
             'Huya' => "https://www.huya.com/{$this->username}",
         };
+    }
+
+    public function champion(): BelongsTo
+    {
+        return $this->belongsTo(Champion::class, 'champion_id', 'champion_id');
     }
 }

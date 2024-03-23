@@ -94,6 +94,11 @@ class Champion extends Model
         return $this->hasOne(ChampionRoles::class, 'champion_id', 'champion_id');
     }
 
+    public function streamers()
+    {
+        return $this->hasMany(Streamer::class, 'champion_id', 'champion_id');
+    }
+
     public function getChampionImageAttribute($centered = true): string
     {
         $url = 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/splash-art';
