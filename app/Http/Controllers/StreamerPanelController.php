@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Streamer;
 use App\Models\Champion;
+use App\Models\Streamer;
 use Illuminate\Http\Request;
 
 class StreamerPanelController extends Controller
