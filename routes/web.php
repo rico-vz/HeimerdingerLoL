@@ -15,10 +15,10 @@ use App\Http\Controllers\SummonerIconController;
 use App\Http\Requests\ContactSubmissionRequest;
 use App\Models\Champion;
 use App\Models\SummonerIcon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use Spatie\Sheets\Sheet;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
