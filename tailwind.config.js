@@ -5,6 +5,7 @@ module.exports = {
     darkMode: 'class',
     content: [
         './resources/**/*.blade.php',
+        './resources/**/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
         './node_modules/flowbite/**/*.js',
@@ -25,10 +26,14 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', 'Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                twitch: '#6441a5',
+                youtube: '#FF0000',
+                kick: '#53fc18',
+                douyu: '#ff5f3a',
+                huya: '#ffaa06'
+            }
         },
-    },
-    corePlugins: {
-        aspectRatio: false,
     },
     variants: {
         extend: {
@@ -37,7 +42,6 @@ module.exports = {
     },
     plugins: [
         require('flowbite/plugin'),
-        require('@tailwindcss/aspect-ratio'),
         require('tailwind-capitalize-first-letter'),
         require('@tailwindcss/typography'),
     ],

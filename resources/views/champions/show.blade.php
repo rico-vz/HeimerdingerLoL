@@ -5,7 +5,7 @@
  about ' . $champion->name . ', ' . $champion->title . '. ' . substr($champion->lore, 0, 50) . '...')
 
 @section('content')
-    <x-champions.grid_info :champion="$champion"/>
+    <x-champions.grid_info :champion="$champion" :streamers="$streamers"/>
 @endsection
 
 @push('bottom_scripts')

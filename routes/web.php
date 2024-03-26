@@ -15,6 +15,7 @@ use App\Http\Controllers\SummonerIconController;
 use App\Http\Requests\ContactSubmissionRequest;
 use App\Models\Champion;
 use App\Models\SummonerIcon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use Spatie\Sheets\Sheet;
@@ -79,3 +80,11 @@ Route::get('/resource/sitemap', static fn () => (new HTMLSitemapController())->i
 
 // Pulse
 Route::get(config('app.login_route'), static fn () => redirect('/pulse'))->name('login')->middleware('auth.basic');
+
+// Streamer Panel
+Route::get('/streamerpanel', static fn () => (new \App\Http\Controllers\StreamerPanelController())->index())->name('streamerpanel.index')->middleware('auth.basic');
+Route::get('/streamerpanel/add', static fn () => (new \App\Http\Controllers\StreamerPanelController())->create())->name('streamerpanel.streamers.create')->middleware('auth.basic');
+Route::post('/streamerpanel/add', static fn (Request $request) => (new \App\Http\Controllers\StreamerPanelController())->store($request))->name('streamerpanel.store')->middleware('auth.basic');
+Route::get('/streamerpanel/edit/{streamer}', static fn (\App\Models\Streamer $streamer) => (new \App\Http\Controllers\StreamerPanelController())->edit($streamer))->name('streamerpanel.edit')->middleware('auth.basic');
+Route::post('/streamerpanel/edit/{streamer}', static fn (Request $request, \App\Models\Streamer $streamer) => (new \App\Http\Controllers\StreamerPanelController())->update($request, $streamer))->name('streamerpanel.update')->middleware('auth.basic');
+Route::delete('/streamerpanel/delete/{streamer}', static fn (\App\Models\Streamer $streamer) => (new \App\Http\Controllers\StreamerPanelController())->destroy($streamer))->name('streamerpanel.destroy')->middleware('auth.basic');

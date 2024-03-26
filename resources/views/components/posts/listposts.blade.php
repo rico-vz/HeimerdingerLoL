@@ -1,23 +1,23 @@
 @use('Carbon\Carbon')
 
-<div class="container mx-auto p-4 flex flex-col items-center justify-center mt-3">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 auto-cols-max w-full">
+<div class="container flex flex-col items-center justify-center p-4 mx-auto mt-3">
+    <div class="grid w-full grid-cols-1 gap-12 md:grid-cols-2 auto-cols-max">
         @foreach($posts as $post)
             @if($post->hidden)
                 @continue
             @endif
-            <article class="inline-block text-gray-200 bg-stone-800/40 shadow-md rounded-2xl border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 items-center h-80 relative">
+            <article class="relative items-center inline-block text-gray-200 border shadow-md bg-stone-800/40 rounded-2xl border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 h-80">
                 <span
-                    class="absolute top-4 left-4 text-sm text-gray-100 font-medium bg-black/60 px-1 py-1 rounded-lg">
+                    class="absolute px-1 py-1 text-sm font-medium text-gray-100 rounded-lg top-4 left-4 bg-black/60">
                     <abbr itemprop="datePublished">{{ Carbon::parse($post->date)->format('F d, Y') }}</abbr>
                 </span>
-                <img src="{{ $post->thumbnail }}" alt="Post Thumbnail" class="w-full h-48 object-cover rounded-t-2xl">
+                <img src="{{ $post->thumbnail }}" alt="Post Thumbnail" class="object-cover w-full h-48 aspect-video rounded-t-2xl">
                 <div class="p-4">
-                    <h2 class="text-xl font-bold mb-2 line-clamp-1" itemprop="name">{{ $post->title }}</h2>
+                    <h2 class="mb-2 text-xl font-bold line-clamp-1" itemprop="name">{{ $post->title }}</h2>
                     <p class="text-sm line-clamp-3" itemprop="headline">{{ $post->description }}</p>
                 </div>
                 <a href="{{ route('posts.show', $post->slug)}}" itemprop="url"
-                   class="absolute bottom-4 right-4 text-sm text-orange-400 hover:text-orange-600">Read more</a>
+                   class="absolute text-sm text-orange-400 bottom-4 right-4 hover:text-orange-600">Read more</a>
             </article>
         @endforeach
     </div>
