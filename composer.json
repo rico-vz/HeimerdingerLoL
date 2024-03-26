@@ -11,7 +11,7 @@
         "php": "^8.2",
         "andcarpi/laravel-popper": "^0.9.4",
         "blade-ui-kit/blade-icons": "^1.6",
-        "creativecrafts/laravel-paginate-collection": "^0.2.4",
+        "creativecrafts/laravel-paginate-collection": "^1.0.0",
         "cviebrock/eloquent-sluggable": "^11.0",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "^3.0",
