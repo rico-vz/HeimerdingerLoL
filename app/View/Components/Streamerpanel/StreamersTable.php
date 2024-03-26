@@ -2,11 +2,9 @@
 
 namespace App\View\Components\Streamerpanel;
 
-use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
-use App\Models\Streamer;
 use Illuminate\Support\Collection;
+use Illuminate\View\Component;
 
 class StreamersTable extends Component
 {
