@@ -101,15 +101,13 @@
                             <div class="flex justify-center items -center">
                                 <div class="flex flex-col items-center justify-center">
                                     <a href="{{ $streamer->streamer_url }}" target="_blank" rel="noopener noreferrer"
-                                        class="text-center text-neutral-100 text-sm mt-1.5 items-center">
+                                        class="text-center text-neutral-100 text-sm mt-1.5 items-center drop-shadow-lg text-shadow-{{ strtolower($streamer->platform) }}">
                                         {{ $streamer->displayname }}
                                     </a>
                                 </div>
                             </div>
                         @endforeach
                     </div>
-
-
                 </div>
             </div>
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20"
