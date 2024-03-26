@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Streamer;
 use App\Models\Champion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class StreamerPanelController extends Controller
 {
@@ -41,6 +42,8 @@ class StreamerPanelController extends Controller
 
         Streamer::create($request->all());
 
+        Cache::forget('streamersListAllAPICache');
+
         return redirect()->route('streamerpanel.index');
     }
 
@@ -69,6 +72,8 @@ class StreamerPanelController extends Controller
 
         $streamer->update($request->all());
 
+        Cache::forget('streamersListAllAPICache');
+
         return redirect()->route('streamerpanel.index');
     }
 
@@ -78,6 +83,8 @@ class StreamerPanelController extends Controller
     public function destroy(Streamer $streamer)
     {
         $streamer->delete();
+
+        Cache::forget('streamersListAllAPICache');
 
         return redirect()->route('streamerpanel.index');
     }
