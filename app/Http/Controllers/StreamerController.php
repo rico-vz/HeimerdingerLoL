@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Streamer;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-
 
 class StreamerController extends Controller
 {

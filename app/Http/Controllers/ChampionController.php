@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreChampionRequest;
-use App\Http\Requests\UpdateChampionRequest;
 use App\Models\Champion;
 use App\Models\ChampionRoles;
 use Illuminate\Support\Facades\Cache;
@@ -32,12 +30,12 @@ class ChampionController extends Controller
         $threeDaysInSeconds = 60 * 60 * 24 * 3;
         $sixMonthsInSeconds = 60 * 60 * 24 * 30 * 6;
 
-        $champion = Cache::remember('championShowCache' . $champion->slug, $threeDaysInSeconds, static fn () => $champion->load('streamers', 'skins', 'lanes'));
+        $champion = Cache::remember('championShowCache'.$champion->slug, $threeDaysInSeconds, static fn () => $champion->load('streamers', 'skins', 'lanes'));
 
         $streamers = $champion->load('streamers')->streamers;
 
         $splashColor = Cache::remember(
-            'championSplashColorCache' . $champion->slug,
+            'championSplashColorCache'.$champion->slug,
             $sixMonthsInSeconds,
             static fn () => getAverageColorFromImageUrl($champion->getChampionImageAttribute())
         );
