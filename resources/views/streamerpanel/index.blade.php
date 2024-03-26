@@ -5,5 +5,5 @@
 
 @section('content')
     <x-streamerpanel.home />
-    <x-streamerpanel.streamerstable :streamers="$streamers" />
+    <x-streamerpanel.streamersTable :streamers="$streamers" />
 @endsection
