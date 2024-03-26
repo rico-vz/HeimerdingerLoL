@@ -23,7 +23,7 @@
         <div class="grid w-screen grid-cols-1 gap-5 md-grid-cols-2 lg:grid-cols-3">
             <div
                 class="relative border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
-                <div class="absolute inset-0 aspect-w-16 aspect-h-9 glow-shadow rounded-2xl"
+                <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
                      style="--splash-color: {{$skin->splash_color}}"></div>
                 <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=840&output=webp&q=70"
                      alt="{{$skin->skin_name}} Splash Art"

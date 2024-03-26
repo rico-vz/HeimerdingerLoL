@@ -13,10 +13,10 @@
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
         <div class="grid w-screen grid-cols-1 gap-5 md-grid-cols-2 lg:grid-cols-3">
             <div
-                class="relative border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
-                <div class="absolute inset-0 aspect-w-16 aspect-h-9 glow-shadow rounded-2xl"
+                class="relative border shadow-sm aspect-video rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
+                <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
                     style="--splash-color: {{ $champion->splash_color }}"></div>
-                <div class="relative overflow-hidden aspect-w-16 aspect-h-9 rounded-2xl">
+                <div class="relative overflow-hidden aspect-video rounded-2xl">
                     <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(false) }}&w=880&output=webp&q=85&il"
                         alt="{{ $champion->name }} Splash Art"
                         class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 hover:scale-105">
