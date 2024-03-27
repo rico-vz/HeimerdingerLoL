@@ -21,6 +21,10 @@
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Contact</a>
             </li>
             <li>
+                <a href="/support-me"
+                   class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Support</a>
+            </li>
+            <li>
                 <a href="/post/privacy-policy"
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Privacy</a>
             </li>
@@ -38,7 +42,7 @@
                     style="width: 250px; height: 54px;" width="250" height="54"/></a>
         </div>
         <span
-            class="flex mb-2 flex-row items-center justify-center text-sm text-gray-300 whitespace-pre sm:text-center dark:text-gray-300"> <a
+            class="flex flex-row items-center justify-center mb-2 text-sm text-gray-300 whitespace-pre sm:text-center dark:text-gray-300"> <a
                 href="{{route('sitemap.index')}}" class="hover:underline">Sitemap</a></span>
         <span
             class="flex flex-row items-center justify-center text-sm text-gray-500 whitespace-pre sm:text-center dark:text-gray-400">© {{date('Y')}} <a

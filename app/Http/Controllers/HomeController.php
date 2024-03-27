@@ -21,4 +21,9 @@ class HomeController extends Controller
             'upcomingSkins' => $upcomingSkins,
         ]);
     }
+
+    public function support()
+    {
+        return view('support');
+    }
 }
