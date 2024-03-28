@@ -13,16 +13,20 @@ function getRoleIcon($roleName): string
         'Support' => 'gm-support.png',
     ];
 
-    return asset('img/'.$roleIcons[$roleName]);
+    return asset('img/' . $roleIcons[$roleName]);
 }
 
 function getAverageColorFromImageUrl($imageUrl): string
 {
     $imgManager = new ImageManager(new Driver());
 
-    $img = $imgManager->read(file_get_contents($imageUrl));
+    try {
+        $img = $imgManager->read(file_get_contents($imageUrl));
+    } catch (Exception $e) {
+        return '#904f2c';
+    }
 
-    $img->resize(24, 24);
+    $img->resize(32, 32);
 
     $totalR = 0;
     $totalG = 0;
