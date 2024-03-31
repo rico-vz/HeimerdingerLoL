@@ -35,6 +35,8 @@ Route::get('/', static fn () => (new HomeController())->index())->name('home');
 
 Route::get('/support-me', static fn () => (new HomeController())->support())->name('support');
 
+Route::get('/roadmap', static fn () => (new HomeController())->roadmap())->name('roadmap');
+
 // Champions
 Route::get('/champions', static fn () => (new ChampionController())->index())->name('champions.index');
 Route::get('/champion/{champion}', static fn (Champion $champion) => (new ChampionController())->show($champion))->name('champions.show');

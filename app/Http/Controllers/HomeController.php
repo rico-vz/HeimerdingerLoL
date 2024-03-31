@@ -26,4 +26,9 @@ class HomeController extends Controller
     {
         return view('support');
     }
+
+    public function roadmap()
+    {
+        return view('roadmap');
+    }
 }

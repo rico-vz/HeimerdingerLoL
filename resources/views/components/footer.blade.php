@@ -25,6 +25,10 @@
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Support</a>
             </li>
             <li>
+                <a href="/roadmap"
+                   class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Roadmap</a>
+            </li>
+            <li>
                 <a href="/post/privacy-policy"
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Privacy</a>
             </li>
