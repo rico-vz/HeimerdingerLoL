@@ -11,7 +11,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Sheets::all()->filter(function ($post) {
-            return !$post->hidden;
+            return ! $post->hidden;
         })->sortByDesc('date');
         $paginatedPosts = Paginate::collection($posts, 6);
 
