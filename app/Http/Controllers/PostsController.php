@@ -10,7 +10,9 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Sheets::all()->sortByDesc('date');
+        $posts = Sheets::all()->filter(function ($post) {
+            return !$post->hidden;
+        })->sortByDesc('date');
         $paginatedPosts = Paginate::collection($posts, 6);
 
         return view('posts.index', [
