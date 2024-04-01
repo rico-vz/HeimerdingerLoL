@@ -31,6 +31,7 @@
 
     @stack('meta_tags')
 
+
     <!-- OpenGraph -->
     <meta property="og:site_name" content="Heimerdinger.LoL">
     <meta property="og:title" content="@yield('title')">
@@ -38,14 +39,14 @@
     <meta property="og:description" content="@yield('description')">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cdn.heimerdinger.lol/og-img-home.png">
+    <meta property="og:image" content="@yield('og_image', 'https://cdn.heimerdinger.lol/og-img-home.png')">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
-    <meta property="twitter:image" content="https://cdn.heimerdinger.lol/og-img-home.png">
+    <meta property="twitter:image" content="@yield('og_image', 'https://cdn.heimerdinger.lol/og-img-home.png')">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

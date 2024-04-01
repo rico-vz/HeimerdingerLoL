@@ -1,8 +1,10 @@
 @use('Carbon\Carbon')
 @extends('layouts.app')
 
-@section('title', $post->title . ' • Heimerdinger.LoL')
+@section('title', $post->title)
 @section('description', 'Heimerdinger.LoL: ' . $post->description)
+
+@section('og_image', $post->thumbnail)
 
 @push('meta_tags')
     <link rel="canonical" href="{{ config('app.HEIMER_URL') . '/post/' . $post->slug }}">
