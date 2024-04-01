@@ -18,9 +18,9 @@ hidden: false
 ---
 
 If you're a big [League of Legends](https://heimerdinger.lol/about/faq/league-of-legends) enjoyer you might already know of the April Fools events (or "URF Day") that happen every year on April 1st. Rotating game modes or very silly things happening in normal games, and this year is no different. This year we also have a special mission called "Insert Cute Name Here" with the description "Befriend Little Legends on Summoner's Rift". Once completed, you will get the [Hatty Crabby Icon](https://heimerdinger.lol/icon/hatty-crabby-icon-votcm).
- 
+
 <a href="https://heimerdinger.lol/icon/hatty-crabby-icon-votcm">![Hatty Crabby Icon Image](https://wsrv.nl/?url=https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/6584.jpg&w=120&output=webp&q=75&il)
-</a> 
+</a>
 Though the description is kind of vague, so many players are wondering how to get it. Fortunately, it's not that difficult, and we're here to help you out.
 
 ## Requirements for Unlocking Hatty Crabby Icon
@@ -48,7 +48,10 @@ You need to queue up for a Quickplay game, as all the April Fools shenanigans ca
 When you're in a Quickplay match, you're going to want to find and befriend Little Legends that are hidden around the map.
 Some may be located in random bushes, while others are found in the alcoves. To make it easier for them to be found, you can unlock your camera and move it around the map. Any areas where a Little Legend is will stand out, as there will be a golden glow.
 
-So, run toward the glow spots, and when you see the Little Legend, spam-click it until it becomes your friend. If you didn't befriend 5 Little Legends in time, don't worry! You can also get them by killing an enemy that has some.
+So, run toward the glow spots, and when you see the Little Legend, spam-click it until it becomes your friend.
+
+When you kill an enemy you also get their Little Legend Friends, however it doesn't seem like the Little Legends you got from killing the enemy count towards the mission to unlock the Hatty Crabby Icon.
+Some players have also speculated that you need to stay alive with your captured little friends for a certain amount of time for them to actually count, but this isn't confirmed.
 
 Even if you don't befriend enough Little Legends throughout an entire game you shouldn't worry, There is no maximum game limit to complete the mission; you can just queue up a Quickplay game again.
 
