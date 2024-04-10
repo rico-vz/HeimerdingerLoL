@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • Sitemap (HTML)')
+@section('title', 'Heimerdinger • Sitemap (HTML)')
 @section('description', 'Discover the complete sitemap for Heimerdinger.LoL,
 your go-to source for all things League of Legends.
 Explore champions, skins, game assets, and more in one convenient location.')

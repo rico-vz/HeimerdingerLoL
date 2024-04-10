@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • Support the Project')
+@section('title', 'Heimerdinger • Support the Project')
 @section('description', 'Support the Heimerdinger.LoL project by donating through Buy Me a Coffee or GitHub Sponsors.
     Your donations help keep the project running!')
 

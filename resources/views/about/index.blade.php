@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • About')
+@section('title', 'Heimerdinger • About')
 @section('description', 'What is League of Legends? Who is Heimerdinger? What is Heimerdinger.LoL? Explore answers to
 frequently asked questions about League of Legends, Heimerdinger and us. Dive in now!')
 

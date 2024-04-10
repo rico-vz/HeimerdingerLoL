@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • Champions')
+@section('title', 'Heimerdinger • Champions')
 @section('description', 'Explore the world of League of Legends champions on Heimerdinger.LoL. Find detailed
  information on top picks like Heimerdinger, Ezreal, Jinx and Lux. Dive into the action now!')
 

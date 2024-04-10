@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • FAQ: League of Legends')
+@section('title', 'Heimerdinger • FAQ: League of Legends')
 @section('description', 'Explore answers to frequently asked questions about League of Legends. Dive in now!')
 
 @section('content')

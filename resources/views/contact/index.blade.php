@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • Contact')
+@section('title', 'Heimerdinger • Contact')
 @section('description',
     'Contact Heimerdinger.LoL for any inquiries, feedback, or suggestions. We are always looking to
     improve our website and content.')

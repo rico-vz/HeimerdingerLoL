@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Heimerdinger.LoL • Roadmap')
+@section('title', 'Heimerdinger • Roadmap')
 @section('description', 'See what\'s coming next to Heimerdinger.lol. Vote on features you\'d like to see implemented
     next.')
 
