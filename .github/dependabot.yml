@@ -9,3 +9,14 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "symfony/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "laravel/*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      laravel-pkgs:
+        patterns:
+          - "laravel/*"
+          - "barryvdh/*"
+          - "spatie/*"
