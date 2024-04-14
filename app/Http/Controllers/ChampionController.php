@@ -37,7 +37,7 @@ class ChampionController extends Controller
         $splashColor = Cache::remember(
             'championSplashColorCache'.$champion->slug,
             $sixMonthsInSeconds,
-            static fn () => getAverageColorFromImageUrl('https://wsrv.nl/?url=' . $champion->getChampionImageAttribute(true))
+            static fn () => getAverageColorFromImageUrl('https://wsrv.nl/?url='.$champion->getChampionImageAttribute(true))
         );
 
         $champion->splash_color = $splashColor;
