@@ -99,9 +99,13 @@ class Champion extends Model
         return $this->hasMany(Streamer::class, 'champion_id', 'champion_id');
     }
 
-    public function getChampionImageAttribute(): string
+    public function getChampionImageAttribute(bool $uncentered = false): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'.$this->champion_id.'/'.$this->champion_id.'000.jpg';
+        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
+        $imagePath = $uncentered ? 'uncentered/' : '';
+        $imageUrl = $baseUrl . $imagePath . $this->champion_id . '/' . $this->champion_id . '000.jpg';
+
+        return $imageUrl;
     }
 
     public function getChampionImageTileAttribute(): string

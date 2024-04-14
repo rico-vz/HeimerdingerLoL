@@ -17,7 +17,7 @@
                 <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
                     style="--splash-color: {{ $champion->splash_color }}"></div>
                 <div class="relative overflow-hidden aspect-video rounded-2xl">
-                    <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute() }}&w=880&output=webp&q=85&il"
+                    <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=880&output=webp&q=85&il"
                         alt="{{ $champion->name }} Splash Art"
                         class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 hover:scale-105">
                 </div>
