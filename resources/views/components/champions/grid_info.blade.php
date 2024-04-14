@@ -120,7 +120,7 @@
                             @foreach ($champion->skins as $key => $skin)
                                 <div class="flex flex-col group">
                                     <a href="/skin/{{ $skin->slug }}">
-                                        <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=450&output=webp&q=70&il"
+                                        <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=450&output=webp&q=70&il"
                                             alt="{{ $champion->name }} {{ $skin->name }} Splash Art"
                                             @if ($key < 6) loading="eager" @else loading="lazy" @endif
                                             class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10 hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">

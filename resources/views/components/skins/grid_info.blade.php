@@ -25,12 +25,12 @@
                 class="relative border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
                 <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
                      style="--splash-color: {{$skin->splash_color}}"></div>
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=840&output=webp&q=70"
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=840&output=webp&q=90"
                      alt="{{$skin->skin_name}} Splash Art"
                      class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
 
                 <div class="absolute bottom-0 left-0 p-4">
-                    <a href="{{ $skin->getSkinImageAttribute() }}" rel="noopener" target="_blank"
+                    <a href="{{ $skin->getSkinImageAttribute(true) }}" rel="noopener" target="_blank"
                        class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in
                         HD</a>
                 </div>

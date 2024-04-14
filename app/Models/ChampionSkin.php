@@ -72,9 +72,13 @@ class ChampionSkin extends Model
         return $this->hasMany(SkinChroma::class, 'full_skin_id', 'full_skin_id');
     }
 
-    public function getSkinImageAttribute(): string
+    public function getSkinImageAttribute(bool $uncentered = false): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'.$this->champion_id.'/'.$this->full_skin_id.'.jpg';
+        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
+        $imagePath = $uncentered ? 'uncentered/' : '';
+        $imageUrl = $baseUrl . $imagePath . $this->champion_id . '/' . $this->full_skin_id . '.jpg';
+
+        return $imageUrl;
     }
 
     public function getSkinImageLoadingAttribute(): string
