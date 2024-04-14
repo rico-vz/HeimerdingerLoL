@@ -101,16 +101,17 @@ class Champion extends Model
 
     public function getChampionImageAttribute(): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' . $this->champion_id  . '/' . $this->champion_id  . '000.jpg';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'.$this->champion_id.'/'.$this->champion_id.'000.jpg';
     }
+
     public function getChampionImageTileAttribute(): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/' . $this->champion_id . '/' . $this->champion_id . '000.jpg';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/'.$this->champion_id.'/'.$this->champion_id.'000.jpg';
     }
 
     public function getChampionSquareImageAttribute(): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/' . $this->champion_id . '.png';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/'.$this->champion_id.'.png';
     }
 
     public function getChampionAbilityIconQAttribute(): string
