@@ -99,26 +99,18 @@ class Champion extends Model
         return $this->hasMany(Streamer::class, 'champion_id', 'champion_id');
     }
 
-    public function getChampionImageAttribute($centered = true): string
+    public function getChampionImageAttribute(): string
     {
-        $url = 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/splash-art';
-
-        return $centered ? $url.'/centered' : $url;
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' . $this->champion_id  . '/' . $this->champion_id  . '000.jpg';
     }
-
-    public function getChampionImageLoadingAttribute(): string
-    {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait';
-    }
-
     public function getChampionImageTileAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/' . $this->champion_id . '/' . $this->champion_id . '000.jpg';
     }
 
     public function getChampionSquareImageAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/square';
+        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/' . $this->champion_id . '.png';
     }
 
     public function getChampionAbilityIconQAttribute(): string
