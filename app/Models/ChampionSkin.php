@@ -76,7 +76,7 @@ class ChampionSkin extends Model
     {
         $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
         $imagePath = $uncentered ? 'uncentered/' : '';
-        $imageUrl = $baseUrl . $imagePath . $this->champion_id . '/' . $this->full_skin_id . '.jpg';
+        $imageUrl = $baseUrl.$imagePath.$this->champion_id.'/'.$this->full_skin_id.'.jpg';
 
         return $imageUrl;
     }
