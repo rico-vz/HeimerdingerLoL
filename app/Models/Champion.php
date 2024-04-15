@@ -103,7 +103,7 @@ class Champion extends Model
     {
         $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
         $imagePath = $uncentered ? 'uncentered/' : '';
-        $imageUrl = $baseUrl . $imagePath . $this->champion_id . '/' . $this->champion_id . '000.jpg';
+        $imageUrl = $baseUrl.$imagePath.$this->champion_id.'/'.$this->champion_id.'000.jpg';
 
         return $imageUrl;
     }
