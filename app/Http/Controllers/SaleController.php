@@ -10,7 +10,7 @@ class SaleController extends Controller
     {
         $sales = Cache::remember('sales_data', 60 * 60 * 8, static function () {
             $shopData = json_decode(
-                file_get_contents('https://api.shop.riotgames.com/v3/collections/'),
+                file_get_contents('https://rico-vz.github.io/shop-depr-temp/download.json'),
                 true
             );
             $salesData = array_filter($shopData, static fn ($collection) => $collection['path'] === '/event/sales');
