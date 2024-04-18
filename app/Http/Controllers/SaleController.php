@@ -13,7 +13,7 @@ class SaleController extends Controller
             $lmi_api_key = config('services.lmi.api_key');
 
             $response = Http::withHeaders([
-                'Authorization' => 'Bearer ' . $lmi_api_key,
+                'Authorization' => 'Bearer '.$lmi_api_key,
             ])->get('https://lmi.orianna.dev/api/lol-sales');
 
             return $response->json();
