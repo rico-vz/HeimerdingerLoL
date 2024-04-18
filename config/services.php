@@ -9,4 +9,8 @@ return [
         'scheme' => 'https',
     ],
 
+    'lmi' => [
+        'api_key' => env('LMI_API_KEY'),
+    ],
+
 ];

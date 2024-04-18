@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
 
 class SaleController extends Controller
 {
     public function index()
     {
         $sales = Cache::remember('sales_data', 60 * 60 * 8, static function () {
-            $shopData = json_decode(
-                file_get_contents('https://rico-vz.github.io/shop-depr-temp/download.json'),
-                true
-            );
-            $salesData = array_filter($shopData, static fn ($collection) => $collection['path'] === '/event/sales');
+            $lmi_api_key = config('services.lmi.api_key');
 
-            return reset($salesData)['dynamicCollection']['discountedProductsByProductType'] ?? [];
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer ' . $lmi_api_key,
+            ])->get('https://lmi.orianna.dev/api/lol-sales');
+
+            return $response->json();
         });
 
         return view('sales.index', ['sales' => $sales]);
