@@ -4,7 +4,7 @@
             <x-logo class="w-auto mr-2 h-9" alt="Heimerdinger.lol Logo"/>
             Heimerdinger.LoL
         </a>
-        <p class="my-4 text-sm text-gray-500 dark:text-gray-400">Heimerdinger.LoL was created under <a
+        <p class="my-4 text-sm text-gray-300">Heimerdinger.LoL was created under <a
                 href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a>' "<a
                 href="https://www.riotgames.com/en/legal"
                 class="underline transition-all duration-700 decoration-orange-500/50 hover:decoration-orange-500 hover:decoration-1"
@@ -15,7 +15,7 @@
                 href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a>. <a
                 href="https://www.riotgames.com/" rel="noopener" target="_blank">Riot Games</a> does not endorse or sponsor
             this project.</p>
-        <ul class="flex flex-wrap items-center justify-center mb-6 text-neutral-300">
+        <ul class="flex flex-wrap items-center justify-center mb-6 text-neutral-200">
             <li>
                 <a href="/contact"
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Contact</a>
@@ -49,7 +49,7 @@
             class="flex flex-row items-center justify-center mb-2 text-sm text-gray-300 whitespace-pre sm:text-center dark:text-gray-300"> <a
                 href="{{route('sitemap.index')}}" class="hover:underline">Sitemap</a></span>
         <span
-            class="flex flex-row items-center justify-center text-sm text-gray-500 whitespace-pre sm:text-center dark:text-gray-400">© {{date('Y')}} <a
+            class="flex flex-row items-center justify-center text-sm text-gray-400 whitespace-pre sm:text-center dark:text-gray-400">© {{date('Y')}} <a
                 href="/" class="hover:underline">Heimerdinger.LoL</a> • Made with <a
                 aria-label="Find out more about the creator of Heimerdinger.lol" href="https://rico.sh"><x-iconsax-bul-heart-circle
                     class="relative self-center inline-block w-5 text-red-400"/></a></span>

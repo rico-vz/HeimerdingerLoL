@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Heimerdinger • About')
-@section('description', 'What is League of Legends? Who is Heimerdinger? What is Heimerdinger.LoL? Explore answers to
-frequently asked questions about League of Legends, Heimerdinger and us. Dive in now!')
+@section('description',
+    'What is League of Legends? Who is Heimerdinger? What is Heimerdinger.LoL? Explore answers to
+    frequently asked questions about League of Legends, Heimerdinger and us. Dive in now!')
 
 @section('content')
     <div class="max-w-screen-xl px-5 mx-auto min-h-sceen">
@@ -16,17 +17,16 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
         </div>
 
         <div class="flex items-center justify-center mt-2">
-            <a href="{{route('about.faq.heimerdinger')}}"
-               class="px-4 py-2 mr-3 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">FAQ •
+            <a href="{{ route('about.faq.heimerdinger') }}"
+                class="px-4 py-2 mr-3 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ •
                 Heimerdinger</a>
-            <a href="{{route('about.faq.leagueoflegends')}}"
-               class="px-4 py-2 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">FAQ • League of
+            <a href="{{ route('about.faq.leagueoflegends') }}"
+                class="px-4 py-2 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ • League of
                 Legends</a>
         </div>
 
         <div class="flex flex-col items-center justify-center mt-5">
-            <h2
-                class="text-lg font-bold text-center text-gray-100 uppercase">
+            <h2 class="text-lg font-bold text-center text-gray-100 uppercase">
                 What is League of Legends?</h2>
             <p class="max-w-3xl mt-2 text-center text-stone-300">
                 League of Legends (LoL), commonly referred to as League, is a MOBA game developed and published by Riot
@@ -67,8 +67,7 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
         </div>
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
-            <h2
-                class="text-lg font-bold text-center text-gray-100 uppercase">
+            <h2 class="text-lg font-bold text-center text-gray-100 uppercase">
                 What is Heimerdinger.lol?</h2>
             <p class="max-w-3xl mt-2 text-center text-stone-300">
                 Heimerdinger.lol is a website dedicated to providing information about League of Legends and its events.
@@ -86,15 +85,14 @@ frequently asked questions about League of Legends, Heimerdinger and us. Dive in
                 <br><br>
                 I am always looking for ways to improve this website. If you have any suggestions, feedback, or just
                 want to
-                say hi, you can do so by contacting me through the contact form on <a
-                    href="/contact" class="underline decoration-orange-500/50" rel="noopener" target="_blank">this
+                say hi, you can do so by contacting me through the contact form on <a href="/contact"
+                    class="underline decoration-orange-500/50" rel="noopener" target="_blank">this
                     website</a>. I will try to respond as soon as possible.
             </p>
         </div>
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
-            <h2
-                class="text-lg font-bold text-center text-gray-100 uppercase">
+            <h2 class="text-lg font-bold text-center text-gray-100 uppercase">
                 Who is Heimerdinger?</h2>
             <p class="max-w-3xl mt-2 text-center text-stone-300">
                 Heimerdinger is a character from the game. He is a brilliant
