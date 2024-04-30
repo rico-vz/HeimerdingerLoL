@@ -101,9 +101,12 @@ class Champion extends Model
 
     public function getChampionImageAttribute(bool $uncentered = false): string
     {
-        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
-        $imagePath = $uncentered ? 'uncentered/' : '';
-        $imageUrl = $baseUrl.$imagePath.$this->champion_id.'/'.$this->champion_id.'000.jpg';
+        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/';
+        $championName = strtolower(str_replace([' ', "'", '.'], ['', '', ''], $this->name));
+        $imagePath =  'base/images/';
+        $imageUrl = $baseUrl . $championName . '/skins/' . $imagePath . $championName . '_splash_';
+        $imageUrl .= $uncentered ? 'uncentered' : 'centered';
+        $imageUrl .= '_0.jpg';
 
         return $imageUrl;
     }

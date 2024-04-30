@@ -74,9 +74,9 @@ class ChampionSkin extends Model
 
     public function getSkinImageAttribute(bool $uncentered = false): string
     {
-        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/';
-        $imagePath = $uncentered ? 'uncentered/' : '';
-        $imageUrl = $baseUrl.$imagePath.$this->champion_id.'/'.$this->full_skin_id.'.jpg';
+        $championName = strtolower(str_replace([' ', "'"], ['', ''], $this->champion->name));
+        $imagePath = $uncentered ? 'uncentered_' : 'centered_';
+        $imageUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/' . $championName . '/skins/skin' . str_pad($this->skin_id, 2, '0', STR_PAD_LEFT) . '/images/' . $championName . '_splash_' . $imagePath . $this->skin_id . '.jpg';
 
         return $imageUrl;
     }
