@@ -55,6 +55,10 @@
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
+    <div class="py-1 text-center text-black bg-orange-400">
+        <p class="text-sm font-medium">We're aware of an issue where certain images may not display properly. We're currently working on a solution.</p>
+    </div>
+
     <x-navbar />
     @yield('content')
     <x-footer />
