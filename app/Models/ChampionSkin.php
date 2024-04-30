@@ -76,7 +76,7 @@ class ChampionSkin extends Model
     {
         $championName = strtolower(str_replace([' ', "'"], ['', ''], $this->champion->name));
         $imagePath = $uncentered ? 'uncentered_' : 'centered_';
-        $imageUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/' . $championName . '/skins/skin' . str_pad($this->skin_id, 2, '0', STR_PAD_LEFT) . '/images/' . $championName . '_splash_' . $imagePath . $this->skin_id . '.jpg';
+        $imageUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/'.$championName.'/skins/skin'.str_pad($this->skin_id, 2, '0', STR_PAD_LEFT).'/images/'.$championName.'_splash_'.$imagePath.$this->skin_id.'.jpg';
 
         return $imageUrl;
     }
