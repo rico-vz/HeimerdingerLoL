@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Artisan;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,8 +21,10 @@ class DatabaseSeeder extends Seeder
         $this->call(ChampionRolesSeeder::class);
         $this->call(SummonerIconSeeder::class);
         $this->call(SummonerEmoteSeeder::class);
+        $this->call(ChampionImageSeeder::class);
 
         Cache::flush();
+        Artisan::call('cloudflare:purge');
 
         Log::info('Seeding complete at '.date('Y-m-d H:i:s'));
     }

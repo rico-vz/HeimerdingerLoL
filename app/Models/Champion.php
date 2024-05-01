@@ -101,19 +101,12 @@ class Champion extends Model
 
     public function getChampionImageAttribute(bool $uncentered = false): string
     {
-        $baseUrl = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/';
-        $championName = strtolower(str_replace([' ', "'", '.'], ['', '', ''], $this->name));
-        $imagePath = 'base/images/';
-        $imageUrl = $baseUrl.$championName.'/skins/'.$imagePath.$championName.'_splash_';
-        $imageUrl .= $uncentered ? 'uncentered' : 'centered';
-        $imageUrl .= '_0.jpg';
-
-        return $imageUrl;
+        return getChampionImage($this->champion_id . '000', $uncentered ? 'uncentered_splash' : 'splash');
     }
 
     public function getChampionImageTileAttribute(): string
     {
-        return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/'.$this->champion_id.'/'.$this->champion_id.'000.jpg';
+        return getChampionImage($this->champion_id . '000', 'tile');
     }
 
     public function getChampionSquareImageAttribute(): string
@@ -121,6 +114,7 @@ class Champion extends Model
         return 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/'.$this->champion_id.'.png';
     }
 
+    // TODO: Implement Ability Icons in the DB and get them from there.
     public function getChampionAbilityIconQAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/q';
