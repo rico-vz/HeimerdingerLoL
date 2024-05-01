@@ -101,12 +101,12 @@ class Champion extends Model
 
     public function getChampionImageAttribute(bool $uncentered = false): string
     {
-        return getChampionImage($this->champion_id . '000', $uncentered ? 'uncentered_splash' : 'splash');
+        return getChampionImage($this->champion_id.'000', $uncentered ? 'uncentered_splash' : 'splash');
     }
 
     public function getChampionImageTileAttribute(): string
     {
-        return getChampionImage($this->champion_id . '000', 'tile');
+        return getChampionImage($this->champion_id.'000', 'tile');
     }
 
     public function getChampionSquareImageAttribute(): string
