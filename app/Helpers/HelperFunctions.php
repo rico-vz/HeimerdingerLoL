@@ -1,8 +1,8 @@
 <?php
 
+use App\Models\ChampionImage;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
-use App\Models\ChampionImage;
 
 function getRoleIcon($roleName): string
 {
@@ -67,17 +67,17 @@ function getRoleIconSvg($roleName): string
 }
 
 /**
- * Get the champion image
+ * Get the champion image.
  *
- * @param string $full_id
- * @param enum $type splash, uncentered_splash, loading, tile, icon, ability, video
+ * @param  string  $full_id
+ * @param  enum  $type  splash, uncentered_splash, loading, tile, icon, ability, video
  * @return string
  */
 function getChampionImage($full_id, $type): string
 {
     $championImage = ChampionImage::where('full_id', $full_id)->where('type', $type)->first();
 
-    if (!$championImage) {
+    if (! $championImage) {
         return '';
     }
 
