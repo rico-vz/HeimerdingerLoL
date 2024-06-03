@@ -28,6 +28,7 @@ class ChampionSkinController extends Controller
             'Rare' => 'text-pink-300',
             'Mythic' => 'text-purple-500',
             'Ultimate' => 'text-yellow-400',
+            'Transcendent' => 'text-orange-400',
         ];
 
         return view('skins.index', ['skins' => $skins, 'rarityColor' => $rarityColor]);
