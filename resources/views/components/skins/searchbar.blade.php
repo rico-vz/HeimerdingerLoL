@@ -1,20 +1,16 @@
+<script src="https://unpkg.com/htmx.org@2.0.0"></script>
 <div class="flex items-center justify-center mt-8">
-    <form action="{{ route('skins.index') }}" method="GET" class="flex" id="searchForm">
+    <form  method="GET" class="flex" id="searchForm">
         <div class="relative">
-            <input type="text" name="filter[name]" placeholder="Search by skin name"
-                   value="{{ request('filter.name') }}"
-                   class="border border-transparent focus:border-transparent focus:ring-0 border-stone-700 rounded-l px-4 py-2 bg-stone-800 text-white ring-orange-500 pr-10">
+            <input hx-get="{{ route('skins.index') }}" hx-trigger="keyup changed delay:100ms" hx-target="#skin-list" hx-swap-oob="true" type="text" name="filter[name]" placeholder="Search by skin name" value="{{ request('filter.name') }}"
+                class="px-4 py-2 pr-10 text-white border border-transparent rounded shadow-md focus:border-transparent focus:ring-0 border-stone-700 bg-stone-800 ring-orange-500">
             @if (request('filter.name'))
                 <button type="button" onclick="clearSearchAndSubmit()"
-                        class="absolute inset-y-0 right-0 flex items-center px-3 bg-stone-800 text-white cursor-pointer">
-                    <x-iconsax-lin-clipboard-close class="w-6 text-white"/>
+                    class="absolute inset-y-0 right-0 flex items-center px-3 text-white cursor-pointer bg-stone-800">
+                    <x-iconsax-lin-clipboard-close class="w-6 text-white" />
                 </button>
             @endif
         </div>
-        <button type="submit"
-                class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-r focus:outline-none ring-orange-500">
-            Search
-        </button>
     </form>
 </div>
 <script>

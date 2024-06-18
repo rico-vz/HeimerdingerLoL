@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@view-transition {
+    navigation: auto; /* enabled! */
+}
+
 @font-face {
     font-display: swap;
     font-family: "Inter";

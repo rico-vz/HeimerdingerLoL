@@ -8,13 +8,14 @@ use App\Models\ChampionSkin;
 use Illuminate\Support\Facades\Cache;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
+use Illuminate\Http\Request;
 
 class ChampionSkinController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $skins = QueryBuilder::for(ChampionSkin::class)
             ->allowedFilters(AllowedFilter::partial('name', 'skin_name'), 'rarity')
@@ -31,7 +32,7 @@ class ChampionSkinController extends Controller
             'Transcendent' => 'text-violet-400',
         ];
 
-        return view('skins.index', ['skins' => $skins, 'rarityColor' => $rarityColor]);
+        return view('skins.index', ['skins' => $skins, 'rarityColor' => $rarityColor])->fragmentIf($request->hasHeader('HX-Request'), 'skin-list');
     }
 
     /**

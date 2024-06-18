@@ -44,7 +44,7 @@ Route::get('roadmap', static fn () => (new HomeController())->roadmap())->name('
 Route::get('champions', static fn () => (new ChampionController())->index())->name('champions.index');
 Route::get('champion/{champion}', static fn (Champion $champion) => (new ChampionController())->show($champion))->name('champions.show');
 // Skins
-Route::get('skins', static fn () => (new ChampionSkinController())->index())->name('skins.index');
+Route::get('skins', static fn (Request $request) => (new ChampionSkinController())->index($request))->name('skins.index');
 Route::get('skin/{championSkin}', static fn (ChampionSkin $championSkin) => (new ChampionSkinController())->show($championSkin))->name('skins.show');
 
 // Icons
