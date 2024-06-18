@@ -1,9 +1,9 @@
 <?php
 
 use App\Models\ChampionImage;
+use Illuminate\Support\Facades\Cache;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
-use Illuminate\Support\Facades\Cache;
 
 function getRoleIcon($roleName): string
 {

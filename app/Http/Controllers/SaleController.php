@@ -14,13 +14,14 @@ class SaleController extends Controller
                 $lmi_api_key = config('services.lmi.api_key');
 
                 $response = Http::withHeaders([
-                    'Authorization' => 'Bearer ' . $lmi_api_key,
+                    'Authorization' => 'Bearer '.$lmi_api_key,
                 ])->get('https://lmi.orianna.dev/api/lol-sales');
 
                 $response = $response->json();
 
                 if ($response['champion_sales'] === null) {
                     logger()->error('LMI has broken');
+
                     return abort(503, 'Trying to access array offset on value of type null');
                 }
 
@@ -35,7 +36,6 @@ class SaleController extends Controller
                 abort(500, 'Sorry, an error occurred while trying to fetch the Sale Rotation. Please try again later.');
             }
         }
-
 
         return view('sales.index', ['sales' => $sales]);
     }
