@@ -38,7 +38,6 @@ Route::get('/', static fn () => (new HomeController())->index())->name('home');
 
 Route::get('donate', static fn () => (new HomeController())->donate())->name('donate');
 
-
 Route::get('roadmap', static fn () => (new HomeController())->roadmap())->name('roadmap');
 
 // Champions
