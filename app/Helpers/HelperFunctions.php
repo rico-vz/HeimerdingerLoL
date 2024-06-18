@@ -3,6 +3,7 @@
 use App\Models\ChampionImage;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
+use Illuminate\Support\Facades\Cache;
 
 function getRoleIcon($roleName): string
 {
@@ -82,4 +83,14 @@ function getChampionImage($full_id, $type): string
     }
 
     return $championImage->url;
+}
+
+function getCommitHash(): string
+{
+    /** @var string $commit */
+    $commit = Cache::remember('commit_hash', 60 * 72, function () {
+        return trim(exec('git log --pretty="%h" -n1 HEAD'));
+    });
+
+    return $commit;
 }
