@@ -10,7 +10,7 @@
             <div class="max-w-3xl mx-auto text-center">
                 <h1
                     class="text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
-                    Support the Project</h1>
+                    Donate to Heimerdinger</h1>
 
                 <h2 class="mt-4 text-stone-300">
                     Heimerdinger.lol is ran and maintained by a single developer. If you enjoy the content and would like to

@@ -21,8 +21,8 @@
                    class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Contact</a>
             </li>
             <li>
-                <a href="/support-me"
-                   class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Support</a>
+                <a href="/donate"
+                   class="mr-4 hover:underline md:mr-6 decoration-orange-500 decoration-1">Donate</a>
             </li>
             <li>
                 <a href="/roadmap"

@@ -33,7 +33,7 @@ use Spatie\Sheets\Sheet;
 
 Route::get('/', static fn () => (new HomeController())->index())->name('home');
 
-Route::get('/support-me', static fn () => (new HomeController())->support())->name('support');
+Route::get('/donate', static fn () => (new HomeController())->donate())->name('donate');
 
 Route::get('/roadmap', static fn () => (new HomeController())->roadmap())->name('roadmap');
 

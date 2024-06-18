@@ -22,9 +22,9 @@ class HomeController extends Controller
         ]);
     }
 
-    public function support()
+    public function donate()
     {
-        return view('support');
+        return view('donate');
     }
 
     public function roadmap()
