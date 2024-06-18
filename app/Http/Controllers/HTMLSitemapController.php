@@ -19,6 +19,11 @@ class HTMLSitemapController extends Controller
         $icons = Cache::remember('sitemap_iconsCache', $twentyHoursInSeconds, fn () => SummonerIcon::orderBy('title')->get());
         $posts = Sheets::all()->sortByDesc('date');
 
-        return view('sitemap.index', compact('champions', 'skins', 'icons', 'posts'));
+        return view('sitemap.index', [
+            'champions' => $champions,
+            'skins' => $skins,
+            'icons' => $icons,
+            'posts' => $posts,
+        ]);
     }
 }
