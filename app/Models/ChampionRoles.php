@@ -16,13 +16,6 @@ class ChampionRoles extends Model
         'roles',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'roles' => 'array',
-        ];
-    }
-
     public function champion(): BelongsTo
     {
         return $this->belongsTo(Champion::class, 'champion_id', 'champion_id');
@@ -49,5 +42,12 @@ class ChampionRoles extends Model
         }
 
         return $transformedRoles;
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'roles' => 'array',
+        ];
     }
 }

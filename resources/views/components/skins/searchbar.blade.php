@@ -4,7 +4,7 @@
             <input type="text" name="filter[name]" placeholder="Search by skin name"
                    value="{{ request('filter.name') }}"
                    class="border border-transparent focus:border-transparent focus:ring-0 border-stone-700 rounded-l px-4 py-2 bg-stone-800 text-white ring-orange-500 pr-10">
-            @if(request('filter.name'))
+            @if (request('filter.name'))
                 <button type="button" onclick="clearSearchAndSubmit()"
                         class="absolute inset-y-0 right-0 flex items-center px-3 bg-stone-800 text-white cursor-pointer">
                     <x-iconsax-lin-clipboard-close class="w-6 text-white"/>

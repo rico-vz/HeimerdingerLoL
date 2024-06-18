@@ -2,4 +2,4 @@
 
 use App\Http\Controllers\StreamerController;
 
-Route::get('/streamers', [StreamerController::class, 'all']);
+Route::get('streamers', [StreamerController::class, 'all']);

@@ -21,7 +21,7 @@
                 <li>
                     <a href="{{ route('streamerpanel.index') }}"
                         class="flex py-2 pl-3 pr-2 rounded hover:bg-stone-100 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-orange-400 dark:hover:bg-stone-700 dark:hover:text-white md:dark:hover:bg-transparent
-                        {{ request()->routeIs('streamerpanel.*') ? 'text-orange-400 font-medium' : 'text-white'  }}">
+                        {{ request()->routeIs('streamerpanel.*') ? 'text-orange-400 font-medium' : 'text-white' }}">
                         Streamers</a>
                 </li>
                 <li>

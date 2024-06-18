@@ -14,7 +14,7 @@
 
     <div class="container flex items-center justify-center flex-grow p-4 mx-auto mt-3">
         <div class="items-center justify-center text-center align-middle">
-            <img class="items-center mx-auto" src="{{asset('img/heimerdinger-emote.webp')}}"
+            <img class="items-center mx-auto" src="{{ asset('img/heimerdinger-emote.webp') }}"
                  alt="Heimerdinger Emote">
             <p class="text-gray-100">Tired of endless browsing to find that one icon or emote you love?</p>
             <p class="text-gray-100">We got you covered! Search through <span
@@ -24,9 +24,9 @@
             <p class="mb-6 text-gray-100">Automatically updated and sorted by release date.</p>
             <p class="mb-3 text-gray-200">Click on the asset category you'd like to view below to get started!</p>
             <div class="flex justify-center space-x-4">
-                <a href="{{route('assets.icons.index')}}"
+                <a href="{{ route('assets.icons.index') }}"
                    class="px-4 py-2 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">Icons</a>
-                <a href="{{route('assets.emotes.index')}}"
+                <a href="{{ route('assets.emotes.index') }}"
                    class="px-4 py-2 font-bold text-white bg-orange-500 rounded hover:bg-orange-600">Emotes</a>
             </div>
         </div>

@@ -22,13 +22,6 @@ class SummonerIcon extends Model
         'esports_event',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'legacy' => 'boolean',
-        ];
-    }
-
     public function sluggable(): array
     {
         return [
@@ -48,5 +41,12 @@ class SummonerIcon extends Model
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'legacy' => 'boolean',
+        ];
     }
 }

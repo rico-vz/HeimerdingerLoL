@@ -6,9 +6,6 @@ use Laravel\Pulse\Support\PulseMigration;
 
 return new class() extends PulseMigration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         if (! $this->shouldRun()) {
@@ -72,9 +69,6 @@ return new class() extends PulseMigration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('pulse_values');

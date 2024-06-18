@@ -34,15 +34,6 @@ class ChampionSkin extends Model
         'splash_artist',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'associated_skinline' => 'array',
-            'voice_actor' => 'array',
-            'splash_artist' => 'array',
-        ];
-    }
-
     public function sluggable(): array
     {
         return [
@@ -85,5 +76,14 @@ class ChampionSkin extends Model
     public function getSkinImageTileAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile/skin/'.$this->skin_id;
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'associated_skinline' => 'array',
+            'voice_actor' => 'array',
+            'splash_artist' => 'array',
+        ];
     }
 }

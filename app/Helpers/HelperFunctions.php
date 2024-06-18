@@ -72,7 +72,6 @@ function getRoleIconSvg($roleName): string
  *
  * @param  string  $full_id
  * @param  enum  $type  splash, uncentered_splash, loading, tile, icon, ability, video
- * @return string
  */
 function getChampionImage($full_id, $type): string
 {
@@ -85,6 +84,9 @@ function getChampionImage($full_id, $type): string
     return $championImage->url;
 }
 
+/**
+ * Get the commit hash.
+ */
 function getCommitHash(): string
 {
     /** @var string $commit */

@@ -29,13 +29,6 @@ class Champion extends Model
         'release_patch',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'roles' => 'array',
-        ];
-    }
-
     public function getResourceTypeAttribute($value): string
     {
         $resourceTypes = [
@@ -138,5 +131,12 @@ class Champion extends Model
     public function getChampionAbilityIconPAttribute(): string
     {
         return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/ability-icon/p';
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'roles' => 'array',
+        ];
     }
 }
