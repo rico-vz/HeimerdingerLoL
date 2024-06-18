@@ -38,6 +38,7 @@ Route::get('/', static fn () => (new HomeController())->index())->name('home');
 
 Route::get('donate', static fn () => (new HomeController())->donate())->name('donate');
 
+
 Route::get('roadmap', static fn () => (new HomeController())->roadmap())->name('roadmap');
 
 // Champions
@@ -92,3 +93,6 @@ Route::post('streamerpanel/add', static fn (Request $request) => (new StreamerPa
 Route::get('streamerpanel/edit/{streamer}', static fn (Streamer $streamer) => (new StreamerPanelController())->edit($streamer))->name('streamerpanel.edit')->middleware('auth.basic');
 Route::post('streamerpanel/edit/{streamer}', static fn (Request $request, Streamer $streamer) => (new StreamerPanelController())->update($request, $streamer))->name('streamerpanel.update')->middleware('auth.basic');
 Route::delete('streamerpanel/delete/{streamer}', static fn (Streamer $streamer) => (new StreamerPanelController())->destroy($streamer))->name('streamerpanel.destroy')->middleware('auth.basic');
+
+// Redirects for old URLs
+Route::redirect('support-me', 'donate', 301);
