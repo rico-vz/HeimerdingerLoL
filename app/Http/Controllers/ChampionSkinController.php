@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreChampionSkinRequest;
 use App\Http\Requests\UpdateChampionSkinRequest;
 use App\Models\ChampionSkin;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
-use Illuminate\Http\Request;
 
 class ChampionSkinController extends Controller
 {
