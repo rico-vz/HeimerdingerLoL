@@ -47,6 +47,7 @@ class Champion extends Model
             'BLOODTHIRST' => 'Bloodthirst',
             'FLOW' => 'Flow',
             'SOUL_UNBOUND' => 'Soul Unbound',
+            'CRIMSON_RUSH' => 'Crimson Rush',
         ];
 
         return $resourceTypes[$value];
