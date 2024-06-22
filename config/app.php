@@ -20,4 +20,6 @@ return [
 
     'GTAG_MEASUREMENT_ID' => env('GTAG_MEASUREMENT_ID', 'G-XXXXXXXXXX'),
 
+    'MAMC_SECRET' => env('MAMC_SECRET', 'secret'),
+
 ];

@@ -6,6 +6,7 @@ use App\Models\Champion;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
 class ChampionSeeder extends Seeder
 {
@@ -14,8 +15,12 @@ class ChampionSeeder extends Seeder
      */
     public function run(): void
     {
-        $championDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
-        $championData = json_decode(file_get_contents($championDataUrl), true);
+        $mamcSecret = config('app.MAMC_SECRET');
+
+        $championDataUrl = 'https://mamchamp.orianna.dev/champion-data';
+        $championData = Http::withHeaders([
+            'MAM-Get-Secret' => $mamcSecret,
+        ])->get($championDataUrl)->json();
         $changeCount = 0;
 
         foreach ($championData as $champion) {
