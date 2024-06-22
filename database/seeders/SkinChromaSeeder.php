@@ -5,8 +5,8 @@ namespace Database\Seeders;
 use App\Models\SkinChroma;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class SkinChromaSeeder extends Seeder
 {
