@@ -7,9 +7,7 @@ use Illuminate\View\Component;
 
 class List_all extends Component
 {
-    public function __construct(public array $champions, public array $roles)
-    {
-    }
+    public function __construct(public array $champions, public array $roles) {}
 
     public function render(): View
     {

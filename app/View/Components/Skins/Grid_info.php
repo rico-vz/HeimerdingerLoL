@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class Grid_info extends Component
 {
-    public function __construct(public ChampionSkin $skin)
-    {
-    }
+    public function __construct(public ChampionSkin $skin) {}
 
     public function render(): View
     {

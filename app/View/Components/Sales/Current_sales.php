@@ -7,9 +7,7 @@ use Illuminate\View\Component;
 
 class Current_sales extends Component
 {
-    public function __construct(public array $sales)
-    {
-    }
+    public function __construct(public array $sales) {}
 
     public function render(): View
     {

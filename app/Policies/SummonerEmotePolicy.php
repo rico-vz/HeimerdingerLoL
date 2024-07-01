@@ -10,31 +10,17 @@ class SummonerEmotePolicy
 {
     use HandlesAuthorization;
 
-    public function viewAny(User $user): bool
-    {
-    }
+    public function viewAny(User $user): bool {}
 
-    public function view(User $user, SummonerEmote $summonerEmote): bool
-    {
-    }
+    public function view(User $user, SummonerEmote $summonerEmote): bool {}
 
-    public function create(User $user): bool
-    {
-    }
+    public function create(User $user): bool {}
 
-    public function update(User $user, SummonerEmote $summonerEmote): bool
-    {
-    }
+    public function update(User $user, SummonerEmote $summonerEmote): bool {}
 
-    public function delete(User $user, SummonerEmote $summonerEmote): bool
-    {
-    }
+    public function delete(User $user, SummonerEmote $summonerEmote): bool {}
 
-    public function restore(User $user, SummonerEmote $summonerEmote): bool
-    {
-    }
+    public function restore(User $user, SummonerEmote $summonerEmote): bool {}
 
-    public function forceDelete(User $user, SummonerEmote $summonerEmote): bool
-    {
-    }
+    public function forceDelete(User $user, SummonerEmote $summonerEmote): bool {}
 }
