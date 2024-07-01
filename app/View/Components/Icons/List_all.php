@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class List_all extends Component
 {
-    public function __construct(public SummonerIcon $icons)
-    {
-    }
+    public function __construct(public SummonerIcon $icons) {}
 
     public function render(): View
     {

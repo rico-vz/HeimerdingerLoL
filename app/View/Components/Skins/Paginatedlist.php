@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class Paginatedlist extends Component
 {
-    public function __construct(public Paginator $skins, public array $rarityColor)
-    {
-    }
+    public function __construct(public Paginator $skins, public array $rarityColor) {}
 
     public function render(): View
     {

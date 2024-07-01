@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class List_all extends Component
 {
-    public function __construct(public SummonerEmote $emotes)
-    {
-    }
+    public function __construct(public SummonerEmote $emotes) {}
 
     public function render(): View
     {

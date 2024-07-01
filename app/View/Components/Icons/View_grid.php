@@ -8,9 +8,7 @@ use Illuminate\View\Component;
 
 class View_grid extends Component
 {
-    public function __construct(public SummonerIcon $icon)
-    {
-    }
+    public function __construct(public SummonerIcon $icon) {}
 
     public function render(): View
     {
