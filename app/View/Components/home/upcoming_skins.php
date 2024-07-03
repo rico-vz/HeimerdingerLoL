@@ -7,9 +7,7 @@ use Illuminate\View\Component;
 
 class upcoming_skins extends Component
 {
-    public function __construct(public array $upcomingSkins)
-    {
-    }
+    public function __construct(public array $upcomingSkins) {}
 
     public function render(): View
     {
