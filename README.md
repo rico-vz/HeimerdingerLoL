@@ -6,8 +6,6 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&amp;logo=laravel&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&amp;logo=mysql&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="shields"></p>
 
-<a href="https://rico.sh"><img src="https://img.shields.io/badge/%E2%AD%90-rico.sh-white?labelColor=rgb(246, 129, 2)&style=flat" alt="⭐" /></a>
-
   
 <h2>🧐 Features</h2>
 
@@ -48,3 +46,8 @@ Technologies used in the project:
 <h2>⚠️ Disclaimer:</h2>
 
 Heimerdinger.lol was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.
+
+---
+
+<a href="https://rico.sh"><img src="https://img.shields.io/badge/%E2%AD%90-rico.sh-white?labelColor=rgb(246, 129, 2)&style=flat" alt="⭐" /></a>
+
