@@ -6,16 +6,16 @@
     <h1
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         {{ $skin->skin_name }}</h1>
-    <p class="text-sm font-medium text-center text-orange-400 uppercase transition-all duration-700 hover:underline decoration-1 decoration-transparent hover:decoration-orange-400">
-        <a
-            href="/champion/{{ $skin->champion->slug }}">
+    <p
+        class="text-sm font-medium text-center text-orange-400 uppercase transition-all duration-700 hover:underline decoration-1 decoration-transparent hover:decoration-orange-400">
+        <a href="/champion/{{ $skin->champion->slug }}">
             <span class="flex items-center justify-center">
-            View
-            champion
-            info
-                <x-iconsax-bul-arrow-square-right class="w-5"/>
+                View
+                champion
+                info
+                <x-iconsax-bul-arrow-square-right class="w-5" />
 
-                </span>
+            </span>
         </a>
 
 
@@ -24,21 +24,20 @@
             <div
                 class="relative border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 lg:col-span-2">
                 <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
-                     style="--splash-color: {{ $skin->splash_color }}"></div>
+                    style="--splash-color: {{ $skin->splash_color }}"></div>
                 <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=840&output=webp&q=90"
-                     alt="{{ $skin->skin_name }} Splash Art"
-                     class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
+                    alt="{{ $skin->skin_name }} Splash Art"
+                    class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
 
                 <div class="absolute bottom-0 left-0 p-4">
                     <a href="{{ $skin->getSkinImageAttribute(true) }}" rel="noopener" target="_blank"
-                       class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in
+                        class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in
                         HD</a>
                 </div>
             </div>
 
 
-            <div
-                class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 lg:col-start-3"
+            <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 lg:col-start-3"
                 style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">
 
                 <h4 class="text-center text-lg font-semibold text-neutral-100 uppercase mt-3.5 shadow-sm mx-2">
@@ -51,7 +50,7 @@
                         @if ($skin->rp_price == '99999')
                             Not Available for RP
                         @else
-                            <x-icon-RiotPoints class="inline-block w-4"/>
+                            <x-icon-RiotPoints class="inline-block w-4" />
                             {{ $skin->rp_price }} RP
                         @endif
                     </li>
@@ -69,7 +68,8 @@
                     </li>
                     <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
-                        <span class="font-bold">Chromas:</span> @if ($skin->chromas->count() > 0)
+                        <span class="font-bold">Chromas:</span>
+                        @if ($skin->chromas->count() > 0)
                             {{ $skin->chromas->count() }}
                         @else
                             None
@@ -133,7 +133,7 @@
 
 
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
-                 style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">
+                style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
                         {{ $skin->name }} Lore</h4>
@@ -141,7 +141,8 @@
                         @if ($skin->lore)
                             {!! $skin->lore !!}
                         @else
-                            Heimerdinger has looked far and wide but could not find any lore for {{ $skin->skin_name }}.
+                            Heimerdinger has looked far and wide but could not find any lore for
+                            {{ $skin->skin_name }}.
                             But we're sure it's a great skin! The things we do know is that it was released on
                             {{ $skin->release_date }} and costs {{ $skin->rp_price }} RP.
                         @endif
@@ -149,8 +150,7 @@
                 </div>
 
             </div>
-            <div
-                class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20"
+            <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 lg:col-span-2 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
@@ -165,17 +165,16 @@
                             @foreach ($skin->chromas as $key => $chroma)
                                 <div class="flex flex-col group">
                                     <a href="/skin/{{ $skin->slug }}">
-                                        <img
-                                            src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=220&output=webp&q=70&il"
+                                        <img src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=220&output=webp&q=70&il"
                                             alt="{{ $chroma->chroma_name }} {{ $chroma->skin_name }} ScreenShot"
                                             @if ($key < 6) loading="eager" @else loading="lazy" @endif
                                             class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10 hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">
                                     </a>
                                     <div>
 
-                                        <p class="align-bottom text-center text-neutral-100 text-sm mt-1.5 items-center">
-                                            <span
-                                                class="hover:text-orange-400 group-hover:text-orange-400">
+                                        <p
+                                            class="align-bottom text-center text-neutral-100 text-sm mt-1.5 items-center">
+                                            <span class="hover:text-orange-400 group-hover:text-orange-400">
                                                 {{ $chroma->chroma_name }}
                                             </span>
                                         </p>

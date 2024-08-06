@@ -10,7 +10,7 @@
 
     @fragment('skin-list')
         <div id="skin-list">
-            <div class="container flex items-center justify-center p-4 mx-auto mt-3" >
+            <div class="container flex items-center justify-center p-4 mx-auto mt-3">
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                     @foreach ($skins as $key => $skin)
                         <div

@@ -14,6 +14,11 @@
     <meta name="googlebot" content="index, follow">
 @endpush
 
+@push('top_scripts')
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4505764048662657"
+        crossorigin="anonymous"></script>
+@endpush
+
 @section('content')
     <a href="{{ route('posts.index') }}"
         class="block mt-8 text-sm font-medium text-center text-orange-400 uppercase hover:underline">Back
@@ -35,6 +40,8 @@
             <h2 class="text-sm italic text-center text-orange-400 not-prose" itemprop="description">
                 “{{ $post->description }}”
             </h2>
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                data-ad-format="fluid" data-ad-client="ca-pub-4505764048662657" data-ad-slot="2492379195"></ins>
             <p>
                 {{ $post->contents }}
             </p>
@@ -42,6 +49,13 @@
                 Tagged with: <span itemprop="keywords" class="italic">
                     {{ isset($post->tags) ? implode(', ', $post->tags) : 'League of Legends' }}</span>
             </p>
+
         </div>
     </article>
 @endsection
+
+@push('bottom_scripts')
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+@endpush
