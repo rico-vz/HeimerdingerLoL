@@ -46,6 +46,8 @@
                 </div>
             </a>
         @endforeach
+        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7t+ey-1j-38+br"
+            data-ad-client="ca-pub-4505764048662657" data-ad-slot="1195346069"></ins>
     </div>
 
 
@@ -85,4 +87,7 @@
             @endforeach
         </div>
     </div>
+    <!-- Sales Rotation Footer 001 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657" data-ad-slot="9975854214"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
 </section>
