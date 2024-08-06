@@ -149,3 +149,7 @@
 .text-shadow-huya {
     text-shadow: 1px 1px 2px #ffaa06;
 }
+
+ins.adsbygoogle[data-ad-status="unfilled"] {
+    display: none !important;
+}
