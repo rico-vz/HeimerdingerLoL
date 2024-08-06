@@ -13,7 +13,6 @@ class ChampionImageSeeder extends Seeder
      */
     public function run(): void
     {
-        // Loop over all champions
         Champion::all()->each(function ($champion) {
             $dataJson = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/champions/'.$champion->champion_id.'.json';
 
@@ -22,34 +21,30 @@ class ChampionImageSeeder extends Seeder
             $championSkins = $data['skins'];
 
             foreach ($championSkins as $skin) {
-                $splash = new ChampionImage();
-                $splash->full_id = $skin['id'];
-                $splash->champion_id = $champion->champion_id;
-                $splash->type = 'splash';
-                $splash->url = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/'.strtolower(substr($skin['splashPath'], strpos($skin['splashPath'], 'ASSETS')));
-                $splash->save();
-
-                $uncenteredSplash = new ChampionImage();
-                $uncenteredSplash->full_id = $skin['id'];
-                $uncenteredSplash->champion_id = $champion->champion_id;
-                $uncenteredSplash->type = 'uncentered_splash';
-                $uncenteredSplash->url = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/'.strtolower(substr($skin['uncenteredSplashPath'], strpos($skin['uncenteredSplashPath'], 'ASSETS')));
-                $uncenteredSplash->save();
-
-                $loading = new ChampionImage();
-                $loading->full_id = $skin['id'];
-                $loading->champion_id = $champion->champion_id;
-                $loading->type = 'loading';
-                $loading->url = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/'.strtolower(substr($skin['loadScreenPath'], strpos($skin['loadScreenPath'], 'ASSETS')));
-                $loading->save();
-
-                $tile = new ChampionImage();
-                $tile->full_id = $skin['id'];
-                $tile->champion_id = $champion->champion_id;
-                $tile->type = 'tile';
-                $tile->url = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/'.strtolower(substr($skin['tilePath'], strpos($skin['tilePath'], 'ASSETS')));
-                $tile->save();
+                $this->updateOrCreateImage($skin, $champion, 'splash', $skin['splashPath']);
+                $this->updateOrCreateImage($skin, $champion, 'uncentered_splash', $skin['uncenteredSplashPath']);
+                $this->updateOrCreateImage($skin, $champion, 'loading', $skin['loadScreenPath']);
+                $this->updateOrCreateImage($skin, $champion, 'tile', $skin['tilePath']);
             }
         });
+    }
+
+    /**
+     * Update or create a ChampionImage entry.
+     */
+    private function updateOrCreateImage($skin, $champion, $type, $path): void
+    {
+        $url = 'https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/'.strtolower(substr($path, strpos($path, 'ASSETS')));
+
+        ChampionImage::updateOrCreate(
+            [
+                'full_id' => $skin['id'],
+                'type' => $type,
+            ],
+            [
+                'champion_id' => $champion->champion_id,
+                'url' => $url,
+            ]
+        );
     }
 }
