@@ -7,6 +7,12 @@
     <h1
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         Champions</h1>
+        <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4505764048662657"
+     data-ad-slot="7031271888"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
     <div class="flex justify-center items-center mx-auto max-w-screen-xl mt-2.5">
         <x-champions.lane-selector class="text-center" />
     </div>
