@@ -5,16 +5,16 @@
  Dive in now!')
 
 @section('content')
-    <div class="max-w-screen-xl mx-auto px-5 min-h-sceen">
+    <div class="max-w-screen-xl px-5 mx-auto min-h-sceen">
         <div class="flex flex-col items-center">
-            <h1 class="text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text mt-12">
+            <h1 class="mt-12 text-3xl font-bold text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
                 FAQ • Heimerdinger
             </h1>
             <h2 class="text-lg text-gray-300">
                 Frequently Asked Questions about the popular League of Legends champion Heimerdinger.
             </h2>
         </div>
-        <div class="grid divide-y divide-neutral-700 max-w-xl mx-auto mt-8">
+        <div class="grid max-w-xl mx-auto mt-8 divide-y divide-neutral-700">
             <x-about.faq.dropdown
                 question="Is Heimerdinger a yordle?"
                 answer="Yes! Heimerdinger is a yordle. He is a yordle inventor in the League of Legends universe. On-top of that he also also our mascot."/>
