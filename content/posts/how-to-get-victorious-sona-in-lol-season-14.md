@@ -29,7 +29,7 @@ Once you have earned enough split points, you will get the Victorious Sona skin 
 
 ### Time is Ticking
 
-Season 14 Split 2 ends on November 12th, 2024. Make sure you have enough split points to unlock the Victorious Sona skin before the season ends. If you don't have enough split points by then, you will miss out on this skin.
+Season 14 Split 2 ends on September 24th, 2024. Make sure you have enough split points to unlock the Victorious Sona skin before the season ends. If you don't have enough split points by then, you will miss out on this skin.
 
 If you're interested in getting a rank chroma for the Victorious Sona skin, you will need to reach the rank in question as your final rank for the season. For example, if you want the Diamond chroma, you will need to end the season in Diamond rank. If you reach Diamond you will also get the Iron to Emerald chromas.
 
@@ -56,7 +56,7 @@ And many more! Each Season split, Riot selects a champion to receive the Victori
 
 ### Grind for the Victorious Sona Skin
 
-With the new split point system, instead of the Gold rank requirement, it's easier than ever to get the Victorious Sona skin. All you need to do is play Ranked and earn enough split points to unlock the skin. Make sure you have enough split points before the season ends on November 12th, 2024, so you don't miss out on this enchanting skin.
+With the new split point system, instead of the Gold rank requirement, it's easier than ever to get the Victorious Sona skin. All you need to do is play Ranked and earn enough split points to unlock the skin. Make sure you have enough split points before the season ends on September 24th, 2024, so you don't miss out on this enchanting skin.
 
 So, queue up for Ranked, keep an eye on those Split Points, and let's hit the Rift. Victorious Sona is waiting for you, and the clock is ticking until September 24th! Good luck, and have fun! 🎉
 
