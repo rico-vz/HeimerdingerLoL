@@ -20,7 +20,7 @@ function getRoleIcon($roleName): string
 
 function getAverageColorFromImageUrl($imageUrl): string
 {
-    $imgManager = new ImageManager(new Driver());
+    $imgManager = new ImageManager(new Driver);
 
     try {
         $img = $imgManager->read(file_get_contents($imageUrl));
