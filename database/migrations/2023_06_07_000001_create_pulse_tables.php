@@ -4,7 +4,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Laravel\Pulse\Support\PulseMigration;
 
-return new class() extends PulseMigration
+return new class extends PulseMigration
 {
     public function up(): void
     {
