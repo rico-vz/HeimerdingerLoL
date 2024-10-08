@@ -19,7 +19,7 @@ class CloudflarePurgeCommand extends Command
     public function handle(): void
     {
         if (App::environment('production')) {
-            $client = new Client();
+            $client = new Client;
             $cf_zone_id = config('cloudflare.cf_zone_id');
             $cf_auth_bearer = config('cloudflare.cf_auth_bearer');
 
