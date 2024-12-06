@@ -18,6 +18,7 @@ module.exports = {
         "text-purple-500",
         "text-yellow-400",
         "text-violet-400",
+        "text-violet-300",
     ],
     theme: {
         extend: {

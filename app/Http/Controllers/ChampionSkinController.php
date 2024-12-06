@@ -30,6 +30,7 @@ class ChampionSkinController extends Controller
             'Mythic' => 'text-purple-500',
             'Ultimate' => 'text-yellow-400',
             'Transcendent' => 'text-violet-400',
+            'Exalted' => 'text-violet-300',
         ];
 
         return view('skins.index', ['skins' => $skins, 'rarityColor' => $rarityColor])->fragmentIf($request->hasHeader('HX-Request'), 'skin-list');
