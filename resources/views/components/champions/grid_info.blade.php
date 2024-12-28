@@ -30,7 +30,6 @@
                     {{ $champion->name }} Information</h4>
 
                 <ul class="ml-7">
-
                     <li class="mt-8 text-base font-medium leading-loose text-neutral-100 hyphens-auto" lang="en">
                         <span class="font-bold">Full Title:</span> {{ $champion->name }}, {{ $champion->title }}.
                     </li>
@@ -87,6 +86,14 @@
                 </ul>
             </div>
 
+            <!-- First Advertisement Container -->
+            <div class="col-span-full">
+                <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
+                <div class="w-full min-h-[90px] bg-stone-800/40 rounded-lg flex items-center justify-center">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
+                        data-ad-slot="5592927431" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+                </div>
+            </div>
 
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
@@ -126,7 +133,6 @@
                                             class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10 hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">
                                     </a>
                                     <div>
-
                                         <p
                                             class="align-bottom text-center text-neutral-100 text-sm mt-1.5 items-center">
                                             <a href="/skin/{{ $skin->slug }}"
@@ -142,6 +148,16 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Second Advertisement Container -->
+            <div class="col-span-full">
+                <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
+                <div class="w-full min-h-[90px] bg-stone-800/40 rounded-lg flex items-center justify-center">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
+                        data-ad-slot="5592927431" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+                </div>
+            </div>
+
             <div class="transition-all duration-700 border shadow-md lg:col-span-3 rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
                 <div class="p-4">
@@ -156,3 +172,10 @@
         </div>
     </div>
 </section>
+
+@push('bottom_scripts')
+    @include('popper::assets')
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+@endpush
