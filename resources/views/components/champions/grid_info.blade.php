@@ -87,11 +87,12 @@
             </div>
 
             <!-- First Advertisement Container -->
-            <div class="col-span-full">
+            <div class="px-4 col-span-full">
                 <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
-                <div class="w-full min-h-[90px] bg-stone-800/40 rounded-lg flex items-center justify-center">
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
-                        data-ad-slot="5592927431" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+                <div
+                    class="mx-auto w-[728px] h-[90px] max-w-full bg-stone-800/40 rounded-lg flex items-center justify-center">
+                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4505764048662657" data-ad-slot="5592927431"></ins>
                 </div>
             </div>
 
@@ -150,11 +151,12 @@
             </div>
 
             <!-- Second Advertisement Container -->
-            <div class="col-span-full">
+            <div class="px-4 col-span-full">
                 <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
-                <div class="w-full min-h-[90px] bg-stone-800/40 rounded-lg flex items-center justify-center">
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
-                        data-ad-slot="5592927431" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+                <div
+                    class="mx-auto w-[728px] h-[90px] max-w-full bg-stone-800/40 rounded-lg flex items-center justify-center">
+                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                        data-ad-client="ca-pub-4505764048662657" data-ad-slot="5592927431"></ins>
                 </div>
             </div>
 
@@ -172,10 +174,15 @@
         </div>
     </div>
 </section>
-
+@push('top_scripts')
+    @vite('resources/js/lane-filter.js')
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4505764048662657"
+        crossorigin="anonymous"></script>
+@endpush
 @push('bottom_scripts')
     @include('popper::assets')
     <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 @endpush
