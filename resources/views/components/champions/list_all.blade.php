@@ -4,22 +4,6 @@
 ?>
 
 <div class="relative">
-    <!-- Left Ad Container -->
-    <div class="fixed hidden w-64 2xl:block left-4 top-24">
-        <div class="p-4 border rounded-lg bg-stone-800/40 border-stone-800">
-            <div class="mb-2 text-sm text-center text-stone-400">Advertisement</div>
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
-                data-ad-slot="3924622540" data-ad-format="vertical" data-full-width-responsive="false"></ins>
-        </div>
-    </div>
-    <!-- Right Ad Container -->
-    <div class="fixed hidden w-64 2xl:block right-4 top-24">
-        <div class="p-4 border rounded-lg bg-stone-800/40 border-stone-800">
-            <div class="mb-2 text-sm text-center text-stone-400">Advertisement</div>
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
-                data-ad-slot="8775562347" data-ad-format="vertical" data-full-width-responsive="false"></ins>
-        </div>
-    </div>
     <!-- Main Content -->
     <section class="max-w-5xl mx-auto mt-12">
         <h1
@@ -87,10 +71,3 @@
         </div>
     </section>
 </div>
-
-@push('bottom_scripts')
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-@endpush

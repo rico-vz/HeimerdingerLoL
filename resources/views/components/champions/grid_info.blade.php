@@ -85,17 +85,6 @@
                     </li>
                 </ul>
             </div>
-
-            <!-- First Advertisement Container -->
-            <div class="px-4 col-span-full">
-                <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
-                <div
-                    class="mx-auto w-[728px] h-[90px] max-w-full bg-stone-800/40 rounded-lg flex items-center justify-center">
-                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-                        data-ad-client="ca-pub-4505764048662657" data-ad-slot="5592927431"></ins>
-                </div>
-            </div>
-
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
                 <div class="p-4">
@@ -150,15 +139,7 @@
                 </div>
             </div>
 
-            <!-- Second Advertisement Container -->
-            <div class="px-4 col-span-full">
-                <p class="mb-1 text-xs text-center uppercase text-neutral-400">Advertisement</p>
-                <div
-                    class="mx-auto w-[728px] h-[90px] max-w-full bg-stone-800/40 rounded-lg flex items-center justify-center">
-                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-                        data-ad-client="ca-pub-4505764048662657" data-ad-slot="5592927431"></ins>
-                </div>
-            </div>
+
 
             <div class="transition-all duration-700 border shadow-md lg:col-span-3 rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
@@ -181,8 +162,4 @@
 @endpush
 @push('bottom_scripts')
     @include('popper::assets')
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 @endpush
