@@ -35,13 +35,17 @@
                     </li>
                     <li class="text-base font-medium leading-loose text-neutral-100 hyphens-auto" lang="en">
                         <span class="font-bold">Popular Positions:</span>
-                        @foreach ($champion->lanes->roles as $lane)
-                            <span class="inline-block lowercase capitalize-first">{{ $lane }} @svg(getRoleIconSvg($lane), 'w-5 h-5 inline-block')
-                                @if (!$loop->last)
-                                    -
-                                @endif
-                            </span>
-                        @endforeach
+                        @if(isset($champion->lanes) && isset($champion->lanes->roles))
+                            @foreach ($champion->lanes->roles as $lane)
+                                <span class="inline-block lowercase capitalize-first">{{ $lane }} @svg(getRoleIconSvg($lane), 'w-5 h-5 inline-block')
+                                    @if (!$loop->last)
+                                        -
+                                    @endif
+                                </span>
+                            @endforeach
+                        @else
+                            <span class="inline-block lowercase capitalize-first">Not Enough Data</span>
+                        @endif
                     </li>
                     <li class="items-center text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">

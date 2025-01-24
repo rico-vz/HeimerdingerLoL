@@ -11,8 +11,8 @@
             Champions
         </h1>
 
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657"
-            data-ad-slot="7031271888" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657" data-ad-slot="7031271888"
+            data-ad-format="auto" data-full-width-responsive="true"></ins>
 
         <div class="flex justify-center items-center mx-auto max-w-5xl mt-2.5">
             <x-champions.lane-selector class="text-center" />
@@ -23,7 +23,10 @@
                 @foreach ($champions as $key => $champion)
                     <div
                         class="champ-card flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
-                        border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10 @foreach ($roles[$key]->roles as $lane) POS-{{ $lane }} @endforeach">
+                border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10
+                @if (isset($roles[$key]) && $roles[$key] !== null && isset($roles[$key]->roles)) @foreach ($roles[$key]->roles as $lane)
+                        POS-{{ $lane }}
+                    @endforeach @endif">
                         <div class="mx-4 mt-4 overflow-hidden border-2 rounded-2xl bg-clip-border border-orange-400/40">
                             <div class="aspect-w-4 aspect-h-3">
                                 <a href="/champion/{{ $champion->slug }}">
@@ -46,13 +49,15 @@
 
                             <div class="flex items-center mt-2">
                                 <p class="flex text-sm text-gray-300">
-                                    @foreach ($roles[$key]->roles as $lane)
-                                        <span class="sr-only">{{ $lane }}</span>
-                                        <img {{ Popper::arrow('translucent')->theme('dark')->position('bottom')->pop($lane) }}
-                                            @if ($key < 8) loading="auto" @else loading="lazy" @endif
-                                            src="{{ getRoleIcon($lane) }}" alt="{{ $lane }} Icon"
-                                            class="mr-1 w-7 h-7">
-                                    @endforeach
+                                    @if (isset($roles[$key]) && $roles[$key] !== null && isset($roles[$key]->roles))
+                                        @foreach ($roles[$key]->roles as $lane)
+                                            <span class="sr-only">{{ $lane }}</span>
+                                            <img {{ Popper::arrow('translucent')->theme('dark')->position('bottom')->pop($lane) }}
+                                                @if ($key < 8) loading="auto" @else loading="lazy" @endif
+                                                src="{{ getRoleIcon($lane) }}" alt="{{ $lane }} Icon"
+                                                class="mr-1 w-7 h-7">
+                                        @endforeach
+                                    @endif
                                 </p>
 
                                 <div class="flex items-end justify-end w-full justify-items-end">
