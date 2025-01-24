@@ -35,7 +35,7 @@
                     </li>
                     <li class="text-base font-medium leading-loose text-neutral-100 hyphens-auto" lang="en">
                         <span class="font-bold">Popular Positions:</span>
-                        @if(isset($champion->lanes) && isset($champion->lanes->roles))
+                        @if (isset($champion->lanes) && isset($champion->lanes->roles))
                             @foreach ($champion->lanes->roles as $lane)
                                 <span class="inline-block lowercase capitalize-first">{{ $lane }} @svg(getRoleIconSvg($lane), 'w-5 h-5 inline-block')
                                     @if (!$loop->last)
