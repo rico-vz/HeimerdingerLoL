@@ -9,6 +9,10 @@
     <x-icons.searchbar />
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
 
+        <div class="hidden md:block md:mr-6">
+            <x-ads.vertical-banner />
+        </div>
+
         <div class="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-6">
 
             @foreach ($icons as $key => $icon)

@@ -15,6 +15,10 @@
             <x-champions.lane-selector class="text-center" />
         </div>
 
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
+        </div>
+
         <div class="container flex items-center justify-center p-4 mx-auto mt-3">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($champions as $key => $champion)

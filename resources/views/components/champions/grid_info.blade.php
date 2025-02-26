@@ -37,7 +37,8 @@
                         <span class="font-bold">Popular Positions:</span>
                         @if (isset($champion->lanes) && isset($champion->lanes->roles))
                             @foreach ($champion->lanes->roles as $lane)
-                                <span class="inline-block lowercase capitalize-first">{{ $lane }} @svg(getRoleIconSvg($lane), 'w-5 h-5 inline-block')
+                                <span class="inline-block lowercase capitalize-first">{{ $lane }}
+                                    @svg(getRoleIconSvg($lane), 'w-5 h-5 inline-block')
                                     @if (!$loop->last)
                                         -
                                     @endif
@@ -150,6 +151,7 @@
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
                         {{ $champion->name }} Lore</h4>
+                    <x-ads.in-article />
                     <p class="text-neutral-100 hyphens-auto text-base mt-2.5 leading-loose w-9/12 mx-auto"
                         lang="en">
                         {{ $champion->lore }}
@@ -161,8 +163,6 @@
 </section>
 @push('top_scripts')
     @vite('resources/js/lane-filter.js')
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4505764048662657"
-        crossorigin="anonymous"></script>
 @endpush
 @push('bottom_scripts')
     @include('popper::assets')

@@ -8,6 +8,10 @@
         Champion Skins</h1>
     <x-skins.searchbar />
 
+    <div class="flex justify-center my-4">
+        <x-ads.horizontal-banner />
+    </div>
+
     @fragment('skin-list')
         <div id="skin-list">
             <div class="container flex items-center justify-center p-4 mx-auto mt-3">
