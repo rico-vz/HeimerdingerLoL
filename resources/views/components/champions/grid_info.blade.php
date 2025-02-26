@@ -23,6 +23,8 @@
                 </div>
             </div>
 
+            <x-ads.common />
+
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 lg:col-start-3"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
 
@@ -90,7 +92,6 @@
                     </li>
                 </ul>
             </div>
-            <x-ads.common />
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
                 <div class="p-4">
@@ -145,14 +146,11 @@
                 </div>
             </div>
 
-            <x-ads.common />
-
             <div class="transition-all duration-700 border shadow-md lg:col-span-3 rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
                 <div class="p-4">
                     <h4 class="text-center text-xl font-semibold text-neutral-100 uppercase mt-2.5 shadow-sm">
                         {{ $champion->name }} Lore</h4>
-                    <x-ads.in-article />
                     <p class="text-neutral-100 hyphens-auto text-base mt-2.5 leading-loose w-9/12 mx-auto"
                         lang="en">
                         {{ $champion->lore }}
