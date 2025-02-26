@@ -52,6 +52,10 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('ads.client_id') }}"
+        crossorigin="anonymous"></script>
+
     @stack('top_scripts')
     <x-analytics.plausible />
 </head>
@@ -59,6 +63,7 @@
 <body class="antialiased bg-stone-900 dark scroll-smooth">
     <x-navbar />
     @yield('content')
+    <x-ads.common />
     <x-footer />
     @stack('bottom_scripts')
 </body>
