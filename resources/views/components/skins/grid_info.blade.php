@@ -18,7 +18,7 @@
             </span>
         </a>
 
-
+        <x-ads.common />
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
         <div class="grid w-screen grid-cols-1 gap-5 md-grid-cols-2 lg:grid-cols-3">
             <div
@@ -131,7 +131,6 @@
                 </ul>
             </div>
 
-            <x-ads.common />
 
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">

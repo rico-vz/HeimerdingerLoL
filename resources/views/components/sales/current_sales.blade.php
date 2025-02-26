@@ -49,6 +49,8 @@
                 </div>
             </a>
         @endforeach
+        <x-ads.common />
+
     </div>
 
     <div class="flex justify-center my-4">
