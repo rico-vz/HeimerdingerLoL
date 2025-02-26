@@ -17,6 +17,6 @@ return [
         'vertical_banner' => '9117294343',
         'in_article' => '7169787855',
         'rectangle' => '1917461172',
-        'common' => '4128691547'
-    ]
+        'common' => '4128691547',
+    ],
 ];
