@@ -90,6 +90,7 @@
                     </li>
                 </ul>
             </div>
+            <x-ads.common />
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
                 <div class="p-4">
@@ -144,7 +145,7 @@
                 </div>
             </div>
 
-
+            <x-ads.common />
 
             <div class="transition-all duration-700 border shadow-md lg:col-span-3 rounded-2xl border-3 border-white/10 shadow-stone-800/80 hover:shadow-orange-500/20"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">

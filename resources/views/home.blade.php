@@ -10,6 +10,9 @@
 
     @if ($upcomingSkins != [])
         <x-home.upcoming_skins :upcomingSkins="$upcomingSkins" />
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
+        </div>
     @endif
     <x-home.recent_skins :latestSkins="$latestSkins" />
 @endsection

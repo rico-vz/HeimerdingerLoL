@@ -11,6 +11,10 @@
             class="text-sm font-bold text-center text-transparent uppercase md:text-lg bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
             Released in: {{ $icon->release_year }}</h2>
 
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
+        </div>
+
         <div class="container flex items-center justify-center p-4 mx-auto my-auto mt-3">
             <div class="grid w-screen grid-cols-1 gap-8 md:grid-cols-2">
                 <div
