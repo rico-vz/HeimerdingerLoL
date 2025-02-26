@@ -7,12 +7,6 @@
         class="text-3xl font-bold text-center text-transparent uppercase sm:text-4xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         Summoner Icons</h1>
     <x-icons.searchbar />
-
-    <div class="max-w-lg mx-auto mt-4 text-center">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657" data-ad-slot="7852517087"
-            data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
 
         <div class="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-6">

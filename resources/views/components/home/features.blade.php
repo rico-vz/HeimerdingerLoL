@@ -84,9 +84,6 @@
                     information about the game.
                 </p>
             </a>
-            <div></div>
-            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-eg-k+31-7n+8n"
-                data-ad-client="ca-pub-4505764048662657" data-ad-slot="4356125202"></ins>
         </div>
     </div>
 </section>

@@ -19,9 +19,6 @@
         class="text-lg font-bold text-center text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         LoL Icons & Emotes</h2>
 
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657" data-ad-slot="1526464654"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-
     <div class="container flex items-center justify-center flex-grow p-4 mx-auto mt-3">
         <div class="items-center justify-center text-center align-middle">
             <img class="items-center mx-auto" src="{{ asset('img/heimerdinger-emote.webp') }}" alt="Heimerdinger Emote">

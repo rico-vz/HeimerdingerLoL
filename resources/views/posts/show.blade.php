@@ -40,8 +40,6 @@
             <h2 class="text-sm italic text-center text-orange-400 not-prose" itemprop="description">
                 “{{ $post->description }}”
             </h2>
-            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
-                data-ad-format="fluid" data-ad-client="ca-pub-4505764048662657" data-ad-slot="2492379195"></ins>
             <p>
                 {{ $post->contents }}
             </p>

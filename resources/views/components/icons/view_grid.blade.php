@@ -102,13 +102,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <div
-                    class="items-center col-span-2 border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80 !hidden lg:!block justify-center">
-                    <ins class="!flex justify-center adsbygoogle rounded-2xl" style="display:block" data-ad-client="ca-pub-4505764048662657"
-                        data-ad-slot="4667687216" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                </div>
-
             </div>
         </div>
     </div>
