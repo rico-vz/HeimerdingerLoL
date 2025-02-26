@@ -7,8 +7,6 @@
 
     @push('top_scripts')
         @vite('resources/js/lane-filter.js')
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4505764048662657"
-            crossorigin="anonymous"></script>
     @endpush
 
 @section('content')
@@ -17,7 +15,4 @@
 
 @push('bottom_scripts')
     @include('popper::assets')
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 @endpush

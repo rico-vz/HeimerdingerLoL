@@ -46,8 +46,6 @@
                 </div>
             </a>
         @endforeach
-        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7t+ey-1j-38+br"
-            data-ad-client="ca-pub-4505764048662657" data-ad-slot="1195346069"></ins>
     </div>
 
 

@@ -8,12 +8,9 @@
         Champion Skins</h1>
     <x-skins.searchbar />
 
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4505764048662657"
-     data-ad-slot="4300903438"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+    <div class="flex justify-center my-4">
+        <x-ads.horizontal-banner />
+    </div>
 
     @fragment('skin-list')
         <div id="skin-list">

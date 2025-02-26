@@ -11,11 +11,12 @@
             Champions
         </h1>
 
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4505764048662657" data-ad-slot="7031271888"
-            data-ad-format="auto" data-full-width-responsive="true"></ins>
-
         <div class="flex justify-center items-center mx-auto max-w-5xl mt-2.5">
             <x-champions.lane-selector class="text-center" />
+        </div>
+
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
         </div>
 
         <div class="container flex items-center justify-center p-4 mx-auto mt-3">
