@@ -15,6 +15,9 @@
                 <h2 class="mt-4 text-stone-300">
                     See what's coming next to Heimerdinger.lol. Vote on features you'd like to see implemented next.
                 </h2>
+                <div class="flex justify-center my-4">
+                    <x-ads.horizontal-banner />
+                </div>
                 <p class="mt-4 mb-8">
                     View the full roadmap at <a href="https://heimerdinger.features.vote/roadmap"
                         class="text-orange-300 hover:text-orange-500">Heimerdinger Features Roadmap</a>.

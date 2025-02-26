@@ -14,6 +14,9 @@
                 Frequently Asked Questions about the popular League of Legends champion Heimerdinger.
             </h2>
         </div>
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
+        </div>
         <div class="grid max-w-xl mx-auto mt-8 divide-y divide-neutral-700">
             <x-about.faq.dropdown
                 question="Is Heimerdinger a yordle?"

@@ -12,6 +12,9 @@
         class="text-lg font-bold text-center text-transparent uppercase sm:text-xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         All champions & skins on sale</h2>
 
+        <div class="flex justify-center my-4">
+            <x-ads.horizontal-banner />
+        </div>
     <h3
         class="mt-8 mb-2 text-2xl font-bold text-center text-transparent uppercase sm:text-3xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         Champions on Sale</h3>
@@ -48,6 +51,9 @@
         @endforeach
     </div>
 
+    <div class="flex justify-center my-4">
+        <x-ads.horizontal-banner />
+    </div>
 
     <h3
         class="mt-8 text-2xl font-bold text-center text-transparent uppercase sm:text-3xl bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
@@ -85,5 +91,7 @@
             @endforeach
         </div>
     </div>
+
+
 
 </section>
