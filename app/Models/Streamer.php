@@ -28,11 +28,11 @@ class Streamer extends Model
     public function getStreamerUrlAttribute(): string
     {
         return match ($this->platform) {
-            'Twitch' => "https://www.twitch.tv/{$this->username}",
-            'YouTube' => "https://www.youtube.com/@{$this->username}",
-            'Kick' => "https://kick.com/{$this->username}",
-            'Douyu' => "https://www.douyu.com/{$this->username}",
-            'Huya' => "https://www.huya.com/{$this->username}",
+            'Twitch' => 'https://www.twitch.tv/' . $this->username,
+            'YouTube' => 'https://www.youtube.com/@' . $this->username,
+            'Kick' => 'https://kick.com/' . $this->username,
+            'Douyu' => 'https://www.douyu.com/' . $this->username,
+            'Huya' => 'https://www.huya.com/' . $this->username,
         };
     }
 

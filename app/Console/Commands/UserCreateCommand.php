@@ -13,10 +13,8 @@ class UserCreateCommand extends Command
 
     public function handle(): void
     {
-        if (config('app.env') === 'production') {
-            if (! $this->confirm('You are in production mode. Are you sure you want to continue?')) {
-                return;
-            }
+        if (config('app.env') === 'production' && ! $this->confirm('You are in production mode. Are you sure you want to continue?')) {
+            return;
         }
 
         $this->info('Creating a new user...');

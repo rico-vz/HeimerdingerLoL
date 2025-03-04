@@ -27,12 +27,12 @@ class SaleController extends Controller
 
                 return $response;
             });
-        } catch (\Exception $e) {
-            if ($e->getMessage() === 'Trying to access array offset on value of type null') {
+        } catch (\Exception $exception) {
+            if ($exception->getMessage() === 'Trying to access array offset on value of type null') {
                 logger()->error('LMI has broken');
                 abort(503, 'Sorry, the Sale Rotation is currently under maintenance. Please try again later.');
             } else {
-                logger()->error('An error occurred while trying to fetch the Sale Rotation', ['error' => $e->getMessage()]);
+                logger()->error('An error occurred while trying to fetch the Sale Rotation', ['error' => $exception->getMessage()]);
                 abort(500, 'Sorry, an error occurred while trying to fetch the Sale Rotation. Please try again later.');
             }
         }

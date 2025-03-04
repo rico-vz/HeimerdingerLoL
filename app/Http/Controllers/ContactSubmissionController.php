@@ -20,12 +20,15 @@ class ContactSubmissionController extends Controller
         $descriptionContent = "**Name**: {$contactSubmission->name}\n\n**Email**: {$contactSubmission->email}\n\n**Category**: {$contactSubmission->category->humanReadable()}\n\n**Subject**: {$contactSubmission->subject}\n\n**Message**: {$contactSubmission->message}";
 
         if ($contactSubmission->discord) {
-            $descriptionContent .= "\n\n\n**Discord**: {$contactSubmission->discord}";
+            $descriptionContent .= '
+
+
+**Discord**: ' . $contactSubmission->discord;
         }
 
-        DiscordAlert::message("There is a new contact submission from {$contactSubmission->name} ({$contactSubmission->email}).", [
+        DiscordAlert::message(sprintf('There is a new contact submission from %s (%s).', $contactSubmission->name, $contactSubmission->email), [
             [
-                'title' => "{$contactSubmission->category->humanReadable()} - {$contactSubmission->subject}",
+                'title' => sprintf('%s - %s', $contactSubmission->category->humanReadable(), $contactSubmission->subject),
                 'description' => $descriptionContent,
                 'color' => '#ff8a4c',
             ],

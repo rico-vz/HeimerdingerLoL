@@ -23,7 +23,7 @@ class ChampionRoles extends Model
 
     public function getRolesAttribute($value): array
     {
-        $value = json_decode($value);
+        $value = json_decode((string) $value);
 
         $roleNames = [
             'TOP' => 'Toplane',

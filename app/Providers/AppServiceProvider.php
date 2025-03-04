@@ -46,21 +46,15 @@ class AppServiceProvider extends ServiceProvider
 
     public function bootAuth(): void
     {
-        Gate::define('viewPulse', function (User $user) {
-            return $user->admin;
-        });
+        Gate::define('viewPulse', fn(User $user) => $user->admin);
     }
 
     public function bootRoute(): void
     {
-        RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
-        });
+        RateLimiter::for('api', fn(Request $request) => Limit::perMinute(60)->by($request->user()?->id ?: $request->ip()));
 
-        Route::bind('post', function ($path) {
-            return $this->app->make(Sheets::class)
-                ->collection('posts')
-                ->get($path) ?? abort(404);
-        });
+        Route::bind('post', fn($path) => $this->app->make(Sheets::class)
+            ->collection('posts')
+            ->get($path) ?? abort(404));
     }
 }
