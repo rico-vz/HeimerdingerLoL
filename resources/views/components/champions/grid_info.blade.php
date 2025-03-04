@@ -10,6 +10,9 @@
         class="text-sm font-bold text-center text-transparent uppercase md:text-lg bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         {{ $champion->title }}</h2>
 
+
+        <x-ads.common />
+
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
         <div class="grid w-screen grid-cols-1 gap-5 md-grid-cols-2 lg:grid-cols-3">
             <div
@@ -22,8 +25,6 @@
                         class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 hover:scale-105">
                 </div>
             </div>
-
-            <x-ads.common />
 
             <div class="transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 lg:col-start-3"
                 style="--tw-shadow-color:{{ $champion->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $champion->splash_color }};">
