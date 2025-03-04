@@ -23,7 +23,7 @@ class ContactSubmissionController extends Controller
             $descriptionContent .= '
 
 
-**Discord**: ' . $contactSubmission->discord;
+**Discord**: '.$contactSubmission->discord;
         }
 
         DiscordAlert::message(sprintf('There is a new contact submission from %s (%s).', $contactSubmission->name, $contactSubmission->email), [

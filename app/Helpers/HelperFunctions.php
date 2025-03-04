@@ -90,7 +90,7 @@ function getChampionImage($full_id, $type): string
 function getCommitHash(): string
 {
     /** @var string $commit */
-    $commit = Cache::remember('commit_hash', 60 * 72, fn() => trim(exec('git log --pretty="%h" -n1 HEAD')));
+    $commit = Cache::remember('commit_hash', 60 * 72, fn () => trim(exec('git log --pretty="%h" -n1 HEAD')));
 
     return $commit;
 }
