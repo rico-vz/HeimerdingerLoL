@@ -1,5 +1,4 @@
 <section class="max-w-screen-xl mx-auto mt-12">
-    <p class="sr-only">Heimerdinger Presents:</p>
     <h3
         class="text-sm font-bold text-center text-transparent uppercase sm:text-md bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
         CHAMPION DETAILS</h3>

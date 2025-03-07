@@ -35,7 +35,6 @@
                                         href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a></h2>
 
                                 <div class="my-1">
-                                    <span class="sr-only">Associated Skinline:</span>
                                     @foreach ($skin->associated_skinline as $skinline)
                                         <span
                                             class="bg-orange-100 text-orange-800 text-xs font-medium

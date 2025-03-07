@@ -1,6 +1,5 @@
 <section class="min-h-[80vh] flex items-center justify-center">
     <div class="items-center justify-center mx-auto my-auto align-middle">
-        <p class="sr-only">Heimerdinger Presents:</p>
         <h3
             class="text-sm font-bold text-center text-transparent uppercase sm:text-md bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
             ICON DETAILS</h3>
