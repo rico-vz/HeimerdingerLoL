@@ -5270,13 +5270,13 @@
                 "illuminate/support": "^10.0|^11.0",
                 "nesbot/carbon": "^2.71|^3.0",
                 "php": "^8.2||^8.3||^8.4",
-                "spatie/laravel-package-tools": "^1.16.1"
+                "spatie/laravel-package-tools": "^1.16.1",
+                "spatie/crawler": "^8.4"
             },
             "require-dev": {
                 "mockery/mockery": "^1.6.6",
                 "orchestra/testbench": "^8.14|^9.0",
                 "pestphp/pest": "^2.24",
-                "spatie/crawler": "^8.4",
                 "spatie/pest-plugin-snapshots": "^2.1",
                 "spatie/phpunit-snapshot-assertions": "^5.1.2",
                 "spatie/temporary-directory": "^2.2"
