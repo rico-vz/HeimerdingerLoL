@@ -32,7 +32,7 @@ To check how much longer you have left exactly, open your Profile in LoL and cli
 
 ![Countdown](https://i.ibb.co/PgSMbpC/image.png)
 
-## Understanding Split Points in Season 14 
+## Understanding Split Points in Season 14
 
 Let's dive into exactly how you'll unlock that sweet Victorious [Master Yi](https://heimerdinger.lol/champion/master-yi) skin through League's split point system! Whether you're a ranked veteran or just starting your climb, understanding how split points work is your key to success.
 
@@ -41,15 +41,17 @@ Let's dive into exactly how you'll unlock that sweet Victorious [Master Yi](http
 The path to Victorious Master Yi varies depending on your rank, and it's actually more straightforward than you might think:
 
 **Gold and Above (80 Split Points)**
+
 - Gold
 - Platinum
 - Emerald
-- Diamond 
+- Diamond
 - Master
-- Grandmaster 
+- Grandmaster
 - Challenger
 
 **Below Gold (1000 Split Points)**
+
 - Iron
 - Bronze
 - Silver
@@ -59,6 +61,7 @@ Think of split points as your ranked progress tracker - they're earned through e
 ### How to Track Your Progress
 
 Checking your split point progress is super easy:
+
 - Open your League client
 - Head to your Profile
 - Click on "Ranked"
@@ -70,8 +73,8 @@ The progress bar shows exactly how close you are to unlocking Victorious Master 
 
 Here's something crucial that many players overlook - you need to maintain Honor Level 2 or above to be eligible for Victorious Yi. This isn't just about grinding games; it's about being a positive fella :).
 
-
 If your honor level is below 2, don't panic! You still have time to:
+
 - Play consistently without negative behavior
 - Earn honor from teammates
 - Avoid any penalties or restrictions
@@ -87,11 +90,13 @@ Let's dive into the most efficient strategies for earning those split points - w
 The beauty of League's ranked system in Season 14 is that every game counts towards your goal. Here's how to make the most of your ranked journey:
 
 **For Gold+ Players (80 Split Points)**
+
 - Focus on maintaining your rank
 - Play at least 3-4 ranked games weekly if you aren't at 80 points yet
 - Don't stress about grinding - you're already on track!
 
 **For Below Gold (1000 Split Points)**
+
 - Aim for consistent daily play sessions
 - Target 4-5 games per day for steady progress
 - Track your progress to stay motivated
@@ -101,10 +106,12 @@ The beauty of League's ranked system in Season 14 is that every game counts towa
 Not all ranked queues are created equal when it comes to efficient split point earning:
 
 **Solo/Duo Queue**
+
 - Classic ranked experience
 - Typically faster queue times
 
 **Flex Queue**
+
 - Team up with friends
 - Often more relaxed atmosphere
 - Still counts for split points
@@ -114,16 +121,18 @@ Not all ranked queues are created equal when it comes to efficient split point e
 Let's break down the time needed based on your current rank:
 
 **Gold and Above**
+
 - Average games needed: 20-25
 - Typical completion time: 1-2 weeks
 - Weekly commitment: 3-4 hours
 
 **Below Gold**
+
 - Average games needed: 100-120
 - Typical completion time: 4-6 weeks
 - Daily commitment: 2-3 hours
 
-**Remember, playing Master Yi isn't required to earn points** - play what you're comfortable with! 
+**Remember, playing Master Yi isn't required to earn points** - play what you're comfortable with!
 
 ## The Looks: Victorious Yi Features & Chromas
 
@@ -141,7 +150,7 @@ Let's break down the time needed based on your current rank:
 
 Remember, this is an EXCLUSIVE ranked reward - once Season 14 ends, there's no other way to add this prestigious skin to your collection!
 
-## Troubleshooting & FAQ: Everything You Need to Know!
+## Troubleshooting & FAQ: Everything You Need to Know
 
 Time to tackle those burning questions about Victorious Yi and make sure you're fully prepared for ranked success! We've gathered the most common questions from the LoL community to keep you in the loop.
 
@@ -151,7 +160,7 @@ Time to tackle those burning questions about Victorious Yi and make sure you're 
 Nope! That's old news. You just need those split points - 80 if you're Gold+, or 1000 if you're below Gold.
 
 **"What if I hit Gold later in the season?"**
-Good news - the moment you hit Gold, your split point requirement drops to 80! Even better, any points you've already earned count toward that lower target. 
+Good news - the moment you hit Gold, your split point requirement drops to 80! Even better, any points you've already earned count toward that lower target.
 
 **"Can I earn split points from any ranked queue?"**
 Absolutely! Whether you're grinding Solo/Duo or teaming up in Flex, they will count.
@@ -163,6 +172,7 @@ Absolutely! Whether you're grinding Solo/Duo or teaming up in Flex, they will co
 Want to make every ranked game count? Our community's most successful players are using these approaches:
 
 **Peak Performance Hours**
+
 - Early morning queues (less toxicity!)
 - Weekend morning sessions
 - Avoid ranked during patch days
@@ -172,6 +182,7 @@ Pro tip: Try out the "3-game rule" - if you lose two games in a row, take a shor
 ## Your Next Steps
 
 Ready to dive in? Here's your action plan:
+
 1. Check your current split points
 2. Calculate your remaining games
 3. Lock in that Honor Level 2+

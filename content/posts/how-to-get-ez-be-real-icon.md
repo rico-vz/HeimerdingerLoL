@@ -1,7 +1,7 @@
 ---
 title: "How to Get the Ez-be-real Icon in League of Legends"
 description: Discover everything about obtaining Arcane Fractured Jinx through The Sanctum system, including exact pull rates, costs, and strategies for League of Legends' latest premium skin.
-thumbnail: "https://cdn.heimerdinger.lol/lolesports_rewards_indicator_screenshot.png"
+thumbnail: "https://cdn.heimerdinger.lol/ez-be-real_thumbnail.png"
 date: 2025-03-12
 tags:
     - League of Legends
