@@ -15,4 +15,6 @@
         </div>
     @endif
     <x-home.recent_skins :latestSkins="$latestSkins" />
+
+    <x-petal-attribution />
 @endsection
