@@ -6,42 +6,37 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&amp;logo=laravel&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&amp;logo=mysql&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="shields"></p>
 
-  
 <h2>🧐 Features</h2>
 
 Here're some of the project's features:
 
 *Not all of these features are implemented, yet.*
 
-
-*   All available LoL Champions
-*   Sort champions by most popular lane
-*   Champion & skin sale rotation
-*   All available LoL Skins
-*   All available LoL Skin Chromas
-*   Champion & skin search
-*   A list of all Icons Emotes Summoner Spells Items
-*   Player Profile to show your rank level and mastery points. (By Riot ID *Name#0000*)
+* All available LoL Champions
+* Sort champions by most popular lane
+* Champion & skin sale rotation
+* All available LoL Skins
+* All available LoL Skin Chromas
+* Champion & skin search
+* A list of all Icons Emotes Summoner Spells Items
+* Player Profile to show your rank level and mastery points. (By Riot ID *Name#0000*)
 
 <h2>🍰 Contribution Guidelines:</h2>
 
 Please see [CONTRIBUTING.md](https://github.com/rico-vz/HeimerdingerLoL/blob/main/CONTRIBUTING.md)
 
-  
-  
 <h2>💻 Built with</h2>
 
 Technologies used in the project:
 
-*   Laravel
-*   Vite
-*   MySQL
-*   TailwindCSS
-*   Javascript
-*   Riot Games API
-*   DataDragon API
-*   Meraki Analytics
-  
+* Laravel
+* Vite
+* MySQL
+* TailwindCSS
+* Javascript
+* Riot Games API
+* DataDragon API
+* Meraki Analytics
   
 <h2>⚠️ Disclaimer:</h2>
 
@@ -50,4 +45,3 @@ Heimerdinger.lol was created under Riot Games' "Legal Jibber Jabber" policy usin
 ---
 
 <a href="https://rico.sh"><img src="https://img.shields.io/badge/%E2%AD%90-rico.sh-white?labelColor=rgb(246, 129, 2)&style=flat" alt="⭐" /></a>
-
