@@ -51,7 +51,7 @@
         <span
             class="flex flex-row items-center justify-center text-sm text-gray-400 whitespace-pre sm:text-center dark:text-gray-400">© {{ date('Y') }} <a
                 href="/" class="hover:underline">Heimerdinger.LoL</a> • Made with <a
-                aria-label="Find out more about the creator of Heimerdinger.lol" href="https://rico.sh"><x-iconsax-bul-heart-circle
+                aria-label="Find out more about the creator of Heimerdinger.lol" href="https://solo.to/fwost"><x-iconsax-bul-heart-circle
                     class="relative self-center inline-block w-5 text-red-400"/></a></span>
 
         <span>   <p class="mt-3 font-mono text-sm text-gray-200 opacity-75">Version: {{ getCommitHash() }}</p> </span>
