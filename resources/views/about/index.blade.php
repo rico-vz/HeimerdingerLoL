@@ -18,10 +18,12 @@
 
         <div class="flex items-center justify-center mt-2">
             <a href="{{ route('about.faq.heimerdinger') }}"
-                class="px-4 py-2 mr-3 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ •
+                class="px-4 py-2 mr-3 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ
+                •
                 Heimerdinger</a>
             <a href="{{ route('about.faq.leagueoflegends') }}"
-                class="px-4 py-2 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ • League of
+                class="px-4 py-2 font-bold transition-all bg-orange-400 rounded text-neutral-900 hover:bg-orange-300">FAQ •
+                League of
                 Legends</a>
         </div>
 
@@ -81,7 +83,7 @@
                 Heimerdinger.lol is a fan-made website and created + ran by one person. Heimerdinger.lol is free to use
                 and
                 will
-                always be free to use. We currently do not run ads on our website. We are not affiliated with Riot Games
+                always be free to use. We are not affiliated with Riot Games
                 in
                 any way. We are just a fan of League of Legends and
                 created this website to help other fans while also learning and practicing our skills. We hope you enjoy
