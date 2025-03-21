@@ -45,7 +45,7 @@
                 <ul class="mx-5">
                     <li class="items-center mt-4 text-base font-medium leading-loose text-neutral-100 hyphens-auto"
                         lang="en">
-                        <span class="font-bold">RP Cost:</span>
+                        <span class="font-bold">Price:</span>
                         @if ($skin->rp_price == '99999')
                             Not Available for RP
                         @else
