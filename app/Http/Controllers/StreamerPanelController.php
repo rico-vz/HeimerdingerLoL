@@ -34,7 +34,8 @@ class StreamerPanelController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['champion_id' => 'required|exists:champions,champion_id',
+        $request->validate([
+            'champion_id' => 'required|exists:champions,champion_id',
             'platform' => 'required|in:twitch,youtube,kick,douyu,huya',
             'username' => 'required|string',
             'displayname' => 'required|string',
