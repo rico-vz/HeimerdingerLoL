@@ -43,7 +43,7 @@
         "phpunit/phpunit": "^11.0",
         "rector/rector": "^2.0",
         "spatie/laravel-ignition": "^2.4",
-        "tightenco/duster": "^3.0"
+        "tightenco/duster": "^3.2"
     },
     "autoload": {
         "psr-4": {
