@@ -30,7 +30,7 @@
         "spatie/laravel-query-builder": "^6.0",
         "spatie/laravel-sitemap": "^7.2",
         "spatie/sheets": "^1.12",
-        "sqids/sqids": "^0.4.1"
+        "sqids/sqids": "^0.5.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.10",
