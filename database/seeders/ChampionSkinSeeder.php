@@ -33,7 +33,7 @@ class ChampionSkinSeeder extends Seeder
                     continue;
                 }
 
-                if ($skin['cost'] == 'Special') {
+                if (in_array($skin['cost'], ['Special', 'Battle Pass', 'Sanctum'])) {
                     $skin['cost'] = 99999;
                 }
 
