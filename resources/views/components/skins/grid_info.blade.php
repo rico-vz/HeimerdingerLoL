@@ -488,6 +488,180 @@
                     page for more {{ $skin->champion->name }} skins and their details.
                 </p>
             </div>
+
+        </div>
+        <div class="p-6 mt-8 border shadow-md bg-stone-800/40 border-neutral-300/5 rounded-2xl" itemscope
+            itemtype="https://schema.org/FAQPage">
+            <h2
+                class="mb-4 text-2xl font-bold text-transparent uppercase bg-gradient-to-bl from-orange-300 to-orange-500 bg-clip-text">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="divide-y divide-stone-700/50">
+                <div class="py-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name" class="mb-2 text-lg font-bold text-orange-400">How can I get
+                        {{ $skin->skin_name }} if it's not in the store?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text" class="text-neutral-100">
+                            @if ($skin->rp_price == '99999')
+                                {{ $skin->skin_name }} is a special skin that can't be purchased directly with RP.
+                                Instead, you need to
+                                @if ($skin->availability == 'Limited')
+                                    obtain it through special events or promotions. This might include The Sanctum
+                                    (gacha system), Battle Pass progression, watching esports, or limited-time
+                                    promotions. Since it's a limited-access skin, check the League client news for the
+                                    specific method currently available.
+                                @elseif ($skin->availability == 'Upcoming')
+                                    wait for its release, which will likely be part of a special event. When available,
+                                    it will be obtainable through alternative means like The Sanctum (gacha system),
+                                    Battle Pass progression, watching esports, or special promotions rather than direct
+                                    RP purchase.
+                                @else
+                                    access it through special means such as The Sanctum (gacha system), Battle Pass
+                                    progression, watching esports, or limited-time promotions. Check the current event
+                                    details in the League client for the exact method.
+                                @endif
+                            @elseif ($skin->availability == 'Legacy')
+                                While {{ $skin->skin_name }} is a legacy skin and not regularly available in the store,
+                                you can still obtain it through hextech crafting, event orbs, or during special sales
+                                when legacy vaults are temporarily opened. Keep an eye on the League client for events
+                                like Lunar Revel, Snowdown, or special champion spotlights when legacy skins often
+                                return.
+                            @elseif ($skin->availability == 'Limited')
+                                {{ $skin->skin_name }} is a limited skin, which means it's rare. Limited skins
+                                typically don't return to the store, but in some cases, you might find it in special
+                                bundles, through "Your Shop" personalized discounts, or during major game anniversaries
+                                when Riot occasionally brings back limited content.
+                            @elseif ($skin->availability == 'Upcoming')
+                                {{ $skin->skin_name }} hasn't been released yet! Once it launches, you'll be able to
+                                purchase it directly from the store for {{ $skin->rp_price }} RP.
+                            @else
+                                If {{ $skin->skin_name }} is not currently in your store, try restarting your client.
+                                You can purchase it directly for {{ $skin->rp_price }} RP, get it through hextech
+                                crafting (if you're lucky), or ask a friend to gift it to you.
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name" class="mb-2 text-lg font-bold text-orange-400">Can I gift
+                        {{ $skin->skin_name }} to a friend?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text" class="text-neutral-100">
+                            @if ($skin->rp_price == '99999')
+                                No, {{ $skin->skin_name }} cannot be gifted directly to friends. Since it's a special
+                                skin obtained through
+                                @if ($skin->availability == 'Upcoming')
+                                    upcoming special means (like Battle Pass, The Sanctum, or other events), there is no
+                                    direct gifting option. Your friend will need to participate in the event or
+                                    promotion to obtain it themselves once it becomes available.
+                                @else
+                                    alternative means (like Battle Pass, The Sanctum, or other events) rather than
+                                    direct RP purchase, there is no gifting option available. Your friend will need to
+                                    participate in the event or promotion to obtain it themselves.
+                                @endif
+                            @elseif ($skin->availability == 'Available')
+                                Yes! You can gift {{ $skin->skin_name }} to friends who have been on your friends list
+                                for at least 24 hours. Just go to the store, select the gifting icon, find your friend,
+                                and select the skin. Keep in mind that gifting costs the same amount
+                                ({{ $skin->rp_price }} RP) as buying it for yourself.
+                            @elseif ($skin->availability == 'Legacy' || $skin->availability == 'Limited')
+                                When {{ $skin->skin_name }} becomes temporarily available during special events, you
+                                can gift it to friends who have been on your friends list for at least 24 hours. Since
+                                this is a {{ strtolower($skin->availability) }} skin, gifting it is a special surprise
+                                that not everyone will have access to.
+                            @elseif ($skin->availability == 'Upcoming')
+                                Once {{ $skin->skin_name }} is released, you'll be able to gift it to any friend who
+                                has been on your friends list for at least 24 hours. New skins are almost always
+                                giftable upon release.
+                            @else
+                                Yes, as long as the person has been on your friends list for at least 24 hours, you can
+                                gift this skin. Gifting costs the same ({{ $skin->rp_price }} RP) as buying it for
+                                yourself.
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name" class="mb-2 text-lg font-bold text-orange-400">How does
+                        {{ $skin->skin_name }} compare to other {{ $skin->champion->name }} skins?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text" class="text-neutral-100">
+                            @if ($skin->rp_price == '99999')
+                                {{ $skin->skin_name }} is a special skin that can't be directly purchased
+                                with RP, making it more exclusive than standard {{ $skin->champion->name }} skins.
+                                These special skins often have production quality comparable to higher-tier skins (1350
+                                RP+) with unique thematic elements.
+                            @else
+                                {{ $skin->skin_name }} offers a {{ strtolower($skin->rarity) }} tier experience at
+                                {{ $skin->rp_price }} RP, making it
+                                {{ $skin->rp_price < 1350 ? 'more affordable than other skins' : 'one of the higher-end options' }}
+                                for {{ $skin->champion->name }}.
+                            @endif
+
+                            @if ($skin->new_effects && $skin->new_animations)
+                                What sets it apart from lower-tier {{ $skin->champion->name }} skins is the
+                                combination of custom visual effects and animations, which give a completely fresh feel
+                                to the champion.
+                            @elseif ($skin->new_effects)
+                                Unlike some basic {{ $skin->champion->name }} skins, this one includes custom visual
+                                effects that really change how your abilities look in game.
+                            @elseif ($skin->new_animations)
+                                The unique animations separate it from simpler {{ $skin->champion->name }} skins,
+                                giving the champion new personality through movement.
+                            @endif
+
+                            For a detailed comparison with all other {{ $skin->champion->name }} skins, check out our
+                            <a href="/champion/{{ $skin->champion->slug }}"
+                                class="text-orange-400 hover:text-orange-300">{{ $skin->champion->name }}
+                                page</a> that lists all skins.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name" class="mb-2 text-lg font-bold text-orange-400">
+                        @if ($skin->rp_price == '99999')
+                            What's the best way to get {{ $skin->skin_name }}?
+                        @else
+                            When does {{ $skin->skin_name }} go on sale?
+                        @endif
+                    </h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text" class="text-neutral-100">
+                            @if ($skin->rp_price == '99999')
+                                The most efficient way to obtain {{ $skin->skin_name }} depends on its specific
+                                acquisition method. For Battle Pass skins, purchase the pass early and complete missions
+                                consistently. For Sanctum skins, use the free orbs first, then strategically purchase
+                                additional orbs if needed. For event-specific skins, check the event details in the
+                                League client for the most efficient path. Sometimes these special skins reappear in
+                                future events, but there's no guarantee, so it's best to grab them when initially
+                                available.
+                            @elseif ($skin->availability == 'Upcoming' || $skin->release_date == '0000-00-00')
+                                New skins like {{ $skin->skin_name }} typically don't go on sale immediately after
+                                release. You'll usually need to wait 4-6 months before seeing it in a regular sale
+                                rotation. However, it might appear in "Your Shop" with a personalized discount if you
+                                play {{ $skin->champion->name }} frequently.
+                            @elseif ($skin->availability == 'Legacy' || $skin->availability == 'Limited')
+                                Since {{ $skin->skin_name }} is a {{ strtolower($skin->availability) }} skin, it
+                                doesn't follow the regular sale schedule. Instead, watch for special events when legacy
+                                vaults open, usually at holidays or during champion updates. When available again, it
+                                might be at full price or occasionally discounted as part of a bundle.
+                            @else
+                                Riot typically puts skins on sale approximately every 6-8 months.
+                                {{ $skin->skin_name }} could appear in the weekly sale rotation for 30-50% off its
+                                original price ({{ $skin->rp_price }} RP). The most reliable way to get a discount is
+                                through "Your Shop," which offers personalized discounts on skins for champions you play
+                                often. Check our <a href="/sale-rotation"
+                                    class="text-orange-400 hover:text-orange-300">sale rotation tracker</a> to see if
+                                this skin is on sale currently.
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
