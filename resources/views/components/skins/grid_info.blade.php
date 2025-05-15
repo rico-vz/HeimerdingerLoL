@@ -29,9 +29,15 @@
 
             <!-- Splash Art -->
             <div class="relative w-full h-full">
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1200&output=webp&q=90&h=350&fit=cover"
-                    alt="{{ $skin->skin_name }} Splash Art"
-                    class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100">
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=30&h=20&fit=cover&blur=5&output=webp"
+                    class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $skin->skin_name }} Loading" />
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85"
+                    srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=350&fit=cover&output=webp&q=85 480w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85 800w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1200&h=350&fit=cover&output=webp&q=90 1200w"
+                    sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+                    class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100"
+                    alt="{{ $skin->skin_name }} Splash Art" loading="eager" />
 
                 <!-- Gradient Overlay for Text Readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent"></div>
