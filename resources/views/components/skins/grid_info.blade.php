@@ -21,16 +21,59 @@
 
     <!-- Hero Section with Splash Art -->
     <div class="container mx-auto mt-8">
-        <!-- Full-width Splash Art -->
-        <div class="relative mb-8 border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80">
-            <div class="absolute inset-0 aspect-video glow-shadow rounded-2xl"
-                style="--splash-color: {{ $skin->splash_color }}"></div>
-            <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=840&output=webp&q=90"
-                alt="{{ $skin->skin_name }} Splash Art"
-                class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100 rounded-2xl">
-            <div class="absolute bottom-0 left-0 p-4">
-                <a href="{{ $skin->getSkinImageAttribute(true) }}" rel="noopener" target="_blank"
-                    class="p-2 text-base font-bold text-white bg-black bg-opacity-50 rounded-xl">View in HD</a>
+        <!-- Compact Splash Art Section -->
+        <div class="relative overflow-hidden border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80"
+            style="height: 350px;">
+            <div class="absolute inset-0 glow-shadow rounded-2xl">
+            </div>
+
+            <!-- Splash Art -->
+            <div class="relative w-full h-full">
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1200&output=webp&q=90&h=350&fit=cover"
+                    alt="{{ $skin->skin_name }} Splash Art"
+                    class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100">
+
+                <!-- Gradient Overlay for Text Readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent"></div>
+
+                <!-- Info Overlay -->
+                <div class="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between w-full p-4">
+                    <div>
+                        <h3 class="mb-1 text-2xl font-bold text-white drop-shadow-lg">{{ $skin->skin_name }}</h3>
+                        <p class="mb-2 text-sm font-medium text-orange-300">{{ $skin->rarity }} Skin for
+                            {{ $skin->champion->name }}</p>
+                        <a href="{{ $skin->getSkinImageAttribute(true) }}" rel="noopener" target="_blank"
+                            class="inline-flex items-center px-3 py-1 text-sm font-bold text-white transition bg-orange-500 rounded-lg bg-opacity-80 hover:bg-opacity-100">
+                            <span>View Full Art</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Quick Price Info -->
+                    <div class="px-3 py-2 border rounded-lg bg-stone-900/80 border-orange-500/40">
+                        @if ($skin->rp_price == '99999')
+                            <span class="font-bold text-orange-400">Special Offer</span>
+                        @else
+                            <span class="flex items-center font-bold text-white">
+                                <x-icon-RiotPoints class="inline-block w-5 mr-1" />
+                                {{ $skin->rp_price }} RP
+                            </span>
+                        @endif
+                        <div class="mt-1 text-xs text-gray-300">
+                            @if ($skin->release_date == '0000-00-00')
+                                Coming Soon
+                            @else
+                                Released: {{ $skin->release_date }}
+                            @endif
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -46,7 +89,8 @@
                     <div class="md:col-span-3">
                         <h3 class="mb-2 text-xl font-bold text-orange-400">The Basics</h3>
                         <p>
-                            Looking to spice up your games with a killer new look for {{ $skin->champion->name }}? Let's
+                            Looking to spice up your games with a killer new look for {{ $skin->champion->name }}?
+                            Let's
                             dive into everything you need to know about <strong>{{ $skin->skin_name }}</strong>, a
                             unique skin for
                             {{ $skin->champion->name }}. This skin is all about giving your favorite champion a fresh
@@ -56,7 +100,7 @@
 
                     <!-- Quick Facts Card -->
                     <div class="p-4 transition-all duration-700 border shadow-md rounded-xl border-white/10"
-                        style="--tw-shadow-color:{{ $skin->splash_color }}; --tw-shadow: var(--tw-shadow-colored); background-color: {{ $skin->splash_color }};">
+                        style="--tw-shadow-color:#704e3d; --tw-shadow: var(--tw-shadow-colored); background-color: #704e3d;">
                         <h4 class="mb-2 text-lg font-semibold text-center uppercase text-neutral-100">Quick Facts</h4>
                         <div class="text-base text-neutral-100">
                             <p class="mb-2"><span class="font-bold">Price:</span>
@@ -258,8 +302,7 @@
             </div>
 
             <!-- Lore Section -->
-            <div class="p-6 mt-10 border rounded-2xl border-white/10"
-                style="background-color: {{ $skin->splash_color }};">
+            <div class="p-6 mt-10 border rounded-2xl border-white/10" style="background-color: #704e3d;">
                 <h3 class="mb-4 text-xl font-bold text-neutral-100">The Story Behind {{ $skin->skin_name }}</h3>
                 <div class="leading-relaxed text-neutral-100">
                     @if ($skin->lore)
