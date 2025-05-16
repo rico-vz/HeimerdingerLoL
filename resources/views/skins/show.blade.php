@@ -18,7 +18,7 @@
 @endsection
 
 @push('bottom_scripts')
-    @vite('resources/js/vert-scroll.js')
+    @vite('resources/js/horizontal-scroll.js')
     <script type="application/ld+json">
     @php
     $description = $skin->skin_name . " is a " . $skin->rarity . " tier skin for " . $skin->champion->name . " in League of Legends";

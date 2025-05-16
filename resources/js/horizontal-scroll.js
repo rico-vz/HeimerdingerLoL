@@ -6,5 +6,5 @@ if (skinsElement) {
             ev.preventDefault();
             skinsElement.scrollLeft += (ev.deltaY + ev.deltaX);
         }
-    });
+    }, { passive: false });
 }

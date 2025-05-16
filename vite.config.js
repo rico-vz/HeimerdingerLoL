@@ -5,7 +5,7 @@ export const hash = Math.floor(Math.random() * 90000) + 10000;
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/lane-filter.js', 'resources/js/vert-scroll.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/lane-filter.js', 'resources/js/horizontal-scroll.js'],
             refresh: true,
         }),
     ],

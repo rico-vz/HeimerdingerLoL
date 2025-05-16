@@ -18,7 +18,7 @@
 @endsection
 
 @push('bottom_scripts')
-    @vite('resources/js/vert-scroll.js')
+    @vite('resources/js/horizontal-scroll.js')
     <script type="application/ld+json">
     @php
     $description = $champion->name . " is a " . strtolower(implode('/', $champion->roles)) . " champion in League of Legends";
