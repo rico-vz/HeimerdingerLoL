@@ -50,6 +50,11 @@
     <meta property="twitter:description" content="@yield('description')">
     <meta property="twitter:image" content="@yield('og_image', 'https://cdn.heimerdinger.lol/og-img-home.png')">
 
+    <link rel="preload" href="/fonts/inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-v13-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-v13-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google AdSense -->
