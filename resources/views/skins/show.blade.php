@@ -22,6 +22,15 @@
     <script type="application/ld+json">
     @php
     $description = $skin->skin_name . " is a " . $skin->rarity . " tier skin for " . $skin->champion->name . " in League of Legends";
+    $realCurrencyPrice = match (true) {
+        $skin->rp_price == '99999' => 0,
+        $skin->rp_price >= 3250 => 25,
+        $skin->rp_price >= 1820 => 15,
+        $skin->rp_price >= 1350 => 10,
+        $skin->rp_price >= 975 => 7.5,
+        $skin->rp_price >= 520 => 5,
+        default => 0,
+    };
 
     if($skin->new_effects) $description .= " with custom visual effects";
     if($skin->new_animations) $description .= ", new animations";
@@ -45,8 +54,8 @@
         "offers" => [
             "@type" => "Offer",
             "url" => url()->current(),
-            "priceCurrency" => "RP",
-            "price" => $skin->rp_price == '99999' ? '' : $skin->rp_price,
+            "priceCurrency" => "EUR",
+            "price" => $skin->rp_price == '99999' ? '' : $realCurrencyPrice,
             "priceValidUntil" => date('Y-m-d', strtotime('+1 year')),
             "availability" => $skin->availability == 'Available'
                 ? 'https://schema.org/InStock'
