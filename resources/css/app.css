@@ -164,3 +164,8 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
     background-color: rgba(0, 0, 0, 0.02);
     border-radius: 4px;
 }
+
+#skinsElement {
+    overflow-y: auto;
+    overflow-x: auto;
+}

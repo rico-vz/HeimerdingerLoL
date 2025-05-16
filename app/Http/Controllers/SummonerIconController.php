@@ -11,7 +11,7 @@ class SummonerIconController extends Controller
     public function index()
     {
         $icons = QueryBuilder::for(SummonerIcon::class)
-            ->allowedFilters('title')
+            ->allowedFilters(['title', 'esports_team', 'release_year'])
             ->defaultSort('-icon_id')
             ->paginate(72)
             ->appends(request()->query());
