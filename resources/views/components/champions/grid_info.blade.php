@@ -20,16 +20,19 @@
             style="height: 350px;">
             <div class="absolute inset-0 glow-shadow rounded-2xl"></div>
 
-            <div class="relative w-full h-full">
-                <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=30&h=20&fit=cover&blur=5&output=webp"
-                    class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $champion->name }} Loading" />
-                <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85"
-                    srcset="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=480&h=350&fit=cover&output=webp&q=85 480w,
-                    //wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85 800w,
-                    //wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=1200&h=350&fit=cover&output=webp&q=90 1200w"
-                    sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+            <div class="relative w-full" style="aspect-ratio: 1278/348;">
+                <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=30&h=8&fit=cover&blur=5&output=webp"
+                    class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $champion->name }} Loading"
+                    width="1278" height="348" />
+
+                <img src="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85"
+                    srcset="//wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=480&h=131&fit=cover&output=webp&q=85 480w,
+                //wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85 800w,
+                //wsrv.nl/?url={{ $champion->getChampionImageAttribute(true) }}&w=1280&h=348&fit=cover&output=webp&q=90 1280w"
+                    sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1280px"
                     class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100"
-                    alt="{{ $champion->name }} Splash Art" loading="eager" />
+                    alt="{{ $champion->name }} Splash Art" loading="eager" fetchpriority="high" width="1278"
+                    height="348" />
 
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent"></div>
 

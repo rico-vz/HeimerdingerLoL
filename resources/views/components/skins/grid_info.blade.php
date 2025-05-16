@@ -28,16 +28,19 @@
             </div>
 
             <!-- Splash Art -->
-            <div class="relative w-full h-full">
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=30&h=20&fit=cover&blur=5&output=webp"
-                    class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $skin->skin_name }} Loading" />
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85"
-                    srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=350&fit=cover&output=webp&q=85 480w,
-                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=350&fit=cover&output=webp&q=85 800w,
-                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1200&h=350&fit=cover&output=webp&q=90 1200w"
-                    sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+            <div class="relative w-full" style="aspect-ratio: 1278/348;">
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=30&h=8&fit=cover&blur=5&output=webp"
+                    class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $skin->skin_name }} Loading"
+                    width="1278" height="348" />
+
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85"
+                    srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=131&fit=cover&output=webp&q=85 480w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85 800w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1280&h=348&fit=cover&output=webp&q=90 1280w"
+                    sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1280px"
                     class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100"
-                    alt="{{ $skin->skin_name }} Splash Art" loading="eager" />
+                    alt="{{ $skin->skin_name }} Splash Art" loading="eager" fetchpriority="high" width="1278"
+                    height="348" />
 
                 <!-- Gradient Overlay for Text Readability -->
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent"></div>
@@ -356,11 +359,19 @@
                     <div class="grid grid-flow-col grid-rows-2 gap-4 mb-4 w-max">
                         @foreach ($skin->chromas as $key => $chroma)
                             <div class="flex flex-col group">
-                                <a href="/skin/{{ $skin->slug }}">
-                                    <img src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=220&output=webp&q=70&il"
+                                <a class="relative block" style="aspect-ratio: 63/71; width: 126px;">
+                                    <img src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=20&h=23&output=webp&q=20&blur=3&il"
+                                        alt="{{ $chroma->chroma_name }} {{ $chroma->skin_name }} Loading"
+                                        class="absolute inset-0 object-cover w-full h-full rounded-2xl blur-sm"
+                                        width="126" height="142" />
+
+                                    <img src="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=126&h=142&output=webp&q=70&il"
+                                        srcset="//wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=126&h=142&output=webp&q=70&il 1x,
+                                //wsrv.nl/?url={{ $chroma->getChromaImageAttribute() }}&w=252&h=284&output=webp&q=80&il 2x"
                                         alt="{{ $chroma->chroma_name }} {{ $chroma->skin_name }} ScreenShot"
-                                        @if ($key < 6) loading="eager" @else loading="lazy" @endif
-                                        class="inline-block h-36 object-cover rounded-2xl shadow-md border border-3 border-white/10 hover:shadow-orange-500/20 transition-all duration-700 mr-2.5">
+                                        @if ($key < 6) loading="eager" fetchpriority="high" @else loading="lazy" @endif
+                                        class="absolute inset-0 object-cover w-full h-full transition-all duration-700 border shadow-md rounded-2xl border-3 border-white/10 hover:shadow-orange-500/20"
+                                        width="126" height="142" />
                                 </a>
                                 <p class="align-bottom text-center text-neutral-100 text-sm mt-1.5 items-center">
                                     <span class="hover:text-orange-400 group-hover:text-orange-400">
