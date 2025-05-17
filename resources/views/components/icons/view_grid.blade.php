@@ -117,9 +117,9 @@
                                 <p class="text-base font-medium text-neutral-100">
                                     <span class="font-bold text-orange-400">Special Guide:</span> Wondering how to get
                                     this icon? Check out our
-                                    href="/post/how-to-get-hatty-crabby-icon-in-league-of-legends"
-                                    class="text-orange-400 underline hover:text-orange-300">complete guide on
-                                    obtaining the Hatty Crabby Icon</a>.
+                                    <a href="/post/how-to-get-hatty-crabby-icon-in-league-of-legends"
+                                        class="text-orange-400 underline hover:text-orange-300">complete guide on
+                                        obtaining the Hatty Crabby Icon</a>.
                                 </p>
                             </div>
                         @endif
