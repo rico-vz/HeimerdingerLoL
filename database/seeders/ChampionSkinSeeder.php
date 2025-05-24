@@ -15,12 +15,7 @@ class ChampionSkinSeeder extends Seeder
      */
     public function run(): void
     {
-        $mamcSecret = config('app.MAMC_SECRET');
-
-        $championDataUrl = 'https://mamchamp.orianna.dev/champion-data';
-        $championData = Http::withHeaders([
-            'MAM-Get-Secret' => $mamcSecret,
-        ])->get($championDataUrl)->json();
+        $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
         $changeCount = 0;
 
         foreach ($championData as $champion) {
