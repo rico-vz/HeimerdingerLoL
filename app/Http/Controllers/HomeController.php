@@ -18,6 +18,8 @@ class HomeController extends Controller
 
 
         $latestSkins = Cache::remember('latestSkins_home', 60 * 4, static fn() => ChampionSkin::where('release_date', '!=', '0000-00-00')
+            ->where('availability', '!=', 'Upcoming')
+            ->where('release_date', '<=', now())
             ->orderBy('release_date', 'desc')->get());
 
         return view('home', [
