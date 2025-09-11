@@ -15,7 +15,10 @@ class ChampionSeeder extends Seeder
      */
     public function run(): void
     {
-        $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
+        $championData = Http::get('https://static.heimerdinger.lol/champions.json')->json();
+        if (!is_array($championData)) {
+            $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
+        }
         $changeCount = 0;
 
         foreach ($championData as $champion) {

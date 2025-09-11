@@ -15,7 +15,10 @@ class SkinChromaSeeder extends Seeder
      */
     public function run(): void
     {
-        $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
+        $championData = Http::get('https://static.heimerdinger.lol/champions.json')->json();
+        if (!is_array($championData)) {
+            $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
+        }
         $changeCount = 0;
 
         foreach ($championData as $champion) {
@@ -34,7 +37,7 @@ class SkinChromaSeeder extends Seeder
                     $chromaAttributes = [
                         'chroma_id' => $chromaId,
                         'full_skin_id' => $skin['id'],
-                        'skin_name' => $skin['name'].' '.$champion['name'],
+                        'skin_name' => $skin['name'] . ' ' . $champion['name'],
                         'chroma_name' => $chroma['name'],
                         'chroma_colors' => $chroma['colors'],
                         'chroma_image' => $chroma['chromaPath'],
@@ -50,11 +53,11 @@ class SkinChromaSeeder extends Seeder
                     }
 
                     if ($chromaExists && $this->hasAttributesChanged($chromaExists, $chromaAttributes)) {
-                        Log::info('Updating chroma: '.$chromaId);
+                        Log::info('Updating chroma: ' . $chromaId);
                         $chromaExists->update($chromaAttributes);
                         $changeCount++;
                     } elseif (! $chromaExists) {
-                        Log::info('Creating chroma: '.$chromaId);
+                        Log::info('Creating chroma: ' . $chromaId);
                         SkinChroma::create($chromaAttributes);
                         $changeCount++;
                     }
