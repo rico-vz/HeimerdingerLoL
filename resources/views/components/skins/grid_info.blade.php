@@ -29,14 +29,14 @@
 
             <!-- Splash Art -->
             <div class="relative w-full" style="aspect-ratio: 1278/348;">
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=30&h=8&fit=cover&blur=5&output=webp"
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=30&h=8&fit=cover&blur=5&output=webp&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp"
                     class="absolute inset-0 object-cover w-full h-full blur-sm" alt="{{ $skin->skin_name }} Loading"
                     width="1278" height="348" />
 
-                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85"
-                    srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=131&fit=cover&output=webp&q=85 480w,
-                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85 800w,
-                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1280&h=348&fit=cover&output=webp&q=90 1280w"
+                <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp"
+                    srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=131&fit=cover&output=webp&q=85&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp 480w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=800&h=218&fit=cover&output=webp&q=85&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp 800w,
+                //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=1280&h=348&fit=cover&output=webp&q=90&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp 1280w"
                     sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1280px"
                     class="z-10 object-cover w-full h-full transition-transform duration-700 transform scale-100"
                     alt="{{ $skin->skin_name }} Splash Art" loading="eager" fetchpriority="high" width="1278"
