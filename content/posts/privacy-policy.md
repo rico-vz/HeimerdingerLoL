@@ -13,7 +13,7 @@ hidden: true
 
 # Privacy Policy
 
-Last Updated: March 18th, 2024
+Last Updated: September 27th, 2025
 
 ## 1. Introduction
 
@@ -27,7 +27,7 @@ We may collect and store information that you voluntarily provide to us, includi
 
 ### 2.2 Automatically Collected Information
 
-We use Cloudflare Insights and Plausible to collect anonymous data about your interactions with our site. This data includes, but is not limited to, your IP address, browser type, operating system, and pages visited. We use this data to improve our site and your user experience. No information is shared with, sent to or sold to third-parties. No information is monetized
+We use Cloudflare Insights and Umami Analytics to collect anonymous data about your interactions with our site. This data includes, but is not limited to, your IP address, browser type, operating system, and pages visited. We use this data to improve our site and your user experience. No information is shared with, sent to or sold to third-parties. No information is monetized
 
 ## 3. How We Use Your Information
 

@@ -62,7 +62,7 @@
         crossorigin="anonymous"></script>
 
     @stack('top_scripts')
-    <x-analytics.plausible />
+    <x-analytics.umami />
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">

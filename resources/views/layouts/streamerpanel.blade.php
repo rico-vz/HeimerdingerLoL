@@ -46,7 +46,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('top_scripts')
-    <x-analytics.plausible />
+    <x-analytics.umami />
 </head>
 
 <body class="antialiased bg-stone-900 dark scroll-smooth">
