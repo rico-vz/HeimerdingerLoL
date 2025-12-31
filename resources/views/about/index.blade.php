@@ -27,9 +27,7 @@
                 Legends</a>
         </div>
 
-        <div class="flex justify-center my-4">
-            <x-ads.horizontal-banner />
-        </div>
+
 
         <div class="flex flex-col items-center justify-center mt-5">
             <h2 class="text-lg font-bold text-center text-gray-100 uppercase">
@@ -70,7 +68,7 @@
                 Which boasts a 100% rating on Rotten Tomatoes, 9/10 on IMDB, 10/10 on IGN and a 97/100 on Google
                 Reviews.
             </p>
-            <x-ads.in-article />
+
         </div>
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
@@ -96,7 +94,7 @@
                     class="underline decoration-orange-500/50" rel="noopener" target="_blank">this
                     website</a>. I will try to respond as soon as possible.
             </p>
-            <x-ads.in-article />
+
         </div>
         <hr class="w-48 h-1 mx-auto my-4 border-0 rounded md:my-10 bg-stone-500">
         <div class="flex flex-col items-center mt-5">
@@ -129,7 +127,7 @@
                 commitment to ethical progress have made him an essential part of the series, offering both wisdom and
                 intrigue to the unfolding story of Arcane. So I'm sure we will be seeing him again in Arcane Season 2.
             </p>
-            <x-ads.in-article />
+
         </div>
     </div>
 @endsection

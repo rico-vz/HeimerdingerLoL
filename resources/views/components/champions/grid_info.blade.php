@@ -12,8 +12,6 @@
         {{ $champion->title }}
     </h2>
 
-    <x-ads.common />
-
     <!-- Hero Section with Splash Art -->
     <div class="container mx-auto mt-8">
         <div class="relative overflow-hidden border shadow-sm rounded-2xl bg-stone-800/40 border-neutral-300/5 shadow-stone-800/80"
@@ -43,8 +41,8 @@
                         <a href="{{ $champion->getChampionImageAttribute(true) }}" rel="noopener" target="_blank"
                             class="inline-flex items-center px-3 py-1 text-sm font-bold text-white transition bg-orange-500 rounded-lg bg-opacity-80 hover:bg-opacity-100">
                             <span>View Full Splash Art</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -248,7 +246,7 @@
 
                                 <img src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=240&h=142&output=webp&q=80&fit=cover"
                                     srcset="//wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=240&h=142&output=webp&q=80&fit=cover 1x,
-                                    //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=284&output=webp&q=80&fit=cover 2x"
+                                        //wsrv.nl/?url={{ $skin->getSkinImageAttribute(true) }}&w=480&h=284&output=webp&q=80&fit=cover 2x"
                                     @if ($key < 6) loading="eager" @else loading="lazy" @endif
                                     class="relative z-10 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                     alt="{{ $champion->name }} {{ $skin->name }} Splash Art" />
@@ -285,8 +283,7 @@
             @if (count($streamers) > 0)
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
                     @foreach ($streamers as $streamer)
-                        <div
-                            class="p-3 transition-all border rounded-lg bg-stone-700/20 border-white/5 hover:bg-stone-700/30">
+                        <div class="p-3 transition-all border rounded-lg bg-stone-700/20 border-white/5 hover:bg-stone-700/30">
                             <a href="{{ $streamer->streamer_url }}" target="_blank" rel="noopener noreferrer"
                                 class="flex flex-col items-center text-neutral-100 hover:text-orange-400">
                                 <span
@@ -301,8 +298,8 @@
             @else
                 <div class="p-4 text-center border rounded-lg bg-stone-700/20 border-white/5">
                     <div class="flex flex-col items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-3 text-orange-400/70"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-3 text-orange-400/70" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                         </svg>

@@ -85,8 +85,5 @@
                 </p>
             </a>
         </div>
-        <div class="w-full mt-12">
-            <x-ads.horizontal-banner />
-        </div>
     </div>
 </section>

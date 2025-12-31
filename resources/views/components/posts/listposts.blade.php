@@ -22,9 +22,6 @@
             </article>
         @endforeach
     </div>
-    <div class="flex justify-center my-4">
-        <x-ads.horizontal-banner />
-    </div>
     <div class="mt-4">
         {{ $posts->links() }}
     </div>

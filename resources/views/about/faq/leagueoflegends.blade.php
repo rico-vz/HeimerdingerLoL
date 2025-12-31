@@ -14,9 +14,6 @@
                 Frequently Asked Questions about League of Legends and Riot Games.
             </p>
         </div>
-        <div class="flex justify-center my-4">
-            <x-ads.horizontal-banner />
-        </div>
         <div class="grid max-w-xl mx-auto mt-8 divide-y divide-neutral-700">
             <x-about.faq.dropdown question="Is League of Legends on Steam?"
                 answer="League of Legends is not available on Steam. It was developed and published by Riot Games and has its own client for downloading and playing the game." />
@@ -48,7 +45,7 @@
             <x-about.faq.dropdown question="When League of Legends season 14 end?"
                 answer="Season 14 is predicted to end on January 10, 2025. Season 15 will start the morning after when 15.1 is live." />
 
-                <x-about.faq.dropdown question="When League of Legends season 14 split 2end?"
+            <x-about.faq.dropdown question="When League of Legends season 14 split 2end?"
                 answer="Season 14 Split 2 will end on September 24, 2024." />
 
             <x-about.faq.dropdown question="Is League of Legends Arena mode permanent?"

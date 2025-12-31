@@ -139,36 +139,6 @@
             </div>
         </div>
 
-        <div class="ad-slot-container mx-auto my-5 w-full max-w-[970px] min-h-[250px]">
-            <div class="ad-slot-wrapper"
-                style="
-                width: 100%;
-                max-width: 970px; /* Matches AdSense typical leaderboard size */
-                min-height: 250px; /* Matches AdSense typical medium rectangle or leaderboard */
-                margin: 0 auto; /* Centered */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            ">
-                <x-ads.common />
-            </div>
-
-            <div id="donation-fallback"
-                class="hidden w-full max-w-[970px] min-h-[250px] p-6 mx-auto border shadow-md bg-stone-800/40 border-neutral-300/5 rounded-2xl text-center flex flex-col justify-center items-center">
-                <p class="mb-4 text-lg text-neutral-100">
-                    We appreciate you using Heimerdinger.lol!
-                </p>
-                <p class="mb-6 text-neutral-200">
-                    Your support helps us keep the site running. Please consider donating.
-                </p>
-                <a href="/donate"
-                    class="inline-flex items-center px-6 py-3 text-lg font-bold text-white transition bg-orange-500 rounded-lg bg-opacity-80 hover:bg-opacity-100">
-                    Support Us
-                </a>
-            </div>
-        </div>
-
         <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
             <div class="p-6 border shadow-md bg-stone-800/40 border-neutral-300/5 rounded-2xl">
                 <h3 class="mb-4 text-xl font-bold text-orange-400">
@@ -381,38 +351,5 @@
 
     echo json_encode($jsonObject, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     @endphp
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const adWrapper = document.querySelector('.ad-slot-wrapper');
-            const fallbackContainer = document.getElementById('donation-fallback');
-
-            setTimeout(function() {
-                const adElement = adWrapper.querySelector('ins.adsbygoogle');
-                let adIsVisible = false;
-
-                if (adElement) {
-                    // check if ad is marked as unfilled
-                    const adStatus = adElement.getAttribute('data-ad-status');
-                    if (adStatus === 'unfilled') {
-                        adIsVisible = false;
-                    } else {
-                        const adRect = adElement.getBoundingClientRect();
-                        if (adRect.width > 1 && adRect.height > 1 && getComputedStyle(adElement).display !==
-                            'none') {
-                            adIsVisible = true;
-                        }
-                    }
-                }
-
-                if (!adIsVisible) {
-                    if (adWrapper) adWrapper.style.display = 'none';
-                    if (fallbackContainer) fallbackContainer.classList.remove('hidden');
-                } else {
-                    if (adWrapper) adWrapper.style.display = 'flex';
-                    if (fallbackContainer) fallbackContainer.classList.add('hidden');
-                }
-            }, 2575);
-        });
     </script>
 @endpush

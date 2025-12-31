@@ -20,8 +20,6 @@
     <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ff7c47">
 
-    <meta name="google-adsense-account" content="ca-pub-4505764048662657">
-
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
 
@@ -57,10 +55,6 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('ads.client_id') }}"
-        crossorigin="anonymous"></script>
-
     @stack('top_scripts')
     <x-analytics.umami />
 </head>
@@ -68,7 +62,6 @@
 <body class="antialiased bg-stone-900 dark scroll-smooth">
     <x-navbar />
     @yield('content')
-    <x-ads.common />
     <x-footer />
     @stack('bottom_scripts')
 </body>

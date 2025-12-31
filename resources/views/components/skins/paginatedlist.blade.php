@@ -8,10 +8,6 @@
         Champion Skins</h1>
     <x-skins.searchbar />
 
-    <div class="flex justify-center my-4">
-        <x-ads.horizontal-banner />
-    </div>
-
     @fragment('skin-list')
         <div id="skin-list">
             <div class="container flex items-center justify-center p-4 mx-auto mt-3">
@@ -51,8 +47,7 @@
                             </div>
 
                             <div class="flex items-end justify-center px-4 mt-auto mb-2 text-2xl text-white md:text-lg">
-                                <p class="text-sm font-medium hover:text-orange-400"><a
-                                        href="/skin/{{ $skin->slug }}">More
+                                <p class="text-sm font-medium hover:text-orange-400"><a href="/skin/{{ $skin->slug }}">More
                                         details
                                         <x-iconsax-bul-arrow-circle-right class="inline-block w-6" />
                                     </a>

@@ -8,10 +8,6 @@
         Summoner Icons</h1>
     <x-icons.searchbar />
 
-    <div class="flex justify-center my-4">
-        <x-ads.horizontal-banner />
-    </div>
-
     <div class="container flex items-center justify-center p-4 mx-auto mt-3">
 
         <div class="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-6">
@@ -48,9 +44,6 @@
                 </div>
             @endforeach
         </div>
-    </div>
-    <div class="flex justify-center my-4">
-        <x-ads.horizontal-banner />
     </div>
     {{ $icons->links() }}
 </section>

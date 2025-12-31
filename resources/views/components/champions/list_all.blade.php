@@ -15,17 +15,12 @@
             <x-champions.lane-selector class="text-center" />
         </div>
 
-        <div class="flex justify-center my-4">
-            <x-ads.horizontal-banner />
-        </div>
-
         <div class="container flex items-center justify-center p-4 mx-auto mt-3">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($champions as $key => $champion)
-                    <div
-                        class="champ-card flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
-                border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10
-                @if (isset($roles[$key]) && $roles[$key] !== null && isset($roles[$key]->roles)) @foreach ($roles[$key]->roles as $lane)
+                    <div class="champ-card flex flex-col text-gray-700 bg-stone-800/40 shadow-md rounded-2xl bg-clip-border
+                    border border-stone-800 hover:border-orange-500/10 hover:shadow-orange-500/10
+                    @if (isset($roles[$key]) && $roles[$key] !== null && isset($roles[$key]->roles)) @foreach ($roles[$key]->roles as $lane)
                         POS-{{ $lane }}
                     @endforeach @endif">
                         <div class="mx-4 mt-4 overflow-hidden border-2 rounded-2xl bg-clip-border border-orange-400/40">
@@ -55,8 +50,7 @@
                                             <span class="sr-only">{{ $lane }}</span>
                                             <img {{ Popper::arrow('translucent')->theme('dark')->position('bottom')->pop($lane) }}
                                                 @if ($key < 8) loading="auto" @else loading="lazy" @endif
-                                                src="{{ getRoleIcon($lane) }}" alt="{{ $lane }} Icon"
-                                                class="mr-1 w-7 h-7">
+                                                src="{{ getRoleIcon($lane) }}" alt="{{ $lane }} Icon" class="mr-1 w-7 h-7">
                                         @endforeach
                                     @endif
                                 </p>

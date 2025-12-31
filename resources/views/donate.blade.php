@@ -36,10 +36,6 @@
                         width="114" style="border: 0; border-radius: 6px;"></iframe>
                 </div>
 
-                <div class="flex justify-center my-4">
-                    <x-ads.horizontal-banner />
-                </div>
-
                 <div class="mt-4">
                     <img src="https://cdn.heimerdinger.lol/cat_excited.gif" alt="Excited Cat Emote" class="mx-auto w-28">
                 </div>

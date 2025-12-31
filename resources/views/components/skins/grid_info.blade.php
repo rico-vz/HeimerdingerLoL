@@ -17,8 +17,6 @@
         </a>
     </p>
 
-    <x-ads.common />
-
     <!-- Hero Section with Splash Art -->
     <div class="container mx-auto mt-8">
         <!-- Compact Splash Art Section -->

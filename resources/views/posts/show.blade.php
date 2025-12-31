@@ -35,11 +35,11 @@
             <h2 class="text-sm italic text-center text-orange-400 not-prose" itemprop="description">
                 “{{ $post->description }}”
             </h2>
-            <x-ads.in-article />
+
             <p>
                 {{ $post->contents }}
             </p>
-            <x-ads.in-article />
+
             <p class="mt-3 text-sm text-center">
                 Tagged with: <span itemprop="keywords" class="italic">
                     {{ isset($post->tags) ? implode(', ', $post->tags) : 'League of Legends' }}</span>
