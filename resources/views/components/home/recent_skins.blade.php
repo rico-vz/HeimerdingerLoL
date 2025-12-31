@@ -17,54 +17,52 @@
         </div>
         <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
             @foreach ($latestSkins as $skin)
-                @if ($loop->index < 6)
-                    <div
-                        class="p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
-                        <div class="flex flex-col">
-                            <div class="flex flex-col items-center justify-center">
-                                <a href="{{ route('skins.show', $skin->slug) }}">
-                                    <img loading="lazy" class="h-full border-2 w-80 border-orange-400/40 rounded-xl"
-                                        src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=480&output=webp&q=75&maxage=7d&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp"
-                                        alt="{{ $skin->skin_name }} Splash Art">
-                                </a>
+                        <div
+                            class="p-8 transition border shadow-xl bg-stone-800/40 border-stone-800 rounded-xl hover:border-orange-500/10 hover:shadow-orange-500/10">
+                            <div class="flex flex-col">
                                 <div class="flex flex-col items-center justify-center">
-                                    <h2 class="mt-4 text-xl font-bold text-white"><a
-                                            href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a>
-                                    </h2>
-                                    <h3 class="text-stone-200">Released
-                                        {{ Carbon::parse($skin->release_date)->diffForHumans([
-                                            'parts' => 2,
-                                            'join' => true,
-                                        ]) }}
-                                    </h3>
+                                    <a href="{{ route('skins.show', $skin->slug) }}">
+                                        <img loading="lazy" class="h-full border-2 w-80 border-orange-400/40 rounded-xl"
+                                            src="//wsrv.nl/?url={{ $skin->getSkinImageAttribute() }}&w=480&output=webp&q=75&maxage=7d&default=i.ibb.co/xt3D5LMt/heimerdingerlol-placeholder.webp"
+                                            alt="{{ $skin->skin_name }} Splash Art">
+                                    </a>
+                                    <div class="flex flex-col items-center justify-center">
+                                        <h2 class="mt-4 text-xl font-bold text-white"><a
+                                                href="{{ route('skins.show', $skin->slug) }}">{{ $skin->skin_name }}</a>
+                                        </h2>
+                                        <h3 class="text-stone-200">Released
+                                            {{ Carbon::parse($skin->release_date)->diffForHumans([
+                    'parts' => 2,
+                    'join' => true,
+                ]) }}
+                                        </h3>
 
-                                    @foreach ($skin->associated_skinline as $skinline)
-                                        <span
-                                            class="my-2 bg-orange-100 text-orange-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-orange-300">
-                                            {{ $skinline }}</span>
-                                    @endforeach
+                                        @foreach ($skin->associated_skinline as $skinline)
+                                            <span
+                                                class="my-2 bg-orange-100 text-orange-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border border-orange-300">
+                                                {{ $skinline }}</span>
+                                        @endforeach
 
-                                    <p class="flex text-sm text-stone-300">
-                                        @if ($skin->rp_price == '99999')
-                                            Not Available for RP
-                                        @else
-                                            <x-icon-RiotPoints class="w-4 mr-1 text-yellow-400" />
-                                            {{ $skin->rp_price }} RP
-                                        @endif
-                                    </p>
-
-                                    @if ($skin->loot_eligible)
-                                        <p class="flex items-center mt-1 text-sm italic text-stone-300">
-                                            <x-icon-loot class="w-4 mr-1 text-yellow-200" />
-                                            Can be obtained from loot
+                                        <p class="flex text-sm text-stone-300">
+                                            @if ($skin->rp_price == '99999')
+                                                Not Available for RP
+                                            @else
+                                                <x-icon-RiotPoints class="w-4 mr-1 text-yellow-400" />
+                                                {{ $skin->rp_price }} RP
+                                            @endif
                                         </p>
-                                    @endif
 
+                                        @if ($skin->loot_eligible)
+                                            <p class="flex items-center mt-1 text-sm italic text-stone-300">
+                                                <x-icon-loot class="w-4 mr-1 text-yellow-200" />
+                                                Can be obtained from loot
+                                            </p>
+                                        @endif
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endif
             @endforeach
 
         </div>

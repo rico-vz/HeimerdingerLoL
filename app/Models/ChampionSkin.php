@@ -22,7 +22,7 @@ class ChampionSkin extends Model
         'availability',
         'loot_eligible',
         'rp_price',
-        'raritiy',
+        'rarity',
         'release_date',
         'associated_skinline',
         'new_effects',
@@ -70,12 +70,12 @@ class ChampionSkin extends Model
 
     public function getSkinImageLoadingAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/portrait/skin/'.$this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/portrait/skin/' . $this->skin_id;
     }
 
     public function getSkinImageTileAttribute(): string
     {
-        return 'https://cdn.communitydragon.org/latest/champion/'.$this->champion_id.'/tile/skin/'.$this->skin_id;
+        return 'https://cdn.communitydragon.org/latest/champion/' . $this->champion_id . '/tile/skin/' . $this->skin_id;
     }
 
     protected function casts(): array

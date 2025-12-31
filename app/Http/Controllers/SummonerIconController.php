@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\SummonerIcon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class SummonerIconController extends Controller
 {
     public function index()
     {
-        $icons = QueryBuilder::for(SummonerIcon::class)
-            ->allowedFilters(['title', 'esports_team', 'release_year'])
-            ->defaultSort('-icon_id')
-            ->paginate(72)
-            ->appends(request()->query());
+        $cacheKey = 'icons_' . md5(serialize(request()->query()));
+
+        $icons = Cache::remember($cacheKey, 60 * 60, function () {
+            return QueryBuilder::for(SummonerIcon::class)
+                ->allowedFilters(['title', 'esports_team', 'release_year'])
+                ->defaultSort('-icon_id')
+                ->paginate(72)
+                ->appends(request()->query());
+        });
 
         return view('icons.index', ['icons' => $icons]);
     }

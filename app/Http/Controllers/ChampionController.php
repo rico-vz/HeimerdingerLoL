@@ -31,7 +31,7 @@ class ChampionController extends Controller
 
         $champion = Cache::remember('championShowCache' . $champion->slug, $threeDaysInSeconds, static fn() => $champion->load('streamers', 'skins', 'lanes'));
 
-        $streamers = $champion->load('streamers')->streamers;
+        $streamers = $champion->streamers;
 
         return view('champions.show', ['champion' => $champion, 'streamers' => $streamers]);
     }

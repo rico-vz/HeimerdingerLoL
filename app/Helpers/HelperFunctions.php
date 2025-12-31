@@ -15,7 +15,7 @@ function getRoleIcon($roleName): string
         'Support' => 'gm-support.png',
     ];
 
-    return asset('img/'.$roleIcons[$roleName]);
+    return asset('img/' . $roleIcons[$roleName]);
 }
 
 function getAverageColorFromImageUrl($imageUrl): string
@@ -75,9 +75,13 @@ function getRoleIconSvg($roleName): string
  */
 function getChampionImage($full_id, $type): string
 {
-    $championImage = ChampionImage::where('full_id', $full_id)->where('type', $type)->first();
+    $cacheKey = "champion_image_{$full_id}_{$type}";
 
-    if (! $championImage) {
+    $championImage = Cache::remember($cacheKey, 60 * 60 * 24, static function () use ($full_id, $type) {
+        return ChampionImage::where('full_id', $full_id)->where('type', $type)->first();
+    });
+
+    if (!$championImage) {
         return '';
     }
 
@@ -92,7 +96,7 @@ function getCommitHash(): string
     /**
      * @var string $commit
      */
-    $commit = Cache::remember('commit_hash', 60 * 72, fn () => trim(exec('git log --pretty="%h" -n1 HEAD')));
+    $commit = Cache::remember('commit_hash', 60 * 72, fn() => trim(exec('git log --pretty="%h" -n1 HEAD')));
 
     return $commit;
 }

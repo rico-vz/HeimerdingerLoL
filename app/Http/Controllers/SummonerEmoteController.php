@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\SummonerEmote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class SummonerEmoteController extends Controller
 {
     public function index()
     {
-        $emotes = QueryBuilder::for(SummonerEmote::class)
-            ->allowedFilters('title')
-            ->defaultSort('-emote_id')
-            ->paginate(72)
-            ->appends(request()->query());
+        $cacheKey = 'emotes_' . md5(serialize(request()->query()));
+
+        $emotes = Cache::remember($cacheKey, 60 * 60, function () {
+            return QueryBuilder::for(SummonerEmote::class)
+                ->allowedFilters('title')
+                ->defaultSort('-emote_id')
+                ->paginate(72)
+                ->appends(request()->query());
+        });
 
         return view('emotes.index', ['emotes' => $emotes]);
     }

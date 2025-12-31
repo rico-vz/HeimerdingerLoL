@@ -14,13 +14,13 @@ class HomeController extends Controller
                 $query->where('release_date', '0000-00-00')
                     ->orWhere('release_date', '>', now());
             })
-            ->orderBy('release_date', 'desc')->get());
+            ->orderBy('release_date', 'desc')->limit(6)->get());
 
 
         $latestSkins = Cache::remember('latestSkins_home', 60 * 4, static fn() => ChampionSkin::where('release_date', '!=', '0000-00-00')
             ->where('availability', '!=', 'Upcoming')
             ->where('release_date', '<=', now())
-            ->orderBy('release_date', 'desc')->get());
+            ->orderBy('release_date', 'desc')->limit(6)->get());
 
         return view('home', [
             'latestSkins' => $latestSkins,
