@@ -63,6 +63,7 @@
     <x-navbar />
     @yield('content')
     <x-footer />
+    <x-newsletter.floating />
     @stack('bottom_scripts')
 </body>
 
