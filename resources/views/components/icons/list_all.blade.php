@@ -20,7 +20,7 @@
                         <a href="/icon/{{ $icon->slug }}">
                             <img @if ($key < 8) loading="eager" @else loading="lazy" @endif
                                 src="//wsrv.nl/?url={{ $icon->image }}&w=200&output=webp&q=50&il&default=ssl:wsrv.nl%2F%3Furl%3Dhttps://i.ibb.co/5s6YyvN/aaaa.png"
-                                class="object-cover w-full h-full" alt="{{ $icon->title }} Icon" /></a>
+                                class="object-cover w-full h-full" alt="{{ $icon->title }} Icon" width="96" height="96" /></a>
                     </div>
 
                     <div class="px-4 py-2">

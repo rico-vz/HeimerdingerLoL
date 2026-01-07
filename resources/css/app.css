@@ -129,3 +129,16 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
     overflow-y: auto;
     overflow-x: auto;
 }
+
+.prose img {
+    height: auto;
+    max-width: 100%;
+}
+
+.prose img:not([width]):not([height]) {
+    aspect-ratio: attr(width) / attr(height);
+}
+
+.prose img[width][height] {
+    aspect-ratio: attr(width) / attr(height);
+}

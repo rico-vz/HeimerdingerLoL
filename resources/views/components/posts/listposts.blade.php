@@ -12,6 +12,8 @@
                         src="{{ $post->thumbnail }}"
                         alt="{{ $post->title }} Thumbnail"
                         class="object-cover w-full h-full"
+                        width="1200"
+                        height="630"
                     >
                 </a>
 
