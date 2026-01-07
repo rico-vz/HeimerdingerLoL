@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Schedule;
 
 Schedule::command('db:seed --force')->twiceDaily(1, 13)->timezone('Europe/Amsterdam');
 
-Schedule::command('sitemap:generate')->weekly();
+Schedule::command('sitemap:generate')->daily();
