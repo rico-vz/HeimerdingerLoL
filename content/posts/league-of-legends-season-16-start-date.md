@@ -25,7 +25,7 @@ The ranked queue will not become available immediately after the patch goes live
 
 ## Getting Ready for Season 16
 
-Before you queue up, check out our comprehensive post about all the Season 16 changes: [When Does League of Legends Season 16 Start? Everything Ranked Players Need to Know](/post/lol-season-16-changes-role-quests-map-changes). We break down the new items, champion adjustments and ranked system updates that will affect your climb.
+Before you queue up, check out our comprehensive post about all the Season 16 changes: [How to Prepare for LoL Season 16: New Role Quests and Major Map Changes Explained](/post/lol-season-16-changes-role-quests-map-changes). We break down the new items, champion adjustments and ranked system updates that will affect your climb.
 
 There are lots of big changes this season to be excited about. Understanding these changes before your first game could be the difference between starting strong and digging yourself out of a hole.
 
