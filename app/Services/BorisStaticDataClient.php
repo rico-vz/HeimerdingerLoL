@@ -20,11 +20,13 @@ class BorisStaticDataClient
 
     public function getChampions(): array
     {
-        return $this->fetchWithFallback(
+        $payload = $this->fetchWithFallback(
             self::CHAMPIONS_ENDPOINT,
             self::MERAKI_CHAMPIONS_URL,
             fn (mixed $payload): bool => $this->isChampionPayload($payload)
         );
+
+        return $this->normalizeChampionPayload($payload);
     }
 
     public function getChampionRates(): array
@@ -138,7 +140,17 @@ class BorisStaticDataClient
 
     private function isChampionPayload(mixed $payload): bool
     {
-        return is_array($payload) && array_is_list($payload);
+        if (! is_array($payload) || $payload === []) {
+            return false;
+        }
+
+        if (array_is_list($payload)) {
+            return isset($payload[0]['id']);
+        }
+
+        $firstChampion = reset($payload);
+
+        return is_array($firstChampion) && isset($firstChampion['id']);
     }
 
     private function isChampionRatesPayload(mixed $payload): bool
@@ -159,5 +171,14 @@ class BorisStaticDataClient
     private function borisUrl(): string
     {
         return rtrim((string) config('services.boris.url'), '/');
+    }
+
+    private function normalizeChampionPayload(array $payload): array
+    {
+        if (array_is_list($payload)) {
+            return $payload;
+        }
+
+        return array_values($payload);
     }
 }
