@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use RuntimeException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -16,30 +17,61 @@ class SaleController extends Controller
         }
 
         try {
-            $sales = Cache::remember('sales_data', 60 * 60 * 8, static function () {
-                $lmi_api_key = config('services.lmi.api_key');
+            $sales = Cache::remember('sales_data', 60 * 60 * 8, function () {
+                $borisUrl = rtrim((string) config('services.boris.url'), '/');
+                $borisApiKey = (string) config('services.boris.api_key');
 
-                $response = Http::withHeaders([
-                    'Authorization' => 'Bearer ' . $lmi_api_key,
-                ])->get('https://lmi.orianna.dev/api/lol-sales');
+                $headers = [
+                    'X-API-Key' => $borisApiKey,
+                ];
 
-                $response = $response->json();
+                $championSalesResponse = Http::withHeaders($headers)->get($borisUrl.'/api/champions/sales');
+                $skinSalesResponse = Http::withHeaders($headers)->get($borisUrl.'/api/skins/sales');
 
-                if (! isset($response['champion_sales']) || $response['champion_sales'] === null) {
-                    Log::error('LMI has broken');
-                    return abort(503, 'Trying to access array offset on value of type null');
+                if (! $championSalesResponse->successful() || ! $skinSalesResponse->successful()) {
+                    Log::error('Boris sales request failed.', [
+                        'champions_status' => $championSalesResponse->status(),
+                        'skins_status' => $skinSalesResponse->status(),
+                    ]);
+
+                    throw new RuntimeException('Boris sales request failed.');
                 }
 
-                return $response;
+                $championSales = $championSalesResponse->json();
+                $skinSales = $skinSalesResponse->json();
+
+                if (
+                    ! isset($championSales['items']) || ! is_array($championSales['items']) ||
+                    ! isset($skinSales['items']) || ! is_array($skinSales['items'])
+                ) {
+                    Log::error('Boris sales payload is invalid.');
+
+                    throw new RuntimeException('Boris sales payload is invalid.');
+                }
+
+                return [
+                    'champion_sales' => array_map(static fn (array $item): array => [
+                        'item_id' => $item['id'],
+                        'rp' => $item['sale_rp'],
+                        'percent_off' => $item['percent_off'],
+                    ], $championSales['items']),
+                    'skin_sales' => array_map(static fn (array $item): array => [
+                        'item_id' => $item['id'],
+                        'rp' => $item['sale_rp'],
+                        'percent_off' => $item['percent_off'],
+                    ], $skinSales['items']),
+                ];
             });
         } catch (\Exception $exception) {
-            if ($exception->getMessage() === 'Trying to access array offset on value of type null') {
-                Log::error('LMI has broken');
+            if (
+                $exception->getMessage() === 'Boris sales request failed.' ||
+                $exception->getMessage() === 'Boris sales payload is invalid.'
+            ) {
                 abort(503, 'Sorry, the Sale Rotation is currently under maintenance. Please try again later.');
-            } else {
-                Log::error('An error occurred while trying to fetch the Sale Rotation', ['error' => $exception->getMessage()]);
-                abort(500, 'Sorry, an error occurred while trying to fetch the Sale Rotation. Please try again later.');
             }
+
+            Log::error('An error occurred while trying to fetch the Sale Rotation', ['error' => $exception->getMessage()]);
+            abort(500, 'Sorry, an error occurred while trying to fetch the Sale Rotation. Please try again later.');
         }
 
         return view('sales.index', ['sales' => $sales]);
