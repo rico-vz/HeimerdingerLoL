@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\SkinChroma;
+use App\Services\BorisStaticDataClient;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class SkinChromaSeeder extends Seeder
@@ -15,10 +15,7 @@ class SkinChromaSeeder extends Seeder
      */
     public function run(): void
     {
-        $championData = Http::get('https://static.heimerdinger.lol/champions.json')->json();
-        if (!is_array($championData)) {
-            $championData = Http::get('https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json')->json();
-        }
+        $championData = app(BorisStaticDataClient::class)->getChampions();
         $changeCount = 0;
 
         foreach ($championData as $champion) {

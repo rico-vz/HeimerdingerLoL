@@ -1,5 +1,7 @@
 <?php
 
+use Pdo\Mysql;
+
 return [
 
     'default' => env('DB_CONNECTION', 'mysql'),
@@ -25,10 +27,10 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? [
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::ATTR_TIMEOUT => 15,
-                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-            ] : [],
+                class_exists(Mysql::class) ? Mysql::ATTR_USE_BUFFERED_QUERY : PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+            ], static fn ($value) => $value !== null) : [],
             'sticky' => true,
         ],
     ],

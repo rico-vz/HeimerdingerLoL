@@ -8,8 +8,30 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     private function indexExists(string $table, string $indexName): bool
     {
+        return match (DB::getDriverName()) {
+            'sqlite' => $this->sqliteIndexExists($table, $indexName),
+            default => $this->mysqlIndexExists($table, $indexName),
+        };
+    }
+
+    private function mysqlIndexExists(string $table, string $indexName): bool
+    {
         $result = DB::select("SHOW INDEX FROM {$table} WHERE Key_name = ?", [$indexName]);
+
         return count($result) > 0;
+    }
+
+    private function sqliteIndexExists(string $table, string $indexName): bool
+    {
+        $indexes = DB::select("PRAGMA index_list('{$table}')");
+
+        foreach ($indexes as $index) {
+            if (($index->name ?? null) === $indexName) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function up(): void

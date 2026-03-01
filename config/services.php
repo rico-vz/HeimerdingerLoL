@@ -13,4 +13,9 @@ return [
         'api_key' => env('LMI_API_KEY'),
     ],
 
+    'boris' => [
+        'url' => env('BORIS_URL', 'https://boris.heimerdinger.lol'),
+        'api_key' => env('BORIS_API_KEY'),
+    ],
+
 ];

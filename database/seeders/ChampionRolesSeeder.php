@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Champion;
 use App\Models\ChampionRoles;
+use App\Services\BorisStaticDataClient;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
@@ -15,8 +16,7 @@ class ChampionRolesSeeder extends Seeder
      */
     public function run(): void
     {
-        $roleDataUrl = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json';
-        $roleData = json_decode(file_get_contents($roleDataUrl), true);
+        $roleData = app(BorisStaticDataClient::class)->getChampionRates();
         $changeCount = 0;
 
         foreach ($roleData['data'] as $championId => $roles) {
