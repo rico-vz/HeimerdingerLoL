@@ -25,5 +25,9 @@
         "flowbite": "^2.0.0",
         "npm-run-all": "^4.1.5",
         "tailwind-capitalize-first-letter": "^1.0.4"
+    },
+    "overrides": {
+        "minimatch": "^3.1.4",
+        "rollup": "^4.59.0"
     }
 }
