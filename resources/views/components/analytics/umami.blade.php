@@ -1,1 +1,2 @@
-<script defer src="https://pulse.zensodigital.com/script.js" data-website-id="c1145df5-52d7-449e-9ad5-3bd204f6b4c4"></script>
+<script defer src="https://io.zenso.digital/core" data-website-id="109ec697-0467-429d-a494-711cc11abdc4"></script>
+<script defer src="https://io.zenso.digital/recorder.js" data-website-id="109ec697-0467-429d-a494-711cc11abdc4" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
