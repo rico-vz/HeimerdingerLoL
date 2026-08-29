@@ -1,7 +1,7 @@
 ---
 title: "How to Get Victorious Yi in LoL Season 14"
 description: "Unlock the Victorious Yi skin in Season 14 with our comprehensive guide. Learn about the new split point system, requirements, and fastest earning methods!"
-thumbnail: "https://cdn.heimerdinger.lol/victorious-yi-how-to-get.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/victorious-yi-how-to-get.png"
 date: 2024-12-12 # YYYY-MM-DD HH:MM:SS
 tags:
     - Victorious Master Yi

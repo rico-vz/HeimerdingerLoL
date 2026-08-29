@@ -1,7 +1,7 @@
 ---
 title: "How to Get the Ez-be-real Icon in League of Legends"
 description: Find out how to get the Ez-be-real icon in League of Legends by watching LoL esports broadcasts. Our guide covers the step-by-step process and tips to help you unlock this exclusive icon!
-thumbnail: "https://cdn.heimerdinger.lol/ez-be-real_thumbnail.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/ez-be-real_thumbnail.png"
 date: 2025-03-12
 tags:
     - League of Legends
@@ -41,7 +41,7 @@ Look for any current live broadcasts of League tournaments such as First Stand 2
 
 While watching the stream, look for the "**REWARDS ✅**" text in the bottom right corner of the page. If you see that, it means everything is working!
 
-![Rewards indicator with arrow pointing to the checkmark in the bottom right of the screen](https://cdn.heimerdinger.lol/lolesports_rewards_indicator_screenshot.png)
+![Rewards indicator with arrow pointing to the checkmark in the bottom right of the screen](https://cdn-old.heimerdinger.lol/lolesports_rewards_indicator_screenshot.png)
 
 If you don't see this icon, try clearing your cookies or using a different browser.
 

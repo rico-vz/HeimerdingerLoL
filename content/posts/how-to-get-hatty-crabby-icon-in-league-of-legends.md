@@ -1,7 +1,7 @@
 ---
 title: "How to Get the Hatty Crabby Icon in League of Legends"
 description: 'Discover how to get the adorable Hatty Crabby Icon in League of Legends this April Fools 2024 Event by completing the "Insert Cute Name Here: Befriend Little Legends on Summoners Rift" mission.'
-thumbnail: "https://cdn.heimerdinger.lol/how-to-get-hatty-crabby-icon.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/how-to-get-hatty-crabby-icon.png"
 date: 2024-04-01 # YYYY-MM-DD HH:MM:SS
 tags:
     - Hatty Crabby
@@ -35,7 +35,7 @@ There is a minimum account level requirement, but not really. The Hatty Crabby I
 
 Unfortunately the "Insert Cute Name Here: Befriend Little Legends on Summoner's Rift" mission is only here for a limited time, so you have to be quick! The mission will be available from April 1st 2024 until April 3rd 2024.
 
-![Mission: Befriend Little Legends on Summoner's Rift](https://cdn.heimerdinger.lol/crabby_mission.png)
+![Mission: Befriend Little Legends on Summoner's Rift](https://cdn-old.heimerdinger.lol/crabby_mission.png)
 
 ## Step-by-Step Guide to Getting Hatty Crabby Icon
 

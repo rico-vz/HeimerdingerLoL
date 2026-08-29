@@ -1,7 +1,7 @@
 ---
 title: "How to Get Arcane Fractured Jinx: Complete Pull Guide & Cost"
 description: Discover everything about obtaining Arcane Fractured Jinx through The Sanctum system, including exact pull rates, costs, and strategies for League of Legends' latest premium skin.
-thumbnail: "https://cdn.heimerdinger.lol/how-to-get-arcane-fracturated-jinx.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/how-to-get-arcane-fracturated-jinx.png"
 date: 2024-12-12
 tags:
     - League of Legends

@@ -1,7 +1,7 @@
 ---
 title: "When Does League of Legends Season 16 Start? Everything Ranked Players Need to Know"
 description: Season 16 of League of Legends starts January 8, 2026 arouind noon. Get the exact launch time and learn how to prepare for the new ranked season with our guide
-thumbnail: "https://cdn.heimerdinger.lol/lol-s16-start.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/lol-s16-start.png"
 date: 2026-01-07 # YYYY-MM-DD HH:MM:SS
 tags:
     - League of Legends

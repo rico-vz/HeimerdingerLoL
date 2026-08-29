@@ -1,7 +1,7 @@
 ---
 title: "How to Get Victorious Sona in LoL Season 14"
 description: "Sona is coming the Rift as the Season 14 Split 2 Victorious skin. Let's talk about how you can add this enchanting skin to your collection, completely free!"
-thumbnail: "https://cdn.heimerdinger.lol/How_to_Get_Victorious_Sona.jpg"
+thumbnail: "https://cdn-old.heimerdinger.lol/How_to_Get_Victorious_Sona.jpg"
 date: 2024-09-12 # YYYY-MM-DD HH:MM:SS
 tags:
     - Victorious

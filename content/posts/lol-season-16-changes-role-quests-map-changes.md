@@ -1,7 +1,7 @@
 ---
 title: "How to Prepare for LoL Season 16: New Role Quests and Major Map Changes Explained"
 description: Everything you need to know about League of Legends Season 2026 changes including Role Quests, Hextech Gunblade return, Atakhan removal, 200% crit damage and new tower mechanics. Complete S16 Split 1 patch notes breakdown.
-thumbnail: "https://cdn.heimerdinger.lol/lol-s16-guide.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/lol-s16-guide.png"
 date: 2026-01-07 # YYYY-MM-DD HH:MM:SS
 tags:
     - League of Legends

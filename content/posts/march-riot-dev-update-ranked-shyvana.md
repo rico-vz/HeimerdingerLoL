@@ -1,7 +1,7 @@
 ---
 title: "March Dev Update: Faster Queues, Ranked Changes and Shyvana's Rework"
 description: Faster queues, massive Ranked ladder adjustments, and Shyvana's VGU are here. Catch up on everything you missed in the March Riot Dev Update.
-thumbnail: "https://cdn.heimerdinger.lol/LoL-March-Dev-Update.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/LoL-March-Dev-Update.png"
 date: 2026-02-03 # YYYY-MM-DD HH:MM:SS
 tags:
     - League of Legends

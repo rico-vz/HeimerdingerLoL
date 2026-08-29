@@ -1,7 +1,7 @@
 ---
 title: 'Patch 14.6: New Bot AI coming to League of Legends'
 description: New bots in League of Legends with Patch 14.6, enhanced bots that jungle, rotate, and target objectives. Perfect for new players learning the game!
-thumbnail: 'https://cdn.heimerdinger.lol/new-ai-bots-in-14.6-leagueoflegends.png'
+thumbnail: 'https://cdn-old.heimerdinger.lol/new-ai-bots-in-14.6-leagueoflegends.png'
 date: 2024-03-15 # YYYY-MM-DD HH:MM:SS
 tags:
   - league of legends

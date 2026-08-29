@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <img src="https://cdn.heimerdinger.lol/cat_excited.gif" alt="Excited Cat Emote" class="mx-auto w-28">
+                    <img src="https://cdn-old.heimerdinger.lol/cat_excited.gif" alt="Excited Cat Emote" class="mx-auto w-28">
                 </div>
             </div>
         </div>

@@ -39,14 +39,14 @@
     <meta property="og:description" content="@yield('description')">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="@yield('og_image', 'https://cdn.heimerdinger.lol/og-img-home.png')">
+    <meta property="og:image" content="@yield('og_image', 'https://cdn-old.heimerdinger.lol/og-img-home.png')">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="heimerdinger.lol">
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('description')">
-    <meta property="twitter:image" content="@yield('og_image', 'https://cdn.heimerdinger.lol/og-img-home.png')">
+    <meta property="twitter:image" content="@yield('og_image', 'https://cdn-old.heimerdinger.lol/og-img-home.png')">
 
     <link rel="preload" href="/fonts/inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/inter-v13-latin-500.woff2" as="font" type="font/woff2" crossorigin>

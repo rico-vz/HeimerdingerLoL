@@ -1,7 +1,7 @@
 ---
 title: "How to Change Your League of Legends Name"
 description: "Learn how to change your League of Legends name and Riot ID with our step-by-step guide. Customize your in-game name and stand out on the rift. Heimerdinger.lol has all the tips to help you update your LoL name."
-thumbnail: "https://cdn.heimerdinger.lol/change-your-lol-name-thumb.png"
+thumbnail: "https://cdn-old.heimerdinger.lol/change-your-lol-name-thumb.png"
 date: 2024-05-28 # YYYY-MM-DD HH:MM:SS
 tags:
     - League of Legends
