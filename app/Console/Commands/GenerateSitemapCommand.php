@@ -80,7 +80,6 @@ class GenerateSitemapCommand extends Command
         $urls = [];
         foreach ($staticPages as $page) {
             $urls[] = Url::create($page['url'])
-                ->setLastModificationDate(now())
                 ->setChangeFrequency($page['changefreq'])
                 ->setPriority($page['priority']);
         }
@@ -110,11 +109,15 @@ class GenerateSitemapCommand extends Command
         $urls = [];
 
         foreach ($icons as $icon) {
-            $lastmod = $icon->updated_at ? Carbon::parse($icon->updated_at) : now();
-            $urls[] = Url::create(route('assets.icons.show', $icon->slug))
-                ->setLastModificationDate($lastmod)
+            $url = Url::create(route('assets.icons.show', $icon->slug))
                 ->setChangeFrequency('monthly')
                 ->setPriority(0.6);
+
+            if ($icon->updated_at) {
+                $url->setLastModificationDate(Carbon::parse($icon->updated_at));
+            }
+
+            $urls[] = $url;
         }
 
         return $urls;
@@ -126,13 +129,18 @@ class GenerateSitemapCommand extends Command
         $urls = [];
 
         foreach ($skins as $skin) {
-            $lastmod = $skin->updated_at 
-                ? Carbon::parse($skin->updated_at) 
-                : ($skin->release_date && $skin->release_date !== '' ? $this->parseReleaseDate($skin->release_date) : now());
-            $urls[] = Url::create(route('skins.show', $skin->slug))
-                ->setLastModificationDate($lastmod)
+            $lastmod = $skin->updated_at
+                ? Carbon::parse($skin->updated_at)
+                : $this->parseReleaseDate($skin->release_date);
+            $url = Url::create(route('skins.show', $skin->slug))
                 ->setChangeFrequency('monthly')
                 ->setPriority(0.7);
+
+            if ($lastmod) {
+                $url->setLastModificationDate($lastmod);
+            }
+
+            $urls[] = $url;
         }
 
         return $urls;
@@ -144,24 +152,33 @@ class GenerateSitemapCommand extends Command
         $urls = [];
 
         foreach ($champions as $champion) {
-            $lastmod = $champion->updated_at 
-                ? Carbon::parse($champion->updated_at) 
-                : ($champion->release_date && $champion->release_date !== '' ? $this->parseReleaseDate($champion->release_date) : now());
-            $urls[] = Url::create(route('champions.show', $champion->slug))
-                ->setLastModificationDate($lastmod)
+            $lastmod = $champion->updated_at
+                ? Carbon::parse($champion->updated_at)
+                : $this->parseReleaseDate($champion->release_date);
+            $url = Url::create(route('champions.show', $champion->slug))
                 ->setChangeFrequency('monthly')
                 ->setPriority(0.8);
+
+            if ($lastmod) {
+                $url->setLastModificationDate($lastmod);
+            }
+
+            $urls[] = $url;
         }
 
         return $urls;
     }
 
-    private function parseReleaseDate(string $dateString): Carbon
+    private function parseReleaseDate(?string $dateString): ?Carbon
     {
+        if (! $dateString || $dateString === '0000-00-00') {
+            return null;
+        }
+
         try {
             return Carbon::parse($dateString);
         } catch (\Exception $e) {
-            return now();
+            return null;
         }
     }
 
