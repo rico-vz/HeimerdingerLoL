@@ -12,7 +12,7 @@ tags:
 hidden: false
 ---
 
-League of Legends' latest premium skin, [Arcane Fractured Jinx](https://heimerdinger.lol/skin/arcane-fractured-jinx), has arrived in The Sanctum, bringing one of the most sought-after character designs from the hit Netflix series directly into the game. But unlike traditional skin releases, getting your hands on this particular Arcane version of Jinx requires you to use a gacha system.
+League of Legends' latest premium skin, [Arcane Fractured Jinx](https://heimerdinger.lol/skin/arcane-fractured-jinx), has arrived in The Sanctum, bringing one of the most sought-after character designs from the hit Netflix series directly into the game. But unlike traditional skin releases, getting your hands on this particular Arcane version of [Jinx](https://heimerdinger.lol/champion/jinx) requires you to use a gacha system.
 
 ![In-game Arcane Fractured Jinx](https://i.ibb.co/2d9fzT9/jinx-skin-forms-updated-v0-6ive6bzngz4e1.webp)
 
@@ -116,9 +116,9 @@ Maybe wait if:
 
 ## Alternative Jinx Skins
 
-Can't commit to The Sanctum's gacha system? No worries! Let's check out some absolutely amazing Jinx skins that won't make your wallet cry itself to sleep. These alternatives have been voted as community favorites, and honestly? They're pretty incredible!
+Can't commit to The Sanctum's gacha system? No worries! Let's check out some absolutely amazing [Jinx skins](https://heimerdinger.lol/champion/jinx) that won't make your wallet cry itself to sleep. These alternatives have been voted as community favorites, and honestly? They're pretty incredible!
 
-### T1 Jinx: The Champion's Choice
+### [T1 Jinx](https://heimerdinger.lol/skin/t1-jinx): The Champion's Choice
 
 Coming in hot as the community's #1 pick, T1 Jinx is basically what happens when you let esports greatness design a skin. Here's why players are obsessed:
 
@@ -126,7 +126,7 @@ Coming in hot as the community's #1 pick, T1 Jinx is basically what happens when
 -   That signature T1 red and white color scheme
 -   Price: 1350 RP (way easier on the wallet!)
 
-### Star Guardian Jinx: A Classic Skinline
+### [Star Guardian Jinx](https://heimerdinger.lol/skin/star-guardian-jinx): A Classic Skinline
 
 Sitting pretty at #2, Star Guardian Jinx transforms our favorite chaos agent into a magical girl with attitude. And let me tell you, it's absolutely worth checking out:
 
@@ -134,7 +134,7 @@ Sitting pretty at #2, Star Guardian Jinx transforms our favorite chaos agent int
 -   Gorgeous VFX and SFX
 -   Price: 1820 RP (Legendary tier, but straightforward to buy)
 
-### Ambitious Elf Jinx: Happy Holidays
+### [Ambitious Elf Jinx](https://heimerdinger.lol/skin/ambitious-elf-jinx): Happy Holidays
 
 Coming in at #3, don't let this skin's simplicity fool you. Ambitious Elf Jinx brings the holiday chaos at a price point that'll make you smile:
 

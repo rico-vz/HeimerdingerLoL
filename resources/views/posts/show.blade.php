@@ -94,7 +94,7 @@
 
                 @if($post->thumbnail)
                 <div class="overflow-hidden relative mb-10 w-full rounded-2xl ring-1 shadow-2xl aspect-video ring-white/10">
-                    <img src="{{ $post->thumbnail }}"
+                    <img src="//wsrv.nl/?url={{ urlencode($post->thumbnail) }}&w=1200&output=webp"
                          alt="{{ $post->title }}"
                          class="object-cover w-full h-full transition duration-700 transform hover:scale-105"
                          loading="eager"
@@ -162,7 +162,7 @@
                     <a href="{{ route('posts.show', $relatedPost->slug) }}" class="flex flex-col h-full group">
                         <div class="overflow-hidden relative mb-4 w-full rounded-xl border transition-all aspect-video bg-stone-800 border-stone-700 group-hover:border-orange-500/50">
                             @if($relatedPost->thumbnail)
-                            <img src="{{ $relatedPost->thumbnail }}" alt="{{ $relatedPost->title }}" class="object-cover w-full h-full transition duration-500 group-hover:scale-105" width="1920" height="1080">
+                            <img src="//wsrv.nl/?url={{ urlencode($relatedPost->thumbnail) }}&w=640&output=webp" alt="{{ $relatedPost->title }}" class="object-cover w-full h-full transition duration-500 group-hover:scale-105" width="1920" height="1080" loading="lazy">
                             @else
                             <div class="flex justify-center items-center w-full h-full bg-gradient-to-br from-stone-800 to-stone-900 text-stone-700">
                                 <span class="text-4xl opacity-20">LoL</span>

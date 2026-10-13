@@ -9,7 +9,7 @@
             <article class="flex overflow-hidden flex-col h-full rounded-2xl border shadow-md transition-colors duration-300 group bg-stone-800/40 border-stone-800 hover:border-orange-500/30">
                 <a href="{{ route('posts.show', $post->slug) }}" class="relative w-full overflow-hidden aspect-[1.91/1] block">
                     <img
-                        src="{{ $post->thumbnail }}"
+                        src="//wsrv.nl/?url={{ urlencode($post->thumbnail) }}&w=640&output=webp"
                         alt="{{ $post->title }} Thumbnail"
                         class="object-cover w-full h-full"
                         width="1200"
