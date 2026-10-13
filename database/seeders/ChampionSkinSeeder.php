@@ -4,12 +4,15 @@ namespace Database\Seeders;
 
 use App\Models\ChampionSkin;
 use App\Services\BorisStaticDataClient;
+use Database\Seeders\Concerns\ComparesStoredAttributes;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 
 class ChampionSkinSeeder extends Seeder
 {
+    use ComparesStoredAttributes;
+
     /**
      * Run the database seeds.
      */
@@ -78,16 +81,5 @@ class ChampionSkinSeeder extends Seeder
         if ($changeCount > 0) {
             Artisan::call('cloudflare:purge');
         }
-    }
-
-    private function hasAttributesChanged($skin, $attributes)
-    {
-        foreach ($attributes as $key => $value) {
-            if ($skin->{$key} != $value) {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

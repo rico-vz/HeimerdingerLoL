@@ -4,12 +4,15 @@ namespace Database\Seeders;
 
 use App\Models\Champion;
 use App\Services\BorisStaticDataClient;
+use Database\Seeders\Concerns\ComparesStoredAttributes;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 
 class ChampionSeeder extends Seeder
 {
+    use ComparesStoredAttributes;
+
     /**
      * Run the database seeds.
      */
@@ -53,16 +56,5 @@ class ChampionSeeder extends Seeder
         if ($changeCount > 0) {
             Artisan::call('cloudflare:purge');
         }
-    }
-
-    private function hasAttributesChanged($champion, $attributes)
-    {
-        foreach ($attributes as $key => $value) {
-            if ($champion->{$key} != $value) {
-                return true;
-            }
-        }
-
-        return false;
     }
 }
