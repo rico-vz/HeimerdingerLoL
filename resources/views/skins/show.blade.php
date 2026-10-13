@@ -22,15 +22,6 @@
     <script type="application/ld+json">
     @php
     $description = $skin->skin_name . " is a " . $skin->rarity . " tier skin for " . $skin->champion->name . " in League of Legends";
-    $realCurrencyPrice = match (true) {
-        $skin->rp_price == '99999' => 0,
-        $skin->rp_price >= 3250 => 25,
-        $skin->rp_price >= 1820 => 15,
-        $skin->rp_price >= 1350 => 10,
-        $skin->rp_price >= 975 => 7.5,
-        $skin->rp_price >= 520 => 5,
-        default => 0,
-    };
 
     if($skin->new_effects) $description .= " with custom visual effects";
     if($skin->new_animations) $description .= ", new animations";
@@ -39,36 +30,40 @@
     if($skin->new_quotes) $description .= ", unique voice lines";
     $description .= ".";
 
+    $properties = [
+        ["@type" => "PropertyValue", "name" => "Rarity", "value" => $skin->rarity],
+    ];
+
+    if ($skin->rp_price != '99999') {
+        $properties[] = ["@type" => "PropertyValue", "name" => "Price", "value" => (int) $skin->rp_price, "unitText" => "RP"];
+    }
+
+    $artwork = [
+        "@type" => "VisualArtwork",
+        "name" => $skin->skin_name,
+        "image" => $skin->getSkinImageAttribute(true),
+        "artform" => "League of Legends champion skin",
+        "creator" => ["@type" => "Organization", "name" => "Riot Games"],
+        "about" => [
+            "@type" => "Thing",
+            "name" => $skin->champion->name,
+            "url" => route('champions.show', $skin->champion),
+        ],
+    ];
+
+    if ($skin->release_date && $skin->release_date != '0000-00-00') {
+        $artwork["datePublished"] = $skin->release_date;
+    }
+
     // creating json object cause blade parsing
     $jsonObject = [
         "@context" => "https://schema.org/",
-        "@type" => "Product",
+        "@type" => "WebPage",
         "name" => $skin->skin_name . " - League of Legends Skin",
-        "image" => $skin->getSkinImageAttribute(true),
         "description" => $description,
-        "brand" => [
-            "@type" => "Brand",
-            "name" => "Riot Games"
-        ],
-        "sku" => "lol-skin-" . $skin->id,
-        "offers" => [
-            "@type" => "Offer",
-            "url" => url()->current(),
-            "priceCurrency" => "EUR",
-            "price" => $skin->rp_price == '99999' ? '' : $realCurrencyPrice,
-            "priceValidUntil" => date('Y-m-d', strtotime('+1 year')),
-            "availability" => $skin->availability == 'Available'
-                ? 'https://schema.org/InStock'
-                : ($skin->availability == 'Upcoming' || $skin->release_date == '0000-00-00'
-                    ? 'https://schema.org/PreOrder'
-                    : 'https://schema.org/LimitedAvailability'),
-            "seller" => [
-                "@type" => "Organization",
-                "name" => "Riot Games"
-            ]
-        ],
-        "category" => "Video Game Cosmetic Item",
-        "releaseDate" => $skin->release_date == '0000-00-00' ? '' : $skin->release_date
+        "url" => url()->current(),
+        "mainEntity" => $artwork,
+        "additionalProperty" => $properties,
     ];
 
     echo json_encode($jsonObject, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
