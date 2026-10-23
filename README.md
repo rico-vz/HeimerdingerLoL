@@ -1,5 +1,12 @@
 <h1 align="center" id="title">Heimerdinger.lol</h1>
 
+> [!NOTE] 
+> **Archived.** This is the final public snapshot of [Heimerdinger.lol](https://heimerdinger.lol).  
+> Heimerdinger.lol has been rewritten in a private repository where development is now continued.
+> 
+> No license is granted.
+
+
 <p align="center"><img src="https://socialify.git.ci/rico-vz/HeimerdingerLoL/image?font=Inter&amp;issues=1&amp;language=1&amp;logo=https%3A%2F%2Fsvgur.com%2Fi%2FzA2.svg&amp;name=1&amp;owner=1&amp;pattern=Plus&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
 <p id="description">Heimerdinger.lol is a user-friendly League of Legends website providing you with interesting and fun information such as current sale rotation and upcoming skins.</p>
